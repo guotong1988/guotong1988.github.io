@@ -54,8 +54,8 @@
       "path": "[[workspace]]/projects/_posts"
     },
     {
-      "title": "notebook",
-      "path": "[[workspace]]/notebook/_posts"
+      "title": "research",
+      "path": "[[workspace]]/research/_posts"
     }
   ],
   "frontMatter.taxonomy.tags": [
