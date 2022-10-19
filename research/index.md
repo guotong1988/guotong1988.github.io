@@ -7,7 +7,7 @@ permalink: /research/
 
 <ul>
 
-  <a class="page-link" href="/research/">relabel</a>
+  <a class="page-link" href="/research/relabel/">relabel</a>
 
   {% for post in site.categories.research %}
     <li>
