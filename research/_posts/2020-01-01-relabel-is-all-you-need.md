@@ -93,8 +93,8 @@ For CTR task, we use the method of \cite{ref6} that automatically set the label 
 
 We do the experiments of text classification and NER to verify our idea. The results is shown in Table 1 and Table 2. We also do a lot of other classification task and NER task of other dataset. The improvement is also significant and we do not list the detail results. 
 
-![Table1](https://github.com/guotong1988/guotong1988.github.io/tree/main/research/image/relabel/table1.png)
-![Table2](https://github.com/guotong1988/guotong1988.github.io/tree/main/research/image/relabel/table2.png)
+![](/assets/png/data-centric/table1.png)
+![](/assets/png/data-centric/table2.png)
 
 
 ### Analysis
