@@ -1,8 +1,14 @@
 ---
 layout: page
 title: Research work
-description: Research work of Lester James V. Miranda
+description: Research work of Tong Guo
 permalink: /research/
 ---
 
-[Re-Label Is All You Need](https://guotong1988.github.io/research/relabel.md)  
+<ul>
+  {% for post in site.categories.notebook %}
+    <li>
+        {% if post.highlight %}&starf; {% endif %}<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
