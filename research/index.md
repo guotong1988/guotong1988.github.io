@@ -6,6 +6,9 @@ permalink: /research/
 ---
 
 <ul>
+
+  <a class="page-link" href="/research/_posts">relabel</a>
+
   {% for post in site.categories.research %}
     <li>
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
