@@ -6,9 +6,9 @@ permalink: /research/
 ---
 
 <ul>
-  {% for post in site.categories.notebook %}
+  {% for post in site.categories.research %}
     <li>
-        {% if post.highlight %}&starf; {% endif %}<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
