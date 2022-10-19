@@ -94,6 +94,7 @@ For CTR task, we use the method of \cite{ref6} that automatically set the label 
 We do the experiments of text classification and NER to verify our idea. The results is shown in Table 1 and Table 2. We also do a lot of other classification task and NER task of other dataset. The improvement is also significant and we do not list the detail results. 
 
 ![](/assets/png/data-centric/table1.png)
+
 ![](/assets/png/data-centric/table2.png)
 
 
@@ -109,19 +110,25 @@ We argue that the key point to improve the industry deep learning application pe
 ### References
 
 \bibitem{ref1}
+
 Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25: 1097-1105.
 
 \bibitem{ref2}
+
 Guo T. Learning From How Human Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref3}
+
 Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
 
 \bibitem{ref4}
+
 Liu Z, Lin Y, Cao Y, et al. Swin transformer: Hierarchical vision transformer using shifted windows[J]. arXiv preprint arXiv:2103.14030, 2021.
 
 \bibitem{ref5}
+
 Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in neural information processing systems. 2017: 5998-6008.
 
 \bibitem{ref6}
+
 Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v3 
