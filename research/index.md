@@ -5,4 +5,4 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-[Re-Label Is All You Need](https://github.com/guotong1988/guotong1988.github.io/tree/main/research/relabel.md)  
+[Re-Label Is All You Need](https://guotong1988.github.io/research/relabel.md)  
