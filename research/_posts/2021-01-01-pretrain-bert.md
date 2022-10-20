@@ -39,7 +39,7 @@ BERT \cite{ref1}, or Bidirectional Encoder Representations from Transformers, is
 
 In this section we describe the BERT-like models we use. First we describe the notations we use. We use $L$ to indicate the input sequence length. We use $N$ to indicate the hidden size. 
 
-The code is released at \url{https://github.com/guotong1988/my_bert}.
+The code is released at \url{https://github.com/guotong1988/bert_compare}.
 
 #### The Origin BERT
 
