@@ -14,6 +14,10 @@ description: "Re-Label By Data Pattern Is All You Need For Knowledge Driven Deep
 ### abstract
 In industry deep learning application, we should fix the badcase after we achieve more than 95% accuracy at dev dataset. The badcase reason is from the wrong rule/knowledge of human labeling and will cause low accuracy under human evaluation. In this paper, we propose the pattern-based method to fix the badcase for industry application inference. We propose the pipeline to solve the problem and improve the accuracy of human evaluation. The experiment results verify our idea, which means label-edit is the method to implement controllable deep learning application.
 
+#### keywords
+
+Deep Learning, Pattern Recognition, Fuzzy Matching, Similar Search
+
 ### Introduction
 
 In industry deep learning \cite{ref1} application, we use the re-label method\cite{ref2} to achieve more than 95% accuracy at dev dataset. But under human evaluation for industry application inference, the accuracy is only around 90%-94%. The reason for this problem can be found on the badcase review. In the badcase review, we find that the badcase is caused by wrong rule/knowledge of human labeling. In order to fix the badcase of training data. we propose the pattern-based re-label pipeline. The intuition is that the badcase prediction data should contain the same pattern in the training data. Take text classification as example, it means the badcase prediction data contains the same tokens in the training data. So we could retrieve all the training text which contains the same pattern/tokens and re-label them.
