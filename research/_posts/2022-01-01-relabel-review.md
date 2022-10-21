@@ -20,3 +20,14 @@ In the end, ..
 #### keywords
 
 Deep Learning, Pattern Recognition, Fuzzy Matching, Similar Search, Data Centric, Human Labeling
+
+
+### Reference
+
+\bibitem{ref1}
+
+Guo T. Learning From Human Correction For Data-Centric Deep Learning[J]. arXiv preprint arXiv:2102.00225, 2021.
+
+\bibitem{ref2}
+
+Guo T. Re-Label Is All You Need[J].
