@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Comprehensive Exploration of Pre-training Language Models"
-date: 2021-01-01
+date: 2022-01-01
 category: research
 comments: true
 author: "Tong Guo"
