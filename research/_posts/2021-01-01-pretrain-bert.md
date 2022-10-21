@@ -47,11 +47,11 @@ We refer the origin BERT to the code released by Google {\url{https://github.com
 
 #### TextCNN-BERT
 
-The intuition we try this architecture is that we think convolution layer can extract features that is different from self-attention layer. We learn the model architecture from TextCNN \cite{ref13}. We use TextCNN to extract feature from sequence input. Then the output of TextCNN concat the sequence input for the self-attention layer. In detail, we use a convolution kernel $R^{1 \times N}$ which in channel is $1$ and out channel is $N$ to output a tensor $R^{L \times N}$. Then we concat it to the embedding layer to get a tensor $R^{2L \times N}$ for the next self-attention-layer.
+The intuition we try this architecture is that we think convolution layer can extract features that is different from self-attention layer. We learn the model architecture from TextCNN \cite{ref13}. We use TextCNN to extract feature from sequence input. Then the output of TextCNN concat the sequence input for the self-attention layer. In detail, we use a convolution kernel $R^{1 × N}$ which in channel is $1$ and out channel is $N$ to output a tensor $R^{L × N}$. Then we concat it to the embedding layer to get a tensor $R^{2L × N}$ for the next self-attention-layer.
 
 #### Ngram-BERT
 
-The intuition we try this architecture is that we think the N-gram info can be the supplement for the one-token-level sequence. We add the N-gram info for the Origin BERT. In detail, we concat 2-gram of token embeddings to get a tensor which shape is $R^{L \times 2N}$. Then we use a matrix $R^{2N \times N}$ to transform it to a tensor $R^{L \times N}$ . Then we concat $R^{L \times N}$ to the embedding layer for the next self-attention layer.
+The intuition we try this architecture is that we think the N-gram info can be the supplement for the one-token-level sequence. We add the N-gram info for the Origin BERT. In detail, we concat 2-gram of token embeddings to get a tensor which shape is $R^{L × 2N}$. Then we use a matrix $R^{2N × N}$ to transform it to a tensor $R^{L × N}$ . Then we concat $R^{L × N}$ to the embedding layer for the next self-attention layer.
 
 #### Dense-BERT
 
