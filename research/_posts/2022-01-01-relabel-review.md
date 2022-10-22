@@ -13,7 +13,7 @@ description: "Re-Label For Industry Deep Learning: A Review"
 
 ### abstract
 Recently, the fast development of deep learning has brought computer science to a new era. 
-In this survey, We first summarize how to achieve 97% accuracy in industry deep learning application in both dev dataset and human evaluation by re-label / labeling-again, based on the principle that deep learning is rule-injected model with strong generalization ability. 
+In this survey, We first summarize how to achieve 97% accuracy in industry deep learning application in both dev dataset and human evaluation by re-label / label-again, based on the principle that deep learning is rule-injected model with strong generalization ability. 
 Then we extend the re-label method to more possible idea.
 In the end, ..
 
