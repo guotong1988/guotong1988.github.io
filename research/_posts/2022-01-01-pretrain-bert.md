@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "A Comprehensive Exploration of Pre-training Language Models"
+title: "A Comprehensive Comparison of Pre-training Language Models"
 date: 2022-01-01
 category: research
 comments: true
 author: "Tong Guo"
-description: "A Comprehensive Exploration of Pre-training Language Models Under Same Resource"
+description: "A Comprehensive Comparison of Pre-training Language Models Under Same Resource"
 ---
-# A Comprehensive Exploration of Pre-training Language Models
+# A Comprehensive Comparison of Pre-training Language Models
 
 ### abstract
 
