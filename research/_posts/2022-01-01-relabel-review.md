@@ -16,7 +16,7 @@ Recently, the fast development of deep learning has brought computer science to 
 In this survey, We first summarize how to achieve 97% accuracy in any human-labeled industry deep learning application in both dev dataset and human evaluation by re-label / label-again, 
 based on the principle that deep learning is rule-injected model with strong generalization ability. 
 Then we extend the re-label method to more possible idea.
-In the end, ..
+In the end, we imagine re-label method to more impossible idea.
 
 #### keywords
 
