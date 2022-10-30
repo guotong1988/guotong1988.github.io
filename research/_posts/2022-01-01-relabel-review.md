@@ -30,10 +30,15 @@ Data centric methods without changing the ground-truth-label do not have enough 
 Re-Label Methods \cite{ref1} \cite{ref2} \cite{ref3} correct the noisy data and re-direct the wrong knowledge data,
 and achieve 97% accuracy in any human-labeled deep learning application. 
 
-### Future Work
+### With Human Correction, Reward Is Enough 
 
 Human learn from base concept and get 'reward' from the physical world, 
 in the same time human correct and refresh the knowledge from new 'reward'.
+
+Keeping the knowledge of robot/agent to be always right is important. 
+The self-correction for robot/agent is very hard.
+The correction can be done by human. 
+Human change the base reward rule for robot/agent to refresh their knowledge. 
 
 
 
