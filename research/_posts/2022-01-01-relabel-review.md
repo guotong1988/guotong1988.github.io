@@ -30,6 +30,13 @@ Data centric methods without changing the ground-truth-label do not have enough 
 Re-Label Methods \cite{ref1} \cite{ref2} \cite{ref3} correct the noisy data and re-direct the wrong knowledge data,
 and achieve 97% accuracy in any human-labeled deep learning application. 
 
+### Future Work
+
+Human learn from base concept and get "reward" from the physical world, 
+in the same time human correct and refresh the knowledge from new "reward".
+
+
+
 ### Reference
 
 \bibitem{ref1}
