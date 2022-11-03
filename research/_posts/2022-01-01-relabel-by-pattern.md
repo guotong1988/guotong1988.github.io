@@ -61,6 +61,7 @@ In the named-entity-recognise task, there is work\cite{ref5} that injects the en
 ### Conclusion
 
 In this paper, we solve the problem of the low accuracy under human evaluation after we achieve good accuracy of dev dataset. We propose the pipeline: First, we find the badcase in the prediction data and summarize the right knowledge for human labeling. Second, we summarize the pattern from prediction badcase data and re-label the training data which match the pattern. Loop this pipeline means we inject the right knowledge/rule to the deep model by re-label the training data retrieved by pattern from badcase prediction data. The experiment results verify our idea.
+Our idea can apply to a broad set of deep learning industry applications.
 
 ### References
 
