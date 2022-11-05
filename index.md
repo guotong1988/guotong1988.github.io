@@ -4,3 +4,4 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+<meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />

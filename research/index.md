@@ -14,3 +14,4 @@ permalink: /research/
   {% endfor %}
 
 </ul>
+<meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
