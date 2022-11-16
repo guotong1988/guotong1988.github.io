@@ -40,6 +40,8 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 ### Same Idea and More Applications
 
+![](/assets/png/relabel/fig1.png)
+
 #### sequence tagging
 We take named entity recognition(NER) as example for the sequence tagging like tasks. In NER task, we extract several classes of key phrase from a sentence. Follow our idea, we view each class of NER task as a classification task. Then our steps are:
 
@@ -106,6 +108,9 @@ We do the experiments of text classification and NER to verify our idea. The res
 
 The improvement reason is also based on the better and better understanding for the specific task's labeling rule/knowledge of labeling human once by once. Human-in-the-loop here means that in each loop the labeling human leader should learn and summarize the corrected rule/knowledge based on the last loop.
 
+###  Related Work
+The work\cite{ref_proc7} proposes another pseudo-label-based re-label method without human labeling, which is different from our method. Our method is to improve the industry machine learning application accuracy/precision/recall/BLEU/AUC/... to more than 97% by human re-label. 
+
 
 ### Conclusion
 
@@ -136,3 +141,6 @@ Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in
 \bibitem{ref6}
 
 Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v3 
+
+\bibitem{ref7}
+Yun S, Oh S J, Heo B, et al. Re-labeling imagenet: from single to multi-labels, from global to localized labels[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021: 2340-2350.
