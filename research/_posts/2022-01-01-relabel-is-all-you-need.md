@@ -16,7 +16,7 @@ In industry deep learning application, our manually labeled data has a certain n
 
 #### keywords
 
-Deep Learning, Human Labeling, Data Centric
+Deep Learning, Human Labeling, Data Centric, Text-to- Speech, Speech-to-Text, Text Classification, Image Classification, Sequence Tagging, Object Detection, Sequence Generation, Click-Through Rate prediction
 
 ### Introduction
 
@@ -109,7 +109,7 @@ We do the experiments of text classification and NER to verify our idea. The res
 The improvement reason is also based on the better and better understanding for the specific task's labeling rule/knowledge of labeling human once by once. Human-in-the-loop here means that in each loop the labeling human leader should learn and summarize the corrected rule/knowledge based on the last loop.
 
 ###  Related Work
-The work\cite{ref_proc7} proposes another pseudo-label-based re-label method without human labeling, which is different from our method. Our method is to improve the industry machine learning application accuracy/precision/recall/BLEU/AUC/... to more than 97% by human re-label. 
+The work\cite{ref7} proposes another pseudo-label-based re-label method without human labeling, which is different from our method. Our method is to improve the industry machine learning application accuracy/precision/recall/BLEU/AUC/... to more than 97% by human re-label. 
 
 
 ### Conclusion
