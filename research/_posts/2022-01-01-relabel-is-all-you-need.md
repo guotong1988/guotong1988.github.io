@@ -143,4 +143,5 @@ Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in
 Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v3 
 
 \bibitem{ref7}
+
 Yun S, Oh S J, Heo B, et al. Re-labeling imagenet: from single to multi-labels, from global to localized labels[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021: 2340-2350.
