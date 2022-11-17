@@ -16,7 +16,7 @@ In industry deep learning application, our manually labeled data has a certain n
 
 #### keywords
 
-Deep Learning, Human Labeling, Data Centric, Text-to- Speech, Speech-to-Text, Text Classification, Image Classification, Sequence Tagging, Object Detection, Sequence Generation, Click-Through Rate prediction
+Deep Learning, Human Labeling, Data Centric, Text-to-Speech, Speech-to-Text, Text Classification, Image Classification, Sequence Tagging, Object Detection, Sequence Generation, Click-Through Rate prediction
 
 ### Introduction
 
