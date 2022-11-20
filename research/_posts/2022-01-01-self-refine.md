@@ -125,9 +125,9 @@ Then the trained model will inference ‘aae’ to class-A, and also will infere
 
 The reason for this example is: A little wrong-label data can lead to wrong inference for some kind of new data, but the wrong-label data can be found by self-predict-and-compare method.
 
-### Conclusion}
+### Conclusion
 
-The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref_proc11} that inject the prediction result of model-A to model-B. For further applying of self-correct method, we can correct the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref_proc13}.
+The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref11} that inject the prediction result of model-A to model-B. For further applying of self-correct method, we can correct the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref13}.
 
 
 ### Reference
