@@ -14,7 +14,7 @@ description: "Self-Refine Learning For Data-Centric Text Classification"
 
 ### abstract
 
-In industry NLP application, our manually labeled data has a certain number of noisy data. We present a simple method to find the noisy data and re-label their labels to the result of model prediction. We select the noisy data whose human label is not contained in the top-K model's predictions. The model is trained on the origin dataset. The experiment result shows that our method works. For industry deep learning application, our method improve the text classification accuracy from 80.5\% to 90.6\% in dev dataset, and improve the human-evaluation accuracy from 83.2\% to 90.1\%.
+In industry NLP application, our manually labeled data has a certain number of noisy data. We present a simple method to find the noisy data and re-label their labels to the result of model prediction. We select the noisy data whose human label is not contained in the top-K model's predictions. The model is trained on the origin dataset. The experiment result shows that our method works. For industry deep learning application, our method improve the text classification accuracy from 80.5% to 90.6% in dev dataset, and improve the human-evaluation accuracy from 83.2% to 90.1%.
 
 
 #### keywords
