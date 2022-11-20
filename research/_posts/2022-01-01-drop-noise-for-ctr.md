@@ -67,7 +67,9 @@ In this section, we illustrate why drop the noise data work.
 
 Take text classification as example. If there are 2-class to classify. The sample training data is like: 
 
+
 ---
+
 
 'aac' -- class-A
 
@@ -81,7 +83,9 @@ Take text classification as example. If there are 2-class to classify. The sampl
 
 'bbe' -- class-B 
 
+
 ---
+
 
 We define that the text started with 'aa' to label class-A and started with 'bb' to label class-B.
 
@@ -89,7 +93,9 @@ Then the trained model will inference 'aae' to class-A, but will inference 'aaee
 
 Then we drop the wrong-label training data and get:
 
+
 ---
+
 
 'aac' -- class-A
 
@@ -101,7 +107,9 @@ Then we drop the wrong-label training data and get:
 
 'bbe' -- class-B 
 
+
 ---
+
 
 Then the trained model will inference 'aae' to class-A, and also will inference 'aaee' to class-A, according to the training data distribution.
 
