@@ -113,6 +113,8 @@ Then we drop the wrong-label training data and get:
 
 Then the trained model will inference 'aae' to class-A, and also will inference 'aaee' to class-A, according to the training data distribution.
 
+The reason for this example is: A little wrong-label data can lead to wrong inference for some kind of new data, but the wrong-label data can be found by self-predict-and-compare method.
+
 
 ### Conclusion
 
