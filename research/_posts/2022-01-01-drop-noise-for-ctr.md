@@ -61,6 +61,49 @@ In this section we describe detail of experiment parameters and show the experim
 
 In this section, we evaluate our methods on our real-world dataset. Our dataset-A contains 2,000,000,000 user-item click-or-not data and each data has 100 features. Table 1 shows the performance comparison on the dataset. The model is DeepFM. As our method is data-centric approach, we do not focus on which model we use.
 
+### Analysis
+
+In this section, we illustrate why drop the noise data work.
+
+Take text classification as example. If there are 2-class to classify. The sample training data is like: 
+
+---
+
+'aac' -- class-A
+
+'aad' -- class-A
+
+'aae' -- class-B -- wrong-label
+
+'bbc' -- class-B 
+
+'bbd' -- class-B 
+
+'bbe' -- class-B 
+
+---
+
+We define that the text started with 'aa' to label class-A and started with 'bb' to label class-B.
+
+Then the trained model will inference 'aae' to class-A, but will inference 'aaee' to class-B, according to the training data distribution.
+
+Then we drop the wrong-label training data and get:
+
+---
+
+'aac' -- class-A
+
+'aad' -- class-A
+
+'bbc' -- class-B 
+
+'bbd' -- class-B 
+
+'bbe' -- class-B 
+
+---
+
+Then the trained model will inference 'aae' to class-A, and also will inference 'aaee' to class-A, according to the training data distribution.
 
 
 ### Conclusion
