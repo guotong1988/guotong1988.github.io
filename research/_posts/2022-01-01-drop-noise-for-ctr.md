@@ -36,7 +36,7 @@ There are many works focus on the model-centric perspective of CTR task. Factori
 Previous works \cite{ref1} \cite{ref2} \cite{ref3} focus on the data-centric perspective on human-labeled dataset and do not apply the idea to user-generated dataset like CTR task.
  
 
-### Method}
+### Method
 
 ![](/assets/png/drop-ctr/fig1.png)
 
