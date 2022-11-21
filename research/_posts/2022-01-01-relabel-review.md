@@ -11,7 +11,7 @@ description: "Re-Label For Industry Deep Learning: A Review"
 
 # Re-Label Method: A Review
 
-### abstract
+## Abstract
 Recently, the fast development of deep learning has brought computer science to a new era. 
 In this survey, We first summarize how to achieve 97% accuracy in any human-labeled industry deep learning application in both dev dataset and human evaluation by re-label / label-again, 
 based on the principle that deep learning is rule-injected model with strong generalization ability. 
@@ -22,7 +22,7 @@ In the end, we imagine re-label method to further impossible idea.
 
 Deep Learning, Pattern Recognition, Fuzzy Matching, Similar Search, Data Centric, Human Labeling
 
-### introduction
+## Introduction
 
 Deep learning is the deep neural network that has the most strong generalization ability now. 
 And the generalization ability is based on the labeled training data. The training data is injected by human knowledge/rule.
@@ -30,6 +30,10 @@ Data centric methods without changing the ground-truth-label do not have enough 
 Re-Label Methods \cite{ref1} \cite{ref2} \cite{ref3} correct the noisy data and re-direct the wrong knowledge data,
 and achieve 97% accuracy in any human-labeled deep learning application. 
 
+
+
+
+## Further Idea
 
 ### Combine Re-label Method and Reinforcement Learning
 
@@ -46,7 +50,7 @@ Human change the base reward rule for robot/agent to refresh their knowledge.
 
 
 
-### Reference
+## Reference
 
 \bibitem{ref1}
 
