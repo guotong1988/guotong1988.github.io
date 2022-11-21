@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Re-Label For Industry Deep Learning: A Review"
+title: "Re-Label Method: A Review"
 date: 2022-01-01
 category: research
 comments: true
@@ -9,7 +9,7 @@ description: "Re-Label For Industry Deep Learning: A Review"
 ---
 
 
-# Re-Label For Industry Deep Learning: A Review
+# Re-Label Method: A Review
 
 ### abstract
 Recently, the fast development of deep learning has brought computer science to a new era. 
