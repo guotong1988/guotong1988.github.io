@@ -9,6 +9,13 @@ Hi! My name is Tong Guo. My nick name is TechOnly.
 
 Welcome to my paper blog!
 
+
+## ---
+
+Reviewer of NAACL Industry Track
+
+PC Member of EMNLP Industry Track
+
 ## Contact
 
 779222056@qq.com
