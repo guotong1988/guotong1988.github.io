@@ -127,7 +127,9 @@ In this section we describe detail of experiment parameters and show the experim
 In this section, we evaluate our methods versus other approachs on the WikiSQL dataset. See Table 1 and Table 2 for detail. The SQLova\cite{ref3} result use the BERT-Base-Uncased pretrained model and run on our machine without execution-guided decoding(EG)\cite{ref6}.
 
 ![](/assets/png/rule-text2sql/table1.png)
+
 ![](/assets/png/rule-text2sql/table2.png)
+
 ![](/assets/png/rule-text2sql/table3.png)
 
 ### Conclusion
