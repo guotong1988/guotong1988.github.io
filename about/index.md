@@ -16,10 +16,6 @@ Reviewer of NAACL Industry Track
 
 PC Member of EMNLP Industry Track
 
----
 
-## Contact
-
-779222056@qq.com
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
