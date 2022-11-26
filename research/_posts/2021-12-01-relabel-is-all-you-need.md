@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Re-Label Is All You Need"
-date: 2022-01-01
+date: 2021-12-01
 category: research
 comments: true
 author: "Tong Guo"
