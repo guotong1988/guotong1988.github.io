@@ -34,20 +34,20 @@ In this paper, we evaluate the performance of our learning framework on our item
 
 As it is shown in Figure 1, we have several terminologies to introduce:
 
-#### In-domain data / domain-specific data:
+#### In-domain data / domain-specific data
 The large amounts of data in our database. Our manually labeled dataset is sampled from this in-domain data. This in-domain data is produced by our user or customer.
 
-#### Self-training:
+#### Self-training
 We use a simple self-training method inspired by Algorithm 1. First, a teacher model is trained on the manually labeled data. Then the teacher model generates pseudo labels on unlabeled data (e.i., all the data in our database). Finally, a student is trained to optimize the loss on human labels and pseudo labels jointly.
 
-#### Pre-training:
+#### Pre-training
 This term means the training step that use hundred millions data. The step 1 of Figure 1 is training on the unlabel data. The step 1 of Figure 1 is training on the pseudo-label data. The next step of this training step is the fine-tuning step using the manually labeled data.
 
 
-#### Self-training as pre-training / task-specific training:
+#### Self-training as pre-training / task-specific training
 This term refers to the step 4 of Figure 1, which means the training step that use pseudo-label. We consider this training step as a pre-training step for the next fine-tuning step on manually labeled data. 
 
-#### Self-training for fine-tuning / task-specific fine-tuning:
+#### Self-training for fine-tuning / task-specific fine-tuning
 This term refers to the step 5 of Figure 1, which means the fine-tuning step that use both the pseudo-label data and the manually labeled data. 
 
 In detail, we aim to answer the questions: How much does self-training as pre-training perform in low-resource NLP task and high-resource NLP task? To the best of our knowledge, this is the first study exploring the improvement of self-training as pre-training (i.e., using the pseudo-label data for pre-training language models) for natural language understanding. And this is the first study exploring the self-training improvement based on the step of self-training as pre-training (i.e., adding the high-confidence-score pseudo-label data for fine-tuning based on the pre-trained model). This is also the first work exploring the combination of self-training and pre-training when the manually labeled fine-tuning dataset is relatively large (2000K).
