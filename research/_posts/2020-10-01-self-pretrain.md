@@ -159,34 +159,34 @@ In this section we describe our experimental setup and experimental results.
 
 In this section we describe the parameters in our experiments. In all the experiments except the baselines, we use 3-layer-BERT with 768 hidden size and 12 self-attention heads. (Total Parameters = 40M). For efficiency reason, we use only 3 layers of BERT, because it is an industry application and we only have limited computation resource to inference hundred millions data. And 3-layer-BERT is 200%-300% faster than 12-layer-BERT in inference time. The max sequence length for text classification task is 64. The max sequence length for the NER task is 128. The total data size are presented in Table 3. For the text classification task, we setup 3 experimental groups with different fine-tuning data size separately. The 3 different fine-tuning dataset are sampled from the total 2,000,000 data and run the learning framework independently. 
 
-### Text Classification Domain-Specific Pre-training
+#### Text Classification Domain-Specific Pre-training
 
 We use a batch size of 64 * 4-GPU and pre-train for 3,000,000 steps. We use Adam \cite{kingma2014adam} with learning rate of 5e-5, beta1 = 0.9, beta2 = 0.999, L2 weight decay of 0.01, learning rate warmup over the first 10,000 steps, and linear decay of the learning rate. We use a dropout \cite{srivastava2014dropout} probability of 0.1 on all layers. The 3-layer-BERT is initialized by the origin BERT's \cite{devlin2019bert} 3 layers. 
 
-### NER Domain-Specific Pre-training
+#### NER Domain-Specific Pre-training
 The NER domain-specific pre-training is almost the same to the text classification domain-specific pre-training. The pre-training data is item description sentence for NER and the pre-training data is concatenation of multi words (item name, item short tag, item poi name) for text classification.
 
-### Text Classification Fine-Tuning
+#### Text Classification Fine-Tuning
 We use a batch size of 64 * 1-GPU and fine-tune for 7 epochs. We use Adam with learning rate of 1e-5. The dropout probability is 0.1 on all layers. The fine-tuning data with different size in Table 2 is sampled from all the 2,000,000 data and the 40,000 test data is fixed.
 
-### NER Fine-Tuning
+#### NER Fine-Tuning
 We use a batch size of 64 * 1-GPU and fine-tune for 3 epochs. We use Adam with learning rate of 1e-5. The dropout probability is 0.1 on all layers.
 
-### Text Classification Task-Specific Pre-training
+#### Text Classification Task-Specific Pre-training
 We use a batch size of 64 * 4-GPU and pre-train for 3,000,000 steps. We use Adam with learning rate of 5e-5, beta1 = 0.9, beta2 = 0.999, L2 weight decay of 0.01, learning rate warmup over the first 10,000 steps, and linear decay of the learning rate. We use a dropout probability of 0.1 on all layers. The 3-layer-BERT is initialized by the origin BERT's \cite{devlin2019bert} 3 layers. For fair comparison, we do not initialize this step of pre-training by the result model of domain-specific pre-training step.
 
-### NER Task-Specific Pre-training
+#### NER Task-Specific Pre-training
 We use a batch size of 64 * 4-GPU and pre-train for 3,000,000 steps. We use Adam with learning rate of 5e-5, beta1 = 0.9, beta2 = 0.999, L2 weight decay of 0.01, learning rate warmup over the first 10,000 steps, and linear decay of the learning rate. We use a dropout probability of 0.1 on all layers. The 3-layer-BERT is initialized by the origin BERT's \cite{devlin2019bert} 3 layers. For fair comparison, we do not initialize this step of pre-training by the result model of domain-specific pre-training step.
 
 
 
 ### Baseline Setup
 In this section we describe the baselines in Table 2.
-### BERT-Base-3layer baseline
+#### BERT-Base-3layer baseline
  For the BERT-Base-3layer baseline, we extract 3 layers from the origin 12-layer BERT-Base \cite{devlin2019bert} and fine-tune on the manually labeled dataset. 
-### BERT-Base-12layer baseline
+#### BERT-Base-12layer baseline
  For the BERT-Base-12layer baseline, we use the origin 12-layer BERT-Base \cite{devlin2019bert} and fine-tune on the manually labeled dataset. 
-### Classic Self-training baseline
+#### Classic Self-training baseline
  For the Classic Self-training baseline, we use a simple self-training method inspired by Algorithm 1. First, a teacher model is trained on the manually labeled data. Then the teacher model generates pseudo labels on unlabeled data (e.i., all the data in our database). Finally, a student is trained to optimize the loss on human labels and pseudo labels jointly. The pseudo labels data with the high confidence score are averagely sampled from each class of all the data for fine-tuning upon the origin BERT-Base-12layer, Model-A and Model-C. 
 
 ## Experimental Results
