@@ -11,7 +11,7 @@ description: "A Comprehensive Exploration of Self-training for Pre-training Lang
 
 # Self-training For Pre-training Language Models
 
-### Abstract
+## Abstract
 
 Language model pre-training has proven to be useful in many language understanding tasks. In this paper, we investigate whether it is still helpful to add the self-training method in the pre-training step and the fine-tuning step. Towards this goal, we propose a learning framework that making best use of the unlabel data on the low-resource and high-resource labeled dataset. In industry NLP applications, we have large amounts of data produced by users or customers. Our learning framework is based on this large amounts of unlabel data. First, We use the model fine-tuned on manually labeled dataset to predict pseudo labels for the user-generated unlabeled data. Then we use the pseudo labels to supervise the task-specific training on the large amounts of user-generated data. We consider this task-specific training step on pseudo labels as a pre-training step for the next fine-tuning step. At last, we fine-tune on the manually labeled dataset upon the pre-trained model. In this work, we first empirically show that our method is able to solidly improve the performance by 3.6%, when the manually labeled fine-tuning dataset is relatively small. Then we also show that our method still is able to improve the performance further by 0.2%, when the manually labeled fine-tuning dataset is relatively large enough. We argue that our method make the best use of the unlabel data, which is superior to either pre-training or self-training alone. 
 
@@ -20,7 +20,7 @@ pre-training, self-training, text classification, named entity recognition
 
 
 
-### Introduction
+## Introduction
 
 ![](/assets/png/self-pretrain/fig1.png)
 
@@ -34,20 +34,20 @@ In this paper, we evaluate the performance of our learning framework on our item
 
 As it is shown in Figure 1, we have several terminologies to introduce:
 
-##### In-domain data / domain-specific data:
+#### In-domain data / domain-specific data:
 The large amounts of data in our database. Our manually labeled dataset is sampled from this in-domain data. This in-domain data is produced by our user or customer.
 
-##### Self-training:
+#### Self-training:
 We use a simple self-training method inspired by Algorithm 1. First, a teacher model is trained on the manually labeled data. Then the teacher model generates pseudo labels on unlabeled data (e.i., all the data in our database). Finally, a student is trained to optimize the loss on human labels and pseudo labels jointly.
 
-##### Pre-training:
+#### Pre-training:
 This term means the training step that use hundred millions data. The step 1 of Figure 1 is training on the unlabel data. The step 1 of Figure 1 is training on the pseudo-label data. The next step of this training step is the fine-tuning step using the manually labeled data.
 
 
-##### Self-training as pre-training / task-specific training:
+#### Self-training as pre-training / task-specific training:
 This term refers to the step 4 of Figure 1, which means the training step that use pseudo-label. We consider this training step as a pre-training step for the next fine-tuning step on manually labeled data. 
 
-##### Self-training for fine-tuning / task-specific fine-tuning:
+#### Self-training for fine-tuning / task-specific fine-tuning:
 This term refers to the step 5 of Figure 1, which means the fine-tuning step that use both the pseudo-label data and the manually labeled data. 
 
 In detail, we aim to answer the questions: How much does self-training as pre-training perform in low-resource NLP task and high-resource NLP task? To the best of our knowledge, this is the first study exploring the improvement of self-training as pre-training (i.e., using the pseudo-label data for pre-training language models) for natural language understanding. And this is the first study exploring the self-training improvement based on the step of self-training as pre-training (i.e., adding the high-confidence-score pseudo-label data for fine-tuning based on the pre-trained model). This is also the first work exploring the combination of self-training and pre-training when the manually labeled fine-tuning dataset is relatively large (2000K).
@@ -61,7 +61,7 @@ In summary, our contributions include:
 • We explore different experimental factors on our text classification dataset and NER dataset. The experiment results prove that the pre-training with task-specific loss and no-MaskLM (masked language model) loss is the best way to make use of the unlabel data. We also find that pre-training using KL-divergence loss with pre-softmax logits is better than cross-entropy loss with one-hot pseudo-label, which is corresponding to the step 4 of Figure 1.
 
 
-### Related Work
+## Related Work
 
 ![](/assets/png/self-pretrain/alg1.png)
 
@@ -79,7 +79,7 @@ Self-training \cite{blum1998combining,zhou2004democratic,zhou2005tri} is one of 
 
 
 
-### Our Dataset
+## Our Dataset
 
 In this section, we describe our datasets. The item examples are shown in Table 1. The task examples are shown in Table 2. The data size information is shown in Table 3.
 
@@ -88,11 +88,11 @@ In this section, we describe our datasets. The item examples are shown in Table 
 
 
 
-#### Chinese Text Classification Dataset
+### Chinese Text Classification Dataset
 
 This task is to predict the item type or category, given the item name, item short tag, item POI name. We define 311 classes/types for all the items. The model inputs are item name, item short tag given by POI and the POI name of item. We manually labeled 2,040,000 data. The total item number is 500 million.
 
-#### Chinese NER Dataset
+### Chinese NER Dataset
 
 This task is to extract all the item properties from item description. The item description is a short paragraph written by users. We manually labeled 50,000 data. The total item description number is 200 million. There are 500 million items in total, in which 200 million items have the their descriptions.
 
@@ -100,12 +100,12 @@ This task is to extract all the item properties from item description. The item 
 
 
 
-### Our Method
+## Our Method
 
 In this section, we describe our method in detail. As the Figure 1 shows, our framework includes 5 steps, so we separate this section into 5 subsections: In subsection 4-1, we describe the domain-specific pre-training with unlabeled data. In subsection 4-2, we describe the task-specific fine-tuning with the manually labeled data. In subsection 4-3, we describe the inference step by the fine-tuned model of last step.  In subsection 4-4, we describe the task-specific pre-training with the pseudo-label predicted by the fine-tuned model. In this paper, the step that training the model with the task-specific loss on pseudo-label data is also considered as a pre-training step for the next step. In subsection 4-5, we describe the task-specific fine-tuning which is almost same to subsection 4-2 to get the final model.
 
 
-#### Domain-Specific Pre-training
+### Domain-Specific Pre-training
 
 This is the first step of our method. This step is almost the same to the origin BERT's \cite{devlin2019bert} pre-training step except the data preparation. We use all the in-domain data in our database for pre-training.  
 
@@ -122,7 +122,7 @@ For our Chinese NER task, the model's input is the item description short paragr
 
 ![](/assets/png/self-pretrain/fig5.png)
 
-#### Task-Specific Fine-Tuning
+### Task-Specific Fine-Tuning
 
 This is the second step of our method. We use the model parameter of the last step to initialize this step's model. 
 
@@ -130,7 +130,7 @@ For our Chinese text classification task, we follow the origin BERT \cite{devlin
 
 For our Chinese NER task, we use the CRF(Conditional Random Field) loss. The total fine-tuning data number is our 50,000 manually labeled data. We split all the data to 19:1 as training dataset and test dataset.
 
-#### Inference Step
+### Inference Step
 
 This is the third step of our method. This step is to use the fine-tuned model of last subsection to predict a pseudo-label for all the in-domain data.
 
@@ -138,7 +138,7 @@ For our Chinese text classification task, we use the fine-tuned model of the las
 
 For our Chinese NER task, we use the fine-tuned model of the last subsection to predict the sequence tagging pseudo-label for all the 200 million unlabeled data. Then we get the 200 million NER data with pseudo-label. The pseudo-label could be the one-hot label sequence or the pre-softmax logits.
 
-#### Task-specific Pre-training
+### Task-specific Pre-training
 
 This is the fourth step of our method. We use the pseudo-label of last step as the pseudo ground truth label for training. We consider this training step as the pre-training step for the next step.
 
@@ -146,88 +146,90 @@ For our Chinese text classification task, the model input is the masked text, wh
 
 For our Chinese NER task, the model input is masked text, which is the item description short paragraph. There are four kinds of experiment: 1) The sum of the CRF loss and the MaskLM loss. 2) The CRF loss only. 3) The sum of the KL-divergence loss on the pre-softmax logits and the MaskLM loss. 4) The KL-divergence loss on the pre-softmax logits only. In detail, we use all the tokens' output sequence of BERT for computing the CRF loss and MaskLM loss. The detail is shown in Figure 3 and Figure 5.
 
-#### Final Task-specific Fine-tuning
+### Final Task-specific Fine-tuning
 
 This is the final step of our method. We find that fine-tuning on the manually labeled dataset without pseudo-label high-score data is better. For the classic self-training comparison experiment, we randomly sampled the addition data from each class of the pseudo-label high-score data. We use the pre-trained model of subsection 4-4 for fine-tuning. 
 
-![](/assets/png/self-pretrain/table4.png)
 
-### Experiments
+
+## Experiments
 In this section we describe our experimental setup and experimental results.
 
-#### Experimental Setup
+### Experimental Setup
 
 In this section we describe the parameters in our experiments. In all the experiments except the baselines, we use 3-layer-BERT with 768 hidden size and 12 self-attention heads. (Total Parameters = 40M). For efficiency reason, we use only 3 layers of BERT, because it is an industry application and we only have limited computation resource to inference hundred millions data. And 3-layer-BERT is 200%-300% faster than 12-layer-BERT in inference time. The max sequence length for text classification task is 64. The max sequence length for the NER task is 128. The total data size are presented in Table 3. For the text classification task, we setup 3 experimental groups with different fine-tuning data size separately. The 3 different fine-tuning dataset are sampled from the total 2,000,000 data and run the learning framework independently. 
 
-#### Text Classification Domain-Specific Pre-training
+### Text Classification Domain-Specific Pre-training
 
 We use a batch size of 64 * 4-GPU and pre-train for 3,000,000 steps. We use Adam \cite{kingma2014adam} with learning rate of 5e-5, beta1 = 0.9, beta2 = 0.999, L2 weight decay of 0.01, learning rate warmup over the first 10,000 steps, and linear decay of the learning rate. We use a dropout \cite{srivastava2014dropout} probability of 0.1 on all layers. The 3-layer-BERT is initialized by the origin BERT's \cite{devlin2019bert} 3 layers. 
 
-#### NER Domain-Specific Pre-training
+### NER Domain-Specific Pre-training
 The NER domain-specific pre-training is almost the same to the text classification domain-specific pre-training. The pre-training data is item description sentence for NER and the pre-training data is concatenation of multi words (item name, item short tag, item poi name) for text classification.
 
-#### Text Classification Fine-Tuning
+### Text Classification Fine-Tuning
 We use a batch size of 64 * 1-GPU and fine-tune for 7 epochs. We use Adam with learning rate of 1e-5. The dropout probability is 0.1 on all layers. The fine-tuning data with different size in Table 2 is sampled from all the 2,000,000 data and the 40,000 test data is fixed.
 
-#### NER Fine-Tuning
+### NER Fine-Tuning
 We use a batch size of 64 * 1-GPU and fine-tune for 3 epochs. We use Adam with learning rate of 1e-5. The dropout probability is 0.1 on all layers.
 
-#### Text Classification Task-Specific Pre-training
+### Text Classification Task-Specific Pre-training
 We use a batch size of 64 * 4-GPU and pre-train for 3,000,000 steps. We use Adam with learning rate of 5e-5, beta1 = 0.9, beta2 = 0.999, L2 weight decay of 0.01, learning rate warmup over the first 10,000 steps, and linear decay of the learning rate. We use a dropout probability of 0.1 on all layers. The 3-layer-BERT is initialized by the origin BERT's \cite{devlin2019bert} 3 layers. For fair comparison, we do not initialize this step of pre-training by the result model of domain-specific pre-training step.
 
-#### NER Task-Specific Pre-training
+### NER Task-Specific Pre-training
 We use a batch size of 64 * 4-GPU and pre-train for 3,000,000 steps. We use Adam with learning rate of 5e-5, beta1 = 0.9, beta2 = 0.999, L2 weight decay of 0.01, learning rate warmup over the first 10,000 steps, and linear decay of the learning rate. We use a dropout probability of 0.1 on all layers. The 3-layer-BERT is initialized by the origin BERT's \cite{devlin2019bert} 3 layers. For fair comparison, we do not initialize this step of pre-training by the result model of domain-specific pre-training step.
+
+
+
+### Baseline Setup
+In this section we describe the baselines in Table 2.
+### BERT-Base-3layer baseline
+ For the BERT-Base-3layer baseline, we extract 3 layers from the origin 12-layer BERT-Base \cite{devlin2019bert} and fine-tune on the manually labeled dataset. 
+### BERT-Base-12layer baseline
+ For the BERT-Base-12layer baseline, we use the origin 12-layer BERT-Base \cite{devlin2019bert} and fine-tune on the manually labeled dataset. 
+### Classic Self-training baseline
+ For the Classic Self-training baseline, we use a simple self-training method inspired by Algorithm 1. First, a teacher model is trained on the manually labeled data. Then the teacher model generates pseudo labels on unlabeled data (e.i., all the data in our database). Finally, a student is trained to optimize the loss on human labels and pseudo labels jointly. The pseudo labels data with the high confidence score are averagely sampled from each class of all the data for fine-tuning upon the origin BERT-Base-12layer, Model-A and Model-C. 
+
+## Experimental Results
+In this section, we present experiment results on the text classification task and the NER task. The detail results are presented in Table 4-11. The text classification accuracy means the exact match of predicted class and the ground truth. There are 311 classes in the task. The NER F1 is same to the definition of CoNLL \cite{sang2003introduction}.  The BERT-Base baseline's pre-trained model is from the origin official Github repository. The BERT-Base-3layer is extracted from the origin official BERT-Base-12layer.
+
+![](/assets/png/self-pretrain/table4.png)
 
 ![](/assets/png/self-pretrain/table5678.png)
 
 ![](/assets/png/self-pretrain/table91011.png)
 
-#### Baseline Setup
-In this section we describe the baselines in Table 2.
-#### BERT-Base-3layer baseline
- For the BERT-Base-3layer baseline, we extract 3 layers from the origin 12-layer BERT-Base \cite{devlin2019bert} and fine-tune on the manually labeled dataset. 
-#### BERT-Base-12layer baseline
- For the BERT-Base-12layer baseline, we use the origin 12-layer BERT-Base \cite{devlin2019bert} and fine-tune on the manually labeled dataset. 
-#### Classic Self-training baseline
- For the Classic Self-training baseline, we use a simple self-training method inspired by Algorithm 1. First, a teacher model is trained on the manually labeled data. Then the teacher model generates pseudo labels on unlabeled data (e.i., all the data in our database). Finally, a student is trained to optimize the loss on human labels and pseudo labels jointly. The pseudo labels data with the high confidence score are averagely sampled from each class of all the data for fine-tuning upon the origin BERT-Base-12layer, Model-A and Model-C. 
-
-### Experimental Results
-In this section, we present experiment results on the text classification task and the NER task. The detail results are presented in Table 4-11. The text classification accuracy means the exact match of predicted class and the ground truth. There are 311 classes in the task. The NER F1 is same to the definition of CoNLL \cite{sang2003introduction}.  The BERT-Base baseline's pre-trained model is from the origin official Github repository. The BERT-Base-3layer is extracted from the origin official BERT-Base-12layer.
-
-
-
-### Analysis
+## Analysis
 
 In this section, we analysis our experiment results on Table 4.  we focus on the effect of two factors: the size of the fine-tuning dataset, the data content of the pre-training dataset.
 
-##### Fine-tuning data size.
+#### Fine-tuning data size
 In low-resource dataset, the whole gain of our framework is 3.6% (from 87.0% to 90.6%) for the text classification task. In high-resource dataset, the whole gain of our framework is 1.1% (from 90.8% to 91.9%) for the text classification task. We also observe that pre-training with pseudo-label data (i.e., step 4 of Figure 1) is able to improve the performance in high-resource dataset while fine-tuning with manually labeled data and pseudo-label data is not able to improve the performance in high-resource dataset. In the NER task, the stable improvement of in-domain pre-training (i.e., step 1 of Figure 1) is only 0.2% (from 88.6% to 88.8%), compared to the whole 1.0% (from 88.6% to 89.6%) improvement of the learning framework in the NER task. While the improvement of in-domain pre-training for the text classification task is 0.9% (from 90.8% to 91.9%). And the whole improvement is 1.1% (from 90.8% to 91.9%) for the text classification task.
 
-##### In-domain data and out-domain data.
+#### In-domain data and out-domain data
 The domain-specific pre-training (i.e., the step 1 of Figure 1) gain of the text classification task is more than the gain of the NER task. The gain of in-domain pre-training (i.e., the step 1 of Figure 1) for text classification task is 0.7% (from 87.5% to 88.2%). The gain of in-domain pre-training (i.e., the step 1 of Figure 1) for the NER task is 0.1% (from 88.7% to 88.8%). The reason is that the input of the text classification task is the concatenation of multi words (item name, item short tag, item poi name), which is not consistent to the origin BERT's \cite{devlin2019bert} pre-training. The origin BERT's pre-training uses the Chinese Wikipedia natural language sentences. And the NER task's in-domain pre-training uses natural language sentences in our database, which is not that much different to the data format of origin BERT.
 
 
 
-#### Ablation Studies
+### Ablation Studies
 
 In this section, we perform ablation experiments over a number of facets in order to better understand their relative importance, which is corresponding to Table 5-8. 
 
-##### In Table 5
+#### In Table 5
 we show the ablation experiment results over in-domain pre-training corresponding to step 1 of Figure 1.  The gain of the text classification task (from 87.0% to 88.2%) shows the power of in-domain continued pre-training on unlabel data. Although the gain of NER task (from 88.7% to 88.8%) is small, we speedup the model inference by 200%-300% as we replace the 12-layer BERT to 3-layer BERT.
 
-##### In Table 6
+#### In Table 6
 we show the ablation experiment results between unlabel pre-training and pseudo-label pre-training, corresponding to step 1 and 4 of Figure 1. The gain of the text classification task (from 91.7% to 91.9%)  proves that pseudo-label pre-training (i.e., the step 4 of Figure 1) can still improve the performance, even the fine-tuning dataset is very large.
 
-##### In Table 7
+#### In Table 7
 we show the ablation experiment results between logits-based loss and one-hot label-based loss. For the task-specific pre-training step on text classification (i.e., the step 4 of Figure 1), using the KL-divergence loss with pre-softmax logits get more gain than the cross-entropy loss with one-hot pseudo-label. We think the reason is that the pre-softmax logits contains more pre-training information than one-hot pseudo-label.
 
-##### In Table 8
+#### In Table 8
 we show the ablation experiment results between masked text and the origin text in the task-specific pre-training step. For the task-specific pre-training step (i.e., the step 4 of Figure 1), adding the MaskLM loss or masking 15% tokens of the input text do not get more gain, compared to the no-mask or no-noisy text input. We also observer that no-mask or no-noisy text input for pre-training with pseudo-label is able to improve the performance, even when is fine-tuning dataset is relatively large (2000K).
 
 
 
 
-### Conclusion
+## Conclusion
 
 In summary, we reveal these conclusions (detail conclusions are shown in Table 9-11):
 
@@ -245,7 +247,7 @@ In summary, we reveal these conclusions (detail conclusions are shown in Table 9
 
 In the end, our main contribution is we answered the question: Combining pre-training and self-training to make best use of large amounts of unlabeled data improves the fine-tuning performance. We propose a learning framework using no-masked logits-based pseudo-label data for pre-training, which is superior to either pre-training or self-training alone. The experiment result shows that our learning framework make the best use of the unlabel data even when is fine-tuning dataset is relatively large. 
 
-### Reference
+## Reference
 
 ```
 @inproceedings{devlin2019bert,
