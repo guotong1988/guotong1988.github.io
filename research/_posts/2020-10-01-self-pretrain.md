@@ -67,7 +67,10 @@ In summary, our contributions include:
 
 
 
-There is a long history of pre-training language representations\cite{brown1992class,ando2005framework,blitzer2006domain,pennington2014glove,mikolov2013distributed,turian2010word,mnih2009scalable,kiros2015skip,logeswaran2018efficient,jernite2017discourse,hill2016learning}, and we briefly review the most widely-used approaches in this section.
+There is a long history of pre-training language representations\cite{brown1992class,ando2005framework,blitzer2006domain,
+pennington2014glove,mikolov2013distributed,turian2010word,mnih2009scalable,
+kiros2015skip,logeswaran2018efficient,jernite2017discourse,hill2016learning}, 
+and we briefly review the most widely-used approaches in this section.
 
 BERT \cite{devlin2019bert} is based on the multi-layer transformer encoder \cite{vaswani2017attention}, which produces contextual token representations that have been pre-trained from unlabeled text and fine-tuned for a supervised downstream task. BERT achieved previously state-of-the-art results on many sentence-level tasks from the GLUE benchmark \cite{wang2018glue}. There are two steps in BERT's framework: pre-training and fine-tuning. During pre-training, the model is trained on unlabeled data by using masked language model task and next sentence prediction task. Apart from output layers, the same architectures are used in both pre-training and fine-tuning. The same pre-trained model parameters are used to initialize models for different down-stream tasks. 
 
@@ -237,7 +240,7 @@ In summary, we reveal these conclusions (detail conclusions are shown in Table 9
 
 2) For high-resource manually labeled dataset, pre-training with task-specific loss (i.e., step 4 of Figure 1) without masking the input text is the only way to further improve the performance.
 
-3) For pre-training with task-specific loss (i.e., step 4 of Figure 1), input the text without masking is better than masking 15\% tokens of the text.
+3) For pre-training with task-specific loss (i.e., step 4 of Figure 1), input the text without masking is better than masking 15% tokens of the text.
 
 4) For pre-training with task-specific loss (i.e., step 4 of Figure 1), using the KL-divergence loss computed on pre-softmax logits is better than cross-entropy loss computed on one-hot pseudo-label.
 
