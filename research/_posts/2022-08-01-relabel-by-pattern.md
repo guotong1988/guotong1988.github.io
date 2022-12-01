@@ -66,28 +66,22 @@ In this paper, we solve the problem of the low accuracy under human evaluation a
 Our idea can apply to a broad set of deep learning industry applications.
 
 ### References
-
+```
 \bibitem{ref1}
-
 Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25: 1097-1105.
 
 \bibitem{ref2}
-
 Guo T. Learning From Human Correction For Data-Centric Deep Learning[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref3}
-
 Yu T, Li Z, Zhang Z, et al. Typesql: Knowledge-based type-aware neural text-to-sql generation[J]. arXiv preprint arXiv:1804.09769, 2018.
 
 \bibitem{ref4}
-
 Guo T, Gao H. Content enhanced bert-based text-to-sql generation[J]. arXiv preprint arXiv:1910.07179, 2019.
 
 \bibitem{ref5}
-
 https://github.com/guotong1988/Chinese-NER-InjectDictRule
 
 \bibitem{ref6}
-
 Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v5 
-
+```
