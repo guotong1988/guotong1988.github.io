@@ -101,47 +101,37 @@ We will do more experiments on CLUE \cite{ref9} in the future.
 
 
 ### References
-
+```
 \bibitem{ref1}
-
 Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
 
 \bibitem{ref2}
-
 Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25: 1097-1105.
 
 \bibitem{ref3}
-
 Wang A, Singh A, Michael J, et al. GLUE: A multi-task benchmark and analysis platform for natural language understanding[J]. arXiv preprint arXiv:1804.07461, 2018.
 
 \bibitem{ref4}
-
 Kingma D P, Ba J. Adam: A method for stochastic optimization[J]. arXiv preprint arXiv:1412.6980, 2014.
 
 \bibitem{ref5}
-
 Srivastava N, Hinton G, Krizhevsky A, et al. Dropout: a simple way to prevent neural networks from overfitting[J]. The journal of machine learning research, 2014, 15(1): 1929-1958.
 
 \bibitem{ref9}
-
 Xu L, Hu H, Zhang X, et al. Clue: A chinese language understanding evaluation benchmark[J]. arXiv preprint arXiv:2004.05986, 2020.
 
 \bibitem{ref10}
-
 Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in neural information processing systems. 2017: 5998-6008.
 
 \bibitem{ref11}
-
 de Wynter, Adrian, and Daniel J. Perry. "Optimal Subarchitecture Extraction For BERT." arXiv preprint arXiv:2010.10499 (2020).
 
 \bibitem{ref12}
-
 Jiang, Zihang, et al. "Convbert: Improving bert with span-based dynamic convolution." arXiv preprint arXiv:2008.02496 (2020).
 
 \bibitem{ref13}
-
 Zhang, Ye, and Byron Wallace. "A sensitivity analysis of (and practitioners' guide to) convolutional neural networks for sentence classification." arXiv preprint arXiv:1510.03820 (2015).
 
 \bibitem{ref14}
-
 Huang, Gao, et al. "Densely connected convolutional networks." Proceedings of the IEEE conference on computer vision and pattern recognition. 2017.
+```
