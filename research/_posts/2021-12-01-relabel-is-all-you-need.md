@@ -106,7 +106,7 @@ We do the experiments of text classification and NER to verify our idea. The res
 
 ### Analysis
 
-Why re-label method work? Because deep learning is statistic-based. Take classification as example. If there are three **very similar** data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will predict class-A for data-3.
+Why re-label method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the task can be view as classification.) If there are three **very similar** data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will predict class-A for data-3.
 
 The improvement reason is also based on the better and better understanding for the specific task's labeling rule/knowledge of labeling human once by once. Human-in-the-loop here means that in each loop the labeling human leader should learn and summarize the corrected rule/knowledge based on the last loop.
 
