@@ -51,15 +51,13 @@ Human change the base reward rule for robot/agent to refresh their knowledge.
 
 
 ## Reference
-
+```
 \bibitem{ref1}
-
 Guo T. Learning From Human Correction For Data-Centric Deep Learning[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref2}
-
 Guo T. Re-Label Is All You Need[J].
 
 \bibitem{ref3}
-
 Guo, Tong (2022): Re-Label By Data Pattern Is All You Need For Knowledge Driven Deep Learning. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.20485917.v3 
+```
