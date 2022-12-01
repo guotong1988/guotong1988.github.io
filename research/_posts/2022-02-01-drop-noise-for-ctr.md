@@ -125,29 +125,23 @@ Based on the good performance of previous works  \cite{ref1} \cite{ref2} \cite{r
 
 
 ### Reference
-
+```
 \bibitem{ref1}
-
 Guo T. Learning From Human Correction For Data-Centric Deep Learning[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref2}
-
 Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v3 
 
 \bibitem{ref3}
-
 Guo, Tong (2021): Achieving 90% In Data-Centric Industry Deep Learning Task. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v2 
 
 \bibitem{ref4}
-
 [Rendle, 2010] Steffen Rendle. Factorization machines. In ICDM, 2010.
 
 \bibitem{ref5}
-
 Guo H, Tang R, Ye Y, et al. DeepFM: a factorization-machine based neural network for CTR prediction[J]. arXiv preprint arXiv:1703.04247, 2017.
 
 \bibitem{ref6}
-
 Cheng H T, Koc L, Harmsen J, et al. Wide \& deep learning for recommender systems[C]//Proceedings of the 1st workshop on deep learning for recommender systems. 2016: 7-10.
-
+```
 
