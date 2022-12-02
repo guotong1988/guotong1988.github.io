@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Self-Reference Human Labeling For Industry Deep Learning"
+title: "Self-Guided Human Labeling For Industry Deep Learning"
 date: 2022-11-01
 category: research
 comments: true
 author: "Tong Guo"
-description: "Self-Reference Human Labeling For Industry Deep Learning"
+description: "Self-Guided Human Labeling For Industry Deep Learning"
 ---
 
 
-# Self-Reference Human Labeling For Industry Deep Learning
+# Self-Guided Human Labeling For Industry Deep Learning
 
 ### Abstract
 
