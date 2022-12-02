@@ -111,8 +111,9 @@ Why re-label method work? Because deep learning is statistic-based. Take classif
 The improvement reason is also based on the better and better understanding for the specific task's labeling rule/knowledge of labeling human once by once. Human-in-the-loop here means that in each loop the labeling human leader should learn and summarize the corrected rule/knowledge based on the last loop.
 
 ###  Related Work
-The work\cite{ref7} proposes another pseudo-label-based re-label method without human labeling, which is different from our method. Our method is to improve the industry machine learning application accuracy/precision/recall/BLEU/AUC/... to more than 97% by human re-label. 
+The work\cite{ref7} proposes pseudo-label-based method to improve data quality without human re-label, which is different from our method. Our method is to improve the industry machine learning application accuracy/precision/recall/BLEU/AUC/... to more than 97% by human re-label. 
 
+The work\cite{ref8} proposes label-guess-based method to improve data quality without human re-label, which is different from our method. Our method get the guess-label as reference for human re-label.
 
 ### Conclusion
 
@@ -140,4 +141,7 @@ Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. Tec
 
 \bibitem{ref7}
 Yun S, Oh S J, Heo B, et al. Re-labeling imagenet: from single to multi-labels, from global to localized labels[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021: 2340-2350.
+
+\bibitem{ref8}
+Nicholson B, Zhang J, Sheng V S, et al. Label noise correction methods[C]//2015 IEEE International Conference on Data Science and Advanced Analytics (DSAA). IEEE, 2015: 1-9.
 ```
