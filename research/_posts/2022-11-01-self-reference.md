@@ -19,7 +19,7 @@ We first manually label a high quality small seed dataset.
 Then we train model upon the seed dataset.
 Then we predict labels for the next unlabel data. 
 The model's top-10 predictions are the references for human labeling.
-The experiment results shows that, the model trained upon our self-guided dataset can achieve ~90% accuracy in its own training dataset.
+The experiment results shows that, the models trained upon our self-guided dataset can achieve ~90% accuracy in its own training dataset.
 
 #### keywords
 Deep Learning, Human Labeling, Data Centric, Human-In-The-Loop
