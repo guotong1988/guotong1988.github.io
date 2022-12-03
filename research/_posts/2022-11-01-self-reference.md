@@ -14,8 +14,12 @@ description: "Self-Guided Human Labeling For Industry Deep Learning"
 ### Abstract
 
 In human-labeled industry deep learning application, the human-labeled data quality determine the model performance. 
-To gurantee the data quality, we propose our self-guided or self-reference method.
-
+To gurantee the data quality, we propose our self-guided or self-reference method. 
+We first manually label a high quality small seed dataset.
+Then we train model upon the seed dataset.
+Then we predict labels for the next unlabel data. 
+The model's top-10 predictions are the references for human labeling.
+The experiment results shows that, the model trained upon our self-guided dataset can achieve ~90% accuracy in its own training dataset.
 
 #### keywords
 Deep Learning, Human Labeling, Data Centric, Human-In-The-Loop
