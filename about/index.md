@@ -9,6 +9,7 @@ Hi! My name is Tong Guo. My nick name is TechOnly.
 
 Welcome to my paper blog!
 
+Disscussion about my research can be post at https://github.com/guotong1988/guotong1988.github.io/issues
 
 ## Other Info
 
