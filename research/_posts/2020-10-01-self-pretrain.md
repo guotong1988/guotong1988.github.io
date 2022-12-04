@@ -22,7 +22,6 @@ pre-training, self-training, text classification, named entity recognition
 
 ## 1. Introduction
 
-![](/assets/png/self-pretrain/fig1.png)
 
 
 Deep neural networks often require large amounts of labeled data to achieve good performance. However, acquiring labels is a costly process, which motivates research on methods that can effectively utilize unlabeled data to improve performance. Towards this goal, semi-supervised learning \cite{chapelle2009semi} and pre-training are proposed to take advantage of both labeled and unlabeled data. Self-training \cite{scudder1965probability,yarowsky1995unsupervised} is a semi-supervised method which uses a teacher model, trained using labeled data, to create pseudo labels for unlabeled data. Then, a student model is trained with this new training set to yield the final model. Meanwhile, language model pre-training has been shown to be effective for improving many natural language processing (NLP) tasks \cite{devlin2019bert,brown2020language,peters2018deep,radford2019language,radford2018improving}. Previous studies \cite{gururangan2020don,lee2020biobert,beltagy2019scibert} also have shown the benefit of continued pre-training on domain-specific unlabeled data. Then our direct motivation is to answer the question: Do pre-training combined with self-training further improves the fine-tuning performance? Are they complementary? In this paper, we try to answer this question by using the pseudo-label data for pre-training language model.
@@ -31,6 +30,7 @@ We are one of the largest Chinese dining and delivery platform. The report shows
 
 In this paper, we evaluate the performance of our learning framework on our item (a specific food) type text classification task and item property named entity recognition (NER) task. For the item type text classification task, our goal is to predict the 1 food type in 311 classes/types for all the 500 million items, given the item name, item short tag written by POI (Point of Interest, a specific store or restaurant) and item's POI name. For the item property NER task, our goal is to extract item property (such as benefit for stomach, sweet and chewy, cool and refreshing) from item description. The task detail is described in section 3.
 
+![fig1](/assets/png/self-pretrain/fig1.png)
 
 As it is shown in Figure 1, we have several terminologies to introduce:
 
@@ -63,7 +63,7 @@ In summary, our contributions include:
 
 ## 2. Related Works
 
-![](/assets/png/self-pretrain/alg1.png)
+![alg1](/assets/png/self-pretrain/alg1.png)
 
 
 
@@ -86,7 +86,7 @@ Self-training \cite{blum1998combining,zhou2004democratic,zhou2005tri} is one of 
 
 In this section, we describe our datasets. The item examples are shown in Table 1. The task examples are shown in Table 2. The data size information is shown in Table 3.
 
-![](/assets/png/self-pretrain/table123.png)
+![table1-2-3](/assets/png/self-pretrain/table123.png)
 
 
 
@@ -117,13 +117,13 @@ For our Chinese text classification task, the model's 3 inputs are item name, it
 For our Chinese NER task, the model's input is the item description short paragraph. We follow the RoBERTa setting and use the character-level word masking in the short paragraph. The max sequence length is 128 and we remove the next-sentence-predict loss. For efficiency reason, we use 3-layer-BERT in our experiment. We extract 3 layers from the origin official pre-trained BERT as the initialized parameter. The total pre-training data number is 200 million. 
 
 
-![](/assets/png/self-pretrain/fig2.png)
+![fig2](/assets/png/self-pretrain/fig2.png)
 
-![](/assets/png/self-pretrain/fig3.png)
+![fig3](/assets/png/self-pretrain/fig3.png)
 
-![](/assets/png/self-pretrain/fig4.png)
+![fig4](/assets/png/self-pretrain/fig4.png)
 
-![](/assets/png/self-pretrain/fig5.png)
+![fig5](/assets/png/self-pretrain/fig5.png)
 
 ### 4.2 Task-Specific Fine-Tuning
 
@@ -195,11 +195,11 @@ In this section we describe the baselines in Table 2.
 ### 5.3 Experimental Results
 In this section, we present experiment results on the text classification task and the NER task. The detail results are presented in Table 4-11. The text classification accuracy means the exact match of predicted class and the ground truth. There are 311 classes in the task. The NER F1 is same to the definition of CoNLL \cite{sang2003introduction}.  The BERT-Base baseline's pre-trained model is from the origin official Github repository. The BERT-Base-3layer is extracted from the origin official BERT-Base-12layer.
 
-![](/assets/png/self-pretrain/table4.png)
+![table4](/assets/png/self-pretrain/table4.png)
 
-![](/assets/png/self-pretrain/table5678.png)
+![table5-6-7-8](/assets/png/self-pretrain/table5678.png)
 
-![](/assets/png/self-pretrain/table91011.png)
+![table9-10-11](/assets/png/self-pretrain/table91011.png)
 
 ## 6. Analysis
 
