@@ -100,7 +100,7 @@ As it is shown in Table 1, we get the conclusion that the only lack of origin BE
 We will do more experiments on CLUE \cite{ref9} in the future.
 
 
-### Reference
+### References
 ```
 \bibitem{ref1}
 Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
