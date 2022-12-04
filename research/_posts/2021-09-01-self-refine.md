@@ -34,14 +34,14 @@ Based on our industry dataset, we first find the noisy data which human label is
 
  
 
-### 2. Relate work
+### 2. Relate Works
 
 BERT \cite{ref1} is built by the multi-layer transformer encoder \cite{ref10}, which produces self-attended token representations that have been pre-trained from unlabeled text and fine-tuned for the supervised downstream tasks. BERT achieved state-of-the-art results on many sentence-level tasks on the GLUE benchmark \cite{ref3} and CLUE\cite{ref12} benchmark. 
 
 
 Our method is different to semi-supervised learning. Semi-supervised learning solve the problem that making best use of a large amount of unlabeled data. These works include UDA \cite{ref6}, Mixmatch \cite{ref7}, Fixmatch \cite{ref8}, Remixmatch \cite{ref9}. Our work is full supervised.
 
-### 3. Our method
+### 3. Our Method
 
 In this section, we describe our method in detail. Our methods is shown in Fig 1. It includes 5 steps:
 
