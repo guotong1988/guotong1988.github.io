@@ -24,31 +24,35 @@ The experiment results shows that, the models trained upon our self-guided datas
 #### keywords
 Deep Learning, Human Labeling, Data Centric, Human-In-The-Loop
 
-### Introduction
+### 1. Introduction
 
 Deep Learning has been shown to be effective for many artificial intelligence tasks. 
 In human-labeled industry deep learning application, data quality or label quality determine the model performance.
 
 
 
-### Our Method
+### 2. Our Method
 
 ![](/assets/png/self-reference/fig1.png)
 
-#### Seed data prepare 
+#### 2.1 Seed data prepare 
 The seed 10% data should uniformly sample from all the 100% data. Take text related task as example, we first sort the text dataset by string order and then sample by `1 % 10`.
 
+#### 2.2 
 
-### Experiments
 
 
-### Analysis
+### 3. Experiments
 
-### Relate Work
 
-### Conclusion
+### 4. Analysis
+
+### 5. Relate Work
+
+### 6. Conclusion
 
 
 ### Reference
-
+```
 \bibitem{ref1}
+```
