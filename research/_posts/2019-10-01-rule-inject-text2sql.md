@@ -32,7 +32,7 @@ In order to solve the problem that the table content is not used for model, we p
 
 ![](/assets/png/rule-text2sql/fig1.png)
 
-### 2. Related Work
+### 2. Related Works
 
 WikiSQL \cite{ref1} is a large semantic parsing dataset. It has 80654 natural language and corresponding SQL pairs. The examples of WikiSQL are shown in fig. 1. 
 
@@ -122,7 +122,7 @@ $$
 
 In this section we describe detail of experiment parameters and show the experiment result.
 
-#### 5.1 Experiment Result
+#### 5.1 Experiment Results
 
 In this section, we evaluate our methods versus other approachs on the WikiSQL dataset. See Table 1 and Table 2 for detail. The SQLova\cite{ref3} result use the BERT-Base-Uncased pretrained model and run on our machine without execution-guided decoding(EG)\cite{ref6}.
 
