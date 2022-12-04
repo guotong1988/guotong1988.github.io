@@ -38,7 +38,7 @@ Previous works \cite{ref1} \cite{ref2} \cite{ref3} focus on the data-centric per
 
 ### 3. Method
 
-![](/assets/png/drop-ctr/fig1.png)
+![fig1](/assets/png/drop-ctr/fig1.png)
 
 In this section, we describe our method in detail. Our methods is shown in Fig 1. It includes 5 steps:
 
@@ -60,6 +60,10 @@ In this section we describe detail of experiment parameters and show the experim
 #### 4.1 Experiment Results
 
 In this section, we evaluate our methods on our real-world dataset. Our dataset-A contains 2,000,000,000 user-item click-or-not data and each data has 100 features. Table 1 shows the performance comparison on the dataset. The model is DeepFM. As our method is data-centric approach, we do not focus on which model we use.
+
+
+![table1](/assets/png/drop-ctr/table1.png)
+
 
 ### 5. Analysis
 
@@ -119,9 +123,6 @@ The reason for this example is: A little wrong-label data can lead to wrong infe
 ### 6. Conclusion
 
 Based on the good performance of previous works  \cite{ref1} \cite{ref2} \cite{ref3} that have been verified on human-labeled dataset. We further apply the find-noise idea to user-generated dataset and CTR task. The experiment result shows our idea could improve the AUC a lot. As recommendation system predicts the rating or the preference a user might give to an item. Or it is an algorithm that suggests relevant items to users. The most important thing is to find a way to fit the large amount of data. In other words, fitting the dataset means we find the preference of users. Also, noise data is not the low-frequency user data. We will verify our idea on online performance in the future.  
-
-
-![](/assets/png/drop-ctr/table1.png)
 
 
 ### Reference
