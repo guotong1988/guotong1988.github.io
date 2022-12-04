@@ -250,7 +250,7 @@ In summary, we reveal these conclusions (detail conclusions are shown in Table 9
 
 In the end, our main contribution is we answered the question: Combining pre-training and self-training to make best use of large amounts of unlabeled data improves the fine-tuning performance. We propose a learning framework using no-masked logits-based pseudo-label data for pre-training, which is superior to either pre-training or self-training alone. The experiment result shows that our learning framework make the best use of the unlabel data even when is fine-tuning dataset is relatively large. 
 
-## Reference
+## References
 
 ```
 @inproceedings{devlin2019bert,
