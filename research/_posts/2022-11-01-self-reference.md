@@ -47,7 +47,7 @@ The seed 10% data should uniformly sample from all the 100% data. Take text rela
 
 ### 4. Analysis
 
-### 5. Relate Work
+### 5. Relate Works
 
 ### 6. Conclusion
 
