@@ -92,9 +92,7 @@ We call it interaction-based method which fine-tune BERT to compute similarity s
 Then the two output vectors from BERT compute the cosine distance as the input for mean square error loss:
 
 $$
-
-loss = MSE(u \cdot v / (||u||*||v||),y) 
-
+loss = MSE(u \cdot v / (||u|| * ||v||), y) 
 $$
 
 where $u$ and $v$ is the two vectors and $y$ is the label. The full algorithm is shown in Algorithm 1.
