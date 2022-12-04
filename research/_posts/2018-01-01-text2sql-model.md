@@ -11,10 +11,10 @@ description: "Bidirectional Attention for SQL Generation"
 
 # Bidirectional Attention for SQL Generation
 
-## abstract
+## Abstract
 Generating structural query language (SQL) queries from natural language is a long-standing open problem. Answering a natural language question about a database table requires modeling complex interactions between the columns of the table and the question. In this paper, we apply the synthesizing approach to solve this problem. Based on the structure of SQL queries, we break down the model to three sub-modules and design specific deep neural networks for each of them. Taking inspiration from the similar machine reading task, we employ the bidirectional attention mechanisms and character-level embedding with convolutional neural networks (CNNs) to improve the result. Experimental evaluations show that our model achieves the state-of-the-art results in WikiSQL dataset.
 
-#### keywords
+#### Keywords
 Database, Deep Learning, Question Answering, Semantic Parsing
 ## 1. Introduction
 In recent years, with the explosive development of deep learning techniques \cite{ref1}, the problem of generating SQL from natural language has been attracting considerable interest recently. We refer to this problem as the natural-language-to-SQL problem (NL2SQL). Relational databases store the structured data, which is a large amount of entities or numbers. Due to the large number of entities or numbers, which enlarge the word vocabulary for deep learning for natural language processing. And the larger vocabulary will make it harder to find the exact data for a natural language query. For example, in question-answering (QA) problem, we use matching network \cite{ref19} to get the best answer given a question. In the QA problem, the larger amount of entities will lead to the larger class number of answer and will decrease the accuracy of other deep learning models. But generation of SQL from natural language is a good way to handle this application, which could leverage the benefit of relational database itself. 
