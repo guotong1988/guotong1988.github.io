@@ -40,7 +40,7 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 ### 3. Same Idea and More Applications
 
-![](/assets/png/relabel/fig1.png)
+![fig1](/assets/png/relabel/fig1.png)
 
 #### 3.1 sequence tagging
 We take named entity recognition(NER) as example for the sequence tagging like tasks. In NER task, we extract several classes of key phrase from a sentence. Follow our idea, we view each class of NER task as a classification task. Then our steps are:
@@ -99,9 +99,9 @@ For CTR task, we use the method of \cite{ref6} that automatically set the label 
 
 We do the experiments of text classification and NER to verify our idea. The results is shown in Table 1 and Table 2. We also do a lot of other classification task and NER task of other dataset. The improvement is also significant and we do not list the detail results. 
 
-![](/assets/png/relabel/table1.png)
+![table1](/assets/png/relabel/table1.png)
 
-![](/assets/png/relabel/table2.png)
+![table2](/assets/png/relabel/table2.png)
 
 
 ### 5. Analysis
