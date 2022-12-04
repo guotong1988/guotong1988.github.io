@@ -130,7 +130,7 @@ The reason for this example is: A little wrong-label data can lead to wrong infe
 The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref11} that inject the prediction result of model-A to model-B. For further applying of self-correct method, we can correct the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref13}.
 
 
-### Reference
+### References
 ```
 \bibitem{ref1}
 Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
