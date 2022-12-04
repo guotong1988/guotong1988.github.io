@@ -220,7 +220,7 @@ In this paper, based on the structure of SQL and the observation that a sequence
 
 We observe that the accuracy is around 90% on the COLUMN-SELECT clause prediction and AGGREGATOR-SELECT clause prediction because the number of candidate column in the SELECT clause is limited to one. The task will be more challenging if the SQL extends to more than one column candidates and more complex cases like ORDER-BY, GROUP-BY or even JOIN. And the technique of NL2SQL can be applied to Knowledge Graph query or other semantic parsing tasks. There will be a lot of work to research.
 
-## Reference
+## References
 ```
 \bibitem{ref1}
 A. Krizhevsky, I. Sutskever, and G. Hinton.: Imagenet classification with deep convolutional neural networks. In NIPS (2012)
