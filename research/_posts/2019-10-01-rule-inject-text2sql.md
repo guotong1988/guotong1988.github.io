@@ -30,7 +30,7 @@ In order to solve the problem that the table content is not used for model, we p
 
 3. We design the whole BERT-based model and take the two feature vector above as external inputs. The experiment results outperform the baseline\cite{ref3}. The code is available.\footnote[1]{\url{https://github.com/guotong1988/NL2SQL-RULE}}
 
-![123](https://raw.githubusercontent.com/guotong1988/guotong1988.github.io/main/assets/png/rule-text2sql/fig1.png)
+![fig1](/assets/png/rule-text2sql/fig1.png)
 
 ### 2. Related Works
 
