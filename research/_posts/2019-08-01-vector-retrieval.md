@@ -113,7 +113,6 @@ In this section we describe our tree building strategies. In our tree, each non-
 
 ![table1-2](/assets/png/vector-retrieval/table12.png)
 
-![table3](/assets/png/vector-retrieval/table3.png)
 
 
 #### 3.3.1 Representation-based method
@@ -133,3 +132,27 @@ At predicting time, we use beam search from top to down to get the nearest top N
 #### 3.4.2 Interaction-based method
 At predicting time, we compute the score of two sentences by BERT for each node while we are searching the tree. As we take 1-5 sentence for a non-leaf node, we use the max similarity score to decide which non-leaf node is better. The detail beam search strategy is the same as Fig 5. shows. The more sentences that are nearest to the clustering centers we take for one non-leaf node, the more computation time we need to do for a non-leaf node. But the most computation time is consumed at the leaf nodes as leaf node number is much larger than non-leaf node number.
 
+
+## 4. Experiments
+In this section, we describe the datasets, experiments parameter detail and the experimental result. Then, we give a detailed analysis of the model and experiment results.
+
+![table3](/assets/png/vector-retrieval/table3.png)
+
+![table4](/assets/png/vector-retrieval/table4.png)
+
+
+### 4.1 Data Description
+We evaluate the performance on the Quora Question Pairs datasets. Based on the Quora Question Pairs datasets, we combine the dev data and test data to get a dataset of 20000 question pairs, which contains 10000 pairs with label 1 and 10000 pairs with label 0.  After remove the duplicate questions, we get a datasets of 36735 questions. We compute the all embeddings for the 36736 questions in advance. And then we use the 10000 questions which have label 1 as 10000 queries. For each query it compute 36735 cosine distances if we loop all the 36735 questions. We take the top 20 questions for the evaluation of ranking. The training datasets is 384348 question pairs.
+
+### 4.2 Fine-tune Training
+We use the pre-trained BERT-base model file from here\footnote[1]{\url{https://github.com/google-research/bert}}. The max sequence length is 64 and the batch size is 32. The hidden dimension of BERT or output representation dimension is 768. We use Adam optimizer with learning rate 2e-5, and a linear learning rate warm-up over 10% of the training data. 
+
+### 4.3 Tree Building
+We choose 5,8,10 as clustering number for k-means. We name the trees 5-K tree, 8-K tree and 10-K tree, based on the clustering number. The depth for the tree is 5 levels for 36735 vectors. In predicting time, the 5-K tree is the slowest with best accuracy tree and the 10-K tree is the fastest with worst accuracy tree. The 8-K tree is in the middle of them.
+
+### 4.4 Results
+We evaluate the retrieved top N sentences by Mean Average Precision (MAP), Precision @ 1 (P@1), Normalized Discounted Cumulative Gain (NDCG), Mean Reciprocal Rank (MRR) and MRR@10. The \cite{arora2016simple} baseline is from here\footnote[2]{\url{https://github.com/peter3125/sentence2vec}} and the \cite{conneau2017supervised} baseline if from here\footnote[3]{\url{https://github.com/facebookresearch/InferSent}}. The detail compare result is shown in Table 1. and Table 2. The compute-all result means we score all the vector pairs from 0 to end sequentially. The vector distance computation of compute-all uses cosine distance and euclidean distance, and k-d tree uses euclidean distance. The speed comparison is shown in Table 4. We count the number of vector distance computation times for representation-based method or the number of scoring times for sentence pair for interaction-based method. Our tree-based methods outperform \cite{arora2016simple} by 113%, outperform \cite{conneau2017supervised} by 32% and outperform \cite{cer2018universal} by 16% in the top 1 accuracy.
+
+### 4.5 Case Study and Error Analysis
+We show some examples from the eval results to demonstrate the ability of our methods.
+Table 3 shows the retrieval result of top 5 for the query question "Who is the best bodybuilder of all time ?" for compute-all and our 10-K tree. The results show that the ranking accuracy losing may be caused by the non-leaf representation's error, as the results of our tree is far from the query question. We even can not find the right result in the retrieved top 20 questions. We think the non-leaf node lead to the wrong children in tree searching. It is the weakness of our tree building strategy. 
