@@ -40,12 +40,12 @@ We now explain the WikiSQL dataset \cite{ref22}, a dataset of 80654 hand-annotat
 
 (2) The SQL has a fixed structure: SELECT \$COLUMN1 [\$AGG] FROM TABLE WHERE \$COLUMN2 EQUALS \$VALUE1 [AND \$COLUMN3 EQUALS \$VALUE2], where there are one column or one aggregator in the SELECT clause and there are 0-4 conditions in the WHERE clause. Although there is no JOIN clause in the SQL, the task is still challenging as the baseline achieves.
 
-![](/assets/png/text2sql-model/fig1.png)
+![fig1](/assets/png/text2sql-model/fig1.png)
 ## 3. Model
 We present the overall solution for this problem in Fig. 2.
 Before we describe the main SQL generation part of our model, we first describe the bi-directional attention mechanism \cite{ref14} for two sequences.
 
-![](/assets/png/text2sql-model/fig2.png)
+![fig2](/assets/png/text2sql-model/fig2.png)
 
 
 The reason and inspiration to use bi-directional attention is from the machine comprehension task. In the SQuAD \cite{ref26} machine comprehension task, we input the paragraph and question to the model and find the answer string in the paragraph. And in the SQL generation task, we input the question and columns and find the answer column in the columns. The two tasks are very similar in this perspective.
@@ -108,7 +108,7 @@ Then we compute the element-wise multiplication $A_2=M_7 \times S_1$  to get the
 In this section, we present our model to tackle the WikiSQL task. As shown in Fig. 3, our model contains four modules:
 
 
-![](/assets/png/text2sql-model/fig3.png)
+![fig3](/assets/png/text2sql-model/fig3.png)
 
 
 (1) The character-level and word-level embedding layer to map each character and word to vector space. The embedding layer is shared by the next three modules. (2) The COLUMN-SELECT module which predict the column of SELECT clause. (3) The AGGREGATOR-SELECT module which predict the aggregator of SELECT clause. (4) The WHERE module which predict the conditions of WHERE clause.
@@ -209,7 +209,7 @@ We tokenize the sentences using Stanford CoreNLP \cite{ref17}. The LSTM contains
 ### 4.2 Evaluation
 We evaluate our model on the WikiSQL dataset. The decomposition results are presented in Tab. 1 and the overall results are presented in Tab. 2. We display the separated results of each module and the query-match accuracy which compare whether two SQL queries match exactly. From the evaluation result we find that bi-attention mechanisms mainly improve the WHERE clause result and character-level embedding mainly improve the COLUMN-SELECT clause. The execution result is higher because different SQL may obtains the same result. For example, the two SQL queries SELECT COUNT (player) WHERE No. = 23 and SELECT COUNT (No.) WHERE No. = 23 produce the same result in the table of Fig. 1.
 
-![](/assets/png/text2sql-model/table12.png)
+![table1-2](/assets/png/text2sql-model/table12.png)
 
 
 ## 5. Analysis
