@@ -35,6 +35,10 @@ In human-labeled industry deep learning application, data quality or label quali
 
 ![](/assets/png/self-reference/fig1.png)
 
+#### Seed data prepare 
+The seed 10% data should uniformly sample from all the 100% data. Take text related task as example, we first sort the text dataset by string order and then sample by $$ 1 % 10 $$.
+
+
 ### Experiments
 
 
