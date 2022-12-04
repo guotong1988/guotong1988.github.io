@@ -104,7 +104,7 @@ The fine-tune procedure is the same to the sentence pair classification task of 
 ![alg2](/assets/png/vector-retrieval/alg2.png)
 
 
-![fig2-3](/assets/png/vector-retrieval/fig23.png)
+![fig4-5](/assets/png/vector-retrieval/fig45.png)
 
 
 ### 3.3 Tree Building
@@ -156,3 +156,192 @@ We evaluate the retrieved top N sentences by Mean Average Precision (MAP), Preci
 ### 4.5 Case Study and Error Analysis
 We show some examples from the eval results to demonstrate the ability of our methods.
 Table 3 shows the retrieval result of top 5 for the query question "Who is the best bodybuilder of all time ?" for compute-all and our 10-K tree. The results show that the ranking accuracy losing may be caused by the non-leaf representation's error, as the results of our tree is far from the query question. We even can not find the right result in the retrieved top 20 questions. We think the non-leaf node lead to the wrong children in tree searching. It is the weakness of our tree building strategy. 
+
+## 5. Conclusion and Future Work
+In this paper, we study the problem of short sentence ranking for question answering. In order to get best
+similar score in all the questions when given a question as query and accelerate the predicting speed, we propose two methods. The first method is compute the representation for all the questions in advance and build a tree by k-means. The second method is to train a deep model and then use it to compute similarity scores of two sentences during tree searching. The experimental results show that our methods outperform the strong baseline on the short sentence retrieval datasets we construct. The sentence embeddings quality may be improved by better BERT\cite{liu2019roberta} or the XLNet\cite{yang2019xlnet} and we will discover more powerful non-leaf node embeddings for the tree search and evaluate on other datasets\cite{cer2017semeval}, as previous research \cite{zhu2018learning,zhu2019joint} shows that the tree's preformance could reach the performance of compute-all. In conclusion, our goal is to discover better embeddings and better tree structure in the future.
+
+
+## References
+```
+@article{qiao2019understanding,
+  title={Understanding the Behaviors of BERT in Ranking},
+  author={Qiao, Yifan and Xiong, Chenyan and Liu, Zhenghao and Liu, Zhiyuan},
+  journal={arXiv preprint arXiv:1904.07531},
+  year={2019}
+}
+
+@article{guo2019deep,
+  title={A deep look into neural ranking models for information retrieval},
+  author={Guo, Jiafeng and Fan, Yixing and Pang, Liang and Yang, Liu and Ai, Qingyao and Zamani, Hamed and Wu, Chen and Croft, W Bruce and Cheng, Xueqi},
+  journal={arXiv preprint arXiv:1903.06902},
+  year={2019}
+}
+
+@article{xu2019passage,
+  title={Passage Ranking with Weak Supervsion},
+  author={Xu, Peng and Ma, Xiaofei and Nallapati, Ramesh and Xiang, Bing},
+  journal={arXiv preprint arXiv:1905.05910},
+  year={2019}
+}
+
+@inproceedings{zhu2018learning,
+  title={Learning Tree-based Deep Model for Recommender Systems},
+  author={Zhu, Han and Li, Xiang and Zhang, Pengye and Li, Guozheng and He, Jie and Li, Han and Gai, Kun},
+  booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  pages={1079--1088},
+  year={2018},
+  organization={ACM}
+}
+
+@inproceedings{huang2013learning,
+  title={Learning deep structured semantic models for web search using clickthrough data},
+  author={Huang, Po-Sen and He, Xiaodong and Gao, Jianfeng and Deng, Li and Acero, Alex and Heck, Larry},
+  booktitle={Proceedings of the 22nd ACM international conference on Information \& Knowledge Management},
+  pages={2333--2338},
+  year={2013},
+  organization={ACM}
+}
+
+@inproceedings{shen2014latent,
+  title={A latent semantic model with convolutional-pooling structure for information retrieval},
+  author={Shen, Yelong and He, Xiaodong and Gao, Jianfeng and Deng, Li and Mesnil, Gr{\'e}goire},
+  booktitle={Proceedings of the 23rd ACM international conference on conference on information and knowledge management},
+  pages={101--110},
+  year={2014},
+  organization={ACM}
+}
+
+@article{palangi2016deep,
+  title={Deep sentence embedding using long short-term memory networks: Analysis and application to information retrieval},
+  author={Palangi, Hamid and Deng, Li and Shen, Yelong and Gao, Jianfeng and He, Xiaodong and Chen, Jianshu and Song, Xinying and Ward, Rabab},
+  journal={IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP)},
+  volume={24},
+  number={4},
+  pages={694--707},
+  year={2016},
+  publisher={IEEE Press}
+}
+
+@inproceedings{guo2016deep,
+  title={A deep relevance matching model for ad-hoc retrieval},
+  author={Guo, Jiafeng and Fan, Yixing and Ai, Qingyao and Croft, W Bruce},
+  booktitle={Proceedings of the 25th ACM International on Conference on Information and Knowledge Management},
+  pages={55--64},
+  year={2016},
+  organization={ACM}
+}
+
+@article{wan2016match,
+  title={Match-srnn: Modeling the recursive matching structure with spatial rnn},
+  author={Wan, Shengxian and Lan, Yanyan and Xu, Jun and Guo, Jiafeng and Pang, Liang and Cheng, Xueqi},
+  journal={arXiv preprint arXiv:1604.04378},
+  year={2016}
+}
+
+@article{devlin2018bert,
+  title={Bert: Pre-training of deep bidirectional transformers for language understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv preprint arXiv:1810.04805},
+  year={2018}
+}
+
+@inproceedings{vaswani2017attention,
+  title={Attention is all you need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  booktitle={Advances in neural information processing systems},
+  pages={5998--6008},
+  year={2017}
+}
+
+@article{zhu2019joint,
+  title={Joint Optimization of Tree-based Index and Deep Model for Recommender Systems},
+  author={Zhu, Han and Chang, Daqing and Xu, Ziru and Zhang, Pengye and Li, Xiang and He, Jie and Li, Han and Xu, Jian and Gai, Kun},
+  journal={arXiv preprint arXiv:1902.07565},
+  year={2019}
+}
+
+@inproceedings{kiros2015skip,
+  title={Skip-thought vectors},
+  author={Kiros, Ryan and Zhu, Yukun and Salakhutdinov, Ruslan R and Zemel, Richard and Urtasun, Raquel and Torralba, Antonio and Fidler, Sanja},
+  booktitle={Advances in neural information processing systems},
+  pages={3294--3302},
+  year={2015}
+}
+
+@article{arora2016simple,
+  title={A simple but tough-to-beat baseline for sentence embeddings},
+  author={Arora, Sanjeev and Liang, Yingyu and Ma, Tengyu},
+  year={2016}
+}
+
+@article{cer2018universal,
+  title={Universal sentence encoder},
+  author={Cer, Daniel and Yang, Yinfei and Kong, Sheng-yi and Hua, Nan and Limtiaco, Nicole and John, Rhomni St and Constant, Noah and Guajardo-Cespedes, Mario and Yuan, Steve and Tar, Chris and others},
+  journal={arXiv preprint arXiv:1803.11175},
+  year={2018}
+}
+
+@article{yang2019xlnet,
+  title={XLNet: Generalized Autoregressive Pretraining for Language Understanding},
+  author={Yang, Zhilin and Dai, Zihang and Yang, Yiming and Carbonell, Jaime and Salakhutdinov, Ruslan and Le, Quoc V},
+  journal={arXiv preprint arXiv:1906.08237},
+  year={2019}
+}
+
+@article{liu2019roberta,
+  title={RoBERTa: A Robustly Optimized BERT Pretraining Approach},
+  author={Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},
+  journal={arXiv preprint arXiv:1907.11692},
+  year={2019}
+}
+
+@article{conneau2017supervised,
+  title={Supervised learning of universal sentence representations from natural language inference data},
+  author={Conneau, Alexis and Kiela, Douwe and Schwenk, Holger and Barrault, Loic and Bordes, Antoine},
+  journal={arXiv preprint arXiv:1705.02364},
+  year={2017}
+}
+
+@inproceedings{pennington2014glove,
+  title={Glove: Global vectors for word representation},
+  author={Pennington, Jeffrey and Socher, Richard and Manning, Christopher},
+  booktitle={Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)},
+  pages={1532--1543},
+  year={2014}
+}
+
+@article{cer2017semeval,
+  title={Semeval-2017 task 1: Semantic textual similarity-multilingual and cross-lingual focused evaluation},
+  author={Cer, Daniel and Diab, Mona and Agirre, Eneko and Lopez-Gazpio, Inigo and Specia, Lucia},
+  journal={arXiv preprint arXiv:1708.00055},
+  year={2017}
+}
+
+@article{wang2017bilateral,
+  title={Bilateral multi-perspective matching for natural language sentences},
+  author={Wang, Zhiguo and Hamza, Wael and Florian, Radu},
+  journal={arXiv preprint arXiv:1702.03814},
+  year={2017}
+}
+
+@inproceedings{liu2018finding,
+  title={Finding similar exercises in online education systems},
+  author={Liu, Qi and Huang, Zai and Huang, Zhenya and Liu, Chuanren and Chen, Enhong and Su, Yu and Hu, Guoping},
+  booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  pages={1821--1830},
+  year={2018},
+  organization={ACM}
+}
+
+@article{silver2016mastering,
+  title={Mastering the game of Go with deep neural networks and tree search},
+  author={Silver, David and Huang, Aja and Maddison, Chris J and Guez, Arthur and Sifre, Laurent and Van Den Driessche, George and Schrittwieser, Julian and Antonoglou, Ioannis and Panneershelvam, Veda and Lanctot, Marc and others},
+  journal={nature},
+  volume={529},
+  number={7587},
+  pages={484},
+  year={2016},
+  publisher={Nature Publishing Group}
+}
+```
