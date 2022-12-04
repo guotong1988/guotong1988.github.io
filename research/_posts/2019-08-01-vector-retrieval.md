@@ -111,8 +111,6 @@ The fine-tune procedure is the same to the sentence pair classification task of 
 
 In this section we describe our tree building strategies. In our tree, each non-leaf node have several child nodes. The leaf nodes contain the real data and the non-leaf nodes are virtual but undertake the function for searching or undertake the function that lead the path to the leaf nodes. 
 
-![table1-2](/assets/png/vector-retrieval/table12.png)
-
 
 
 #### 3.3.1 Representation-based method
@@ -135,6 +133,8 @@ At predicting time, we compute the score of two sentences by BERT for each node 
 
 ## 4. Experiments
 In this section, we describe the datasets, experiments parameter detail and the experimental result. Then, we give a detailed analysis of the model and experiment results.
+
+![table1-2](/assets/png/vector-retrieval/table12.png)
 
 ![table3](/assets/png/vector-retrieval/table3.png)
 
