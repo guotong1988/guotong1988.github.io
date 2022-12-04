@@ -137,7 +137,7 @@ In this section, we evaluate our methods versus other approachs on the WikiSQL d
 Based on the observation that the table data is almost the same in training time and testing time and to solve the problem that the table content is lack for deep model. We propose a simple encoding methods that can leverage the table content as external feature for the BERT-based deep model, demonstrate its good performance on the WikiSQL task, and achieve state-of-the-art on the datasets. 
 
 
-### Reference
+### References
 ```
 \bibitem{ref1}
 Zhong V, Xiong C, Socher R. Seq2sql: Generating structured queries from natural language using reinforcement learning[J]. arXiv preprint arXiv:1709.00103, 2017.
