@@ -24,7 +24,7 @@ In industry deep learning \cite{ref1} application, we use the re-label method\ci
 
 In this paper, knowledge-driven means the knowledge for labeling when we teach the human how to label. Our method is a kind of human-in-the-loop which means we refresh the knowledge for human to re-label the data. It means we implement controllable deep learning application by label-edit.
 
-### 2. Methods
+### 2. Method
 
 In this section, we propose the pipeline to improve the human evaluation accuracy.
 
