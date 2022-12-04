@@ -125,7 +125,7 @@ The reason for this example is: A little wrong-label data can lead to wrong infe
 Based on the good performance of previous works  \cite{ref1} \cite{ref2} \cite{ref3} that have been verified on human-labeled dataset. We further apply the find-noise idea to user-generated dataset and CTR task. The experiment result shows our idea could improve the AUC a lot. As recommendation system predicts the rating or the preference a user might give to an item. Or it is an algorithm that suggests relevant items to users. The most important thing is to find a way to fit the large amount of data. In other words, fitting the dataset means we find the preference of users. Also, noise data is not the low-frequency user data. We will verify our idea on online performance in the future.  
 
 
-### Reference
+### References
 ```
 \bibitem{ref1}
 Guo T. Learning From Human Correction For Data-Centric Deep Learning[J]. arXiv preprint arXiv:2102.00225, 2021.
