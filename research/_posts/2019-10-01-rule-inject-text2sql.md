@@ -41,15 +41,15 @@ BERT\cite{ref4} is a very deep transformer-based\cite{ref5} model. It first pre-
 
 ### 3. External Feature Vector Encoding
 
-![](/assets/png/rule-text2sql/alg1.png)
+![alg1](/assets/png/rule-text2sql/alg1.png)
 
-![](/assets/png/rule-text2sql/alg2.png)
+![alg2](/assets/png/rule-text2sql/alg2.png)
 
 In this section we describe our encoding methods based on the word matching of table content and question string and the word matching of table header and question string. The full algorithms are shown in Algorithm 1 and Algorithm 2. In the Algorithm 1, the value 1 stand for 'START' tag, value 2 stand for 'MIDDLE' tag, value 3 stand for 'END' tag. In the Algorithm 2, we think that the column, which contains the matched cell, should be marked. The final question mark vector is named $QV$ and the final table header mark vector is named $HV$. For industry application, we could refer to Algorithm 1 and Algorithm 2 to encode external knowledge flexibly.
 
 
 
-![](/assets/png/rule-text2sql/fig2.png)
+![fig2](/assets/png/rule-text2sql/fig2.png)
 
 
 ### 4. The Deep Neural Model
@@ -126,11 +126,11 @@ In this section we describe detail of experiment parameters and show the experim
 
 In this section, we evaluate our methods versus other approachs on the WikiSQL dataset. See Table 1 and Table 2 for detail. The SQLova\cite{ref3} result use the BERT-Base-Uncased pretrained model and run on our machine without execution-guided decoding(EG)\cite{ref6}.
 
-![](/assets/png/rule-text2sql/table1.png)
+![table1](/assets/png/rule-text2sql/table1.png)
 
-![](/assets/png/rule-text2sql/table2.png)
+![table2](/assets/png/rule-text2sql/table2.png)
 
-![](/assets/png/rule-text2sql/table3.png)
+![table3](/assets/png/rule-text2sql/table3.png)
 
 ### 6. Conclusion
 
