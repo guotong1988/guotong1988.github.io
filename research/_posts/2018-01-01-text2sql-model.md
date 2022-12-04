@@ -11,12 +11,12 @@ description: "Bidirectional Attention for SQL Generation"
 
 # Bidirectional Attention for SQL Generation
 
-## Abstract
+## abstract
 Generating structural query language (SQL) queries from natural language is a long-standing open problem. Answering a natural language question about a database table requires modeling complex interactions between the columns of the table and the question. In this paper, we apply the synthesizing approach to solve this problem. Based on the structure of SQL queries, we break down the model to three sub-modules and design specific deep neural networks for each of them. Taking inspiration from the similar machine reading task, we employ the bidirectional attention mechanisms and character-level embedding with convolutional neural networks (CNNs) to improve the result. Experimental evaluations show that our model achieves the state-of-the-art results in WikiSQL dataset.
 
 #### keywords
 Database, Deep Learning, Question Answering, Semantic Parsing
-## Introduction
+## 1. Introduction
 In recent years, with the explosive development of deep learning techniques \cite{ref1}, the problem of generating SQL from natural language has been attracting considerable interest recently. We refer to this problem as the natural-language-to-SQL problem (NL2SQL). Relational databases store the structured data, which is a large amount of entities or numbers. Due to the large number of entities or numbers, which enlarge the word vocabulary for deep learning for natural language processing. And the larger vocabulary will make it harder to find the exact data for a natural language query. For example, in question-answering (QA) problem, we use matching network \cite{ref19} to get the best answer given a question. In the QA problem, the larger amount of entities will lead to the larger class number of answer and will decrease the accuracy of other deep learning models. But generation of SQL from natural language is a good way to handle this application, which could leverage the benefit of relational database itself. 
 
 The study of translating natural language into SQL queries has a long history. Recent works consider deep learning as the main technique. \cite{ref20} employs an improved encoder-decoder framework based on neural machine translation
@@ -29,7 +29,7 @@ Our main contributions in this work are three-fold. First, we apply bidirectiona
 The code is available.
 \footnote[1]{\url{https://github.com/guotong1988/NL2SQL}}
 
-#### Task Description
+## 2. Task Description
 In the NL2SQL task, given a question and a database table, the machine needs to generate a SQL to query the database table, and find the answer to the question. The question is described as a sequence of word tokens: 
 $Q = \{w_1,w_2,...,w_n\}$
 where $n$ is the number of words in the question, and the table is described as a sequence of columns $C=\{c_1,c_2,...,c_n\}$ , where $m$ is the number of columns in the table. The table also has a number of data rows which contains the answer to the question.
@@ -41,7 +41,7 @@ We now explain the WikiSQL dataset \cite{ref22}, a dataset of 80654 hand-annotat
 (2) The SQL has a fixed structure: SELECT \$COLUMN1 [\$AGG] FROM TABLE WHERE \$COLUMN2 EQUALS \$VALUE1 [AND \$COLUMN3 EQUALS \$VALUE2], where there are one column or one aggregator in the SELECT clause and there are 0-4 conditions in the WHERE clause. Although there is no JOIN clause in the SQL, the task is still challenging as the baseline achieves.
 
 ![](/assets/png/text2sql-model/fig1.png)
-## Model
+## 3. Model
 We present the overall solution for this problem in Fig. 2.
 Before we describe the main SQL generation part of our model, we first describe the bi-directional attention mechanism \cite{ref14} for two sequences.
 
@@ -49,9 +49,9 @@ Before we describe the main SQL generation part of our model, we first describe 
 
 
 The reason and inspiration to use bi-directional attention is from the machine comprehension task. In the SQuAD \cite{ref26} machine comprehension task, we input the paragraph and question to the model and find the answer string in the paragraph. And in the SQL generation task, we input the question and columns and find the answer column in the columns. The two tasks are very similar in this perspective.
-#### Bi-attention
+#### 3.1.1 Bi-attention
 Bi-attention is an extended form of attention mechanism.  The attention mechanism is the information of the most relevant words of second sequence to each word of first sequence. The bi-attention also computes the information signifies which words of first sequence have the closest similarity to one of the words of second sequence.
-#### Forward Attention
+#### 3.1.2 Forward Attention
 Suppose we have two sequence of vector representation, $S_1$ and $S_2$ , which dimension is $R^{k_1 \times d}$  and $R^{k_2 \times d}$ , where $d$ is the features dimension size.
 Then we compute the co-attention matrix  $M \in R^{k_1 \times k_2}$:
 
@@ -77,7 +77,7 @@ $$
 A_1=sum(M_3)
 $$
 
-#### Backward Attention
+#### 3.1.3 Backward Attention
 Suppose we already have the co-attention matrix $M \in R^{k_1 \times k_2}$  in Eq. 1. Then we reduce the max value of the first dimension of $M$:
 
 $$
@@ -104,7 +104,7 @@ $$
 
 Then we compute the element-wise multiplication $A_2=M_7 \times S_1$  to get the representation of backward attention information $A_2 \in R^{k_1 \times d}$. Note that the dimension of back-ward attention representation and forward attention representation are equal and are the same as the sequence $S_1$ dimension. In the next section we use the bi-attention mechanism for several components of our model.
 
-### Our Model
+### 3.2 Our Model
 In this section, we present our model to tackle the WikiSQL task. As shown in Fig. 3, our model contains four modules:
 
 
@@ -115,7 +115,7 @@ In this section, we present our model to tackle the WikiSQL task. As shown in Fi
 
 The detailed description of our model is provided as follows.
 
-#### Character-level embedding and word-level embedding
+#### 3.2.1 Character-level embedding and word-level embedding
 We use the character-level GloVe \cite{ref15} pre-trained 300 dimension to initialize the character-level embedding $E_c \in R^{q \times w \times d}$, where $q$ is the word number and $w$ is the character number of each word and $d$ is 300. We leverage convolutional neural networks to get the next representation of $E_c$. We use three convolution kernels, which sizes are height 1 * width 5, height 1 * width 4, height 1 * width 3. The convolution layer and max-pooling layer are 1 as \cite{ref16} did. The input channel is 100 and output channel is 100 so the last dimension of 3 convolution results can concatenate to 300. After the max pooling and concatenation, the dimension of the final result is $q \times d$, which dimension is the same as the word embedding dimension.
 
 We use the word-level GloVe pre-trained with 300 size to initialize the word-level embedding $E_w \in R^{q \times d}$. As for the words which are not in the GloVe, we initialize them to 0. The experiment shows that if we initialize the words which are not in GloVe to a random value and make them trainable, the result decreases. 
@@ -123,7 +123,7 @@ We use the word-level GloVe pre-trained with 300 size to initialize the word-lev
 As one column contains several words, we encode the words of one column into one vector representation by running after a LSTM \cite{ref29}. We take the last state of the LSTM for the representation of one column and consider it as one item of columns, which is the same as one word in the question.
 
 
-#### COLUMN-SELECT module
+#### 3.2.2 COLUMN-SELECT module
 In this sub-task, the inputs are questions and column names, the outputs are one column in the column names. So we need to
 capture the attention info of questions and column names and then leverage the attention info to output a prediction over the column names. We did it as follows.
 
@@ -137,7 +137,7 @@ $$
 
 where $W_1 \in R^{2h \times h}$, $W_2 \in R^{h \times h}$ and $W_3 \in R^{h \times 1}$ are all trainable weights and $P_{sel}$ is the probability distribution over all columns of one table.
 
-#### AGGREGATOR-SELECT module
+#### 3.2.3 AGGREGATOR-SELECT module
 There are 5 types of aggregation keywords in SQL: 'MAX', 'MIN', 'COUNT', 'SUM', 'AVG'. The experiment of SQLNet shows that the column name input do not impact the prediction result. So we only need to input the question and predict the class of aggregation keywords. So we consider this sub-task as a text classification problem. Then we have the question embedding $E_Q \in R^{q \times d}$ and the Bi-LSTM encoded representation $H_Q \in R^{q \times h}$. Then we compute the final prediction for aggregator $P_{agg} \in R^6$:  
 
 $$
@@ -146,7 +146,7 @@ $$
 
 where $W_1 \in R^{h \times h}$ and $W_2 \in R^{h \times 6}$ are all trainable weights and sum apply to the first dimension and $P_{agg}$ is the probability distribution over 6 choices of SQL aggregators.
 
-#### WHERE module
+#### 3.2.4 WHERE module
 The WHERE clause is the most challenging part. The order of conditions does not matter, so we predict the probability of column slots and choose the top columns as a set. We predict the number of conditions and the column slots first. Then we leverage the column predictions to choose from the columns candidates. Then we use the chosen columns as embedding input to predict the operator slots and value slots for each column. We describe them below.
 
 **(1) Condition number**
@@ -182,7 +182,7 @@ $$
 
 Where the inputs $G_o$, $H_Q$ and $H_{topcol}$ are expanded to the same dimension and $W_1 \in R^{h \times h}$, $W_2 \in R^{h \times h}$, $W_3 \in R^{h \times h}$ and $W_4 \in R^{h \times 1}$ are all separated trainable weights. The output of the pointer network is $P_{val} \in R^{N \times p}$, where $q$ is the question length. In engineering we flat the specific dimension for the computation. For example, suppose we have batch size dimension $B$ and $N$ conditions as the second dimension, then we flat the dimension to $B$ * $N$ as the first dimension. Note that we generate the condition values for each of the $K$ conditions. The END token also appears in the question and the model stops generating for this slot when the END token is predicted. We prepare the exact ground truth for each sub-module of WHERE module and give each sub-module of WHERE module a separated loss.
 
-#### Loss function 
+#### 3.2.5 Loss function 
 We use the cross-entropy loss for the prediction of COLUMN-SELECT module and AGGREGATOR-SELECT module. As for the WHERE module, we also use cross-entropy loss for the value slots and operator slots.
 
 As the prediction for the columns in the WHERE module is a target set, we need to penalize the predicted columns that are not in the ground truth. So we design the loss function for the prediction of columns set:
@@ -199,23 +199,23 @@ $$
 
 where $L_{agg}$, $L_{sel}$, $L_{whe}$ are the loss of AGGREGATOR-SELECT, COLUMN-SELECT and WHERE module separately. 
 
-## Experiments
+## 4. Experiments
 In this section, we present more details of the model and the evaluation on the dataset. We also analyze the evaluation result.
 
 
-#### Experimental Setting
+### 4.1 Experimental Setting
 We tokenize the sentences using Stanford CoreNLP \cite{ref17}. The LSTM contains 2 layers and the size of LSTM hidden states h is 50 and the output size of bi-LSTM is 100. The dropout \cite{ref27} for LSTM cell is 0.3. We use different LSTM weights for predicting different slots. Each LSTM which encodes the embedding is an independent weight. Although we do not share the bi-LSTM weight, we find that sharing the same word em-bedding vector is better. Therefore, different components in our model only share the word embedding. We use the Adam optimizer \cite{ref18} with learning rate 0.001 and 0 weight decay to minimize the loss of Eq. 15. We train the model for 100 epochs with fixed word embedding and trainable character embedding. Then we use the pre-trained 100 epoch model to train the next 100 epoch with all traina-ble embeddings. The character-level embedding are all trainable in 0 to 200 epoch. The batch size is 64. We ran-domly re-shuffle the training data in each epoch. In addition, our final model is chosen as the models that perform the best on development set in each part in the process of training. We implement all models using PyTorch \cite{ref30}.
 
-#### Evaluation
+### 4.2 Evaluation
 We evaluate our model on the WikiSQL dataset. The decomposition results are presented in Tab. 1 and the overall results are presented in Tab. 2. We display the separated results of each module and the query-match accuracy which compare whether two SQL queries match exactly. From the evaluation result we find that bi-attention mechanisms mainly improve the WHERE clause result and character-level embedding mainly improve the COLUMN-SELECT clause. The execution result is higher because different SQL may obtains the same result. For example, the two SQL queries SELECT COUNT (player) WHERE No. = 23 and SELECT COUNT (No.) WHERE No. = 23 produce the same result in the table of Fig. 1.
 
 ![](/assets/png/text2sql-model/table12.png)
 
 
-## Analysis
+## 5. Analysis
 The improvement of COLUMN-SELECT clause which is attributed by CNN-based character-level embedding is around 2%, as the baseline result is already 90%. We think it is because with the help of the character-level embedding, the model can be more robust to the minor difference of a word between training data and test data. The improvement of attention is 2.5% and the improvement of the bi-attention mechanisms is 3% to 3.5%. The improvement from attention to bi-attention is 0.5% to 1%. We also observe that if we initialize the words which are not in the GloVe the random initialization and train the embedding, the result does not improve. The reason is that we do not add the mask technique which set the rare words to a minimal value in the model in order that the rare words do not participate in the activation function such as sigmoid. We consider the mask technique as a future work.
 
-## Conclusion
+## 6. Conclusion
 In this paper, based on the structure of SQL and the observation that a sequence-to-sequence model suffer from the "order-matters" problem, we design specific deep neural network for each sub-string of SQL. In the WHERE prediction module, we choose the top probabilities of the column candidates as the chosen set for the prediction of conditions. We apply the bi-directional attention mechanism and the CNN-based character-level embedding to improve the result. The experimental evaluations show that our model achieves the state-of-the-art results in the WikiSQL dataset.
 
 We observe that the accuracy is around 90% on the COLUMN-SELECT clause prediction and AGGREGATOR-SELECT clause prediction because the number of candidate column in the SELECT clause is limited to one. The task will be more challenging if the SQL extends to more than one column candidates and more complex cases like ORDER-BY, GROUP-BY or even JOIN. And the technique of NL2SQL can be applied to Knowledge Graph query or other semantic parsing tasks. There will be a lot of work to research.
