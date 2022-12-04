@@ -18,11 +18,11 @@ based on the principle that deep learning is rule-injected model with strong gen
 Then we extend the re-label method to more possible idea.
 In the end, we imagine re-label method to further impossible idea.
 
-#### keywords
+#### Keywords
 
 Deep Learning, Pattern Recognition, Fuzzy Matching, Similar Search, Data Centric, Human Labeling
 
-## Introduction
+## 1. Introduction
 
 Deep learning is the deep neural network that has the most strong generalization ability now. 
 And the generalization ability is based on the labeled training data. The training data is injected by human knowledge/rule.
@@ -33,12 +33,12 @@ and achieve 97% accuracy in any human-labeled deep learning application.
 
 
 
-## Further Idea
+## 2. Further Idea
 
-### Combine Re-label Method and Reinforcement Learning
+### 2.1 Combine Re-label Method and Reinforcement Learning
 
 
-#### With Human Correction, Reward Is Enough 
+#### 2.1.1 With Human Correction, Reward Is Enough 
 
 Human learn from base concept and get 'reward' from the physical world, 
 in the same time human correct and refresh the knowledge from new 'reward'.
