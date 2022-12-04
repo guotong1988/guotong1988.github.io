@@ -52,7 +52,7 @@ The seed 10% data should uniformly sample from all the 100% data. Take text rela
 ### 6. Conclusion
 
 
-### Reference
+### References
 ```
 \bibitem{ref1}
 ```
