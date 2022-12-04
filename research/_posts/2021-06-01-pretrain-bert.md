@@ -89,8 +89,8 @@ In fine-tuning, we use 100 batch size, 64 sequence length. We use Adam \cite{ref
 For all kinds of BERT-like models, the total parameter will be no difference of 20%.
 
 
-![](/assets/png/berts/table1.png)
-![](/assets/png/berts/table2.png)
+![table1](/assets/png/berts/table1.png)
+![table2](/assets/png/berts/table2.png)
 
 
 ### 5. Analysis and Conclusion
