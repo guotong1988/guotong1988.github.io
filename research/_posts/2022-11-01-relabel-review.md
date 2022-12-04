@@ -50,7 +50,7 @@ Human change the base reward rule for robot/agent to refresh their knowledge.
 
 
 
-## Reference
+## References
 ```
 \bibitem{ref1}
 Guo T. Learning From Human Correction For Data-Centric Deep Learning[J]. arXiv preprint arXiv:2102.00225, 2021.
