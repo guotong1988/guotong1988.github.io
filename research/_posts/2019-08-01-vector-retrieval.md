@@ -3,7 +3,6 @@ layout: post
 title: "Revisiting Semantic Representation and Tree Search for Similar Question Retrieval"
 date: 2019-08-01
 category: research
-comments: true
 author: "Tong Guo"
 description: "Revisiting Semantic Representation and Tree Search for Similar Question Retrieval"
 ---
