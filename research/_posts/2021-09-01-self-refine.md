@@ -30,7 +30,7 @@ Our key contribution is:
 
 Based on our industry dataset, we first find the noisy data which human label is not in the top-K (K=1,2,3...10)  predictions of model. Then we re-label the label of noisy data to the top-1 prediction of the model. The experiment results shows that our idea works for our large industry dataset.  
 
-![](/assets/png/self-refine/fig1.png)
+![fig1](/assets/png/self-refine/fig1.png)
 
  
 
@@ -68,11 +68,11 @@ In this section we describe detail of experiment parameters and show the experim
 
 In fine-tuning, we use Adam \cite{ref4} with learning rate of 1e-5 and use a dropout \cite{ref5} probability of 0.1 on all layers. We use BERT-Base (12 layer, 768 hidden size) as our pre-trained model. 
 
-![](/assets/png/self-refine/table1.png)
+![table1](/assets/png/self-refine/table1.png)
 
 
 
-![](/assets/png/self-refine/table2.png)
+![table2](/assets/png/self-refine/table2.png)
 
 
 
