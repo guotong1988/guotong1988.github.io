@@ -11,18 +11,18 @@ description: "Re-Label Is All You Need For 97% Accuracy"
 
 # Re-Label Is All You Need
 
-### abstract
+### Abstract
 In industry deep learning application, our manually labeled data has a certain number of noisy data. To solve this problem and achieve more than 90 score in dev dataset, we present a simple method to find the noisy data and re-label the noisy data by human, given the model predictions as references in human labeling. In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, click-through rate prediction. The experimental results and human evaluation results verify our idea.
 
-#### keywords
+#### Keywords
 
 Deep Learning, Human Labeling, Data Centric, Text-to-Speech, Speech-to-Text, Text Classification, Image Classification, Sequence Tagging, Object Detection, Sequence Generation, Click-Through Rate prediction
 
-### Introduction
+### 1. Introduction
 
 In recent years, deep learning \cite{ref1} model have shown significant improvement on natural language processing(NLP), computer vision and speech processing technologies. However, the model performance is limited by the human labeled data quality. The main reason is that the human labeled data has a certain number of noisy data. Previous work \cite{ref2} has propose the simple idea to find the noisy data and correct the noisy data. In this paper, we first review the way we achieve more than 90 score in classification task, then we further illustrate our idea for sequence tagging, object detection, sequence generation, click-through rate (CTR) prediction.
 
-### Background
+### 2. Background
 
 In previous work \cite{ref2}, we illustrate our idea in these steps:
 
@@ -38,11 +38,11 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 6. We loop this re-labeling noisy data steps and get the final dataset. Then we get model-v2. We can further loop this steps to get model-v3.
 
-### Same Idea and More Applications
+### 3. Same Idea and More Applications
 
 ![](/assets/png/relabel/fig1.png)
 
-#### sequence tagging
+#### 3.1 sequence tagging
 We take named entity recognition(NER) as example for the sequence tagging like tasks. In NER task, we extract several classes of key phrase from a sentence. Follow our idea, we view each class of NER task as a classification task. Then our steps are:
 
 1. It is a NER task. We have a human labeled dataset-v1.
@@ -57,7 +57,7 @@ We take named entity recognition(NER) as example for the sequence tagging like t
 
 6. We loop this re-labeling noisy data steps for all the classes of NER and get the final dataset. Then we get model-v2.
 
-#### object detection
+#### 3.2 object detection
 
 Object detection is a computer vision technique that allows us to identify and locate objects in an image or video. Follow our idea, we view each kind of bounding box as a classification task. Then our steps are:
 
@@ -73,7 +73,7 @@ Object detection is a computer vision technique that allows us to identify and l
 
 6. We loop this re-labeling noisy data steps for all the classes of object detection and get the final dataset. Then we get model-v2.
 
-#### sequence generation
+#### 3.3 sequence generation
 
 The key step of our idea is about how to judge the noisy data. For sequence generation, we can use BLEU score or other sequence similarity evaluation method. Then our steps are:
 
@@ -89,13 +89,13 @@ The key step of our idea is about how to judge the noisy data. For sequence gene
 
 6. We loop this re-labeling noisy data steps and get the final dataset. Then we get model-v2.
 
-#### click-through rate prediction
+#### 3.4 click-through rate prediction
 
 For CTR task, we use the method of \cite{ref6} that automatically set the label again for the noisy data. CTR task is a click-or-not prediction task, we choose a threshold between the predicted score and the 0/1 online label score to judge whether the data is the noisy data. In this way, we could improve the AUC in dev dataset but the online performance should test online. 
 
 
 
-### Experimental Results
+### 4. Experimental Results
 
 We do the experiments of text classification and NER to verify our idea. The results is shown in Table 1 and Table 2. We also do a lot of other classification task and NER task of other dataset. The improvement is also significant and we do not list the detail results. 
 
@@ -104,18 +104,18 @@ We do the experiments of text classification and NER to verify our idea. The res
 ![](/assets/png/relabel/table2.png)
 
 
-### Analysis
+### 5. Analysis
 
 Why re-label method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) If there are three **very similar** data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will predict class-A for data-3.
 
 The improvement reason is also based on the better and better understanding for the specific task's labeling rule/knowledge of labeling human once by once. Human-in-the-loop here means that in each loop the labeling human leader should learn and summarize the corrected rule/knowledge based on the last loop.
 
-###  Related Work
+### 6. Related Work
 The work\cite{ref7} proposes pseudo-label-based method to improve data quality without human re-label, which is different from our method. Our method is to improve the data quality for model of 97% accuracy/precision/recall/BLEU/AUC by human re-label.
 
 The work\cite{ref8} proposes label-guess-based method to improve data quality without human re-label, which is different from our method. Our method get the guess-label as reference for human re-label.
 
-### Conclusion
+### 7. Conclusion
 
 We argue that the key point to improve the industry deep learning application performance is to correct the noisy data. We propose a simple method to achieve our idea and show the experimental results to verify our idea. 
 
