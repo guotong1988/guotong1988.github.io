@@ -11,13 +11,13 @@ description: "Content Enhanced BERT-based Text-to-SQL Generation"
 
 # Content Enhanced BERT-based Text-to-SQL Generation
 
-### abstract
+### Abstract
 We present a simple methods to leverage the table content for the BERT-based model to solve the text-to-SQL problem. Based on the observation that some of the table content match some words in question string and some of the table header also match some words in question string, we encode two addition feature vector for the deep model. Our methods also benefit the model inference in testing time as the tables are almost the same in training and testing time. We test our model on the WikiSQL dataset and outperform the BERT-based baseline by 3.7% in logic form and 3.7% in execution accuracy and  achieve state-of-the-art.
 
-#### keywords 
+#### Keywords 
 Deep Learning, Semantic Parsing, Database
 
-### Introduction
+### 1. Introduction
 
 Semantic parsing is the tasks of translating natural language to logic form. Mapping from natural language to SQL (NL2SQL) is an important semantic parsing
 task for question answering system. In recent years, deep learning and BERT-based model have shown significant improvement on this task. However, past methods did not encode the table content for the input of deep model. For industry application, the table of training time and the table of testing time are the same. So the table content can be encoded as external knowledge for the deep model.
@@ -32,14 +32,14 @@ In order to solve the problem that the table content is not used for model, we p
 
 ![](/assets/png/rule-text2sql/fig1.png)
 
-### Related Work
+### 2. Related Work
 
 WikiSQL \cite{ref1} is a large semantic parsing dataset. It has 80654 natural language and corresponding SQL pairs. The examples of WikiSQL are shown in fig. 1. 
 
 BERT\cite{ref4} is a very deep transformer-based\cite{ref5} model. It first pre-train on very large corpus using the mask language model loss and the next-sentence loss. And then we could fine-tune BERT on a variety of specific tasks like text classification, text matching and natural language inference and set new state-of-the-art performance on them. 
 
 
-### External Feature Vector Encoding
+### 3. External Feature Vector Encoding
 
 ![](/assets/png/rule-text2sql/alg1.png)
 
@@ -52,7 +52,7 @@ In this section we describe our encoding methods based on the word matching of t
 ![](/assets/png/rule-text2sql/fig2.png)
 
 
-### The Deep Neural Model
+### 4. The Deep Neural Model
 
 Based on the Wikisql dataset, we also use three sub-model to predict the SELECT part, AGG part and WHERE part. The whole model is shown in fig. 2.
 
@@ -60,7 +60,7 @@ Based on the Wikisql dataset, we also use three sub-model to predict the SELECT 
 We use BERT as the representation layer. The question and table header are concat and then input to BERT, so that the question and table header have the attention interaction information of each other.
 We denote the BERT output of question and table header as $Q$ and $H$
 
-#### BERT embedding layer
+#### 4.1 BERT embedding layer
 
 Given the question tokens ${w_1,w_2,...,w_n}$ and the table header ${h_1,h_2,...,h_n}$, we follow the BERT convention and concat the question tokens and table header for BERT input. The detail encoding is below:
 
@@ -70,7 +70,7 @@ $$
 
 The output embeddings of BERT are shared in all the downstream tasks. We think the concatenation input for BERT can produce some kind of 'global' attention for the downstream tasks.
 
-#### SELECT column
+#### 4.2 SELECT column
 Our goal is to predict the column name in the table header. The inputs are the question $Q$ and table header $H$. The output are the probability of SELECT column: 
 
 $$
@@ -79,14 +79,14 @@ $$
 
 where $QV$ and $HV$ is the external feature vectors that are described above.
 
-#### SELECT agg
+#### 4.3 SELECT agg
 Our goal is to predict the agg slot. The inputs are $Q$  with $QV$ and the output are the probability of SELECT agg:
 
 $$
 P(sa|Q,QV) 
 $$
 
-#### WHERE number
+#### 4.4 WHERE number
 
 Our goal is to predict the where number slot. The inputs are $Q$ and $H$ with $QV$ and $HV$. The output are the probability of WHERE number:
 
@@ -94,7 +94,7 @@ $$
 P(wn|Q,H,QV,HV) 
 $$
 
-#### WHERE column
+#### 4.5 WHERE column
 
 Our goal is to predict the where column slot for each condition of WHERE clause. The inputs are $Q$, $H$ and $P_{wn}$ with $QV$ and $HV$. The output are the top $wherenumber$ probability of WHERE column:
 
@@ -102,7 +102,7 @@ $$
 P(wc|Q,H,P_{wn},QV,HV) 
 $$
 
-#### WHERE op
+#### 4.6 WHERE op
 
 Our goal is to predict the where column slot for each condition of WHERE clause. The inputs are $Q$, $H$, $P_{wc}$ and $P_{wn}$. The output are the probability of WHERE op slot:
 
@@ -110,7 +110,7 @@ $$
 P(wo|Q,H,P_{wn},P_{wc}) 
 $$
 
-#### WHERE value
+#### 4.7 WHERE value
 Our goal is to predict the where column slot for each condition of WHERE clause. The inputs are $Q$, $H$, $P_{wn}$, $P_{wc}$ and $P_{wo}$ with $QV$ and $HV$. The output are the probability of WHERE value slot:
 
 $$
@@ -118,11 +118,11 @@ P(wv|Q,H,P_{wn},P_{wc},P_{wo},QV,HV)
 $$
 
 
-### Experiments
+### 5. Experiments
 
 In this section we describe detail of experiment parameters and show the experiment result.
 
-#### Experiment Result
+#### 5.1 Experiment Result
 
 In this section, we evaluate our methods versus other approachs on the WikiSQL dataset. See Table 1 and Table 2 for detail. The SQLova\cite{ref3} result use the BERT-Base-Uncased pretrained model and run on our machine without execution-guided decoding(EG)\cite{ref6}.
 
@@ -132,7 +132,7 @@ In this section, we evaluate our methods versus other approachs on the WikiSQL d
 
 ![](/assets/png/rule-text2sql/table3.png)
 
-### Conclusion
+### 6. Conclusion
 
 Based on the observation that the table data is almost the same in training time and testing time and to solve the problem that the table content is lack for deep model. We propose a simple encoding methods that can leverage the table content as external feature for the BERT-based deep model, demonstrate its good performance on the WikiSQL task, and achieve state-of-the-art on the datasets. 
 
