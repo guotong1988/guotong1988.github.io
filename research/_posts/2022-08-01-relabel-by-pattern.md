@@ -28,7 +28,7 @@ In this paper, knowledge-driven means the knowledge for labeling when we teach t
 
 In this section, we propose the pipeline to improve the human evaluation accuracy.
 
-![](/assets/png/relabel-by-pattern/fig1.png)
+![fig1](/assets/png/relabel-by-pattern/fig1.png)
 
 **Step-1**. Based on the human-labeled training dataset, we train a deep model and predict for industry application dataset. Human evaluate the current deep model prediction dataset and find the badcase patterns. Take text classification task as example, the pattern is the tokens from the badcase prediction text. For computer vision task, the pattern is the pixel token from the badcase prediction image.
 
@@ -43,7 +43,7 @@ If there are no training data that is recognised by badcase patterns, we newly l
 ### 3. Experimental Results
 In the section, we describe the experiment results. Take our text classification task as example. The result is shown in Table 1. In Table 1, data-v1 means the origin training data. And data-v2 and data-v3 means the training data after we use our method for 2 loops, based on data-v1.
 
-![](/assets/png/relabel-by-pattern/table1.png)
+![table1](/assets/png/relabel-by-pattern/table1.png)
 
 ### 4. Related Works
 There are works that inject knowledge into deep model. But they are different from our work. They focus on model-centric part, but our method focuses on the human-in-the-loop labeling data-centric part.
