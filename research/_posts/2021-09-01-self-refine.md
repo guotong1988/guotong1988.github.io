@@ -12,15 +12,15 @@ description: "Self-Refine Learning For Data-Centric Text Classification"
 
 # Self-Refine Learning For Data-Centric Text Classification
 
-### abstract
+### Abstract
 
 In industry NLP application, our manually labeled data has a certain number of noisy data. We present a simple method to find the noisy data and re-label their labels to the result of model prediction. We select the noisy data whose human label is not contained in the top-K model's predictions. The model is trained on the origin dataset. The experiment result shows that our method works. For industry deep learning application, our method improve the text classification accuracy from 80.5% to 90.6% in dev dataset, and improve the human-evaluation accuracy from 83.2% to 90.1%.
 
 
-#### keywords
+#### Keywords
 Deep Learning, Text Classification, NLP
 
-### Introduction
+### 1. Introduction
 
 In recent years, deep learning \cite{ref2} and BERT-based \cite{ref1} model have shown significant improvement on almost all the NLP tasks. However, the most important factor for deep learning application performance is the data quantity and quality. We try to improve performance of the industry NLP application by correcting the noisy data by other most of data. 
 
@@ -34,14 +34,14 @@ Based on our industry dataset, we first find the noisy data which human label is
 
  
 
-### Relate work
+### 2. Relate work
 
 BERT \cite{ref1} is built by the multi-layer transformer encoder \cite{ref10}, which produces self-attended token representations that have been pre-trained from unlabeled text and fine-tuned for the supervised downstream tasks. BERT achieved state-of-the-art results on many sentence-level tasks on the GLUE benchmark \cite{ref3} and CLUE\cite{ref12} benchmark. 
 
 
 Our method is different to semi-supervised learning. Semi-supervised learning solve the problem that making best use of a large amount of unlabeled data. These works include UDA \cite{ref6}, Mixmatch \cite{ref7}, Fixmatch \cite{ref8}, Remixmatch \cite{ref9}. Our work is full supervised.
 
-### Our method
+### 3. Our method
 
 In this section, we describe our method in detail. Our methods is shown in Fig 1. It includes 5 steps:
 
@@ -56,13 +56,13 @@ Step 4, we re-label the noisy data's human label to the top-1 prediction of mode
 Step 5, we train and evaluate upon the dataset of step 4 and get Model-B. As we also re-label the dev dataset by the top-1 prediction of model-A, we also manually evaluate the performance of our method.
 
 
-### The Model
+### 4. The Model
 
 We use BERT as our model. The training steps in our method belongs to the fine-tuning step in BERT. We follow the BERT convention to encode the input text. 
 
 
 
-### Experiments
+### 5. Experiments
 
 In this section we describe detail of experiment parameters and show the experiment result. The detail result is shown in Table 2. The data size in our experiment is shown in Table 1.
 
@@ -77,7 +77,7 @@ In fine-tuning, we use Adam \cite{ref4} with learning rate of 1e-5 and use a dro
 
 
 
-### Analysis
+### 6. Analysis
 
 As the whole dataset is large enough, so we re-label the ground truth of noisy data by other most of the data.
 
@@ -125,7 +125,7 @@ Then the trained model will inference ‘aae’ to class-A, and also will infere
 
 The reason for this example is: A little wrong-label data can lead to wrong inference for some kind of new data, but the wrong-label data can be found by self-predict-and-compare method.
 
-### Conclusion
+### 7. Conclusion
 
 The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref11} that inject the prediction result of model-A to model-B. For further applying of self-correct method, we can correct the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref13}.
 
