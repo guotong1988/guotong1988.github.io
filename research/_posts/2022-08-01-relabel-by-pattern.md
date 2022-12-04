@@ -31,11 +31,13 @@ In this section, we propose the pipeline to improve the human evaluation accurac
 ![](/assets/png/relabel-by-pattern/fig1.png)
 
 **Step-1**
+
 Based on the human-labeled training dataset, we train a deep model and predict for industry application dataset. Human evaluate the current deep model prediction dataset and find the badcase patterns. Take text classification task as example, the pattern is the tokens from the badcase prediction text. For computer vision task, the pattern is the pixel token from the badcase prediction image.
 
 If there are no training data that is recognised by badcase patterns, we newly label the real application data that is recognised by badcase patterns and merge to the training data. Also we get more than 95% accuracy in dev dataset by \cite{ref6} method.
 
 **Step-2**
+
 Re-set the labeling rule/knowledge for human. Then the knowledge-refreshed human re-label the training data that is recognised by badcase patterns of Step-1. Then we train to get a new version of current deep model.
 
 **Loop Step-1 and Step-2**
@@ -53,9 +55,11 @@ In the section, we describe the experiment results. Take our text classification
 There are works that inject knowledge into deep model. But they are different from our work. They focus on model-centric part, but our method focuses on the human-in-the-loop labeling data-centric part.
 
 **Rule-enhanced Text2Sql**
+
 In the text2sql task, there is work\cite{ref3} that injects external entity type-info/knowledge into deep model. There is work \cite{ref4} that inject database design rules/knowledge into deep model. These works give external information that can not be captured by an end-to-end deep model.
 
 **Keyword-enhanced NER**
+
 In the named-entity-recognise task, there is work\cite{ref5} that injects the entity dictionary into deep model. This work give more information for the deep model if the entities of training data is similar to test data.
 
 ### 5. Conclusion
