@@ -13,6 +13,7 @@ Disscussion about my research can be post at https://github.com/guotong1988/guot
 
 ## Other Info
 
+https://scholar.google.com/citations?user=4J7HYNAAAAAJ
 
 Reviewer of NAACL Industry Track
 
