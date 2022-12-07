@@ -28,7 +28,7 @@ In order to solve the problem that the table content is not used for model, we p
 
 2. We use the match inf of all the table column name and question string to mark the column and produce a feature vector which is the same length to the table header. 
 
-3. We design the whole BERT-based model and take the two feature vector above as external inputs. The experiment results outperform the baseline\cite{ref3}. The code is available.\footnote[1]{\url{https://github.com/guotong1988/NL2SQL-RULE}}
+3. We design the whole BERT-based model and take the two feature vector above as external inputs. The experiment results outperform the baseline\cite{ref3}. The code is available. [github.com/guotong1988/NL2SQL-RULE](https://github.com/guotong1988/NL2SQL-RULE)
 
 ![fig1](/assets/png/rule-text2sql/fig1.png)
 
