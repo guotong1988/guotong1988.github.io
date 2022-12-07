@@ -26,8 +26,7 @@ The problem of NL2SQL can be considered as a special instance to the more generi
 \cite{ref24,ref7,ref8,ref9,ref10,ref28,ref11,ref25}. Parsing natural language into a logical form has a wide application in question answering and dialog system. And there are some datasets such as GeoQuery \cite{ref12} and ATIS \cite{ref13}.
 
 Our main contributions in this work are three-fold. First, we apply bidirectional attention to add the relevant information between two sequences for prediction. Second, we leverage character-level embedding and convolutional neural networks (CNNs) to maps each word to a vector space as the new embedding input.  Last, the model we design achieves the state-of-the-art on the WikiSQL dataset.
-The code is available.
-\footnote[1]{\url{https://github.com/guotong1988/NL2SQL}}
+The code is available. [github.com/guotong1988/NL2SQL](https://github.com/guotong1988/NL2SQL)
 
 ## 2. Task Description
 In the NL2SQL task, given a question and a database table, the machine needs to generate a SQL to query the database table, and find the answer to the question. The question is described as a sequence of word tokens: 
