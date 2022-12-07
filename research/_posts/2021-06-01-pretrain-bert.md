@@ -11,7 +11,7 @@ description: "A Comprehensive Comparison of Pre-training Language Models Under S
 
 ### Abstract
 
-Recently, the development of pre-trained language models has brought natural language processing (NLP) tasks to the new state-of-the-art. In this paper we explore the efficiency of various pre-trained language models. We pre-train a list of transformer-based models with the same amount of text and the same training steps. The experimental results shows that the most improvement upon the origin BERT is adding the RNN-layer to capture more contextual information for short text understanding. But there are no remarkable improvement for short text understanding for similar BERT structures.
+Recently, the development of pre-trained language models has brought natural language processing (NLP) tasks to the new state-of-the-art. In this paper we explore the efficiency of various pre-trained language models. We pre-train a list of transformer-based models with the same amount of text and the same training steps. The experimental results shows that the most improvement upon the origin BERT is adding the RNN-layer to capture more contextual information for short text understanding. **But the conclusion is: There are no remarkable improvement for short text understanding for similar BERT structures.**
 
 
 #### Keywords
