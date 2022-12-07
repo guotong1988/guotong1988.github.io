@@ -39,11 +39,11 @@ BERT \cite{ref1}, or Bidirectional Encoder Representations from Transformers, is
 
 In this section we describe the BERT-like models we use. First we describe the notations we use. We use $L$ to indicate the input sequence length. We use $N$ to indicate the hidden size. 
 
-The code is released at \url{https://github.com/guotong1988/bert_compare}.
+The code is released at [github.com/guotong1988/bert_compare](https://github.com/guotong1988/bert_compare).
 
 #### 3.1 The Origin BERT
 
-We refer the origin BERT to the code released by Google {\url{https://github.com/google-research/bert}.
+We refer the origin BERT to the code released by Google [github.com/google-research/bert](https://github.com/google-research/bert).
 
 #### 3.2 TextCNN-BERT
 
@@ -67,7 +67,7 @@ BORT \cite{ref11} is an optimal subarchitecture extraction for BERT by neural ar
 
 #### 3.7 Relative Position Embedding BERT (RTE-BERT)
 
-We replace the embedding layer of origin BERT by the relative position embedding. The code is from here \url{https://github.com/tensorflow/tensor2tensor}. We extract a easy-to-use relative position embedding code from tensor2tensor and put them to here\footnote[4]{\url{https://github.com/guotong1988/transformer\_relative\_position\_embedding}}.
+We replace the embedding layer of origin BERT by the relative position embedding. The code is from here [github.com/tensorflow/tensor2tensor](https://github.com/tensorflow/tensor2tensor). We extract a easy-to-use relative position embedding code from tensor2tensor and put them to here [github.com/guotong1988/transformer_relative_position_embedding](https://github.com/guotong1988/transformer_relative_position_embedding).
 
 #### 3.8 RNN-BERT
 
