@@ -59,7 +59,7 @@ The intuition we try this architecture is that we think the residual connection 
 
 #### 3.5 ConvBERT
 
-ConvBERT \cite{ref12} is using span-based dynamic convolution to improve BERT. The code is from here \url{https://github.com/yitu-opensource/ConvBert}.
+ConvBERT \cite{ref12} is using span-based dynamic convolution to improve BERT. The code is from here [github.com/yitu-opensource/ConvBert](https://github.com/yitu-opensource/ConvBert).
 
 #### 3.6 BORT
 
