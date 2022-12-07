@@ -28,7 +28,7 @@ Deep Learning, Human Labeling, Data Centric, Human-In-The-Loop
 
 Deep Learning has been shown to be effective for many artificial intelligence tasks. 
 In human-labeled industry deep learning application, data quality or label quality determine the model performance.
-The data quality should reach 80%-90% accuracy at least, in order to apply the re-label method \cite{ref1} to further improve to more than 95% accuracy. 
+The data quality should reach 80%-90% accuracy for model at least, in order to apply the re-label method \cite{ref1} to further improve to more than 95% accuracy. 
 
 
 ### 2. Our Method
