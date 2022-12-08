@@ -19,7 +19,7 @@ We first manually label a high quality small seed dataset.
 Then we train model upon the seed dataset.
 Then we predict labels for the next unlabel data. 
 The model's top-10 predictions are the references for human labeling.
-The experiment results shows that, the models trained upon our self-guided dataset can achieve 80%-90% accuracy in its own training dataset.
+The experiment results shows that, the models trained upon our self-guided dataset can achieve 80%-90% accuracy.
 Based on the 80-90% basic dataset, then we can use re-label \cite{ref1} method to further improve to more than 95% accuracy. 
 
 #### Keywords
