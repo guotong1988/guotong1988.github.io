@@ -3,7 +3,6 @@ layout: post
 title: "Re-Label Is All You Need"
 date: 2021-12-01
 category: research
-comments: true
 author: "Tong Guo"
 description: "Re-Label Is All You Need For 97% Accuracy"
 ---
