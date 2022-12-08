@@ -3,7 +3,6 @@ layout: post
 title: "Bidirectional Attention for SQL Generation"
 date: 2018-01-01
 category: research
-comments: true
 author: "Tong Guo"
 description: "Bidirectional Attention for SQL Generation"
 ---
