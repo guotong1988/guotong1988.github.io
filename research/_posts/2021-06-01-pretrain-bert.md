@@ -3,7 +3,6 @@ layout: post
 title: "A Comprehensive Comparison of Pre-training Language Models"
 date: 2021-06-01
 category: research
-comments: true
 author: "Tong Guo"
 description: "A Comprehensive Comparison of Pre-training Language Models Under Same Resource"
 ---
