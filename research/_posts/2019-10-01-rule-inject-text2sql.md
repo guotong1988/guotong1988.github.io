@@ -3,7 +3,6 @@ layout: post
 title: "Content Enhanced BERT-based Text-to-SQL Generation"
 date: 2019-10-01
 category: research
-comments: true
 author: "Tong Guo"
 description: "Content Enhanced BERT-based Text-to-SQL Generation"
 ---
