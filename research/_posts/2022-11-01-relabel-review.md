@@ -3,7 +3,6 @@ layout: post
 title: "Re-Label Method: A Review"
 date: 2022-11-01
 category: research
-comments: true
 author: "Tong Guo"
 description: "Re-Label For Industry 97% Accuracy: A Review"
 ---
