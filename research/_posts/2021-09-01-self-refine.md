@@ -3,7 +3,6 @@ layout: post
 title: "Self-Refine Learning For Data-Centric Text Classification"
 date: 2021-09-01
 category: research
-comments: true
 author: "Tong Guo"
 description: "Self-Refine Learning For Data-Centric Text Classification"
 ---
