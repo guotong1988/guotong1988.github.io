@@ -3,9 +3,8 @@ layout: post
 title: "Re-Label By Data Pattern Is All You Need For Knowledge Driven Deep Learning"
 date: 2022-08-01
 category: research
-comments: true
 author: "Tong Guo"
-description: "Re-Label By Data Pattern Is All You Need For Knowledge Driven Deep Learning"
+description: "Re-Label By Data Pattern Is All You Need For 97% Accuracy"
 ---
 
 
