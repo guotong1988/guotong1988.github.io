@@ -36,7 +36,7 @@ The data quality should reach 80%-90% accuracy for model at least, in order to a
 ![fig1](/assets/png/self-reference/fig1.png)
 
 #### 2.1 Seed data prepare 
-The seed 10% data should uniformly sample from all the 100% data. Take text related task as example, we first sort the text dataset by string order and then sample by `1 % 10`.
+The seed 10% data should uniformly sample from all the 100% data. Take text related task as example, we first sort the text dataset by string order and then sample by `1 % 10`. The seed 10% data's reference labels can be predicted by rule/pattern.
 
 #### 2.2 
 
