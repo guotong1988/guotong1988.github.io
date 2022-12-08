@@ -168,6 +168,6 @@ Guo, Tong. "Learning From How Human Correct." arXiv preprint arXiv:2102.00225 (2
 Xu, Liang, et al. "Clue: A chinese language understanding evaluation benchmark." arXiv preprint arXiv:2004.05986 (2020).
 
 \bibitem{ref13}
-Tong Guo, Re-Label Is All You Need, Guotong1988. Github. Io.
+Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v8 
 ```
 
