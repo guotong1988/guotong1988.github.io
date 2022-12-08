@@ -3,7 +3,6 @@ layout: post
 title: "Self-Guided Human Labeling For Industry Deep Learning"
 date: 2022-11-01
 category: research
-comments: true
 author: "Tong Guo"
 description: "Self-Guided Human Labeling For Industry Deep Learning"
 ---
