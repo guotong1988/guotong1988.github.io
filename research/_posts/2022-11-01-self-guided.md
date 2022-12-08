@@ -19,7 +19,8 @@ We first manually label a high quality small seed dataset.
 Then we train model upon the seed dataset.
 Then we predict labels for the next unlabel data. 
 The model's top-10 predictions are the references for human labeling.
-The experiment results shows that, the models trained upon our self-guided dataset can achieve ~90% accuracy in its own training dataset.
+The experiment results shows that, the models trained upon our self-guided dataset can achieve 80%-90% accuracy in its own training dataset.
+Based on the 80-90% basic dataset, then we can use re-label \cite{ref1} method to further improve to more than 95% accuracy. 
 
 #### Keywords
 Deep Learning, Human Labeling, Data Centric, Human-In-The-Loop
@@ -28,7 +29,7 @@ Deep Learning, Human Labeling, Data Centric, Human-In-The-Loop
 
 Deep Learning has been shown to be effective for many artificial intelligence tasks. 
 In human-labeled industry deep learning application, data quality or label quality determine the model performance.
-The data quality should reach 80%-90% accuracy for model at least, in order to apply the re-label method \cite{ref1} to further improve to more than 95% accuracy. 
+The data quality should reach 80%-90% accuracy for model at least as basic, in order to apply the re-label \cite{ref1} method to further improve to more than 95% accuracy. 
 
 
 ### 2. Our Method
