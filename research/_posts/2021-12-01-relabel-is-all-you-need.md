@@ -116,6 +116,8 @@ The work\cite{ref8} proposes label-guess-based method to improve data quality wi
 
 The work\cite{ref9} of OpenAI also use model predictions for human as references to label. The work\cite{ref9} use the new human-labeled data from model predictions to train the reward model. Our work do not have the reward model of \cite{ref9}, and I think reinforcement learning is same to re-label here. Also the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset (of \cite{ref9}'s policy model), and then to re-label/re-correct. 
 
+Why do I think reinforcement learning is same to re-label here? Because correct by the reward model of \cite{ref9} is same to correct all the data that found by the patterns or substrings. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
+
 ### 7. Conclusion
 
 We argue that the key point to improve the industry deep learning application performance is to correct the noisy data. We propose a simple method to achieve our idea and show the experimental results to verify our idea. 
@@ -149,4 +151,6 @@ Nicholson B, Zhang J, Sheng V S, et al. Label noise correction methods[C]//2015 
 \bibitem{ref9}
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 
+\bibitem{ref10}
+Guo, TechOnly (2022): Re-Label By Data Pattern Is All You Need For Knowledge Driven Deep Learning. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.20485917.v6 
 ```
