@@ -152,5 +152,5 @@ Nicholson B, Zhang J, Sheng V S, et al. Label noise correction methods[C]//2015 
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 
 \bibitem{ref10}
-Guo, TechOnly (2022): Re-Label By Data Pattern Is All You Need For Knowledge Driven Deep Learning. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.20485917.v6 
+Guo, Tong (2022): Re-Label By Data Pattern Is All You Need For Knowledge Driven Deep Learning. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.20485917.v6 
 ```
