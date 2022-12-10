@@ -114,6 +114,8 @@ The work\cite{ref7} proposes pseudo-label-based method to improve data quality w
 
 The work\cite{ref8} proposes label-guess-based method to improve data quality without human re-label, which is different from our method. Our method get the guess-label as reference for human re-label.
 
+The work\cite{ref9} of OpenAI also use model predictions for human as references to label. Our work do not have the reward model of \cite{ref9}, and our work focus on the correction of training data. Also the new human-corrected data from model predictions do not conflict to our method, and the new data can be merged into the whole dataset.
+
 ### 7. Conclusion
 
 We argue that the key point to improve the industry deep learning application performance is to correct the noisy data. We propose a simple method to achieve our idea and show the experimental results to verify our idea. 
@@ -143,4 +145,8 @@ Yun S, Oh S J, Heo B, et al. Re-labeling imagenet: from single to multi-labels, 
 
 \bibitem{ref8}
 Nicholson B, Zhang J, Sheng V S, et al. Label noise correction methods[C]//2015 IEEE International Conference on Data Science and Advanced Analytics (DSAA). IEEE, 2015: 1-9.
+
+\bibitem{ref9}
+Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
+
 ```
