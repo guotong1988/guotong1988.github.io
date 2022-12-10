@@ -116,7 +116,7 @@ The work\cite{ref8} proposes label-guess-based method to improve data quality wi
 
 The work\cite{ref9} of OpenAI also use model predictions for human as references to label. The work\cite{ref9} use the new human-labeled data from model predictions to train the reward model. Our work do not have the reward model of \cite{ref9}, and I think reinforcement learning is same to re-label here. Also the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset (of \cite{ref9}'s policy model), and then to re-label/re-correct. 
 
-Why do I think reinforcement learning is same to re-label here? Because correction by the reward model of \cite{ref9} is same to correct all the data that found by the patterns or substrings of the badcase. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
+Why do I think reinforcement learning from human feedback(RLHF) is same to re-label here? Because correction by the reward model of \cite{ref9} is same to correct all the data that found by the patterns or substrings of the badcase. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
 
 ### 7. Conclusion
 
