@@ -114,7 +114,7 @@ The work\cite{ref7} proposes pseudo-label-based method to improve data quality w
 
 The work\cite{ref8} proposes label-guess-based method to improve data quality without human re-label, which is different from our method. Our method get the guess-label as reference for human re-label.
 
-The work\cite{ref9} of OpenAI also use model predictions for human as references to label. The work\cite{ref9} use the new human-labeled data from model predictions to train the reward model. Our work do not have the reward model of \cite{ref9}, and I think reinforcement learning is same to re-label here. Also the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset, and then to re-label/re-correct. 
+The work\cite{ref9} of OpenAI also use model predictions for human as references to label. The work\cite{ref9} use the new human-labeled data from model predictions to train the reward model. Our work do not have the reward model of \cite{ref9}, and I think reinforcement learning is same to re-label here. Also the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset (of \cite{ref9}'s policy model), and then to re-label/re-correct. 
 
 ### 7. Conclusion
 
