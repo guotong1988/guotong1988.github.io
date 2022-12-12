@@ -52,7 +52,7 @@ Step-2, we train / fine-tune the BERT model on the 2,700,000 training data. We n
 
 Step-3, we use Model-A to predict for all the 2,790,000 data. Then we find all the data whose human label are not in the top-K (K=1,2,3...10) predictions of model-A. We consider they are the noise data. 
 
-Step-4, we drop/remove the noise data from the 2700000 and 90000 data. 
+Step-4, we drop/remove the noise data from the 2,700,000 and 90,000 data. 
 
 Step-5, we train and evaluate upon the dataset of step-4 and get Model-B. 
 
