@@ -66,57 +66,17 @@ In this section, we evaluate our methods on our real-world dataset. Our dataset-
 
 ### 5. Analysis
 
-In this section, we illustrate why drop the noise data work.
+Why drop-noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
 
-Take text classification as example. If there are 2-class to classify. The sample training data is like: 
+If there are three very similar data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will predict class-A for data-3. 
 
+We suppose that data-3 is wrong-labeled by human, because more people labeled these very similar data-1/data-2 to class-A.
 
----
+And the trained model predict class-A for data-3. So the noise data here is data-3 by our method. 
 
+If we do not drop data-3, the model prediction for new data that is the most similar to data-3 will be class-B, which is wrong.
 
-'aac' -- class-A
-
-'aad' -- class-A
-
-'aae' -- class-B -- wrong-label
-
-'bbc' -- class-B 
-
-'bbd' -- class-B 
-
-'bbe' -- class-B 
-
-
----
-
-
-We define that the text started with 'aa' to label class-A and started with 'bb' to label class-B.
-
-Then the trained model will inference 'aae' to class-A, but will inference 'aaee' to class-B, according to the training data distribution.
-
-Then we drop the wrong-label training data and get:
-
-
----
-
-
-'aac' -- class-A
-
-'aad' -- class-A
-
-'bbc' -- class-B 
-
-'bbd' -- class-B 
-
-'bbe' -- class-B 
-
-
----
-
-
-Then the trained model will inference 'aae' to class-A, and also will inference 'aaee' to class-A, according to the training data distribution.
-
-The reason for this example is: A little wrong-label data can lead to wrong inference for some kind of new data, but the wrong-label data can be found by self-predict-and-compare method.
+If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right.  
 
 
 ### 6. Conclusion
