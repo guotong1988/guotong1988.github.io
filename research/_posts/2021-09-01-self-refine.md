@@ -13,7 +13,7 @@ description: "Self-Refine Learning For Data-Centric Text Classification"
 
 ### Abstract
 
-In industry NLP application, our manually labeled data has a certain number of noisy data. We present a simple method to find the noisy data and re-label their labels to the result of model prediction. We select the noisy data whose human label is not contained in the top-K model's predictions. The model is trained on the origin dataset. The experiment result shows that our method works. For industry deep learning application, our method improve the text classification accuracy from 80.5% to 90.6% in dev dataset, and improve the human-evaluation accuracy from 83.2% to 90.1%.
+In industry NLP application, our manually labeled data has a certain number of noise data. We present a simple method to find the noise data and remove them. We select the noise data whose human label is not contained in the top-K model's predictions. The model is trained on the origin dataset. The experiment result shows that our method works. For industry deep learning application, our method improve the text classification accuracy from 80.5% to 90.6% in dev dataset, and improve the human-evaluation accuracy from 83.2% to 90.1%.
 
 
 #### Keywords
@@ -21,13 +21,14 @@ Deep Learning, Text Classification, NLP
 
 ### 1. Introduction
 
-In recent years, deep learning \cite{ref2} and BERT-based \cite{ref1} model have shown significant improvement on almost all the NLP tasks. However, the most important factor for deep learning application performance is the data quantity and quality. We try to improve performance of the industry NLP application by correcting the noisy data by other most of data. 
 
-Previous works \cite{ref11} first find the noisy data which human label and model prediction is not equal and re-label the noisy data manually. During the correction, the last human label and model prediction is viewed by the labeling people. However it need more human labeling. So in this work, we directly re-label the noisy data whose label is not contained in the top-K (K=1,2,3...10) predictions of model. We re-label the noisy data's label to the top-1 prediction of model. 
+In recent years, deep learning \cite{ref2} and BERT-based \cite{ref1} model have shown significant improvement on almost all the NLP tasks. However, the most important factor for deep learning application performance is the data quantity and quality. We try to improve performance of the industry NLP application by correcting the noise data by other most of data. 
+
+Previous works \cite{ref11} first find the noise data which human label and model prediction is not equal and re-label the noise data manually. During the correction, the last human label and model predictions as references are viewed by the labeling people. However it need more human labeling. So in this work, we directly drop the noise data whose label is not contained in the top-K (K=1,2,3...10) predictions of model. 
 
 Our key contribution is:
 
-Based on our industry dataset, we first find the noisy data which human label is not in the top-K (K=1,2,3...10)  predictions of model. Then we re-label the label of noisy data to the top-1 prediction of the model. The experiment results shows that our idea works for our large industry dataset.  
+Based on our industry dataset, we first find the noise data which human label is not in the top-K (K=1,2,3...10)  predictions of model. Then we drop/remove the noise data. The experiment results shows that our idea works for our large industry dataset.  
 
 ![fig1](/assets/png/self-refine/fig1.png)
 
@@ -42,17 +43,18 @@ Our method is different to semi-supervised learning. Semi-supervised learning so
 
 ### 3. Our Method
 
+
 In this section, we describe our method in detail. Our methods is shown in Fig 1. It includes 5 steps:
 
-Step 1, in order to solve our industry text classification problem. We manually label 2,790,000 data and split them into 2,700,000 training data and 90,000 dev data. 
+Step-1, in order to solve our industry text classification problem. We manually label 2,790,000 data and split them into 2,700,000 training data and 90,000 dev data. 
 
-Step 2, we train / fine-tune the BERT model on the 2,700,000 training data. We named the result model of this step Model-A. Note that Model-A should not overfit the training dataset.
+Step-2, we train / fine-tune the BERT model on the 2,700,000 training data. We named the result model of this step Model-A. Note that Model-A should not overfit the training dataset.
 
-Step 3, we use Model-A to predict for all the 2,790,000 data. Then we find all the data whose human label are not in the top-K (K=1,2,3...10) predictions of model-A. We consider they are the noisy data. 
+Step-3, we use Model-A to predict for all the 2,790,000 data. Then we find all the data whose human label are not in the top-K (K=1,2,3...10) predictions of model-A. We consider they are the noise data. 
 
-Step 4, we re-label the noisy data's human label to the top-1 prediction of model-A. Then we split the same 2,700,000:90,000 training and dev dataset.
+Step-4, we drop/remove the noise data from the 2700000 and 90000 data. 
 
-Step 5, we train and evaluate upon the dataset of step 4 and get Model-B. As we also re-label the dev dataset by the top-1 prediction of model-A, we also manually evaluate the performance of our method.
+Step-5, we train and evaluate upon the dataset of step-4 and get Model-B. 
 
 
 ### 4. The Model
@@ -67,66 +69,30 @@ In this section we describe detail of experiment parameters and show the experim
 
 In fine-tuning, we use Adam \cite{ref4} with learning rate of 1e-5 and use a dropout \cite{ref5} probability of 0.1 on all layers. We use BERT-Base (12 layer, 768 hidden size) as our pre-trained model. 
 
-![table1](/assets/png/self-refine/table1.png)
+![table1](/assets/png/self-refine/table12.png)
 
 
-
-![table2](/assets/png/self-refine/table2.png)
 
 
 
 
 ### 6. Analysis
 
-As the whole dataset is large enough, so we re-label the ground truth of noisy data by other most of the data.
+Why drop-noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
 
-To illustrate why self-refine work. We illustrate that only dropping the noise data work.
+If there are three very similar data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will predict class-A for data-3. 
 
-Take text classification as example. If there are 2-class to classify. The sample training data is like:
+We suppose that data-3 is wrong-labeled by human, because more people labeled these very similar data-1/data-2 to class-A.
 
-——————
+And the trained model predict class-A for data-3. So the noise data here is data-3 by our method. 
 
-‘aac’ – class-A
+If we do not drop data-3, the model prediction for new data that is the most similar to data-3 will be class-B, which is wrong.
 
-‘aad’ – class-A
-
-‘aae’ – class-B – wrong-label
-
-‘bbc’ – class-B
-
-‘bbd’ – class-B
-
-‘bbe’ – class-B
-
-——————
-
-We define that the text started with ‘aa’ to label class-A and started with ‘bb’ to label class-B.
-
-Then the trained model will inference ‘aae’ to class-A, but will inference ‘aaee’ to class-B, according to the training data distribution.
-
-Then we drop the wrong-label training data and get:
-
-——————
-
-‘aac’ – class-A
-
-‘aad’ – class-A
-
-‘bbc’ – class-B
-
-‘bbd’ – class-B
-
-‘bbe’ – class-B
-
-——————
-
-Then the trained model will inference ‘aae’ to class-A, and also will inference ‘aaee’ to class-A, according to the training data distribution.
-
-The reason for this example is: A little wrong-label data can lead to wrong inference for some kind of new data, but the wrong-label data can be found by self-predict-and-compare method.
+If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right.  
 
 ### 7. Conclusion
 
-The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref11} that inject the prediction result of model-A to model-B. For further applying of self-correct method, we can correct the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref13}.
+The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref11} that inject the prediction result of model-A to model-B. For further applying of drop-noise method, we can drop the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref13}.
 
 
 ### References
