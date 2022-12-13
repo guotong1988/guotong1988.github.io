@@ -8,7 +8,7 @@ description: "Self-Guided Human Labeling For Industry Deep Learning"
 ---
 
 
-# Self-Guided Human Labeling For Industry Deep Learning
+# Self-Guided Human Labeling For Industry Deep Learning (working in progress)
 
 ### Abstract
 
