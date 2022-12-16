@@ -93,7 +93,7 @@ Guo T. Learning From Human Correction For Data-Centric Deep Learning[J]. arXiv p
 Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v3 
 
 \bibitem{ref3}
-Guo, Tong (2021): Achieving 90% In Data-Centric Industry Deep Learning Task. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v2 
+Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v9
 
 \bibitem{ref4}
 [Rendle, 2010] Steffen Rendle. Factorization machines. In ICDM, 2010.
