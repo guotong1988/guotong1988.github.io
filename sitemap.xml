@@ -9,47 +9,67 @@
 
 <url>
   <loc>https://guotong1988.github.io/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://guotong1988.github.io/about/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://guotong1988.github.io/research/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://guotong1988.github.io/research/2022/01/01/relabel-review/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <loc>https://guotong1988.github.io/research/2022/08/01/relabel-by-pattern/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://guotong1988.github.io/research/2022/01/01/relabel-is-all-you-need/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <loc>https://guotong1988.github.io/research/2022/02/01/drop-noise-for-ctr/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://guotong1988.github.io/research/2022/01/01/relabel-by-pattern/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <loc>https://guotong1988.github.io/research/2021/12/01/relabel-is-all-you-need/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://guotong1988.github.io/research/2022/01/01/pretrain-bert/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <loc>https://guotong1988.github.io/research/2021/09/01/self-refine/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://guotong1988.github.io/research/2022/01/01/drop-noise-for-ctr/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <loc>https://guotong1988.github.io/research/2021/06/01/pretrain-bert/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://guotong1988.github.io/research/2022/01/01/correct/</loc>
-  <lastmod>2022-11-01T08:18:36+00:00</lastmod>
+  <loc>https://guotong1988.github.io/research/2021/02/01/correct/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://guotong1988.github.io/research/2020/10/01/self-pretrain/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://guotong1988.github.io/research/2019/10/01/rule-inject-text2sql/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://guotong1988.github.io/research/2019/08/01/vector-retrieval/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://guotong1988.github.io/research/2018/01/01/text2sql-model/</loc>
+  <lastmod>2022-12-21T02:40:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
