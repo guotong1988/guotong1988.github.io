@@ -87,7 +87,7 @@ Based on the good performance of previous works  \cite{ref1} \cite{ref2} \cite{r
 ### References
 ```
 \bibitem{ref1}
-Guo T. Learning From Human Correction For Data-Centric Deep Learning[J]. arXiv preprint arXiv:2102.00225, 2021.
+Guo T. Learning From Human Correction[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref2}
 Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v3 
