@@ -5,7 +5,7 @@ description: About page of Tong Guo - Blog
 permalink: /about/
 ---
 
-Hi! My name is Tong Guo（郭同）. My nick name is TechOnly.
+Hi! My name is Tong Guo（郭同）. My nickname is TechOnly.
 
 Welcome to my paper blog!
 
