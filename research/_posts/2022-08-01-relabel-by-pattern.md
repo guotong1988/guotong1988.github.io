@@ -47,11 +47,14 @@ In the section, we describe the experiment results. Take our text classification
 ### 4. Related Works
 There are works that inject knowledge into deep model. But they are different from our work. They focus on model-centric part, but our method focuses on the human-in-the-loop labeling data-centric part.
 
-**Rule-enhanced Text2Sql**. In the text2sql task, there is work\cite{ref3} that injects external entity type-info/knowledge into deep model. There is work \cite{ref4} that inject database design rules/knowledge into deep model. These works give external information that can not be captured by an end-to-end deep model.
+#### 4.1 Rule-enhanced Text2Sql
+In the text2sql task, there is work\cite{ref3} that injects external entity type-info/knowledge into deep model. There is work \cite{ref4} that inject database design rules/knowledge into deep model. These works give external information that can not be captured by an end-to-end deep model.
 
-**Keyword-enhanced NER**. In the named-entity-recognise task, there is work\cite{ref5} that injects the entity dictionary into deep model. This work give more information for the deep model if the entities of training data is similar to test data.
+#### 4.2 Keyword-enhanced NER
+In the named-entity-recognise task, there is work\cite{ref5} that injects the entity dictionary into deep model. This work give more information for the deep model if the entities of training data is similar to test data.
 
-**ChatGPT**. The work \cite{ref7} of OpenAI use model predictions for human as new data to label. The model predictions are actually based on the training dataset. Our work do not have the reward model of \cite{ref7}, and I think reinforcement learning from human feedback(RLHF) is same to re-label here. \cite{ref7} correct the knowledge of policy by reward model, which is same to the correct all the related data/labels in training dataset. 
+##### 4.3 ChatGPT
+The work \cite{ref7} of OpenAI use model predictions for human as new data to label. The model predictions are actually based on the training dataset. Our work do not have the reward model of \cite{ref7}, and I think reinforcement learning from human feedback(RLHF) is same to re-label here. \cite{ref7} correct the knowledge of policy by reward model, which is same to the correct all the related data/labels in training dataset. 
 
 ### 5. Conclusion
 
