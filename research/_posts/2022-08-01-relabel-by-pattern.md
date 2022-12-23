@@ -51,6 +51,8 @@ There are works that inject knowledge into deep model. But they are different fr
 
 **Keyword-enhanced NER**. In the named-entity-recognise task, there is work\cite{ref5} that injects the entity dictionary into deep model. This work give more information for the deep model if the entities of training data is similar to test data.
 
+**ChatGPT**. The work \cite{ref7} of OpenAI use model predictions for human as new data to label. The model predictions is actually based on the training dataset. Our work do not have the reward model of \cite{ref7}, and I think reinforcement learning from human feedback(RLHF) is same to re-label here. \cite{ref7} correct the knowledge of policy by reward model, which is same to the correct all the related data/labels in training dataset. 
+
 ### 5. Conclusion
 
 In this paper, we solve the problem of the low accuracy under human evaluation after we achieve good accuracy of dev dataset. We propose the pipeline: First, we find the badcase in the prediction data and summarize the right knowledge for human labeling. Second, we summarize the pattern from prediction badcase data and re-label the training data which match the pattern. Loop this pipeline means we inject the right knowledge/rule to the deep model by re-label the training data retrieved by pattern from badcase prediction data. The experiment results verify our idea.
@@ -75,4 +77,7 @@ https://github.com/guotong1988/Chinese-NER-InjectDictRule
 
 \bibitem{ref6}
 Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v5 
+
+\bibitem{ref7}
+Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 ```
