@@ -15,11 +15,7 @@ Disscussion about my research can be post at [the-repo-issues](https://github.co
 
 [my.scholar.google](https://scholar.google.com/citations?user=4J7HYNAAAAAJ)
 
-Program Committee of ACL Industry Track
-
-Reviewer of NAACL Industry Track
-
-PC Member of EMNLP Industry Track
+Reviewer of ACL/NAACL/EMNLP Industry Track
 
 
 
