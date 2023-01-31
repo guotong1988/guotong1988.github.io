@@ -6,7 +6,7 @@
 
 [Self-training For Pre-training Language Models](2020-10-01-self-pretrain.md)
 
-[Learning From Human Correction](2021-02-01-correct.md)
+[Learning From How Humans Correct](2021-02-01-correct.md)
 
 [A Comprehensive Comparison of Pre-training Language Models](2021-06-01-pretrain-bert.md)
 
