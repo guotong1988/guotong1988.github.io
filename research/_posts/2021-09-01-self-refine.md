@@ -9,7 +9,7 @@ description: "Self-Refine Learning For Data-Centric Deep Learning"
 
 
 
-# Self-Refine Learning For Data-Centric Text Classification
+# Self-Refine Learning For Data-Centric Deep Learning
 
 ### Abstract
 
