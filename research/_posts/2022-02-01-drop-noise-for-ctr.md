@@ -78,9 +78,6 @@ If we do not drop data-3, the model prediction for new data that is the most sim
 
 If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right.  
 
-### 5.1 ChatGPT
-In ChatGPT \cite{ref8}, OpenAI use human-labeled policy-prediction-data as reward to train text-generation transformer \cite{ref7} policy-model. In fact, if we collected the good/bad tags/rewards from users, we can remove the bad 'reward' data for text-generation policy-model and only use good 'reward' data, which means we do not need the text-match-based reward-model.
-
 ### 6. Conclusion
 
 Based on the good performance of previous works  \cite{ref1} \cite{ref2} \cite{ref3} that have been verified on human-labeled dataset. We further apply the find-noise idea to user-generated dataset and CTR task. The experiment result shows our idea could improve the AUC a lot. As recommendation system predicts the rating or the preference a user might give to an item. Or it is an algorithm that suggests relevant items to users. The most important thing is to find a way to fit the large amount of data. In other words, fitting the dataset means we find the preference of users. Also, noise data is not the low-frequency user data. We will verify our idea on online performance in the future.  
@@ -105,12 +102,6 @@ Guo H, Tang R, Ye Y, et al. DeepFM: a factorization-machine based neural network
 
 \bibitem{ref6}
 Cheng H T, Koc L, Harmsen J, et al. Wide \& deep learning for recommender systems[C]//Proceedings of the 1st workshop on deep learning for recommender systems. 2016: 7-10.
-
-\bibitem{ref7}
-Waswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//NIPS. 2017.
-
-\bibitem{ref8}
-Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 
 ```
 
