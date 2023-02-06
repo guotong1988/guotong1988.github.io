@@ -91,7 +91,7 @@ If we do not drop data-3, the model prediction for new data that is the most sim
 If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right. 
 
 #### 6.1 ChatGPT 
-In ChatGPT \cite{ref14}, OpenAI use human-labeled policy-prediction-data as reward to train text-generation transformer \cite{ref15} policy-model. In fact, if we collected the good/bad tags/rewards from users, we can remove the bad 'reward' data for text-generation policy-model and only use good 'reward' data, which means we do not need the text-match-based reward-model.
+In ChatGPT \cite{ref10}, OpenAI use human-labeled policy-prediction-data as reward to train text-generation transformer \cite{ref14} policy-model. In fact, if we collected the good/bad tags/rewards from users, we can remove the bad 'reward' data for text-generation policy-model and only use good 'reward' data, which means we do not need the text-match-based reward-model.
 
 
 ### 7. Conclusion
@@ -141,9 +141,6 @@ Xu, Liang, et al. "Clue: A chinese language understanding evaluation benchmark."
 Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v8 
 
 \bibitem{ref14}
-Waswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//NIPS. 2017.
-
-\bibitem{ref15}
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 ```
 
