@@ -78,6 +78,8 @@ If we do not drop data-3, the model prediction for new data that is the most sim
 
 If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right.  
 
+### 5.1 ChatGPT
+In ChatGPT\cite{ref8}, OpenAI use human-labeled policy-prediction-data as reward to train text-generation transformer\cite{ref7} policy-model. In fact, if we collected the good/bad tags/rewards from users, we can remove the bad 'reward' data for text-generation policy-model and only use good 'reward' data, which means we do not need the text-match-based reward-model.
 
 ### 6. Conclusion
 
@@ -103,5 +105,12 @@ Guo H, Tang R, Ye Y, et al. DeepFM: a factorization-machine based neural network
 
 \bibitem{ref6}
 Cheng H T, Koc L, Harmsen J, et al. Wide \& deep learning for recommender systems[C]//Proceedings of the 1st workshop on deep learning for recommender systems. 2016: 7-10.
+
+\bibitem{ref7}
+Waswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//NIPS. 2017.
+
+\bibitem{ref8}
+Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
+
 ```
 
