@@ -10,7 +10,7 @@
 
 [A Comprehensive Comparison of Pre-training Language Models](2021-06-01-pretrain-bert.md)
 
-[Self-Refine Learning For Data-Centric Text Classification](2021-09-01-self-refine.md)
+[Self-Refine Learning For Data-Centric Deep Learning](2021-09-01-self-refine.md)
 
 [Re-Label Is All You Need](2021-12-01-relabel-is-all-you-need.md)
 
