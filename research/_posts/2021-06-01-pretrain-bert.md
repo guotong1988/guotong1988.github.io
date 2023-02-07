@@ -10,7 +10,7 @@ description: "A Comprehensive Comparison of Pre-training Language Models Under S
 
 ### Abstract
 
-Recently, the development of pre-trained language models has brought natural language processing (NLP) tasks to the new state-of-the-art. In this paper we explore the efficiency of various pre-trained language models. We pre-train a list of transformer-based models with the same amount of text and the same training steps. The experimental results shows that the most improvement upon the origin BERT is adding the RNN-layer to capture more contextual information for short text understanding. **But the conclusion is: There are no remarkable improvement for short text understanding for similar BERT structures.**
+Recently, the development of pre-trained language models has brought natural language processing (NLP) tasks to the new state-of-the-art. In this paper we explore the efficiency of various pre-trained language models. We pre-train a list of transformer-based models with the same amount of text and the same training steps. The experimental results shows that the most improvement upon the origin BERT is adding the RNN-layer to capture more contextual information for short text understanding. **But the conclusion is: There are no remarkable improvement for short text understanding for similar BERT structures.** Data-centric method \cite{ref15} can achieve better performance.
 
 
 #### Keywords
@@ -22,7 +22,7 @@ Deep Learning, Pre-trained Language Model
 
 In recent years, deep learning \cite{ref2} and BERT \cite{ref1} have shown significant improvement on almost all the NLP tasks. However, it lacks of a fair comparison on the transformer-based models, due to the pre-training datasets are different and the pre-training computing resources are different. In industry NLP applications, we need to find the most efficient BERT-like model, as the computing resources is limited.
 
-In the paper, we pre-train a list of transformer-based models on the same datasets and pre-training steps. Then we evaluate the pre-trained performance on our large text classification downstream task.
+In the paper, we pre-train a list of transformer-based models on the same datasets and pre-training steps. Then we evaluate the pre-trained performance by fine-tuning on our large text classification downstream task.
  
 
 
@@ -133,4 +133,7 @@ Zhang, Ye, and Byron Wallace. "A sensitivity analysis of (and practitioners' gui
 
 \bibitem{ref14}
 Huang, Gao, et al. "Densely connected convolutional networks." Proceedings of the IEEE conference on computer vision and pattern recognition. 2017.
+
+\bibitem{ref15}
+Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v11 
 ```
