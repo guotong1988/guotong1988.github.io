@@ -15,7 +15,7 @@ In industry deep learning application, our manually labeled data has a certain n
 
 #### Keywords
 
-Deep Learning, Human Labeling, Data Centric, Text-to-Speech, Speech-to-Text, Text Classification, Image Classification, Sequence Tagging, Object Detection, Sequence Generation, Click-Through Rate prediction
+Deep Learning, Human Labeling, Data Centric, Text-to-Speech, Speech-to-Text, Text Classification, Image Classification, Sequence Tagging, Object Detection, Sequence Generation
 
 ### 1. Introduction
 
@@ -119,9 +119,11 @@ The work\cite{ref8} proposes label-guess-based method to improve data quality wi
 
 #### 6.2 ChatGPT
 
-The work\cite{ref9} of OpenAI also use model predictions for human as references to label. The work\cite{ref9} use the new human-labeled data from model predictions to train the reward model. Our work do not have the reward model of \cite{ref9}, and I think reinforcement learning is same to re-label here. Also the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset (of \cite{ref9}'s policy model), and then to re-label/re-correct. 
+The work\cite{ref9} of OpenAI also use model predictions for human as references to label. The work\cite{ref9} use the new human-labeled data from model predictions to train the reward model, which is named as reinforcement learning from human feedback(RLHF). 
 
-Why do I think reinforcement learning from human feedback(RLHF) is same to re-label here? Because correction by the reward model of \cite{ref9} is same to correct all the data that found by the patterns or substrings of the badcase. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
+Our work do not have the reward model of RLHF, the differnce between RLHF and our re-label method is that RLHF focus on using the model predictions as training dataset of reward model, and our re-label method focus on correcting the origin training dataset of policy model. Also in RLHF, the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset of policy model, and then to re-label/re-correct by our method. 
+
+Also, the correction for policy by the reward model of RLHF is same to correct all the related data/labels that found by the patterns or substrings of the badcases. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
 
 ### 7. Conclusion
 
