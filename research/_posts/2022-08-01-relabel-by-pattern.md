@@ -54,7 +54,7 @@ In the text2sql task, there is work\cite{ref3} that injects external entity type
 In the named-entity-recognise task, there is work\cite{ref5} that injects the entity dictionary into deep model. This work give more information for the deep model if the entities of training data is similar to test data.
 
 #### 4.3 ChatGPT
-The work \cite{ref7} of OpenAI use model predictions for human as new data to label. The model predictions are actually based on the training dataset. Our work do not have the reward model of \cite{ref7}, and I think reinforcement learning from human feedback(RLHF) is same to re-label here. \cite{ref7} correct the policy by reward model, which is same to correct all the related data/labels in training dataset. 
+The work \cite{ref7} of OpenAI use model predictions for human as new data to label. The model predictions are actually based on the training dataset. Our work do not have the reward model of \cite{ref7}, the differnce between reinforcement learning from human feedback(RLHF) and our re-label method is that RLHF focus on using the model predictions as training dataset of reward model, and our re-label method focus on correcting the origin training dataset of policy model. Also, RLHF correct the policy by reward model, which is same to correct all the related data/labels in training dataset of policy model. 
 
 ### 5. Conclusion
 
