@@ -20,7 +20,7 @@ Step-2, the child interacts with the physical world and get feedbacks like can-d
 
 Step-3, the child updates the knowledge in brain, which is view as the test dataset with ground-truth labels is merged into the initial training dataset to update the model policy. 
 
-Step-4, the brain-updated child interacts with the world get feedbacks again, and back to Step-2 and loop again.
+Step-4, the brain-updated child interacts with the world and get feedbacks again, then back to Step-2 and loop again.
 
 ### 1. Introduction
 
