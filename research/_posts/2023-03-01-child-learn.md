@@ -20,8 +20,8 @@ Step-2, the child interacts with the physical world and get feedbacks like can-d
 
 Step-3, the child updates the knowledge in brain, which means the test dataset with ground-truth labels is merged into the initial training dataset to update the model policy. 
 
-Step-4, the brain-updated child interacts with the world get feedbacks again, which is back to Step-2 and loop again.
+Step-4, the brain-updated child interacts with the world get feedbacks again, and back to Step-2 and loop again.
 
 ### 1. Introduction
 
-In previous works, we focus on re-label the noisy data in initial training dataset. In this paper, we focus on solving the problem of exploration and 
+In previous works, we focus on re-label the noisy data in initial training dataset. In this paper, we focus on solving the problem of getting better results that are summarized from pre-trained GPT.
