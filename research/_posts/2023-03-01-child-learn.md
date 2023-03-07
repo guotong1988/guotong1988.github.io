@@ -24,4 +24,11 @@ Step-4, the brain-updated child interacts with the world and get feedbacks again
 
 ### 1. Introduction
 
-In previous works, we focus on re-label the noisy data in initial training dataset. In this paper, we focus on solving the problem of getting better results that are summarized from pre-trained GPT.
+In previous works \cite{ref1}, we focus on re-label the noisy data in initial training dataset. In this paper, we focus on solving the problem of getting better results that are summarized from pre-trained GPT.
+
+### References
+```
+\bibitem{ref1}
+Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
+
+```
