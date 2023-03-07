@@ -16,7 +16,7 @@ The learning procedure of human child are:
 
 Step-1, the child observes how adults do, which is view as the initial supervised training dataset for model. 
 
-Step-2, the child interacts with the physical world and get feedbacks like can-do/cannot-do labels by adults, which is view as the model predict for the test dataset, then the predicted labels become ground-truth labels after humans' agreements. 
+Step-2, the child interacts with the physical world and get feedbacks like can-do/cannot-do labels by adults, which is view as the model predictions for the test dataset, then the predicted labels become ground-truth labels after humans' agreements. 
 
 Step-3, the child updates the knowledge in brain, which is view as the test dataset with ground-truth labels is merged into the initial training dataset to update the model policy. 
 
