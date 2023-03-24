@@ -6,7 +6,7 @@
 
 [Content Enhanced BERT-based Text-to-SQL Generation](2019-10-01-rule-inject-text2sql.md)
 
-[Self-training For Pre-training Language Models](2020-10-01-self-pretrain.md)
+[Predictions For Pre-training Language Models](2020-10-01-self-pretrain.md)
 
 [Learning From How Humans Correct](2021-02-01-correct.md)
 
