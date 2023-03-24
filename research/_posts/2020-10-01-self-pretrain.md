@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Self-training For Pre-training Language Models"
+title: "Predictions For Pre-training Language Models"
 date: 2020-10-01
 category: research
 author: "Tong Guo"
@@ -8,7 +8,7 @@ description: "A Comprehensive Exploration of Self-training for Pre-training Lang
 ---
 
 
-# Self-training For Pre-training Language Models
+# Predictions For Pre-training Language Models
 
 ## Abstract
 
