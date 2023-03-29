@@ -35,6 +35,8 @@ If there are no training data that is recognised by badcase patterns, we newly l
 
 **Step-2**. Re-set the labeling rule/knowledge for human. Then the knowledge-refreshed human re-label the training data that is recognised by badcase patterns of Step-1. Then we train to get a new version of current deep model.
 
+In this step, the range of to-label targets can be simplified, because the to-label data is recognised by badcase patterns and is limited to a smaller range of distribution. So we reduce labeling difficulty by reduce the to-label targets range, which also improves the human labeling accuracy.
+
 **Loop Step-1 and Step-2**. Back to last Step-1 and re-evaluate the last Step-2 model's predictions and find the new badcase patterns.  
 
 
