@@ -22,9 +22,14 @@ Step-3, the child updates the knowledge in brain, which is view as the test data
 
 Step-4, the brain-updated child interacts with the world and get feedbacks again, then back to Step-2 and loop again.
 
-### 1. Introduction
+### Introduction
 
 In previous works \cite{ref1}, we focus on re-label the noisy data in initial training dataset. In this paper, we focus on solving the problem of getting better results that are summarized from pre-trained GPT.
+
+### Method
+
+The labelers only label whether the model predictions is near the truth or not.
+
 
 ### References
 ```
