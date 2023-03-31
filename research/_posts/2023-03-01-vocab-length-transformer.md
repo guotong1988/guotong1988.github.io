@@ -17,3 +17,5 @@ We think that pretraining is mainly storing the words-words relationships, so we
 
 
 ### The Model
+
+![fig1](/assets/png/vocab-len-transformer/fig1.png)
