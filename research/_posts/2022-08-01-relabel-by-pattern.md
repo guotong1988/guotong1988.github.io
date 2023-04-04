@@ -44,7 +44,7 @@ In this step, the range of to-label targets can be simplified, because the to-la
 ### 3. Experimental Results
 In the section, we describe the experiment results. Take our text classification task as example. The result is shown in Table 1. In Table 1, data-v1 means the origin training data. And data-v2 and data-v3 means the training data after we use our method for 2 loops, based on data-v1.
 
-![table2](/assets/png/relabel-by-pattern/table2.png)
+![table1](/assets/png/relabel-by-pattern/table1.png)
 
 ### 4. Related Works
 There are works that inject knowledge into deep model. But they are different from our work. They focus on model-centric part, but our method focuses on the human-in-the-loop labeling data-centric part.
@@ -58,7 +58,7 @@ In the named-entity-recognise task, there is work\cite{ref5} that injects the en
 #### 4.3 ChatGPT
 The work \cite{ref7} of OpenAI use model predictions for human as new data to label. The model predictions are actually based on the training dataset. Our work do not have the reward model of \cite{ref7}, the differnce between reinforcement learning from human feedback(RLHF) and our re-label method is that RLHF focus on using the model predictions as training dataset of reward model, and our re-label method focus on correcting the origin training dataset of policy model. Also, RLHF corrects the policy by reward model, which is same to correct all the related data/labels in training dataset of policy model. 
 
-![table1](/assets/png/relabel-by-pattern/table1.png)
+![table2](/assets/png/relabel-by-pattern/table2.png)
 
 
 ### 5. Conclusion
