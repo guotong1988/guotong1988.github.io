@@ -18,4 +18,4 @@
 
 [Drop Noise For CTR Prediction](2022-02-01-drop-noise-for-ctr.md)
 
-[Re-Label By Data Pattern Is All You Need For Knowledge Driven Deep Learning](2022-08-01-relabel-by-pattern.md)
+[Re-Label By Data Pattern For Knowledge Driven Deep Learning](2022-08-01-relabel-by-pattern.md)
