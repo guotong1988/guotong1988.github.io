@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Re-Label Is All You Need"
+title: "The Re-Label Method For Data-Centric Machine Learning"
 date: 2021-12-01
 category: research
 author: "Tong Guo"
@@ -8,7 +8,7 @@ description: "Re-Label Is All You Need For 97% Accuracy"
 ---
 
 
-# Re-Label Is All You Need
+# The Re-Label Method For Data-Centric Machine Learning
 
 ### Abstract
 In industry deep learning application, our manually labeled data has a certain number of noisy data. To solve this problem and achieve more than 90 score in dev dataset, we present a simple method to find the noisy data and re-label the noisy data by human, given the model predictions as references in human labeling. In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, click-through rate prediction. The experimental results and human evaluation results verify our idea.
@@ -135,7 +135,7 @@ We argue that the key point to improve the industry deep learning application pe
 Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25: 1097-1105.
 
 \bibitem{ref2}
-Guo T. Learning From Human Correction[J]. arXiv preprint arXiv:2102.00225, 2021.
+Guo T. Learning From How Humans Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref3}
 Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
@@ -147,7 +147,7 @@ Liu Z, Lin Y, Cao Y, et al. Swin transformer: Hierarchical vision transformer us
 Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in neural information processing systems. 2017: 5998-6008.
 
 \bibitem{ref6}
-Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v3 
+Guo, Tong (2021): Self-Refine Learning For Data-Centric Deep Learning. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v8
 
 \bibitem{ref7}
 Yun S, Oh S J, Heo B, et al. Re-labeling imagenet: from single to multi-labels, from global to localized labels[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021: 2340-2350.
