@@ -14,7 +14,7 @@
 
 [Self-Refine Learning For Data-Centric Deep Learning](2021-09-01-self-refine.md)
 
-[Re-Label Is All You Need](2021-12-01-relabel-is-all-you-need.md)
+[The Re-Label Method For Data-Centric Machine Learning](2021-12-01-relabel-is-all-you-need.md)
 
 [Drop Noise For CTR Prediction](2022-02-01-drop-noise-for-ctr.md)
 
