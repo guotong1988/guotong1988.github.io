@@ -97,8 +97,8 @@ Auto-GPT try to solve the problem that let ChatGPT interact with the internet. O
 
 ## 4. Conclusion
 
-We propose Auto Self-Correct ChatGPT to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge.
-The core idea of our method is: Editing the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
+We propose Auto Self-Correct ChatGPT to solve the problem that allow human to teach ChatGPT/policy-model to refresh/expand ChatGPT's knowledge.
+The core idea of our method is: Editing the policy model's knowledge equals to editing the related data in the whole train-dataset of policy model.
 
 ## References
 
