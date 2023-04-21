@@ -53,11 +53,11 @@ The procedures for teaching policy model new knowledge is shown in Fig 2.
 
 In Fig 2. the six steps are:
 
-Step-1. Human chats with policy model and find something wrong and ask policy model to correct.
+Step-1. Human chats with policy model and find the wrong response and ask policy model to correct.
 
-Step-2. Policy model call the search system to find the related data corresponding to the prompt of Step-1.
+Step-2. Policy model call the search system to find the related data corresponding to the prompt of Step-1. In this step, policy model transforms natural language to code to call the search system. 
 
-Step-3. The search system fetch the related data from train-dataset and show to human. 
+Step-3. The search system fetch the related data from train-dataset and show to human. The search system uses the keyword-based searching algorithm. We first split the prompt of Step-1 to sub-strings. Then we search the sub-strings in the train-dataset.
 
 Step-4. Human confirms and inputs the right data to replace/edit the fetched related data. In this step, the policy model can also recommend some potential ways to fix the data.
 
@@ -78,7 +78,7 @@ Policy model interacts with this system, following the instructions from human.
 
 We have the chating dataset that can train ChatGPT to chat with human, which can accept these human instructions: 
 
-1. Human instruction that ask policy model to call the search system to find the related data. The policy model transform natural language to code to call the search system.
+1. Human instruction that ask policy model to call the search system to find the related data. The policy model transforms natural language to code to call the search system.
 
 2. Human instruction that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
 
