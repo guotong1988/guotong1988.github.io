@@ -31,6 +31,7 @@ Our work contains these contributions:
 
 #### 2.1 Procedures
 
+##### 2.1.1 Train Policy Model 
 The procedure for training policy model is shown in Fig 1. 
 
 ![fig1](/assets/png/self-correct-chatgpt/fig1.png)
@@ -42,6 +43,8 @@ Step-1. This step is same to InstructGPT's [4] Step-1.
 Step-2. This step is different to InstructGPT's step-2. This step do not have the reward part of InstructGPT. 
 
 Step-3. Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
+
+##### 2.1.2 Teaching Policy Model 
 
 The procedure for teaching policy model new knowledge is shown in Fig 2.
 
