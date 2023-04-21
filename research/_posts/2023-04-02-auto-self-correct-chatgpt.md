@@ -31,9 +31,13 @@ Our work contains these contributions:
 
 #### 2.1 Procedures
 
-The whole procedure is shown in Fig 1.
+The procedure for training policy model is shown in Fig 1. 
 
 ![fig1](/assets/png/self-correct-chatgpt/fig1.png)
+
+The procedure for teaching policy model new knowledge is shown in Fig 2.
+
+![fig2](/assets/png/self-correct-chatgpt/fig2.png)
 
 #### 2.2 Modules
 
