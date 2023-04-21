@@ -45,7 +45,7 @@ Step-2. This step is different to InstructGPT's step-2. This step do not have th
 
 Step-3. Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. Then we get a better train-dataset and a better policy model.
 
-#### 2.1.2 Teaching Policy Model 
+#### 2.1.2 Teach Policy Model 
 
 The procedures for teaching policy model new knowledge is shown in Fig 2.
 
@@ -57,9 +57,9 @@ Step-1. Human chats with policy model and find something wrong and ask policy mo
 
 Step-2. Policy model call the search system to find the related data corresponding to the prompt of Step-1.
 
-Step-3. The search system fetch the related data from train-dataset and show to human.
+Step-3. The search system fetch the related data from train-dataset and show to human. 
 
-Step-4. Human confirms and inputs the right data to replace/edit the fetched related data.
+Step-4. Human confirms and inputs the right data to replace/edit the fetched related data. In this step, the policy model can also recommend some potential ways to fix the data.
 
 Step-5. Policy model processes human's input data to the right format that same to the train-dataset.
 
@@ -72,20 +72,20 @@ The ASC-GPT contains these sub-modules:
 #### 2.2.1 Similar Text Search System
 
 The keyword-based coded search system that can find the related data in the whole train-dataset of policy model. 
-ChatGPT interacts with this system, following the instructions from human.
+Policy model interacts with this system, following the instructions from human.
 
 #### 2.2.2 The Ability To Chat With Human
 
 We have the chating dataset that can train ChatGPT to chat with human, which can accept these human instructions: 
 
-1. Human instruction that ask ChatGPT to call the search system to find the related data. 
+1. Human instruction that ask policy model to call the search system to find the related data. The policy model transform natural language to code to call the search system.
 
 2. Human instruction that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
 
 #### 2.2.3 The Data Editing Module
 
 The editing/replacing/adding coded system for fetched related data. 
-ChatGPT interacts with this system, using the knowledge from human to correct data.
+Policy model interacts with this system, using the knowledge from human to correct data.
 
 
 
