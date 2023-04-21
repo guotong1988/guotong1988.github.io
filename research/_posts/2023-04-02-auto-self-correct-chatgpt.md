@@ -53,11 +53,11 @@ The procedures for teaching policy model new knowledge is shown in Fig 2.
 
 In Fig 2. the six steps are:
 
-Step-1. Human chats with policy model and find the wrong response and ask policy model to correct.
+Step-1. Human inputs a prompt to policy model and find a wrong response. Then human asks policy model to correct.
 
 Step-2. Policy model call the search system to find the related data corresponding to the prompt of Step-1. In this step, policy model transforms natural language to code to call the search system. 
 
-Step-3. The search system fetch the related data from train-dataset and show to human. The search system uses the keyword-based searching algorithm. We first split the prompt of Step-1 to sub-strings. Then we search the sub-strings in the train-dataset.
+Step-3. The search system fetch the related data from train-dataset and show to human. The search system uses the keyword-based searching algorithm. We first split the prompt-response-pair of Step-1 to sub-strings. Then we search the sub-strings in the train-dataset.
 
 Step-4. Human confirms and inputs the right data to replace/edit the fetched related data. In this step, the policy model can also recommend some potential ways to fix the data.
 
@@ -69,10 +69,11 @@ Step-6. The new data is merged/replaced into the train-dataset. The policy model
 
 The ASC-GPT contains these sub-modules:
 
-#### 2.2.1 Similar Text Search System
+#### 2.2.1 Search System
 
 The keyword-based coded search system that can find the related data in the whole train-dataset of policy model. 
-Policy model interacts with this system, following the instructions from human.
+Policy model interacts with this system, following the instructions from human. 
+For example, human find a wrong response of policy model. The search system split the corresponding prompt-response-pair to sub-strings. Then the search system takes the sub-strings as queries.
 
 #### 2.2.2 The Ability To Chat With Human
 
