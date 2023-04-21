@@ -10,7 +10,8 @@ description: "Auto Self-Correct ChatGPT"
 
 ### Abstract
 
-We propose Auto Self-Correct ChatGPT (ASC-GPT) to solve the problem that allow human to teach ChatGPT to refresh its knowledge. The core idea of our method is: Correcting/Teaching the ChatGPT knowledge equals editing the related data in the whole fine-tune train-dataset of ChatGPT.
+We propose Auto Self-Correct ChatGPT (ASC-GPT) to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge. 
+The core idea of our method is: Correcting/Teaching the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
 
 ### Introduction
 
@@ -45,7 +46,7 @@ ChatGPT interacts with this system, following the instructions from human.
 
 ##### The Ability To Chat With Human
 
-The chat dataset that can train ChatGPT to chat with human, which can accept these human instructions: 
+We have the chating dataset that can train ChatGPT to chat with human, which can accept these human instructions: 
 
 1, Human instruction that ask ChatGPT to call the search system to find the related data. 
 
@@ -65,6 +66,8 @@ Using the train-dataset self-predict method [3] to find the potential wrong data
 
 ### Conclusion
 
+We propose Auto Self-Correct ChatGPT to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge.
+The core idea of our method is: Editing the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
 
 ### References
 
