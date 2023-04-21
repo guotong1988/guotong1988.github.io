@@ -17,7 +17,6 @@ The core idea of our method is: Correcting/Teaching the ChatGPT's knowledge equa
 
 Large language models (LLM) like ChatGPT and GPT-4 [1] are extremely powerful in multi-task NLP learning.
 LLM also improves the development of continuous learning, which means LLM can learn new data without forgeting the old data.
-Auto-GPT proposes the goal that attempts to make GPT-4 fully autonomous.
 The problem now is that ChatGPT contains some knowledge that is not aligned to human requirements.
 Our work contains these contributions:
 
@@ -26,6 +25,7 @@ Our work contains these contributions:
 2, We try to correct the fine-tune train-dataset of ChatGPT by ChatGPT itself automatically, while ChatGPT is chating with human.
 
 2, We discuss some possible details to implement our goal.
+
 
 ### Method
 
@@ -63,6 +63,11 @@ ChatGPT interacts with this system, using the knowledge from human to correct da
 
 Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
 
+
+### Related Works
+
+Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a good work and do not conflict to our method.
+Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on allowing human to teach ChatGPT. 
 
 ### Conclusion
 
