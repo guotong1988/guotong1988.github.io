@@ -32,21 +32,22 @@ Our work contains these contributions:
 ### 2.1 Procedures
 
 #### 2.1.1 Train Policy Model 
-The procedure for training policy model is shown in Fig 1. 
+
+The procedures for training policy model is shown in Fig 1. 
 
 ![fig1](/assets/png/self-correct-chatgpt/fig1.png)
 
 In Fig 1. the three steps are:
 
-Step-1. This step is same to InstructGPT's [4] Step-1.
+Step-1. This step is same to InstructGPT's [4] Step-1. In this step, we use the init train-dataset to train the first policy model.
 
-Step-2. This step is different to InstructGPT's step-2. This step do not have the reward part of InstructGPT. 
+Step-2. This step is different to InstructGPT's step-2. This step do not have the reward part of InstructGPT. The right model outputs are selected by human and merged to the init train-dataset.
 
-Step-3. Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
+Step-3. Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. Then we get a better train-dataset and a better policy model.
 
 #### 2.1.2 Teaching Policy Model 
 
-The procedure for teaching policy model new knowledge is shown in Fig 2.
+The procedures for teaching policy model new knowledge is shown in Fig 2.
 
 ![fig2](/assets/png/self-correct-chatgpt/fig2.png)
 
@@ -58,11 +59,11 @@ Step-2. Policy model call the search system to find the related data correspondi
 
 Step-3. The search system fetch the related data from train-dataset and show to human.
 
-Step-4. Human confirm and input the right data to replace/edit the fetched related data.
+Step-4. Human confirms and inputs the right data to replace/edit the fetched related data.
 
 Step-5. Policy model processes human's input data to the right format that same to the train-dataset.
 
-Step-6. The new data is merged/replaced into the train-dataset.
+Step-6. The new data is merged/replaced into the train-dataset. The policy model is trained again.
 
 ### 2.2 Modules
 
@@ -91,7 +92,7 @@ ChatGPT interacts with this system, using the knowledge from human to correct da
 
 ## 3. Related Works
 
-Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a good work and do not conflict to our method.
+Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a great work and do not conflict to our method.
 Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on allowing human to teach ChatGPT. 
 
 ## 4. Conclusion
