@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Auto Self-Correct ChatGPT"
-date: 2023-04-01
+date: 2023-04-02
 category: research
 author: "Tong Guo"
 description: "Auto Self-Correct ChatGPT"
@@ -13,7 +13,7 @@ description: "Auto Self-Correct ChatGPT"
 We propose Auto Self-Correct ChatGPT (ASC-GPT) to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge. 
 The core idea of our method is: Correcting/Teaching the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
 
-## Introduction
+## 1. Introduction
 
 Large language models (LLM) like ChatGPT and GPT-4 [1] are extremely powerful in multi-task NLP learning.
 LLM also improves the development of continuous learning, which means LLM can learn new data without forgeting the old data.
@@ -27,24 +27,24 @@ Our work contains these contributions:
 2, We discuss some possible details to implement our goal.
 
 
-## Method
+## 2. Method
 
-#### Procedures
+#### 2.1 Procedures
 
 The whole procedure is shown in Fig 1.
 
 ![fig1](/assets/png/self-correct-chatgpt/fig1.png)
 
-#### Modules
+#### 2.2 Modules
 
 The ASC-GPT contains these sub-modules:
 
-##### Similar Text Search System
+##### 2.2.1 Similar Text Search System
 
 The keyword-based coded search system that can find the related data in the whole fine-tune train-dataset. 
 ChatGPT interacts with this system, following the instructions from human.
 
-##### The Ability To Chat With Human
+##### 2.2.2 The Ability To Chat With Human
 
 We have the chating dataset that can train ChatGPT to chat with human, which can accept these human instructions: 
 
@@ -52,24 +52,25 @@ We have the chating dataset that can train ChatGPT to chat with human, which can
 
 2, Human instruction that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
 
-##### The Data Editing Module
+##### 2.2.3 The Data Editing Module
 
 The editing/replacing/adding coded system for fetched related data. 
 ChatGPT interacts with this system, using the knowledge from human to correct data.
 
-## Further Functions
+#### 2.3 Further Functions
 
-#### Potential Wrong Data Recommendation
+#####  Potential Wrong Data Recommendation
 
 Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
 
+## 3. Examples
 
-## Related Works
+## 4. Related Works
 
 Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a good work and do not conflict to our method.
 Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on allowing human to teach ChatGPT. 
 
-## Conclusion
+## 5. Conclusion
 
 We propose Auto Self-Correct ChatGPT to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge.
 The core idea of our method is: Editing the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
