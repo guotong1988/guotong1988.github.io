@@ -8,12 +8,12 @@ description: "Auto Self-Correct ChatGPT"
 ---
 # Auto Self-Correct ChatGPT
 
-### Abstract
+## Abstract
 
 We propose Auto Self-Correct ChatGPT (ASC-GPT) to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge. 
 The core idea of our method is: Correcting/Teaching the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
 
-### Introduction
+## Introduction
 
 Large language models (LLM) like ChatGPT and GPT-4 [1] are extremely powerful in multi-task NLP learning.
 LLM also improves the development of continuous learning, which means LLM can learn new data without forgeting the old data.
@@ -27,7 +27,7 @@ Our work contains these contributions:
 2, We discuss some possible details to implement our goal.
 
 
-### Method
+## Method
 
 #### Procedures
 
@@ -57,24 +57,24 @@ We have the chating dataset that can train ChatGPT to chat with human, which can
 The editing/replacing/adding coded system for fetched related data. 
 ChatGPT interacts with this system, using the knowledge from human to correct data.
 
-### Further Functions
+## Further Functions
 
 #### Potential Wrong Data Recommendation
 
 Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
 
 
-### Related Works
+## Related Works
 
 Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a good work and do not conflict to our method.
 Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on allowing human to teach ChatGPT. 
 
-### Conclusion
+## Conclusion
 
 We propose Auto Self-Correct ChatGPT to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge.
 The core idea of our method is: Editing the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
 
-### References
+## References
 
 ```
 [1] OpenAI. 2023. Gpt-4 technical report.
