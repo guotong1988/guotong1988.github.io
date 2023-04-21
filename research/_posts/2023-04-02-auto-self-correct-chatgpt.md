@@ -29,9 +29,9 @@ Our work contains these contributions:
 
 ## 2. Method
 
-#### 2.1 Procedures
+### 2.1 Procedures
 
-##### 2.1.1 Train Policy Model 
+#### 2.1.1 Train Policy Model 
 The procedure for training policy model is shown in Fig 1. 
 
 ![fig1](/assets/png/self-correct-chatgpt/fig1.png)
@@ -44,7 +44,7 @@ Step-2. This step is different to InstructGPT's step-2. This step do not have th
 
 Step-3. Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
 
-##### 2.1.2 Teaching Policy Model 
+#### 2.1.2 Teaching Policy Model 
 
 The procedure for teaching policy model new knowledge is shown in Fig 2.
 
@@ -64,16 +64,16 @@ Step-5. Policy model processes human's input data to the right format that same 
 
 Step-6. The new data is merged/replaced into the train-dataset.
 
-#### 2.2 Modules
+### 2.2 Modules
 
 The ASC-GPT contains these sub-modules:
 
-##### 2.2.1 Similar Text Search System
+#### 2.2.1 Similar Text Search System
 
 The keyword-based coded search system that can find the related data in the whole train-dataset of policy model. 
 ChatGPT interacts with this system, following the instructions from human.
 
-##### 2.2.2 The Ability To Chat With Human
+#### 2.2.2 The Ability To Chat With Human
 
 We have the chating dataset that can train ChatGPT to chat with human, which can accept these human instructions: 
 
@@ -81,7 +81,7 @@ We have the chating dataset that can train ChatGPT to chat with human, which can
 
 2. Human instruction that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
 
-##### 2.2.3 The Data Editing Module
+#### 2.2.3 The Data Editing Module
 
 The editing/replacing/adding coded system for fetched related data. 
 ChatGPT interacts with this system, using the knowledge from human to correct data.
