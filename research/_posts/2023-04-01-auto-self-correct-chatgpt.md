@@ -41,7 +41,7 @@ The ASC-GPT contains these sub-modules:
 ##### Similar Text Search System
 
 The keyword-based coded search system that can find the related data in the whole fine-tune train-dataset. 
-ChatGPT interact with this system, following the instructions from human.
+ChatGPT interacts with this system, following the instructions from human.
 
 ##### The Ability To Chat With Human
 
@@ -53,7 +53,8 @@ The chat dataset that can train ChatGPT to chat with human, which can accept the
 
 ##### The Data Editing Module
 
-The editing/replacing module for fetched related data, which is also a coded system. 
+The editing/replacing/adding coded system for fetched related data. 
+ChatGPT interacts with this system, using the knowledge from human.
 
 ### Conclusion
 
