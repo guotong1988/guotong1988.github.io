@@ -28,6 +28,8 @@ Our work contains these contributions:
 
 ### Method
 
+![fig1](/assets/png/self-correct-chatgpt/fig1.png)
+
 The ASC-GPT contains these sub-modules:
 
 1, The keyword-based coded search system that can find the related data in the whole fine-tune train-dataset.
