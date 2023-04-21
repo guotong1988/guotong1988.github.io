@@ -54,7 +54,7 @@ The chat dataset that can train ChatGPT to chat with human, which can accept the
 ##### The Data Editing Module
 
 The editing/replacing/adding coded system for fetched related data. 
-ChatGPT interacts with this system, using the knowledge from human.
+ChatGPT interacts with this system, using the knowledge from human to correct data.
 
 ### Conclusion
 
