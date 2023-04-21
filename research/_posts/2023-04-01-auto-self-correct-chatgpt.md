@@ -56,6 +56,13 @@ The chat dataset that can train ChatGPT to chat with human, which can accept the
 The editing/replacing/adding coded system for fetched related data. 
 ChatGPT interacts with this system, using the knowledge from human to correct data.
 
+### Further Functions
+
+#### Potential Wrong Data Recommendation
+
+Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
+
+
 ### Conclusion
 
 
@@ -66,7 +73,7 @@ ChatGPT interacts with this system, using the knowledge from human to correct da
 
 [2] https://github.com/Significant-Gravitas/Auto-GPT
 
-
+[3] Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
 ```
 
  
