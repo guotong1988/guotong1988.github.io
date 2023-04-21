@@ -10,7 +10,7 @@ description: "Auto Self-Correct ChatGPT"
 
 ## Abstract
 
-We propose Auto Self-Correct ChatGPT (ASC-GPT) to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge. 
+We propose Auto Self-Correct ChatGPT (ASC-GPT) to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge automatically. 
 The core idea of our method is: Correcting/Teaching the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
 
 ## 1. Introduction
@@ -22,7 +22,7 @@ Our work contains these contributions:
 
 1, We try to solve the problem: We let human to teach ChatGPT, based on the ChatGPT's ability to chat with human.
 
-2, We try to correct the fine-tune train-dataset of ChatGPT by ChatGPT itself automatically, while ChatGPT is chating with human.
+2, We try to correct the train-dataset of ChatGPT's policy model by ChatGPT itself automatically, while ChatGPT is chating with human.
 
 2, We discuss some possible details to implement our goal.
 
@@ -41,7 +41,7 @@ The ASC-GPT contains these sub-modules:
 
 ##### 2.2.1 Similar Text Search System
 
-The keyword-based coded search system that can find the related data in the whole fine-tune train-dataset. 
+The keyword-based coded search system that can find the related data in the whole train-dataset of policy model. 
 ChatGPT interacts with this system, following the instructions from human.
 
 ##### 2.2.2 The Ability To Chat With Human
@@ -63,14 +63,12 @@ ChatGPT interacts with this system, using the knowledge from human to correct da
 
 Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
 
-## 3. Examples
-
-## 4. Related Works
+## 3. Related Works
 
 Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a good work and do not conflict to our method.
 Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on allowing human to teach ChatGPT. 
 
-## 5. Conclusion
+## 4. Conclusion
 
 We propose Auto Self-Correct ChatGPT to solve the problem that allow human to teach ChatGPT to refresh/expand ChatGPT's knowledge.
 The core idea of our method is: Editing the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
