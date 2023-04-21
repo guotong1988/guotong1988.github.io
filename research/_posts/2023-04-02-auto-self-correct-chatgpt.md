@@ -20,11 +20,11 @@ LLM also improves the development of continuous learning, which means LLM can le
 The problem now is that ChatGPT contains some knowledge that is not aligned to human requirements.
 Our work contains these contributions:
 
-1, We try to solve the problem: We let human to teach ChatGPT, based on the ChatGPT's ability to chat with human.
+1. We try to solve the problem: We let human to teach ChatGPT, based on the ChatGPT's ability to chat with human.
 
-2, We try to correct the train-dataset of ChatGPT's policy model by ChatGPT itself automatically, while ChatGPT is chating with human.
+2. We try to correct the train-dataset of ChatGPT's policy model by ChatGPT itself automatically, while ChatGPT is chating with human.
 
-2, We discuss some possible details to implement our goal.
+3. We discuss some possible details to implement our goal.
 
 
 ## 2. Method
@@ -35,9 +35,31 @@ The procedure for training policy model is shown in Fig 1.
 
 ![fig1](/assets/png/self-correct-chatgpt/fig1.png)
 
+In Fig 1. the three steps are:
+
+Step-1. This step is same to InstructGPT's [4] Step-1.
+
+Step-2. This step is different to InstructGPT's step-2. This step do not have the reward part of InstructGPT. 
+
+Step-3. Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
+
 The procedure for teaching policy model new knowledge is shown in Fig 2.
 
 ![fig2](/assets/png/self-correct-chatgpt/fig2.png)
+
+In Fig 2. the six steps are:
+
+Step-1. Human chats with policy model and find something wrong and ask policy model to correct.
+
+Step-2. Policy model call the search system to find the related data corresponding to the prompt of Step-1.
+
+Step-3. The search system fetch the related data from train-dataset and show to human.
+
+Step-4. Human confirm and input the right data to replace/edit the fetched related data.
+
+Step-5. Policy model processes human's input data to the right format that same to the train-dataset.
+
+Step-6. The new data is merged/replaced into the train-dataset.
 
 #### 2.2 Modules
 
@@ -52,20 +74,17 @@ ChatGPT interacts with this system, following the instructions from human.
 
 We have the chating dataset that can train ChatGPT to chat with human, which can accept these human instructions: 
 
-1, Human instruction that ask ChatGPT to call the search system to find the related data. 
+1. Human instruction that ask ChatGPT to call the search system to find the related data. 
 
-2, Human instruction that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
+2. Human instruction that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
 
 ##### 2.2.3 The Data Editing Module
 
 The editing/replacing/adding coded system for fetched related data. 
 ChatGPT interacts with this system, using the knowledge from human to correct data.
 
-#### 2.3 Further Functions
 
-#####  Potential Wrong Data Recommendation
 
-Using the train-dataset self-predict method [3] to find the potential wrong data for human to check and fix. 
 
 ## 3. Related Works
 
@@ -85,6 +104,8 @@ The core idea of our method is: Editing the ChatGPT's knowledge equals to editin
 [2] https://github.com/Significant-Gravitas/Auto-GPT
 
 [3] Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
+
+[4] Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. Advances in Neural Information Processing Systems, 2022, 35: 27730-27744.
 ```
 
  
