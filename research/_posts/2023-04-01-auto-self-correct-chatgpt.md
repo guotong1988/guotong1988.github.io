@@ -28,7 +28,13 @@ Our work contains these contributions:
 
 ### Method
 
+#### Procedures
+
+The whole procedure is shown in Fig 1.
+
 ![fig1](/assets/png/self-correct-chatgpt/fig1.png)
+
+#### Modules
 
 The ASC-GPT contains these sub-modules:
 
