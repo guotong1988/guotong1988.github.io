@@ -56,15 +56,18 @@ The procedures for teaching policy model new knowledge is shown in Fig 2.
 
 In Fig 2. the six steps are:
 
-Step-1. Human inputs a prompt to policy model and find a wrong response. Then human asks policy model to correct.
+Step-1. Human inputs a prompt to policy model and find a wrong response. Then human asks policy model to correct. The detail interaction operation for the wrong-find step can be chat-based or button-based.
 
 Step-2. Policy model call the search system to find the related data corresponding to the prompt of Step-1. In this step, policy model transforms natural language to code to call the search system. 
+It is a similar text search problem here. In this work, we use keyword-based search algorithm.
 
-Step-3. The search system fetch the related data from train-dataset and show to human. The search system uses the keyword-based searching algorithm. We first split the prompt-response-pair of Step-1 to sub-strings. Then we search the sub-strings in the train-dataset. 
+Step-3. The search system fetch the related data from train-dataset. 
+Then the related data is listed for human. 
+As the search system uses the keyword-based searching algorithm, we first split the prompt-response-pair of Step-1 to sub-strings/keywords. Then we search the sub-strings in the train-dataset. 
 
 Step-4. Human confirms and inputs the right data to replace/edit the fetched related data. In this step, the policy model can also recommend some candidate ways to fix the data.
 
-Step-5. Policy model processes human's input data to the exact format that same to the train-dataset.
+Step-5. Policy model processes human's input data to the exact format that same to the train-dataset. It is a text formatting problem here.
 
 Step-6. Based on the data indexes of search system, the new data is merged/replaced into the train-dataset. The policy model is trained again.
 
