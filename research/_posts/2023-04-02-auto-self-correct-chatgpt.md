@@ -42,7 +42,7 @@ The procedures for training policy model is shown in Fig 1.
 
 In Fig 1. the three steps are:
 
-Step-1. This step is same to InstructGPT's [4] Step-1. In this step, we use the init train-dataset to train the first policy model, based on the pre-trained language model.
+Step-1. This step is same to InstructGPT's [4] Step-1. In this step, we use the init train-dataset to train the first policy model, based on the pre-trained language model [5]. 
 
 Step-2. This step is different to InstructGPT's Step-2. This step do not have the reward part of InstructGPT, because the high quality data is the most important. The high quality model's outputs are selected by human and merged to the init train-dataset.
 
@@ -124,6 +124,8 @@ The core idea of our method is: Editing the policy model's knowledge equals to e
 [3] Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
 
 [4] Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. Advances in Neural Information Processing Systems, 2022, 35: 27730-27744.
+
+[5] Brown T, Mann B, Ryder N, et al. Language models are few-shot learners[J]. Advances in neural information processing systems, 2020, 33: 1877-1901.
 ```
 
  
