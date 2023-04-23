@@ -67,7 +67,7 @@ As the search system uses the keyword-based searching algorithm, we first split 
 
 Step-4. Human confirms and inputs the right data to replace/edit the fetched related data. In this step, the policy model can also recommend some candidate ways to fix the data.
 
-Step-5. Policy model processes human's input data to the exact format that same to the train-dataset. It is a text formatting problem here.
+Step-5. We process human's input data to the exact format that same to the train-dataset.
 
 Step-6. Based on the data indexes of search system, the new data is merged/replaced into the train-dataset. The policy model is trained again.
 
@@ -90,11 +90,10 @@ Human labeled the init chating train-dataset that can train policy model to chat
 
 2. Human instructions that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
 
-3. The policy model can also do these works: Transform the new human-inputed knowledge to the exact format that is same to the train-dataset.
 
 #### 2.2.3 Data Editing Module
-
-The editing/replacing/adding coded system for related old data that is fetched from train-dataset. 
+This module transforms the new human-inputed knowledge to the exact format that is same to the train-dataset.
+It is an editing/replacing/adding coded system for related old data that is fetched from train-dataset. 
 Human decides what to do with the new-inputed data: Editing the old data by new data, replacing the old data by new data, or merging the new data to the old data.
 Policy model interacts with this system, using the knowledge from human and call this system to correct the data in train-dataset.
 
