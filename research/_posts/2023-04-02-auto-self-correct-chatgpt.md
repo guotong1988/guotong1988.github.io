@@ -107,7 +107,8 @@ So fixing the model knowledge equals to fixing the its most similar related data
 
 ### Without Reward model 
 
-Our mothod removes the reward model of InstructGPT [4]. Because we think the most important thing is the train-dataset and its quality.
+Our mothod removes the reward model of InstructGPT [4]. Because we think the most important thing is the train-dataset and its quality. 
+We use the self-predict and re-label method [3] to improve the data quality.
 
 
 ## 4. Related Works
