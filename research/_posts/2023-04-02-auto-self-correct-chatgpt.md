@@ -90,13 +90,24 @@ We have the chating dataset that can train policy model to chat with human. The 
 The editing/replacing/adding coded system for fetched related data. 
 Policy model interacts with this system, using the knowledge from human and call this system to correct the data in train-dataset.
 
+## 3. Discussion
 
-## 3. Related Works
+### Similar Search
+
+We think the model inference equals to finding the similar prompt-response-pair in train-dataset. 
+So fixing the model knowledge equals to fixing the its most similar related data.
+
+### Without Reward model 
+
+Our mothod removes the reward model of InstructGPT [4]. Because we think the most important thing is the train-dataset and its quality.
+
+
+## 4. Related Works
 
 Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a great work and do not conflict to our method.
 Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on allowing human to teach ChatGPT. 
 
-## 4. Conclusion
+## 5. Conclusion
 
 We propose Auto Self-Correct ChatGPT to solve the problem that allow human to teach ChatGPT/policy-model to refresh/expand ChatGPT's knowledge.
 The core idea of our method is: Editing the policy model's knowledge equals to editing the related data in the whole train-dataset of policy model.
