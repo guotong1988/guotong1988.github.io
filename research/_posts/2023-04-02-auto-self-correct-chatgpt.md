@@ -42,9 +42,9 @@ The procedures for training policy model is shown in Fig 1.
 
 In Fig 1. the three steps are:
 
-Step-1. This step is same to InstructGPT's [4] Step-1. In this step, we use the init train-dataset to train the first policy model, based on the pre-trained language model [5]. 
+Step-1. This step is same to InstructGPT's [4] first step. In this step, we use the init train-dataset to train/fine-tune the first policy model, based on the pre-trained language model [5]. 
 
-Step-2. This step is different to InstructGPT's Step-2. This step do not have the reward part of InstructGPT, because the high quality data is the most important. The high quality model's outputs are selected by human and merged to the init train-dataset.
+Step-2. This step is different to InstructGPT's second step. This step do not have the reward part of InstructGPT, because we think the high quality data is the most important. The high quality model's outputs are selected by human and merged to the init train-dataset.
 
 Step-3. Using the train-dataset self-predict method [3] to find the potential wrong/noise data for human to check and fix. Then we get a better train-dataset to train a better policy model. This step can be done for several times.
 
@@ -62,11 +62,11 @@ Step-2. Policy model call the search system to find the related data correspondi
 
 Step-3. The search system fetch the related data from train-dataset and show to human. The search system uses the keyword-based searching algorithm. We first split the prompt-response-pair of Step-1 to sub-strings. Then we search the sub-strings in the train-dataset. 
 
-Step-4. Human confirms and inputs the right data to replace/edit the fetched related data. In this step, the policy model can also recommend some potential ways to fix the data.
+Step-4. Human confirms and inputs the right data to replace/edit the fetched related data. In this step, the policy model can also recommend some candidate ways to fix the data.
 
-Step-5. Policy model processes human's input data to the right format that same to the train-dataset.
+Step-5. Policy model processes human's input data to the exact format that same to the train-dataset.
 
-Step-6. The new data is merged/replaced into the train-dataset. The policy model is trained again.
+Step-6. Based on the data indexes of search system, the new data is merged/replaced into the train-dataset. The policy model is trained again.
 
 ### 2.2 Modules
 
@@ -77,19 +77,22 @@ The ASC-GPT contains these sub-modules:
 The keyword-based coded search system that can find the related data in the whole train-dataset of policy model. 
 Policy model interacts with this system, following the instructions from human. 
 For example, human find a wrong response of policy model. The search system split the corresponding prompt-response-pair to sub-strings. Then the search system takes the sub-strings as queries.
-The search system can also be implemented by policy model: We input the prompt that ask policy model to find similar data in its own train-dataset.
+The search system can also be implemented by policy model: We input the prompt that ask policy model to find the most similar data in its own train-dataset.
 
-#### 2.2.2 Policy Model
+#### 2.2.2 Policy Model 
 
-We have the chating dataset that can train policy model to chat with human. The policy model can accept these human instructions: 
+Human labeled the init chating train-dataset that can train policy model to chat with human. The policy model can accept these human instructions: 
 
-1. Human instruction that ask policy model to call the search system to find the related data. The policy model transforms natural language to code to call the search system.
+1. Human instructions that ask policy model to call the search system to find the related data. The policy model transforms natural language to code to call the search system.
 
-2. Human instruction that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
+2. Human instructions that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
+
+3. The policy model can also do these works: Transform the new human-inputed knowledge to the exact format that is same to the train-dataset.
 
 #### 2.2.3 Data Editing Module
 
-The editing/replacing/adding coded system for fetched related data. 
+The editing/replacing/adding coded system for related old data that is fetched from train-dataset. 
+Human decides what to do with the new-inputed data: Editing the old data by new data, replacing the old data by new data, or merging the new data to the old data.
 Policy model interacts with this system, using the knowledge from human and call this system to correct the data in train-dataset.
 
 ## 3. Discussion
@@ -107,7 +110,7 @@ Our mothod removes the reward model of InstructGPT [4]. Because we think the mos
 ## 4. Related Works
 
 Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a great work and do not conflict to our method.
-Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on allowing human to teach ChatGPT. 
+Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on the problem that let human teach ChatGPT. 
 
 ## 5. Conclusion
 
