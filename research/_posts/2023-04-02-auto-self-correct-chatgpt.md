@@ -12,15 +12,15 @@ description: "Auto Self-Correct ChatGPT"
 
 We propose Auto Self-Correct ChatGPT (ASC-GPT) to solve the problem to let human teach ChatGPT to refresh/expand ChatGPT's knowledge automatically. 
 The core idea of our method is: Correcting/Teaching the ChatGPT's knowledge equals to editing the related data in the whole train-dataset of ChatGPT's policy model.
-We propose the procedures to implement our idea and discuss the reason why we design these procedures.
+We propose the procedures to implement our idea and discuss the reasons why we design these procedures.
 
 
 ## 1. Introduction
 
 Large language models (LLM) like ChatGPT and GPT-4 [1] are extremely powerful in multi-task NLP learning.
 LLM also improves the development of continuous learning, which means LLM can learn new data without forgeting the old data.
-The problem now is that ChatGPT contains some knowledge that is not aligned to human requirements.
-
+The problem now is that ChatGPT contains some knowledge that is not aligned to human requirements. 
+Our work try to solve the this problem that let human teach ChatGPT to correct the alignment automatically.
 Our work contains these contributions:
 
 1. We try to solve the problem to let human teach ChatGPT, based on the ChatGPT's ability to chat with human.
