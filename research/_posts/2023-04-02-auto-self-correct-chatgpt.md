@@ -102,7 +102,7 @@ Policy model interacts with this system, using the knowledge from human and call
 
 ### Similar Search
 
-We think the model inference equals to finding the similar prompt-response-pair in train-dataset. 
+We think the model inference equals to finding the most similar prompt-response-pair in train-dataset. 
 So fixing the model knowledge equals to fixing the its most similar related data.
 
 ### Without Reward model 
