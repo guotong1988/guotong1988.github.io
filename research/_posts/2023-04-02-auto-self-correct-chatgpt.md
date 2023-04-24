@@ -99,10 +99,15 @@ Policy model interacts with this system, using the knowledge from human and call
 
 ## 3. Discussion
 
-### Similar Search
+In this section we discuss the reasons why we design the procedures.
+
+### Similar Text Search
 
 We think the model inference equals to finding the most similar prompt-response-pair in train-dataset. 
-So fixing the model knowledge equals to fixing the its most similar related data.
+So fixing the model knowledge equals to fixing the its most similar related data in train-dataset.
+
+Why do we choose sub-strings keyword-based to implement similar text search? 
+If we split the target prompt-response-pair to sub-strings, the train-dataset should contain the same part of sub-strings or patterns somewhere.
 
 ### Without Reward model 
 
@@ -111,6 +116,11 @@ We use the self-predict and re-label method [3] to improve the data quality.
 
 
 ## 4. Related Works
+
+Pre-trained language models [6][7] store the text context for the downstream tasks and improve their performance. 
+
+As the model size becomes larger, GPT-3[5] achieves strong performance on many NLP datasets and demonstrate that scaling up language models greatly improves task-agnostic, few-shot performance.
+ChatGPT [1] fine-tunes with the alignment dataset, based on GPT-3, shows great performance on real world NLP tasks.
 
 Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a great work and do not conflict to our method.
 Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on the problem that let human teach ChatGPT. 
@@ -132,6 +142,10 @@ The core idea of our method is: Editing the policy model's knowledge equals to e
 [4] Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. Advances in Neural Information Processing Systems, 2022, 35: 27730-27744.
 
 [5] Brown T, Mann B, Ryder N, et al. Language models are few-shot learners[J]. Advances in neural information processing systems, 2020, 33: 1877-1901.
+
+[6] Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
+
+[7] Radford A, Narasimhan K, Salimans T, et al. Improving language understanding by generative pre-training[J]. 2018.
 ```
 
  
