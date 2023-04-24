@@ -18,6 +18,7 @@ We propose the procedures to implement our idea and discuss the reasons why we d
 ## 1. Introduction
 
 Large language models (LLM) like ChatGPT and GPT-4 [1] are extremely powerful in multi-task NLP learning.
+The transformers[8] show great ability to learn the text context and store the pre-training information.
 LLM also improves the development of continuous learning, which means LLM can learn new data without forgeting the old data.
 The problem now is that ChatGPT contains some knowledge that is not aligned to human requirements. 
 Our work try to solve the this problem that let human teach ChatGPT to correct the alignment automatically.
@@ -146,6 +147,8 @@ The core idea of our method is: Editing the policy model's knowledge equals to e
 [6] Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
 
 [7] Radford A, Narasimhan K, Salimans T, et al. Improving language understanding by generative pre-training[J]. 2018.
+
+[8] Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[J]. Advances in neural information processing systems, 2017, 30.
 ```
 
  
