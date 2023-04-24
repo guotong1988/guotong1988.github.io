@@ -88,7 +88,7 @@ Human labeled the init chating train-dataset that can train policy model to chat
 
 1. Human instructions that ask policy model to call the search system to find the related data. The policy model transforms natural language to code to call the search system.
 
-2. Human instructions that confirm to do the editing of related data, when human think ChatGPT's response is wrong. 
+2. Human instructions that confirm to do the editing of related data, when human think ChatGPT's response is wrong. Then the policy model transforms natural language to code to call the data editing system.
 
 
 #### 2.2.3 Data Editing Module
