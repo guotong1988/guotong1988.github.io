@@ -86,13 +86,13 @@ Based on the good performance of previous works  \cite{ref1} \cite{ref2} \cite{r
 ### References
 ```
 \bibitem{ref1}
-Guo T. Learning From Human Correction[J]. arXiv preprint arXiv:2102.00225, 2021.
+Guo T. Learning From How Human Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref2}
-Guo, Tong (2021): Self-Refine Learning For Data-Centric Text Classification. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.16610629.v3 
+Guo T. Self-Refine Learning For Data-Centric Deep Learning[J]. 2023.
 
 \bibitem{ref3}
-Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v9
+Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
 
 \bibitem{ref4}
 [Rendle, 2010] Steffen Rendle. Factorization machines. In ICDM, 2010.
