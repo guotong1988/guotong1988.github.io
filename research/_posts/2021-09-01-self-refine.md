@@ -132,7 +132,7 @@ Berthelot D, Carlini N, Cubuk E D, et al. Remixmatch: Semi-supervised learning w
 Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in neural information processing systems. 2017: 5998-6008.
 
 \bibitem{ref11}
-Guo T. Learning From How Human Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
+Guo T. Learning From How Humans Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref12}
 Xu, Liang, et al. "Clue: A chinese language understanding evaluation benchmark." arXiv preprint arXiv:2004.05986 (2020).
