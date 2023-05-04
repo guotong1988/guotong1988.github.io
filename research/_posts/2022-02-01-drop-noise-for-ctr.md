@@ -86,7 +86,7 @@ Based on the good performance of previous works  \cite{ref1} \cite{ref2} \cite{r
 ### References
 ```
 \bibitem{ref1}
-Guo T. Learning From How Human Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
+Guo T. Learning From How Humans Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref2}
 Guo T. Self-Refine Learning For Data-Centric Deep Learning[J]. 2023.
