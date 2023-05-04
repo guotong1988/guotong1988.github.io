@@ -72,7 +72,7 @@ Our idea can apply to a broad set of deep learning industry applications.
 Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25: 1097-1105.
 
 \bibitem{ref2}
-Guo T. Learning From How Human Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
+Guo T. Learning From How Humans Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref3}
 Yu T, Li Z, Zhang Z, et al. Typesql: Knowledge-based type-aware neural text-to-sql generation[J]. arXiv preprint arXiv:1804.09769, 2018.
