@@ -132,13 +132,13 @@ Berthelot D, Carlini N, Cubuk E D, et al. Remixmatch: Semi-supervised learning w
 Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in neural information processing systems. 2017: 5998-6008.
 
 \bibitem{ref11}
-Guo, Tong. "Learning From Human Correction." arXiv preprint arXiv:2102.00225 (2021).
+Guo T. Learning From How Human Correct[J]. arXiv preprint arXiv:2102.00225, 2021.
 
 \bibitem{ref12}
 Xu, Liang, et al. "Clue: A chinese language understanding evaluation benchmark." arXiv preprint arXiv:2004.05986 (2020).
 
 \bibitem{ref13}
-Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v8 
+Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
 
 \bibitem{ref14}
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
