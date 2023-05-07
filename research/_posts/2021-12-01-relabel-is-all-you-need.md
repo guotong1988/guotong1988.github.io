@@ -90,7 +90,7 @@ The key step of our idea is about how to judge the noisy data. For sequence gene
 
 #### 3.4 click-through rate prediction
 
-For CTR task, we use the method of \cite{ref6} that automatically set the label again for the noisy data. CTR task is a click-or-not prediction task, we choose a threshold between the predicted score and the 0/1 online label score to judge whether the data is the noisy data. In this way, we could improve the AUC in dev dataset but the online performance should test online. 
+For CTR task, we use the methods of \cite{ref6} that drop the the noisy data. CTR task is a click-or-not prediction task, we choose a threshold between the predicted score and the 0/1 online label score to judge whether the data is the noisy data. In this way, we could improve the AUC in dev dataset but the online performance should test online. 
 
 
 
