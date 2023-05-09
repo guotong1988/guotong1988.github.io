@@ -5,13 +5,7 @@ description: About page of Tong Guo - Blog
 permalink: /about/
 ---
 
-Hi! My name is Tong Guo（郭同）. My nickname is TechOnly.
-
-Welcome to my paper blog!
-
-Disscussion about my research can be post at [the-repo-issues](https://github.com/guotong1988/guotong1988.github.io/issues)
-
-## Other Info
+Hi! My name is Tong Guo（郭同）
 
 [my.scholar.google](https://scholar.google.com/citations?user=4J7HYNAAAAAJ)
 
