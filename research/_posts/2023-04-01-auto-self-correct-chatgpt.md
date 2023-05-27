@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Auto Self-Correct ChatGPT"
-date: 2023-04-02
+date: 2023-04-01
 category: research
 author: "Tong Guo"
 description: "Auto Self-Correct ChatGPT"
