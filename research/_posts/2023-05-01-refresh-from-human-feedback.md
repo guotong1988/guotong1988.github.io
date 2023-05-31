@@ -14,7 +14,9 @@ In industry deep learning application, our main goal is to get a high quality tr
 
 ## Introduction
 
+## Method
 
+![fig1](/assets/png/refresh/fig1.png)
 
 ## References
 
