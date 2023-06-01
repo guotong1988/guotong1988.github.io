@@ -18,6 +18,10 @@ In industry deep learning application, our main goal is to get a high quality tr
 
 ![fig1](/assets/png/refresh/fig1.png)
 
+## Experiments
+
+We evaluate our method on text classification task and text generation task.
+
 ## References
 
 ```
