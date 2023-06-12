@@ -22,6 +22,11 @@ In industry deep learning application, our main goal is to get a high quality tr
 
 We evaluate our method on text classification task and text generation task.
 
+## Discussion
+
+In industry application, we evaluate the model predictions of online dataset, for every period of time. 
+Using the method of this paper, we can collect the evaluation results to improve the model. So the evaluation results are not wasted.
+ 
 ## References
 
 ```
