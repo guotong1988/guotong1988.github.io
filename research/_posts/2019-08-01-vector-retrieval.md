@@ -24,7 +24,7 @@ We use all the sentence embeddings of test data to build our tree based on k-mea
 We do the experiments on the semantic textual similarity dataset, Quora Question Pairs, and process the dataset for sentence ranking. 
 Experimental results show that our methods outperform the strong baseline. 
 Our tree accelerate the predicting speed by 500%-1000% without losing too much ranking accuracy.
-**But the conclusion is: TF-IDF and BM25 are still the best methods for pre-ranking.**
+**But the conclusion is: TF-IDF and BM25 are still one of the best methods for pre-ranking.**
 
 #### Keywords
 Information Retrieval, Vector Representation
