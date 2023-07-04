@@ -84,7 +84,7 @@ The key step of our idea is about how to judge the noisy data. For sequence gene
 
 4. If the BLEU score of generated sentences of dataset-v1 is far from the human labeled generated sentences of dataset-v1, we think they are the noisy data.
 
-5. We label the noisy data again by human, while given the generated sentences of model and last label by human as reference. In actual operation, it can be a choice question for labeling people. The labeling people choose the best result from generation results of model and last labeled result by human. Then we get dataset-v2.
+5. We label the noisy data again by human, while given the generated sentences of model and last label by human as reference. In actual operation, it can be a choice question for labeling people. The labeling people chooses the best result from generation results of model and last labeled result by human. Then we get dataset-v2.
 
 6. We loop this re-labeling noisy data steps and get the final dataset. Then we get model-v2.
 
