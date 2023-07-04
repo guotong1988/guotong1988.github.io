@@ -76,7 +76,7 @@ Object detection is a computer vision technique that allows us to identify and l
 
 The key step of our idea is about how to judge the noisy data. For sequence generation, we can use BLEU score or other sequence similarity evaluation method. Then our steps are:
 
-1. We take text generation task as example. We have a origin labeled dataset-v1. The data has input sentence and output sentence.
+1. We take text generation task as example. We have an origin labeled dataset-v1. The data has input sentence and output sentence.
 
 2. We train a Encoder-Decoder Transformer\cite{ref5} upon dataset-v1 and get model-v1.
 
