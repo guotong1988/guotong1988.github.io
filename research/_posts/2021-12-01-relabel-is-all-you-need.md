@@ -76,15 +76,15 @@ Object detection is a computer vision technique that allows us to identify and l
 
 The key step of our idea is about how to judge the noisy data. For sequence generation, we can use BLEU score or other sequence similarity evaluation method. Then our steps are:
 
-1. We take text generation task as example. We have a human labeled dataset-v1.
+1. We take text generation task as example. We have a origin labeled dataset-v1. The data has input sentence and output sentence.
 
 2. We train a Encoder-Decoder Transformer\cite{ref5} upon dataset-v1 and get model-v1.
 
-3. Using model-v1 to predict the generated sentences for dataset-v1. 
+3. Using model-v1 to predict the generated sentences for dataset-v1's input sentences. 
 
-4. If the BLEU score of generated sentences of dataset-v1 is far from the human labeled generated sentences of dataset-v1, we think they are the noisy data.
+4. If the BLEU score of model-generated sentences is far from the origin output sentences of dataset-v1, we think they are the noisy data. In actual operation, if the model result and the origin output sentence does not have common token, we think the data is a noisy data. 
 
-5. We label the noisy data again by human, while given the generated sentences of model and last label by human as reference. In actual operation, it can be a choice question for labeling people. The labeling people chooses the best result from generation results of model and last labeled result by human. Then we get dataset-v2.
+5. We label the noisy data again by human, while given the generated sentences of model and origin output sentence as reference. In actual operation, it can be a choice question for labeling people. The labeling people chooses the best result from model results and origin output sentence. Then we get dataset-v2.
 
 6. We loop this re-labeling noisy data steps and get the final dataset. Then we get model-v2.
 
