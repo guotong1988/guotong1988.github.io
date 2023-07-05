@@ -19,17 +19,16 @@ In industry deep learning application, our main goal is to get a high quality tr
 ![fig1](/assets/png/refresh/fig1.png)
 
 
-Step-5 should be in front of Step-6, because the badcase removing Step-6 is more essential than merging Step-5.
+Step-5 should be in front of Step-6, because the badcase removing Step-6 is more essential than merging Step-5. We should first merge the reviewed data to the training dataset, and then we search all the most similar data of badcase data in the merged training dataset.
 
 ## Experiments
 
 We evaluate our method on text generation task. 
 
 ## Discussion
+For text generation task, the correction Step-7 can be a choice question for labeling people. The labeling people chooses the best result from model results and origin output sentence. 
 
-
-In industry application, we evaluate the model predictions of online dataset, for every period of time. 
-Using the method of this paper, we can collect the evaluation results to improve the model. So the evaluation results are not wasted.
+In industry application, we evaluate the model predictions of online dataset, for every period of time. Using the method of this paper, we can collect the evaluation results to improve the model. So the evaluation results are not wasted.
  
 ## References
 
