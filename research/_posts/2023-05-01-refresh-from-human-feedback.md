@@ -19,7 +19,7 @@ In industry deep learning application, our main goal is to get a high quality tr
 ![fig1](/assets/png/refresh/fig1.png)
 
 
-Step-5 should be in front of Step-6, because the badcase removing Step-6 is more essential than merging Step-5. We should first merge the reviewed data to the training dataset, and then we search all the most similar data of wrong prediction data in the merged training dataset.
+Step-5 should be in front of Step-6, because the badcases removing Step-6 is more essential than merging Step-5. We should first merge the reviewed data to the training dataset, and then we search all the most similar data of wrong prediction data in the merged training dataset.
 
 ## Experiments
 
