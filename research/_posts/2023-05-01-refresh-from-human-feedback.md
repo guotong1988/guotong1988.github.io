@@ -26,7 +26,7 @@ Step-5 should be in front of Step-6, because the badcase removing Step-6 is more
 We evaluate our method on text generation task. 
 
 ## Discussion
-For text generation task, the correction Step-7 can be a choice question for labeling people. The labeling people chooses the best result from model results and origin output sentence. 
+For text generation task, the correction Step-7 can be a choice question for labeling people. The labeling people chooses the best result from all the candidates. 
 
 In industry application, we evaluate the model predictions of online dataset, for every period of time. Using the method of this paper, we can collect the evaluation results to improve the model. So the evaluation results are not wasted.
  
