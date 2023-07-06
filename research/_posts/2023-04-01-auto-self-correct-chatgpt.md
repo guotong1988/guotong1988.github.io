@@ -47,7 +47,7 @@ Step-1. This step is same to InstructGPT's [4] first step. In this step, we use 
 
 Step-2. This step is different to InstructGPT's second step. This step do not have the reward part of InstructGPT, because we think the high quality data is the most important. The high quality model's outputs are selected by human and merged to the init train-dataset.
 
-Step-3. Using the self-predict and re-label method [3] to find the potential wrong/noise data for human to check and fix. Then we get a better train-dataset to train a better policy model. This step can be done for several times. The self-predict and re-label method has been verified to improve the data quality and model performance to 97% in [3].
+Step-3. Using the self-predict and re-label method [3] to find the potential wrong/noise data for human to check and fix. In actual operation, this correction step can be a choice question for labeling people. The labeling people chooses the best result from model generation sentences and origin training sentence. Then we get a better train-dataset to train a better policy model. This step can be done for several times. The self-predict and re-label method has been verified to improve the data quality and model performance to 97% in [3].
 
 #### 2.1.2 Teach Policy Model 
 
