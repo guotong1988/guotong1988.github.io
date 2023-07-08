@@ -52,7 +52,7 @@ We take named entity recognition(NER) as example for the sequence tagging like t
 
 4. If the predicted labels of dataset-v1 do not equal to the human labels of dataset-v1, we think they are the noisy data.
 
-5. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v2.
+5. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v2. In actual operation, if the labeling peoples are sufficient, we label the NER results. If the labeling peoples are not sufficient, the labeling task can be a choice question for labeling peoples.
 
 6. We loop this re-labeling noisy data steps for all the classes of NER and get the final dataset. Then we get model-v2.
 
