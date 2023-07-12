@@ -126,6 +126,8 @@ ChatGPT [1] fine-tunes with the alignment dataset, based on GPT-3, shows great p
 Auto-GPT [2] proposes the goal that attempts to make GPT-4 fully autonomous, which is a great work and do not conflict to our method.
 Auto-GPT try to solve the problem that let ChatGPT interact with the internet. Our method focus on the problem that let human teach ChatGPT. 
 
+[9]'s methods aim to update LLMs in a way that sidesteps the computational burden associated with training a wholly new model.
+
 ## 5. Conclusion
 
 We propose Auto Self-Correct ChatGPT to solve the problem that allow human to teach ChatGPT/policy-model to refresh/expand ChatGPT's knowledge.
@@ -149,6 +151,8 @@ The core idea of our method is: Editing the policy model's knowledge equals to e
 [7] Radford A, Narasimhan K, Salimans T, et al. Improving language understanding by generative pre-training[J]. 2018.
 
 [8] Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[J]. Advances in neural information processing systems, 2017, 30.
+
+[9] Yao Y, Wang P, Tian B, et al. Editing Large Language Models: Problems, Methods, and Opportunities[J]. arXiv preprint arXiv:2305.13172, 2023.
 ```
 
  
