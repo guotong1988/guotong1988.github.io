@@ -96,12 +96,13 @@ For CTR task, we use the methods of \cite{ref6} that drop the the noisy data. CT
 
 ### 4. Experimental Results
 
-We do the experiments of text classification and NER to verify our idea. The results is shown in Table 1 and Table 2. We also do a lot of other classification task and NER task of other dataset. The improvement is also significant and we do not list the detail results. 
+We do the experiments of text classification, NER, text generation to verify our idea. The results is shown in Table 1, Table 2, Table 3. We also do a lot of other classification task and NER task of other dataset. The improvement is also significant and we do not list the detail results.
 
 ![table1](/assets/png/relabel/table1.png)
 
 ![table2](/assets/png/relabel/table2.png)
 
+![table3](/assets/png/relabel/table3.png)
 
 ### 5. Analysis
 
