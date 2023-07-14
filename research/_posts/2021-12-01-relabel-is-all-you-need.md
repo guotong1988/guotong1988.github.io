@@ -109,6 +109,8 @@ Why re-label method work? Because deep learning is statistic-based. Take classif
 
 The improvement reason is also based on the better and better understanding for the specific task's labeling rule/knowledge of labeling human once by once. Human-in-the-loop here means that in each loop the labeling human leader should learn and summarize the corrected rule/knowledge based on the last loop.
 
+In the labeling details, the to-label dataset can be sorted for people to read and label, in order for better labeling efficiency. Also, sorted dataset can benefit the discriminating for similar data.
+
 ### 6. Related Works
 
 #### 6.1 Pseudo-label-based method
