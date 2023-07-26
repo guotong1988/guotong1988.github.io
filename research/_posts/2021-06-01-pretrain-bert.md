@@ -135,5 +135,5 @@ Zhang, Ye, and Byron Wallace. "A sensitivity analysis of (and practitioners' gui
 Huang, Gao, et al. "Densely connected convolutional networks." Proceedings of the IEEE conference on computer vision and pattern recognition. 2017.
 
 \bibitem{ref15}
-Guo, Tong (2021): Re-Label Is All You Need. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.17128475.v11 
+Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
 ```
