@@ -30,11 +30,7 @@ Our key contribution is:
 
 Based on our industry dataset, we first find the noise data which human label is not in the top-K (K=1,2,3...10)  predictions of model. Then we drop/remove the noise data. The experiment results shows that our idea works for our large industry dataset.  
 
-![fig1](/assets/png/self-refine/fig1.png)
-*Remove the noise data*
 
- ![fig1](/assets/png/self-refine/fig2.png)
-*Reset the noise data*
 
 ### 2. Relate Works
 
@@ -44,7 +40,11 @@ BERT \cite{ref1} is built by the multi-layer transformer encoder \cite{ref10}, w
 Our method is different to semi-supervised learning. Semi-supervised learning solve the problem that making best use of a large amount of unlabeled data. These works include UDA \cite{ref6}, Mixmatch \cite{ref7}, Fixmatch \cite{ref8}, Remixmatch \cite{ref9}. Our work is full supervised.
 
 ### 3. Our Method
+![fig1](/assets/png/self-refine/fig1.png)
+*Fig 1: Remove the noise data*
 
+ ![fig1](/assets/png/self-refine/fig2.png)
+*Fig 2: Reset the noise data*
 
 In this section, we describe our method in detail. Our methods is shown in Fig 1. It includes 5 steps:
 
