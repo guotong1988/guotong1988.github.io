@@ -13,7 +13,7 @@ description: "Self-Refine Learning For Data-Centric Deep Learning"
 
 ### Abstract
 
-In industry NLP application, our manually labeled data has a certain number of noise data. We present a simple method to find the noise data and remove them. We select the noise data whose human label is not contained in the top-K model's predictions. The experiment result shows that our method works. For industry deep learning application, our method improve the text classification accuracy from 80.5% to 90.6% in dev dataset, and improve the human-evaluation accuracy from 83.2% to 90.1%. **The conclusion** is: The self-predict and self-drop method of this paper can not improve the accuracy to more than 95%, without human labeling again for the training dataset.
+In industry NLP application, our manually labeled data has a certain number of noise data. We present a simple method to find the noise data and remove/reset them. We select the noise data whose human label is not contained in the top-K model's predictions. The experiment result shows that our method works. For industry deep learning application, our method improve the text classification accuracy from 80.5% to 90.6% in dev dataset, and improve the human-evaluation accuracy from 83.2% to 90.1%. **The conclusion** is: The self-predict and remove/reset method of this paper can not improve the accuracy to more than 95% of human evaluation, without human labeling again for the training dataset.
 
 
 #### Keywords
@@ -31,7 +31,7 @@ Our key contribution is:
 Based on our industry dataset, we first find the noise data which human label is not in the top-K (K=1,2,3...10)  predictions of model. Then we drop/remove the noise data. The experiment results shows that our idea works for our large industry dataset.  
 
 ![fig1](/assets/png/self-refine/fig1.png)
-*Drop the noise data*
+*Remove the noise data*
 
  ![fig1](/assets/png/self-refine/fig2.png)
 *Reset the noise data*
