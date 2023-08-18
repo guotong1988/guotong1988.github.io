@@ -46,7 +46,7 @@ Our method is different to semi-supervised learning. Semi-supervised learning so
  ![fig1](/assets/png/self-refine/fig2.png)
 *Fig 2: Reset the noise data*
 
-In this section, we describe our method in detail. Our methods is shown in Fig 1. It includes 5 steps:
+In this section, we describe our method in detail. Our methods are shown in Fig 1 and Fig 2. It includes 5 steps:
 
 Step-1, in order to solve our industry text classification problem. We manually label 2,790,000 data and split them into 2,700,000 training data and 90,000 dev data. 
 
@@ -54,7 +54,7 @@ Step-2, we train / fine-tune the BERT model on the 2,700,000 training data. We n
 
 Step-3, we use Model-A to predict for all the 2,790,000 data. Then we find all the data whose human label are not in the top-K (K=1,2,3...10) predictions of model-A. We consider they are the noise data. 
 
-Step-4, we drop/remove the noise data from the 2,700,000 and 90,000 data. 
+Step-4, we remove/reset the noise data from the 2,700,000 and 90,000 data. 
 
 Step-5, we train and evaluate upon the dataset of step-4 and get Model-B. 
 
