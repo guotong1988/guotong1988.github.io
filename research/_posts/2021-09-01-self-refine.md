@@ -144,5 +144,8 @@ Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint 
 
 \bibitem{ref14}
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
+
+\bibitem{ref15}
+Xu L, Hu H, Zhang X, et al. CLUE: A Chinese language understanding evaluation benchmark[J]. arXiv preprint arXiv:2004.05986, 2020.
 ```
 
