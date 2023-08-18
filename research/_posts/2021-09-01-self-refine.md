@@ -31,8 +31,10 @@ Our key contribution is:
 Based on our industry dataset, we first find the noise data which human label is not in the top-K (K=1,2,3...10)  predictions of model. Then we drop/remove the noise data. The experiment results shows that our idea works for our large industry dataset.  
 
 ![fig1](/assets/png/self-refine/fig1.png)
+*Drop the noise data*
 
- 
+ ![fig1](/assets/png/self-refine/fig2.png)
+*Reset the noise data*
 
 ### 2. Relate Works
 
