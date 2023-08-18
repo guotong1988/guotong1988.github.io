@@ -24,11 +24,11 @@ Deep Learning, Text Classification, NLP
 
 In recent years, deep learning \cite{ref2} and BERT-based \cite{ref1} model have shown significant improvement on almost all the NLP tasks. However, the most important factor for deep learning application performance is the data quantity and quality. We try to improve performance of the industry NLP application by correcting the noise data by other most of data. 
 
-Previous works \cite{ref11} first find the noise data which human label and model prediction is not equal and re-label the noise data manually. During the correction, the last human label and model predictions as references are viewed by the labeling people. However it need more human labeling. So in this work, we directly drop the noise data whose label is not contained in the top-K (K=1,2,3...10) predictions of model. 
+Previous works \cite{ref11} first find the noise data which human label and model prediction is not equal and re-label the noise data manually. During the correction, the last human label and model predictions as references are viewed by the labeling people. However it need more human labeling. So in this work, we directly remove/reset the noise data whose label is not contained in the top-K (K=1,2,3...10) predictions of model. 
 
 Our key contribution is:
 
-Based on our industry dataset, we first find the noise data which human label is not in the top-K (K=1,2,3...10)  predictions of model. Then we drop/remove the noise data. The experiment results shows that our idea works for our large industry dataset.  
+Based on our industry dataset, we first find the noise data which human label is not in the top-K (K=1,2,3...10)  predictions of model. Then we remove/reset the noise data. The experiment results shows that our idea works for our large industry dataset.  
 
 
 
