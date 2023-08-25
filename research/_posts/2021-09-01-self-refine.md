@@ -70,8 +70,8 @@ We use BERT as our model. The training steps in our method belongs to the fine-t
 In this section we describe detail of experiment parameters and show the experiment result. The detail result is shown in Table 2. The data size in our experiment is shown in Table 1.
 
 In fine-tuning, we use Adam \cite{ref4} with learning rate of 1e-5 and use a dropout \cite{ref5} probability of 0.1 on all layers. We use BERT-Base (12 layer, 768 hidden size) as our pre-trained model. 
-
-![table1](/assets/png/self-refine/table12.png)
+![table1](/assets/png/self-refine/table1.png)
+![table23](/assets/png/self-refine/table23.png)
 
 
 
@@ -80,7 +80,7 @@ In fine-tuning, we use Adam \cite{ref4} with learning rate of 1e-5 and use a dro
 
 ### 6. Analysis
 
-Why drop-noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
+Why removing noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
 
 If there are three very similar data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will predict class-A for data-3. 
 
@@ -88,9 +88,9 @@ We suppose that data-3 is wrong-labeled by human, because more people labeled th
 
 And the trained model predict class-A for data-3. So the noise data here is data-3 by our method. 
 
-If we do not drop data-3, the model prediction for new data that is the most similar to data-3 will be class-B, which is wrong.
+If we do not remove data-3, the model prediction for new data that is the most similar to data-3 will be class-B, which is wrong.
 
-If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right. 
+If we remove data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right. 
 
 #### 6.1 ChatGPT 
 In ChatGPT \cite{ref14}, OpenAI use human-labeled policy-prediction-data as reward to train text-generation transformer \cite{ref10} policy-model. In fact, if we collected the good/bad feedbacks/rewards from users, we can remove the bad feedback data for text-generation policy-model, and only use good feedback data to merge into the policy dataset, which means we do not need the text-match-based reward-model. 
@@ -98,7 +98,7 @@ In ChatGPT \cite{ref14}, OpenAI use human-labeled policy-prediction-data as rewa
 
 ### 7. Conclusion
 
-The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref11} that inject the prediction result of model-A to model-B. For further applying of drop-noise method, we can drop the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref13}.
+The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref11} that inject the prediction result of model-A to model-B. For further applying of removing noise method, we can remove the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref13}.
 
 
 ### References
