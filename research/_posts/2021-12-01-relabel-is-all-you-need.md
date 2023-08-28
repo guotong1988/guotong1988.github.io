@@ -4,7 +4,7 @@ title: "The Re-Label Method For Data-Centric Machine Learning"
 date: 2021-12-01
 category: research
 author: "Tong Guo"
-description: "Re-Label Is All You Need For 97% Accuracy For Dev Dataset"
+description: "ReLabel Is All You Need For 97% Accuracy For Dev Dataset"
 ---
 
 
@@ -128,6 +128,9 @@ Our work do not have the reward model of RLHF, the differnce between RLHF and ou
 
 Also, the correction for policy by the reward model of RLHF is same to correct all the related data/labels that found by the patterns or substrings of the badcases. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
 
+#### 6.3 Other Works
+For object detection task, \cite{ref11} use the relabel method and surpassed human performance in offline LiDAR based 3D object detection.
+
 ### 7. Conclusion
 
 We argue that the key point to improve the industry deep learning application performance is to correct the noisy data. We propose a simple method to achieve our idea and show the experimental results to verify our idea. 
@@ -162,5 +165,8 @@ Nicholson B, Zhang J, Sheng V S, et al. Label noise correction methods[C]//2015 
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 
 \bibitem{ref10}
-Guo, Tong (2022): Re-Label By Data Pattern For Knowledge Driven Deep Learning. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.20485917.v6 
+Guo, Tong (2022): Re-Label By Data Pattern For Knowledge Driven Deep Learning. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.20485917.v6
+
+\bibitem{ref11}
+Fan L, Yang Y, Mao Y, et al. Once Detected, Never Lost: Surpassing Human Performance in Offline LiDAR based 3D Object Detection[J]. arXiv preprint arXiv:2304.12315, 2023.
 ```
