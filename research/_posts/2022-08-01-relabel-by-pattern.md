@@ -4,7 +4,7 @@ title: "Re-Label By Data Pattern For Knowledge Driven Deep Learning"
 date: 2022-08-01
 category: research
 author: "Tong Guo"
-description: "Re-Label By Data Pattern Is All You Need For 97% Accuracy For Test Dataset"
+description: "Re-Label By Data Pattern Is All You Need For 97% Accuracy"
 ---
 
 
