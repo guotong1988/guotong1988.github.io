@@ -4,7 +4,7 @@ title: "The Re-Label Method For Data-Centric Machine Learning"
 date: 2021-12-01
 category: research
 author: "Tong Guo"
-description: "ReLabel Is All You Need For 97% Accuracy For Dev Dataset"
+description: "ReLabel Is All You Need For 97% Accuracy"
 ---
 
 
