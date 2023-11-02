@@ -11,7 +11,7 @@ description: "ReLabel Is All You Need For 97% Accuracy"
 # The Re-Label Method For Data-Centric Machine Learning
 
 ### Abstract
-In industry deep learning application, our manually labeled data has a certain number of noisy data. To solve this problem and achieve more than 90 score in dev dataset, we present a simple method to find the noisy data and re-label the noisy data by human, given the model predictions as references in human labeling. In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, click-through rate prediction. The experimental results and human evaluation results verify our idea.
+In industry deep learning application, our manually labeled data has a certain number of noisy data. To solve this problem and achieve more than 90 score in dev dataset, we present a simple method to find the noisy data and re-label the noisy data by human, given the model predictions as references in human labeling. In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, click-through rate prediction. The dev dataset evaluation results and human evaluation results verify our idea.
 
 #### Keywords
 
@@ -33,9 +33,9 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 4. If the predicted labels of dataset-v1 do not equal to the human labels of dataset-v1, we think they are the noisy data.
 
-5. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v2.
+5. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v2 and model-v2.
 
-6. We loop this re-labeling noisy data steps and get the final dataset. Then we get model-v2. We can further loop this steps to get model-v3.
+6. We loop these re-label noisy data steps and get the final dataset and final model.
 
 ### 3. Same Idea and More Applications
 
@@ -52,9 +52,9 @@ We take named entity recognition(NER) as example for the sequence tagging like t
 
 4. If the predicted labels of dataset-v1 do not equal to the human labels of dataset-v1, we think they are the noisy data.
 
-5. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v2. In actual operation, if the labeling peoples are sufficient, we label the NER results. If the labeling peoples are not sufficient, the labeling task can be a choice question for labeling peoples.
+5. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v2. In actual operation, if the labeling peoples are sufficient, we label the NER results. If the labeling peoples are not sufficient, the labeling task can be a choice question for labeling peoples. Then we get dataset-v2 and model-v2.
 
-6. We loop this re-labeling noisy data steps for all the classes of NER and get the final dataset. Then we get model-v2.
+6. We loop these re-label noisy data steps for all the classes of NER and get the final dataset and final model.
 
 #### 3.2 object detection
 
@@ -68,9 +68,9 @@ Object detection is a computer vision technique that allows us to identify and l
 
 4. If the predicted bounding box of dataset-v1 is far from the human labeled bounding box of dataset-v1, we think they are the noisy data.
 
-5. We label the noisy data again by human, while given the bounding boxes of model and last label by human as reference. Then we get dataset-v2.
+5. We label the noisy data again by human, while given the bounding boxes of model and last label by human as reference. Then we get dataset-v2 and model-v2.
 
-6. We loop this re-labeling noisy data steps for all the classes of object detection and get the final dataset. Then we get model-v2.
+6. We loop these re-label noisy data steps for all the classes of object detection and get the final dataset and final model.
 
 #### 3.3 sequence generation
 
@@ -84,9 +84,9 @@ The key step of our idea is about how to judge the noisy data. For sequence gene
 
 4. If the BLEU score of model-generated sentences is far from the origin output sentences of dataset-v1, we think they are the noisy data. In actual operation, if the model result and the origin output sentence does not have common token, we think the data is a noisy data. 
 
-5. We label the noisy data again by human, while given the generated sentences of model and origin output sentence as reference. In actual operation, it can be a choice question for labeling people. The labeling people chooses the best result from model results and origin output sentence. Then we get dataset-v2.
+5. We label the noisy data again by human, while given the generated sentences of model and origin output sentence as reference. In actual operation, it can be a choice question for labeling people. The labeling people chooses the best result from model results and origin output sentence. Then we get dataset-v2 and model-v2.
 
-6. We loop this re-labeling noisy data steps and get the final dataset. Then we get model-v2.
+6. We loop these re-label noisy data steps and get the final dataset and final model.
 
 #### 3.4 click-through rate prediction
 
@@ -104,7 +104,7 @@ We do the experiments of text classification, NER, text generation to verify our
 
 ![table3](/assets/png/relabel/table3.png)
 
-### 5. Analysis
+### 5. Discussion
 
 Why re-label method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) If there are three **very similar** data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B. Then the trained model will probably predict class-A for data-3. We assume that data-3 is wrong labeled to class-B by human, because more people label its similar data to class-A.
 
@@ -114,7 +114,7 @@ In the labeling details, the to-label dataset can be sorted for people to read a
 
 ### 6. Related Works
 
-#### 6.1 Pseudo-label-based method
+#### 6.1 Pseudo-label-based methods
 
 The work\cite{ref7} proposes pseudo-label-based method to improve data quality without human re-label, which is different from our method. Our method is to improve the data quality for model of 97% accuracy/precision/recall/BLEU/AUC by human re-label.
 
