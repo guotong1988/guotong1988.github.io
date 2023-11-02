@@ -29,7 +29,7 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 2. We train a BERT-based \cite{ref3} deep model upon dataset-v1 and get model-v1.
 
-3. Using model-v1 to predict the classification label for dataset-v1. 
+3. Using model-v1 to predict the classification labels for dataset-v1. 
 
 4. If the predicted labels of dataset-v1 do not equal to the human labels of dataset-v1, we think they are the noisy data.
 
