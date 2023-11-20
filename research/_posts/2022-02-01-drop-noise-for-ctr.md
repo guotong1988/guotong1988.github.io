@@ -43,7 +43,7 @@ In this section, we describe our method in detail. Our method is shown in Fig 1.
 
 Step 1, in order to solve our industry CTR problem. We get the user-generated dataset-A and prepare features like age, gender, location. 
 
-Step 2, we train CTR deep model on dataset-A. We named the result model of this step Model-A. Note that Model-A should not overfit the training dataset.
+Step 2, we train CTR deep model on dataset-A. We named the trained model of this step Model-A. Note that Model-A should not overfit the training dataset.
 
 Step 3, we use Model-A to predict for all the dataset-A. Then we find all the data whose user-generated label and predicted-label is different. We consider they are the noise data. There are many ways to define the difference of two labels: the equality of the two labels, or the distance of the two scores.
 
@@ -54,7 +54,7 @@ Step 5, we train upon the dataset-B and get Model-B.
 
 ### 4. Experiments
 
-In this section we describe detail of experiment parameters and list the experiment result.
+In this section we describe detail of experiment parameters and list the experiment results.
 
 #### 4.1 Experiment Results
 
