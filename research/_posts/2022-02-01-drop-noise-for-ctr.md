@@ -64,7 +64,7 @@ In this section, we evaluate our methods on our real-world dataset. Our dataset-
 ![table1](/assets/png/drop-ctr/table1.png)
 
 
-### 5. Analysis
+### 5. Discussion
 
 Why drop-noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
 
