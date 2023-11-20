@@ -32,7 +32,7 @@ Previous works \cite{ref1} \cite{ref2} have shown the effectiveness of our metho
 
 There are many works focus on the model-centric perspective of CTR task. Factorization Machines (FM) \cite{ref3} , DeepFM \cite{ref4}, Wide \& Deep model \cite{ref5} are all works that solve the model-centric perspective of this task.
 
-Previous works \cite{ref1} \cite{ref2} \cite{ref3} focus on the data-centric perspective on human-labeled dataset and do not apply the idea to user-generated dataset like CTR task.
+Previous works \cite{ref1} \cite{ref2} focus on the data-centric perspective on human-labeled dataset and do not apply the idea to user-generated dataset like CTR task.
  
 
 ### 3. Method
