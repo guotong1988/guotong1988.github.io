@@ -129,7 +129,7 @@ Our work do not have the reward model of RLHF, the differnce between RLHF and ou
 Also, the correction for policy by the reward model of RLHF is same to correct all the related data/labels that found by the patterns or substrings of the badcases. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
 
 #### 6.3 Other Works
-For object detection task, \cite{ref11} uses the relabel method and surpasses human performance in offline LiDAR based 3D object detection.
+For object detection task, \cite{ref11} uses the re-label method and surpasses human performance in offline LiDAR based 3D object detection.
 
 ### 7. Conclusion
 
