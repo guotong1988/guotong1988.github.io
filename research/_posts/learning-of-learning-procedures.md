@@ -39,12 +39,15 @@ Solving the problem means we give any human the ability to label data for our sy
 
 Solving the problem means our system can improve itself through conversations with users.
 
+Based on our LLP system, our approach can give domain experts a natural language interface to build a task-oriented dialogue system, or question answering system, or reasoning system.
+
 ### Discussion
 
+
 #### Limitation
+
 We need to define all possible deep learning tasks in advance.
 
-The main purpose of our approach is to give experts a natural language interface to build a task-oriented dialogue system, based on our LLP system.
 
 ### Conclusion
 
