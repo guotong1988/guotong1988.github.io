@@ -37,6 +37,7 @@ In other words, our approach optimizes the automatic expansion and updating of t
 
 Solving the problem means we give any human the ability to label data for our system.
 
+Solving the problem means our system can improve itself through conversations with users.
 
 ### Discussion
 
