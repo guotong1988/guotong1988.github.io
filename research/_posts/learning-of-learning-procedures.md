@@ -13,7 +13,7 @@ description: "The Learning of Learning Procedures"
 ### Abstract
 We propose Learning of Learning Procedures (LLP) to solve the problem to let human teach machine to refresh/expand its knowledge automatically by natural language conversation. LLP is an AI system to solve the problem that let machine to learn knowledge in conversation interacting with human automatically.
 
-The core idea of our method is: The learning of a machine means updating its training datasets. Based on large language model (LLM)'s conversation ability, we train an addtional intent recognition model to determine whether the system need to learn new knowledge. 
+The core idea of our method is: The learning of a machine means updating its training datasets. Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine whether the system need to learn new knowledge. 
 
 It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. Also, based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
