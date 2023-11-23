@@ -37,9 +37,9 @@ In other words, our approach optimizes the automatic expansion and updating of t
 
 #### 1.2 Problem Importance
 
-Solving the problem means we give any human the ability to label data for our system.
+Solving the problem means we give people the ability to label data for our system, except the developers of the AI system.
 
-Solving the problem means our system can improve itself through conversations with users.
+Solving the problem means our system can improve itself through conversations with users automatically.
 
 Based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
