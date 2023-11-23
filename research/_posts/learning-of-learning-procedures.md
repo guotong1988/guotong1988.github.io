@@ -49,6 +49,8 @@ Based on our LLP system, our approach can give users a natural language interfac
 
 #### Create A New Task
 
+![table2](/assets/png/llp/table3.png)
+
 ### Discussion
 
 
