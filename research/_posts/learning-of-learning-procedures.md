@@ -25,10 +25,6 @@ In recent years, deep learning \cite{ref2} and GPT-based \cite{ref12} model have
 
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
 
-![table1](/assets/png/llp/table1.png)
-
-![table2](/assets/png/llp/table2.png)
-
 #### 1.1 Problem Definition
 
 The definition of Learning Procedures (LP) in our work is how the system automatically updates/expands its training datasets with human conversations.
@@ -46,6 +42,10 @@ Based on our LLP system, our approach can give users a natural language interfac
 ### The Learning Of Learning
 
 #### Add New Data To Exist Tasks
+
+![table1](/assets/png/llp/table1.png)
+
+![table2](/assets/png/llp/table2.png)
 
 #### Create A New Task
 
