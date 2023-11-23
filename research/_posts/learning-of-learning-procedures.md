@@ -17,7 +17,7 @@ The core idea of our method is: The learning of a machine means updating its tra
 
 It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. Also, based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
-We propose the procedures to implement our idea and discuss the reasons why we design these procedures.
+We propose the methods to implement our idea and discuss the reasons why we design these methods.
 
 ### 1. Introduction
 
