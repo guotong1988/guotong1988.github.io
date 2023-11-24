@@ -30,11 +30,11 @@ The human learning procedure is the process of humans interacting with the world
 
 In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the DL tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations.
 
-Currently, there are two ways to solve the problem of autonomous learning \cite{ref1} based on the DL framework: One is to add data under existing DL tasks, and the other is to define a new DL task that meets the requirements. Our work is to optimize the automatic expansion of DL task in the AI system.
+Currently, there are two ways to solve the problem of autonomous learning \cite{ref1} based on the DL framework: One is to add/update data under existing DL tasks, and the other is to create a new DL task that meets the requirements. 
 
 \cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
 
-This work mainly solves the problem of automatic definition tasks in conversation with human. For solutions to automatically update data for existing DL tasks, please refer to the appendix.
+This work mainly solves the problem of automatic creating DL tasks in conversation with human. For solutions to automatically update data for existing DL tasks, please refer to the appendix.
 
 #### 1.1 Concept Definition
 
@@ -49,6 +49,10 @@ Solving this problem means we give people the ability to create new DL tasks (an
 Based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
 ### The Learning Of Task Definition
+
+#### Intent Recognition Dataset
+
+#### DL Tasks Definition Related Dataset
 
 ![table2](/assets/png/llp/table3.png)
 
