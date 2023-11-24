@@ -60,11 +60,13 @@ The LLP system has these modules:
 4) A task management module to manage DL tasks relationships in the system.
 
 
-### 2. The Learning Of Task Definition
+### 2. The LLP system
 
-#### 2.1 Intent Recognition Dataset
+#### 2.1 Intent Recognition Module
 
-#### 2.2 DL Tasks Definition Related Dataset
+#### 2.2 DL Tasks Creation Module
+
+#### 2.3 Task Relationship Management Module
 
 ### 3. Applications
 
