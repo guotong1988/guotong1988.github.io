@@ -19,8 +19,8 @@ LLP system is an AI system that contains many deep learning tasks. LLP system pr
 
 It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. Also, based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
-Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine when the system need to learn new knowledge. 
-And we train additional model that upon a well-prepared dataset that handles new deep learning tasks creation in the system.
+Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine when the AI system need to learn new knowledge. 
+And we train additional model that upon a well-prepared dataset that handles new deep learning tasks creation in the AI system.
 
 We propose the methods to implement our idea and discuss the reasons why we design these methods.
 
@@ -32,7 +32,7 @@ In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model
 
 Currently, there are two ways to solve the problem of autonomous learning \cite{ref1} based on the DL framework: One is to add/update data under existing DL tasks, and the other is to create a new DL task that meets the requirements. 
 
-\cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
+
 
 This work mainly solves the problem of automatic creating DL tasks in conversation with human. For solutions to automatically update data for existing DL tasks, please refer to the appendix.
 
@@ -53,6 +53,13 @@ Based on our LLP system, our approach can give users a natural language interfac
 #### Intent Recognition Dataset
 
 #### DL Tasks Definition Related Dataset
+
+### Applications
+
+### Task-oriented Dialogue System
+
+### Reasoning System
+\cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
 
 ![table2](/assets/png/llp/table3.png)
 
