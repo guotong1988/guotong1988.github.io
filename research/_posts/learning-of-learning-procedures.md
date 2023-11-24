@@ -48,10 +48,7 @@ Solving the problem means our system can improve itself through conversations wi
 
 Based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
-### The Learning Of Learning
-
-
-#### Create A New Task
+### The Learning Of Task Definition
 
 ![table2](/assets/png/llp/table3.png)
 
