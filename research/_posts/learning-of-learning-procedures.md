@@ -140,7 +140,7 @@ Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[
 
 #### Add New Data To Existing Tasks
 
-The core idea of updating the datasets is: The learning of a existing task equals to updating its training datasets. 
+The core idea of updating the datasets is: The learning of an existing DL task is to update its training datasets. 
 
 ![table2](/assets/png/llp/table2.png)
 
