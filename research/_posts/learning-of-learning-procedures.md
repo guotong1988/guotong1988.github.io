@@ -48,25 +48,29 @@ Solving this problem means we give people the ability to create new DL tasks (an
 
 Based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
-### The Learning Of Task Definition
+#### 1.3 Contributions
 
-#### Intent Recognition Dataset
+### 2. The Learning Of Task Definition
 
-#### DL Tasks Definition Related Dataset
+#### 2.1 Intent Recognition Dataset
 
-### Applications
+#### 2.2 DL Tasks Definition Related Dataset
 
-### Task-oriented Dialogue System
+### 3. Applications
 
-### Reasoning System
-\cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
+### 3.1 Task-oriented Dialogue System
 
 ![table2](/assets/png/llp/table3.png)
 
-### Discussion
+### 3.2 Reasoning System
+\cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
 
 
-### Conclusion
+### 4. Discussion
+
+### 5. Related Works
+
+### 6. Conclusion
 
 
 ### References
