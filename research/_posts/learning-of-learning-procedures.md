@@ -33,7 +33,7 @@ Currently, there are two ways to solve the problem of autonomous learning \cite{
 
 This work mainly solves the problem of automatic definition tasks in conversation with human. For solutions to automatically update data for existing DL tasks, please refer to the appendix.
 
-#### 1.1 Problem Definition
+#### 1.1 Concept Definition
 
 The definition of Learning Procedures (LP) in our work is the DL tasks in the AI system.
 
