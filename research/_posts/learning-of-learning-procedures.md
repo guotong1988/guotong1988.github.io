@@ -15,7 +15,7 @@ description: "The Learning of Learning Procedures"
 The current large language models (LLMs) mainly lacks the following capabilities: machine reasoning capabilities and autonomous learning capabilities.
 
 We propose Learning of Learning Procedures (LLP) to solve the problem to let human teach machine to refresh/expand its **tasks definition** automatically by natural language conversation.
-LLP system is an AI system to solve the problem that let machine to learn **new tasks definition** in conversation interacting with human automatically.
+LLP system is an AI system that contains many deep learning tasks. LLP system provide the natural language interface to let machine to learn **new tasks definition** in conversation interacting with human automatically.
 
 It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. Also, based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
