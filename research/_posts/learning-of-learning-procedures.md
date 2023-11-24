@@ -12,15 +12,12 @@ description: "The Learning of Learning Procedures"
 
 ### Abstract
 
-The current large language models (LLMs) lacks the following capabilities: machine reasoning capabilities and autonomous learning capabilities.
+The current large language models (LLMs) mainly lacks the following capabilities: machine reasoning capabilities and autonomous learning capabilities.
 
-We propose Learning of Learning Procedures (LLP) to solve the problem to
+We propose Learning of Learning Procedures (LLP) to solve the problem to let human teach machine to refresh/expand its tasks definition automatically by natural language conversation.
+LLP system is an AI system to solve the problem that let machine to learn new tasks definition in conversation interacting with human automatically.
 
-% 主要解决 自动定义问题 的问题，不是怎么更新数据
 
-We propose Learning of Learning Procedures (LLP) to solve the problem to let human teach machine to refresh/expand its knowledge automatically by natural language conversation. LLP is an AI system to solve the problem that let machine to learn knowledge in conversation interacting with human automatically.
-
-The core idea of our method is: The learning of a machine means updating its training datasets. Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine whether the system need to learn new knowledge. 
 
 It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. Also, based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
@@ -32,7 +29,9 @@ In recent years, deep learning \cite{ref2} and GPT-based \cite{ref12} model have
 
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
 
-Currently, there are two ways to solve the problem of machine reasoning based on the existing deep learning framework: one is to add data under existing reasoning tasks \cite{ref1}, and the other is to define a new reasoning task that meets the requirements.
+Currently, there are two ways to solve the problem of machine reasoning \cite{ref1} based on the existing deep learning framework: One is to add data under existing reasoning tasks, and the other is to define a new reasoning task that meets the requirements. 
+
+This work mainly solves the problem of automatic definition tasks. For solutions to automatically update data, please refer to the appendix.
 
 #### 1.1 Problem Definition
 
@@ -109,7 +108,9 @@ Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[
 
 ### Appendix
 
-#### Add New Data To Exist Tasks
+#### Add New Data To Existing Tasks
+
+The core idea of updating the datasets is: The learning of a existing task equals to updating its training datasets. Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine whether the system need to learn new knowledge. 
 
 ![table1](/assets/png/llp/table1.png)
 
