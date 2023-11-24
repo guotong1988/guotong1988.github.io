@@ -66,6 +66,8 @@ The LLP system has these modules:
 
 #### 2.2 Intent Recognition Module
 
+![table1](/assets/png/llp/table1.png)
+
 #### 2.3 DL Tasks Creation Module
 
 #### 2.4 Task Relationship Management Module
@@ -74,7 +76,7 @@ The LLP system has these modules:
 
 #### 3.1 Task-oriented Dialogue System
 
-![table1](/assets/png/llp/table1.png)
+![table2](/assets/png/llp/table2.png)
 
 #### 3.2 Reasoning System
 \cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
@@ -142,5 +144,5 @@ Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[
 
 The core idea of updating the datasets is: The learning of an existing DL task is to update its training datasets. 
 
-![table2](/assets/png/llp/table2.png)
+![table3](/assets/png/llp/table3.png)
 
