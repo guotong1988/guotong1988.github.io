@@ -31,7 +31,7 @@ Currently, there are two ways to solve the problem of autonomous learning \cite{
 
 \cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
 
-This work mainly solves the problem of automatic definition tasks. For solutions to automatically update data, please refer to the appendix.
+This work mainly solves the problem of automatic definition tasks in conversation with human. For solutions to automatically update data for existing DL tasks, please refer to the appendix.
 
 #### 1.1 Problem Definition
 
