@@ -50,6 +50,16 @@ Based on our LLP system, our approach can give users a natural language interfac
 
 #### 1.3 Contributions
 
+In this paper we propose a designing framework of AI system, called LLP. LLP system is based on LLM and have the ability to learn in the conversation with human.
+
+The LLP system has these modules: 
+
+1) LLM to do conversation with human.
+2) An intent recognition module to determine when to update knowledge in the system.
+3) A DL task creation module to create DL tasks in the system.
+4) A task management module to manage DL tasks relationships in the system.
+
+
 ### 2. The Learning Of Task Definition
 
 #### 2.1 Intent Recognition Dataset
