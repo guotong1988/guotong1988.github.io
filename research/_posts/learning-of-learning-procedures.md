@@ -10,7 +10,7 @@ description: "The Learning of Learning Procedures"
 
 # The Learning of Learning Procedures
 
-### Abstract
+## Abstract
 
 The current large language models (LLMs) mainly lacks this capability: autonomous learning capability.
 
@@ -24,7 +24,7 @@ And we train additional model that upon a well-prepared dataset that handles new
 
 We propose the methods to implement our idea and discuss the reasons why we design these methods.
 
-### 1. Introduction
+## 1. Introduction
 
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
 
@@ -60,7 +60,7 @@ The LLP system has these modules:
 4) A task management module to manage DL tasks relationships in the system.
 
 
-### 2. The LLP system
+## 2. The LLP system
 
 #### 2.1 Common Conversation Module
 
@@ -70,24 +70,24 @@ The LLP system has these modules:
 
 #### 2.4 Task Relationship Management Module
 
-### 3. Applications
+## 3. Applications
 
-### 3.1 Task-oriented Dialogue System
+#### 3.1 Task-oriented Dialogue System
 
 ![table1](/assets/png/llp/table1.png)
 
-### 3.2 Reasoning System
+#### 3.2 Reasoning System
 \cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
 
 
-### 4. Discussion
+## 4. Discussion
 
-### 5. Related Works
+## 5. Related Works
 
-### 6. Conclusion
+## 6. Conclusion
 
 
-### References
+## References
 ```
 \bibitem{ref1}
 Yu F, Zhang H, Wang B. Nature language reasoning, a survey[J]. arXiv preprint arXiv:2303.14725, 2023.
