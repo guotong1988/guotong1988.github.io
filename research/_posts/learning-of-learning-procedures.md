@@ -35,13 +35,13 @@ This work mainly solves the problem of automatic definition tasks. For solutions
 
 #### 1.1 Problem Definition
 
-The definition of Learning Procedures (LP) in our work is how the system automatically updates/expands its DL tasks with human conversations.
+The definition of Learning Procedures (LP) in our work is the DL tasks in the AI system.
 
-In other words, our approach optimizes the automatic expansion and updating of the DL tasks.
+The definition of Learning of Learning Procedures (LLP) in our work is how the AI system automatically updates/expands its DL tasks with human conversations.
 
 #### 1.2 Problem Importance
 
-Solving the problem means we give people the ability to create new DL tasks and then add new labeled data for the AI system, except the developers of the AI system.
+Solving this problem means we give people the ability to create new DL tasks (and then add new labeled data) for the AI system, except the developers of the AI system.
 
 Based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
