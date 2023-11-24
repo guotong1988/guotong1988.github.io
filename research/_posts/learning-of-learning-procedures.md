@@ -11,6 +11,13 @@ description: "The Learning of Learning Procedures"
 # The Learning of Learning Procedures
 
 ### Abstract
+
+The current large language models (LLMs) lacks the following capabilities: machine reasoning capabilities and autonomous learning capabilities.
+
+We propose Learning of Learning Procedures (LLP) to solve the problem to
+
+% 主要解决 自动定义问题 的问题，不是怎么更新数据
+
 We propose Learning of Learning Procedures (LLP) to solve the problem to let human teach machine to refresh/expand its knowledge automatically by natural language conversation. LLP is an AI system to solve the problem that let machine to learn knowledge in conversation interacting with human automatically.
 
 The core idea of our method is: The learning of a machine means updating its training datasets. Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine whether the system need to learn new knowledge. 
@@ -21,9 +28,11 @@ We propose the methods to implement our idea and discuss the reasons why we desi
 
 ### 1. Introduction
 
-In recent years, deep learning \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the deep learning tasks. However there is currently a lack of a way for machines to learn from humans in conversations
+In recent years, deep learning \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the deep learning tasks. However there is currently a lack of a way for machines to learn from humans in conversations.
 
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
+
+Currently, there are two ways to solve the problem of machine reasoning based on the existing deep learning framework: one is to add data under existing reasoning tasks \cite{ref1}, and the other is to define a new reasoning task that meets the requirements.
 
 #### 1.1 Problem Definition
 
@@ -41,11 +50,6 @@ Based on our LLP system, our approach can give users a natural language interfac
 
 ### The Learning Of Learning
 
-#### Add New Data To Exist Tasks
-
-![table1](/assets/png/llp/table1.png)
-
-![table2](/assets/png/llp/table2.png)
 
 #### Create A New Task
 
@@ -54,13 +58,13 @@ Based on our LLP system, our approach can give users a natural language interfac
 ### Discussion
 
 
-
+### Conclusion
 
 
 ### References
 ```
 \bibitem{ref1}
-Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
+Yu F, Zhang H, Wang B. Nature language reasoning, a survey[J]. arXiv preprint arXiv:2303.14725, 2023.
 
 \bibitem{ref2}
 Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25: 1097-1105.
@@ -105,7 +109,12 @@ Northcutt C, Jiang L, Chuang I. Confident learning: Estimating uncertainty in da
 Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[J]. arXiv preprint arXiv:2303.10158, 2023.
 ```
 
-### Conclusion
 
+### Appendix
 
+#### Add New Data To Exist Tasks
+
+![table1](/assets/png/llp/table1.png)
+
+![table2](/assets/png/llp/table2.png)
 
