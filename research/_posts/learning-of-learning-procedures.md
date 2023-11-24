@@ -14,10 +14,8 @@ description: "The Learning of Learning Procedures"
 
 The current large language models (LLMs) mainly lacks the following capabilities: machine reasoning capabilities and autonomous learning capabilities.
 
-We propose Learning of Learning Procedures (LLP) to solve the problem to let human teach machine to refresh/expand its tasks definition automatically by natural language conversation.
-LLP system is an AI system to solve the problem that let machine to learn new tasks definition in conversation interacting with human automatically.
-
-
+We propose Learning of Learning Procedures (LLP) to solve the problem to let human teach machine to refresh/expand its **tasks definition** automatically by natural language conversation.
+LLP system is an AI system to solve the problem that let machine to learn **new tasks definition** in conversation interacting with human automatically.
 
 It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. Also, based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
@@ -25,25 +23,25 @@ We propose the methods to implement our idea and discuss the reasons why we desi
 
 ### 1. Introduction
 
-In recent years, deep learning \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the deep learning tasks. However there is currently a lack of a way for machines to learn from humans in conversations.
-
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
 
-Currently, there are two ways to solve the problem of machine reasoning \cite{ref1} based on the existing deep learning framework: One is to add data under existing reasoning tasks, and the other is to define a new reasoning task that meets the requirements. 
+In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the deep learning tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations.
+
+Currently, there are two ways to solve the problem of autonomous learning \cite{ref1} based on the deep learning framework: One is to add data under existing reasoning tasks, and the other is to define a new deep learning task that meets the requirements. Our work is to optimize the automatic expansion of deep learning task in the AI system.
+
+\cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard deep learning task. Solving the problem of autonomous learning also solves the problem of machine reasoning. 
 
 This work mainly solves the problem of automatic definition tasks. For solutions to automatically update data, please refer to the appendix.
 
 #### 1.1 Problem Definition
 
-The definition of Learning Procedures (LP) in our work is how the system automatically updates/expands its training datasets with human conversations.
+The definition of Learning Procedures (LP) in our work is how the system automatically updates/expands its DL tasks with human conversations.
 
-In other words, our approach optimizes the automatic expansion and updating of the training datasets.
+In other words, our approach optimizes the automatic expansion and updating of the DL tasks.
 
 #### 1.2 Problem Importance
 
-Solving the problem means we give people the ability to label data for our system, except the developers of the AI system.
-
-Solving the problem means our system can improve itself through conversations with users automatically.
+Solving the problem means we give people the ability to create new DL tasks and then add new labeled data for the AI system, except the developers of the AI system.
 
 Based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
