@@ -70,7 +70,7 @@ The LLP system has these modules:
 
 ### 3.1 Task-oriented Dialogue System
 
-![table2](/assets/png/llp/table3.png)
+![table1](/assets/png/llp/table1.png)
 
 ### 3.2 Reasoning System
 \cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
@@ -137,8 +137,6 @@ Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[
 #### Add New Data To Existing Tasks
 
 The core idea of updating the datasets is: The learning of a existing task equals to updating its training datasets. 
-
-![table1](/assets/png/llp/table1.png)
 
 ![table2](/assets/png/llp/table2.png)
 
