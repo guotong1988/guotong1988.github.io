@@ -62,11 +62,13 @@ The LLP system has these modules:
 
 ### 2. The LLP system
 
-#### 2.1 Intent Recognition Module
+#### 2.1 Common Conversation Module
 
-#### 2.2 DL Tasks Creation Module
+#### 2.2 Intent Recognition Module
 
-#### 2.3 Task Relationship Management Module
+#### 2.3 DL Tasks Creation Module
+
+#### 2.4 Task Relationship Management Module
 
 ### 3. Applications
 
