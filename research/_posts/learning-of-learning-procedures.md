@@ -25,11 +25,11 @@ We propose the methods to implement our idea and discuss the reasons why we desi
 
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
 
-In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the deep learning tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations.
+In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the DL tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations.
 
-Currently, there are two ways to solve the problem of autonomous learning \cite{ref1} based on the deep learning framework: One is to add data under existing reasoning tasks, and the other is to define a new deep learning task that meets the requirements. Our work is to optimize the automatic expansion of deep learning task in the AI system.
+Currently, there are two ways to solve the problem of autonomous learning \cite{ref1} based on the DL framework: One is to add data under existing reasoning tasks, and the other is to define a new DL task that meets the requirements. Our work is to optimize the automatic expansion of DL task in the AI system.
 
-\cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard deep learning task. Solving the problem of autonomous learning also solves the problem of machine reasoning. 
+\cite{ref1} has a complete definition of machine reasoning, which defines machine reasoning as a standard DL task. Based on the current DL framework, defining the task of the reasoning problem and adding it with the corresponding data is equivalent to solving this reasoning problem by DL.
 
 This work mainly solves the problem of automatic definition tasks. For solutions to automatically update data, please refer to the appendix.
 
