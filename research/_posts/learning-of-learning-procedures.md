@@ -19,6 +19,9 @@ LLP system is an AI system that contains many deep learning tasks. LLP system pr
 
 It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. Also, based on our LLP system, our approach can give users a natural language interface to build their own task-oriented dialogue system, question answering system, or reasoning system.
 
+Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine when the system need to learn new knowledge. 
+And we train additional model that upon a well-prepared dataset that handles new deep learning tasks creation in the system.
+
 We propose the methods to implement our idea and discuss the reasons why we design these methods.
 
 ### 1. Introduction
@@ -108,7 +111,7 @@ Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[
 
 #### Add New Data To Existing Tasks
 
-The core idea of updating the datasets is: The learning of a existing task equals to updating its training datasets. Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine whether the system need to learn new knowledge. 
+The core idea of updating the datasets is: The learning of a existing task equals to updating its training datasets. 
 
 ![table1](/assets/png/llp/table1.png)
 
