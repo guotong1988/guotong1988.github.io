@@ -47,7 +47,6 @@ The LLP system has these modules:
 
 ![table1](/assets/png/llp/table1.png)
 
-![table2](/assets/png/llp/table2.png)
 
 ![table3](/assets/png/llp/table3.png)
 
