@@ -14,8 +14,8 @@ description: "Towards Autonomous Learning of Large Language Models"
 
 The current large language models (LLMs) mainly lacks this capability: autonomous learning capability.
 
-We propose Learning In Conversation (LIC) to solve the problem to let human teach machine to refresh/expand its tasks definition automatically by natural language conversation.
-LIC system is an AI system that contains many deep learning tasks. LIC system provide the natural language interface to let machine to learn new tasks definition in conversation interacting with human automatically.
+We propose Learning In Conversation (LIC) to solve the problem to let human teach machine to refresh/expand its knowledge automatically by natural language conversation.
+LIC system is an AI system that contains many deep learning tasks. LIC system provide the natural language interface to let machine to learn new knowledge in conversation interacting with human automatically.
 
 It is critical, but except for the developers of the AI system, others have no natural language interface to do this education for machine. 
 
