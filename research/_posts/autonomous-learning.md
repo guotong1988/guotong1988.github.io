@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Towards Autonomous Learning of AI System"
+title: "Towards Autonomous Learning of Large Language Models"
 date: 2023-11-01
 category: research
 author: "Tong Guo"
-description: "The Learning of Learning Procedures"
+description: "Towards Autonomous Learning of Large Language Models"
 ---
 
 
-# Towards Autonomous Learning of AI System
+# Towards Autonomous Learning of Large Language Models
 
 ## Abstract
 
@@ -17,9 +17,9 @@ The current large language models (LLMs) mainly lacks this capability: autonomou
 We propose Learning In Conversation (LIC) to solve the problem to let human teach machine to refresh/expand its tasks definition automatically by natural language conversation.
 LIC system is an AI system that contains many deep learning tasks. LIC system provide the natural language interface to let machine to learn new tasks definition in conversation interacting with human automatically.
 
-It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. 
+It is critical, but except for the developers of the AI system, others have no natural language interface to do this education for machine. 
 
-Based on large language model (LLM)'s conversation ability, we train an additional intent recognition model to determine when the AI system need to learn new knowledge. 
+Based on large language models (LLMs) conversation ability, we train an additional intent recognition model to determine when the AI system need to learn new knowledge. We added a module for editing the training data of LLMs. 
 
 We propose the methods to implement our idea and discuss the reasons why we design these methods.
 
@@ -31,11 +31,11 @@ In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model
  
 
 
-In this paper we propose a framework of AI system, called LIC system. LIC system is based on LLM and have the ability to learn in the conversation with human.
+In this paper we propose a framework of AI system, called LIC system. LIC system is based on LLMs and have the ability to learn in the conversation with human.
 
-The LLP system has these modules: 
+The LIC system has these modules: 
 
-1) LLM to do conversation with human.
+1) LLMs to do conversation with human.
 2) An intent recognition module to determine when to update knowledge in the system.
 3) An data management module to update the training dataset.
 
@@ -45,10 +45,10 @@ The LLP system has these modules:
 
 #### 2.2 Intent Recognition Module
 
-![table1](/assets/png/llp/table1.png)
+![table1](/assets/png/auto-learn/table1.png)
 
 
-![table3](/assets/png/llp/table3.png)
+![table3](/assets/png/auto-learn/table3.png)
 
 ## 4. Discussion
 
