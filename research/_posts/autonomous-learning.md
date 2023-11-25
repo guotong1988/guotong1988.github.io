@@ -48,7 +48,7 @@ The LIC system has these modules:
 ![table1](/assets/png/auto-learn/table1.png)
 
 
-![table3](/assets/png/auto-learn/table3.png)
+![table2](/assets/png/auto-learn/table2.png)
 
 ## 4. Discussion
 
