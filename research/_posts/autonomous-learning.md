@@ -19,7 +19,7 @@ LIC system is an AI system that contains many deep learning tasks. LIC system pr
 
 It is critical, but except for the developers of the AI system, others have no natural language interface to do this education for machine. 
 
-Based on large language models (LLMs) conversation ability, we train an additional intent recognition model to determine when the AI system need to learn new knowledge. We added a module for editing the training data of LLMs. 
+Based on large language models (LLMs) conversation ability, we train an additional intent recognition model to determine when the AI system need to learn new knowledge. We add a module for editing the training dataset of LLMs. 
 
 We propose the methods to implement our idea and discuss the reasons why we design these methods.
 
