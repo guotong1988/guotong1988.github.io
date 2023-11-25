@@ -15,7 +15,7 @@ description: "The Learning of Learning Procedures"
 The current large language models (LLMs) mainly lacks this capability: autonomous learning capability.
 
 We propose Learning In Conversation (LIC) to solve the problem to let human teach machine to refresh/expand its tasks definition automatically by natural language conversation.
-LLP system is an AI system that contains many deep learning tasks. LLP system provide the natural language interface to let machine to learn new tasks definition in conversation interacting with human automatically.
+LIC system is an AI system that contains many deep learning tasks. LIC system provide the natural language interface to let machine to learn new tasks definition in conversation interacting with human automatically.
 
 It is critical, but except for the developers of the AI system, others have no interface to do this education for machine. 
 
@@ -31,13 +31,13 @@ In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model
  
 
 
-In this paper we propose a designing framework of AI system, called LLP. LLP system is based on LLM and have the ability to learn in the conversation with human.
+In this paper we propose a framework of AI system, called LIC system. LIC system is based on LLM and have the ability to learn in the conversation with human.
 
 The LLP system has these modules: 
 
 1) LLM to do conversation with human.
 2) An intent recognition module to determine when to update knowledge in the system.
-
+3) An data management module to update the training dataset.
 
 ## 2. The AI system
 
