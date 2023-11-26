@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Towards Autonomous Learning of Large Language Models"
+title: "Build Teacher-Student System for Large Language Models"
 date: 2023-11-01
 category: research
 author: "Tong Guo"
@@ -8,7 +8,7 @@ description: "Towards Autonomous Learning of Large Language Models"
 ---
 
 
-# Towards Autonomous Learning of Large Language Models
+# Build Teacher-Student System for Large Language Models
 
 ## Abstract
 
