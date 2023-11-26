@@ -12,14 +12,14 @@ description: "Towards Autonomous Learning of Large Language Models"
 
 ## Abstract
 
-The current large language models (LLMs) mainly lacks this capability: autonomous learning capability. Also, we can not prepare all the world's data for LLMs.
+The current large language models (LLMs) mainly lacks this capability: autonomous learning capability. Also, we can not prepare all the data/knowledge in the world for LLMs.
 
-We propose Learning In Conversation (LIC) to solve the problem to let human teach machine to refresh/expand its knowledge automatically by natural language conversation.
-LIC system is an AI system that contains many deep learning tasks. LIC system provide the natural language interface to let machine to learn new knowledge in conversation interacting with human automatically.
+We propose Learning In Conversation (LIC) to solve the problem to let human teach machine to refresh/expand its data/knowledge automatically by natural language conversation.
+LIC system is an AI system that contains many deep learning tasks. LIC system provide the natural language interface to let machine to learn new data/knowledge in conversation interacting with human automatically.
 
 It is critical, but except for the developers of the AI system, others have no natural language interface to do this education for machine. 
 
-Based on large language models (LLMs) conversation ability, we train an additional intent recognition model to determine when the AI system need to learn new knowledge. We add a module for editing the training dataset of LLMs. 
+Based on large language models (LLMs) conversation ability, we train an additional intent recognition model to determine when the AI system need to learn new data/knowledge. We add a module for editing the training dataset of LLMs. 
 
 We propose the methods to implement our idea and discuss the reasons why we design these methods.
 
@@ -27,16 +27,15 @@ We propose the methods to implement our idea and discuss the reasons why we desi
 
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
 
-In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the DL tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations.
+In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the DL tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations. And we can not prepare all the data/knowledge in the world for LLMs.
  
-
 
 In this paper we propose a framework of AI system, called LIC system. LIC system is based on LLMs and have the ability to learn in the conversation with human.
 
 The LIC system has these modules: 
 
 1) LLMs to do conversation with human.
-2) An intent recognition module to determine when to update knowledge in the system.
+2) An intent recognition module to determine when to update data/knowledge in the system.
 3) An data management module to update the training dataset.
 
 ## 2. The AI system
@@ -51,6 +50,8 @@ The LIC system has these modules:
 ![table2](/assets/png/auto-learn/table2.png)
 
 ## 4. Discussion
+
+Under the deep learning framework, all data/knowledge is first memorized by the model. 
 
 ## 5. Related Works
 
