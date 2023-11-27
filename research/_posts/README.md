@@ -21,3 +21,5 @@
 [Re-Label By Data Pattern For Knowledge Driven Deep Learning](2022-08-01-relabel-by-pattern.md)
 
 [Auto Self-Correct ChatGPT](2023-04-01-auto-self-correct-chatgpt.md)
+
+[Building Student Module for Large Language Models](2023-12-01-autonomous-learning.md)
