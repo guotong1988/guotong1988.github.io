@@ -44,7 +44,7 @@ The LIC system has these modules:
 
 #### 2.1 Common Conversation Module
 
-To develop this module, we refer to ChatGPT \cite{ref12}.
+To develop this module, we refer to ChatGPT \cite{ref11} \cite{ref12}.
 
 #### 2.2 Intent Recognition Module
 
@@ -108,6 +108,9 @@ Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[
 
 \bibitem{ref10}
 Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in neural information processing systems. 2017: 5998-6008.
+
+\bibitem{ref11}
+OpenAI (2023). GPT-4 Technical Report. ArXiv, abs/2303.08774.
 
 \bibitem{ref12}
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
