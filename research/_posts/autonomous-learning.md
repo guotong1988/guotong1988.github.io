@@ -40,6 +40,8 @@ The LIC system has these modules:
 
 ## 2. The AI system
 
+![fig1](/assets/png/auto-learn/fig1.png)
+
 #### 2.1 Common Conversation Module
 
 #### 2.2 Intent Recognition Module
