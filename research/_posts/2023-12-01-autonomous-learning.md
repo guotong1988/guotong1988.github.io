@@ -80,6 +80,8 @@ This module has these functions:
 
 The AI system under the deep learning framework is a powerful memory system. But we cannot prepare all the data in the world for the AI system to memorize, so we need to provide AI system with the ability to update knowledge autonomously.
 
+Building a student module for LLMs takes a lot of engineering works and datasets preparing. And the goal of our work is to achieve better efficiency in data production. We are trying to find a more efficient method to prepare data for LLMs.
+
 ## 5. Related Works
 
 These are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the problem of autonomous machine intelligence. 
@@ -88,7 +90,7 @@ Transformers-based models \cite{ref10} become the best models in most deep learn
 
 Data centric methods \cite{ref9} \cite{ref11} become the main methods to improve model performance. These data-centric methods become the cornerstones of industrial level NLP system.
 
-Reward-based methods \cite{ref13} formulate the world into a reward based framework. And we need a lot of engineering work to make a reward based closed-loop system.
+Reward-based methods \cite{ref13} formulate the world into a reward based framework. And we need a lot of engineering works to make a reward based closed-loop system.
 
 ## 6. Future Works
 
