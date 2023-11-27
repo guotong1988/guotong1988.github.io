@@ -80,7 +80,7 @@ This module has these functions:
 
 The AI system under the deep learning framework is a powerful memory system. But we cannot prepare all the data in the world for the AI system to memorize, so we need to provide AI system with the ability to update knowledge autonomously.
 
-Building a student module for LLMs takes a lot of engineering works and datasets preparing. And the goal of our work is to achieve better efficiency in data production. We are trying to find a more efficient method to prepare data for LLMs.
+Building a student module for LLMs takes a lot of engineering works and datasets preparing. And the goal of our work is to achieve better efficiency in data production. We are trying to find more efficient methods to prepare data for LLMs.
 
 ## 5. Related Works
 
