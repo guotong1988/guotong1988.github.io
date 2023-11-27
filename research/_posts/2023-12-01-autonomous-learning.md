@@ -40,7 +40,7 @@ The LIC system has these modules:
 
 3) An data management module to update the training dataset.
 
-## 2. The AI system
+## 2. The AI System
 
 ![fig1](/assets/png/auto-learn/fig1.png)
 
