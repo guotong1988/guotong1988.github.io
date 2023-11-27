@@ -27,7 +27,7 @@ We propose the methods to implement our idea and discuss the reasons why we desi
 
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
 
-In recent years, deep learning (DL) \cite{ref2} \cite{ref10} and GPT-based \cite{ref6} \cite{ref7} \cite{ref8} model have shown significant improvement on almost all the DL tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations. And we can not prepare all the data/knowledge in the world for LLMs.
+In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref6} \cite{ref7} \cite{ref8} model have shown significant improvement on almost all the DL tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations. And we can not prepare all the data/knowledge in the world for LLMs.
  
 
 In this paper we propose a framework of AI system, called LIC system. LIC system is based on LLMs and have the ability to learn in the conversation with human.
@@ -61,7 +61,9 @@ The AI system under the deep learning framework is a powerful memory system. But
 
 These are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the problem of autonomous machine intelligence. 
 
-Data centric methods \cite{ref9} have become the main methods to improve model performance.
+Transformers-based models \cite{ref10} become the best models in most deep learning tasks.
+
+Data centric methods \cite{ref9} become the main methods to improve model performance.
 
 ## 6. Future Works
 
