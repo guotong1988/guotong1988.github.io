@@ -57,8 +57,9 @@ Under the deep learning framework, all data/knowledge is first memorized by the 
 
 ## 5. Related Works
 
-## 6. Conclusion
+## 6. Future Works
 
+![fig2](/assets/png/auto-learn/fig2.png)
 
 ## References
 ```
