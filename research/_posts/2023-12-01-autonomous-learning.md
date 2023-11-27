@@ -84,7 +84,7 @@ Building a student module for LLMs takes a lot of engineering works and datasets
 
 ## 4. Related Works
 
-These are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the problem of autonomous machine intelligence. 
+There are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the problem of autonomous machine intelligence. 
 
 Transformers-based models \cite{ref10} become the best models in most deep learning tasks. The transformers-based models also have the extremely excellent storage capabilities. 
 
