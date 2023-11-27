@@ -84,11 +84,11 @@ The AI system under the deep learning framework is a powerful memory system. But
 
 These are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the problem of autonomous machine intelligence. 
 
-Transformers-based models \cite{ref10} become the best models in most deep learning tasks.
+Transformers-based models \cite{ref10} become the best models in most deep learning tasks. The transformers-based models also have the extremely excellent storage capabilities. 
 
-Data centric methods \cite{ref9} become the main methods to improve model performance.
+Data centric methods \cite{ref9} \cite{ref11} become the main methods to improve model performance. These data-centric methods become the cornerstones of industrial level NLP system.
 
-Reward-based method \cite{ref13}
+Reward-based methods \cite{ref13} formulate the world into a reward based framework. And we need a lot of engineering work to make a reward based closed-loop system.
 
 ## 6. Future Works
 
@@ -136,7 +136,7 @@ OpenAI (2023). GPT-4 Technical Report. ArXiv, abs/2303.08774.
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 
 \bibitem{ref13}
-reward is enough
+Silver, David , et al. "Reward is enough." Artificial Intelligence 299.
 
 ```
 
