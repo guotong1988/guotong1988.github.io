@@ -48,8 +48,13 @@ To develop this module, we refer to ChatGPT \cite{ref12}.
 
 #### 2.2 Intent Recognition Module
 
+This module determines when to start human-to-machine teaching.
+
 ![table1](/assets/png/auto-learn/table1.png)
 
+#### 2.3 Data Management Module
+
+This module receives requests from the LLMs and then updates the LLMs' training datasets.
 
 ![table2](/assets/png/auto-learn/table2.png)
 
