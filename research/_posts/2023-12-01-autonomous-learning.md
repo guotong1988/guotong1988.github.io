@@ -36,7 +36,7 @@ The LIC system has these modules:
 
 1) LLMs to do conversation with human.
 
-2) An intent recognition module to determine when to update data/knowledge in the system.
+2) An intent recognition module to determine when and how to update data/knowledge in the system.
 
 3) An data management module to update the training dataset.
 
@@ -50,7 +50,7 @@ To develop this module, we refer to ChatGPT \cite{ref11} \cite{ref12}.
 
 #### 2.2 Intent Recognition Module
 
-This module determines when to start human-to-machine teaching.
+This module determines when and how to start human-to-machine teaching.
 
 ![table1](/assets/png/auto-learn/table1.png)
 
