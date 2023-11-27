@@ -61,6 +61,9 @@ The AI system under the deep learning framework is a powerful memory system. But
 
 ## 6. Future Works
 
+The limitation of our proposed AI system is all the data/knowledge can only be stored under the defined formats or under the defined DL tasks.
+To overcome this limitation, we should let the AI system generate code to update its own code.
+
 ![fig2](/assets/png/auto-learn/fig2.png)
 
 ## References
