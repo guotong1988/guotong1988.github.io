@@ -72,9 +72,9 @@ This module receives requests from the LLMs and then updates the LLMs' training 
 
 This module has these functions:
 
-1)
-
-2)
+1) Finding the corresponding DL tasks that are related to the knowledge.
+  
+2) Finding the positions to add or update the data/knowledge in the training datasets of the DL tasks.
 
 ## 4. Discussion
 
