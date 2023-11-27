@@ -35,7 +35,9 @@ In this paper we propose a framework of AI system, called LIC system. LIC system
 The LIC system has these modules: 
 
 1) LLMs to do conversation with human.
+
 2) An intent recognition module to determine when to update data/knowledge in the system.
+
 3) An data management module to update the training dataset.
 
 ## 2. The AI system
@@ -52,11 +54,27 @@ This module determines when to start human-to-machine teaching.
 
 ![table1](/assets/png/auto-learn/table1.png)
 
+This module has these functions:
+
+1) Recognize the intention that human are teaching.
+
+2) Not knowledgable, but know what is the knowledge.
+
+3) Preparing the knowledge to the dataset format.
+
+4) Determining when to call the data management module.
+
 #### 2.3 Data Management Module
 
 This module receives requests from the LLMs and then updates the LLMs' training datasets.
 
 ![table2](/assets/png/auto-learn/table2.png)
+
+This module has these functions:
+
+1)
+
+2)
 
 ## 4. Discussion
 
@@ -69,6 +87,8 @@ These are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the p
 Transformers-based models \cite{ref10} become the best models in most deep learning tasks.
 
 Data centric methods \cite{ref9} become the main methods to improve model performance.
+
+Reward-based method \cite{ref13}
 
 ## 6. Future Works
 
@@ -115,6 +135,8 @@ OpenAI (2023). GPT-4 Technical Report. ArXiv, abs/2303.08774.
 \bibitem{ref12}
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 
+\bibitem{ref13}
+reward is enough
 
 ```
 
