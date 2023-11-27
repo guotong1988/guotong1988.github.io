@@ -44,7 +44,7 @@ The LIC system has these modules:
 
 #### 2.1 Common Conversation Module
 
-To develop this module, we refer to these works: \cite{ref12}
+To develop this module, we refer to ChatGPT \cite{ref12}.
 
 #### 2.2 Intent Recognition Module
 
