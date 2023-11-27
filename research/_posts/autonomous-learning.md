@@ -44,7 +44,7 @@ The LIC system has these modules:
 
 #### 2.1 Common Conversation Module
 
-To develop this module, we 
+To develop this module, we refer to these works: \cite{ref12}
 
 #### 2.2 Intent Recognition Module
 
@@ -58,6 +58,9 @@ To develop this module, we
 The AI system under the deep learning framework is a powerful memory system. But we cannot prepare all the data in the world for the AI system to memorize, so we need to provide AI system with the ability to update knowledge autonomously.
 
 ## 5. Related Works
+
+These are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the problem of autonomous machine intelligence. 
+
 
 ## 6. Future Works
 
@@ -75,13 +78,13 @@ Yu F, Zhang H, Wang B. Nature language reasoning, a survey[J]. arXiv preprint ar
 Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25: 1097-1105.
 
 \bibitem{ref3}
-Wang A, Singh A, Michael J, et al. GLUE: A multi-task benchmark and analysis platform for natural language understanding[J]. arXiv preprint arXiv:1804.07461, 2018.
+LeCun Y. A path towards autonomous machine intelligence version 0.9. 2, 2022-06-27[J]. Open Review, 2022, 62(1).
 
 \bibitem{ref4}
-Kingma D P, Ba J. Adam: A method for stochastic optimization[J]. arXiv preprint arXiv:1412.6980, 2014.
+Assran M, Duval Q, Misra I, et al. Self-supervised learning from images with a joint-embedding predictive architecture[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023: 15619-15629.
 
 \bibitem{ref5}
-Srivastava N, Hinton G, Krizhevsky A, et al. Dropout: a simple way to prevent neural networks from overfitting[J]. The journal of machine learning research, 2014, 15(1): 1929-1958.
+Bardes A, Ponce J, LeCun Y. Mc-jepa: A joint-embedding predictive architecture for self-supervised learning of motion and content features[J]. arXiv preprint arXiv:2307.12698, 2023.
 
 \bibitem{ref6}
 Xie Q, Dai Z, Hovy E, et al. Unsupervised data augmentation for consistency training[J]. arXiv preprint arXiv:1904.12848, 2019.
@@ -113,9 +116,6 @@ Northcutt C, Jiang L, Chuang I. Confident learning: Estimating uncertainty in da
 \bibitem{ref15}
 Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[J]. arXiv preprint arXiv:2303.10158, 2023.
 ```
-
-
-### Appendix
 
 
 
