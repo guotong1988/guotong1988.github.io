@@ -27,7 +27,7 @@ We propose the methods to implement our idea and discuss the reasons why we desi
 
 The human learning procedure is the process of humans interacting with the world to determine whether they should learn new knowledge. For example, when humans are reading books or watching videos,  Human beings will judge what knowledge should be learned into the brain from learning materials. If the learner cannot judge by himself, the human teacher will tell or emphasize the knowledge point.
 
-In recent years, deep learning (DL) \cite{ref2} and GPT-based \cite{ref12} model have shown significant improvement on almost all the DL tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations. And we can not prepare all the data/knowledge in the world for LLMs.
+In recent years, deep learning (DL) \cite{ref2} \cite{ref10} and GPT-based \cite{ref6} \cite{ref7} \cite{ref8} model have shown significant improvement on almost all the DL tasks. However there is currently a lack of a way for machines to learn automatically from humans in conversations. And we can not prepare all the data/knowledge in the world for LLMs.
  
 
 In this paper we propose a framework of AI system, called LIC system. LIC system is based on LLMs and have the ability to learn in the conversation with human.
@@ -61,6 +61,7 @@ The AI system under the deep learning framework is a powerful memory system. But
 
 These are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the problem of autonomous machine intelligence. 
 
+Data centric methods \cite{ref9} have become the main methods to improve model performance.
 
 ## 6. Future Works
 
@@ -86,14 +87,25 @@ Assran M, Duval Q, Misra I, et al. Self-supervised learning from images with a j
 \bibitem{ref5}
 Bardes A, Ponce J, LeCun Y. Mc-jepa: A joint-embedding predictive architecture for self-supervised learning of motion and content features[J]. arXiv preprint arXiv:2307.12698, 2023.
 
+\bibitem{ref6}
+Brown T, Mann B, Ryder N, et al. Language models are few-shot learners[J]. Advances in neural information processing systems, 2020, 33: 1877-1901.
+
+\bibitem{ref7}
+Radford A, Narasimhan K, Salimans T, et al. Improving language understanding by generative pre-training[J]. 2018.
+
+\bibitem{ref8}
+Radford A, Wu J, Child R, et al. Language models are unsupervised multitask learners[J]. OpenAI blog, 2019, 1(8): 9.
+
+\bibitem{ref9}
+Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[J]. arXiv preprint arXiv:2303.10158, 2023.
+
 \bibitem{ref10}
 Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in neural information processing systems. 2017: 5998-6008.
 
 \bibitem{ref12}
 Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
 
-\bibitem{ref15}
-Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[J]. arXiv preprint arXiv:2303.10158, 2023.
+
 ```
 
 
