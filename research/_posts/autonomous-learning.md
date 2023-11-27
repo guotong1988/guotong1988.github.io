@@ -44,6 +44,8 @@ The LIC system has these modules:
 
 #### 2.1 Common Conversation Module
 
+To develop this module, we 
+
 #### 2.2 Intent Recognition Module
 
 ![table1](/assets/png/auto-learn/table1.png)
@@ -53,7 +55,7 @@ The LIC system has these modules:
 
 ## 4. Discussion
 
-Under the deep learning framework, all data/knowledge is first memorized by the model. 
+The AI system under the deep learning framework is a powerful memory system. But we cannot prepare all the data in the world for the AI system to memorize, so we need to provide AI system with the ability to update knowledge autonomously.
 
 ## 5. Related Works
 
