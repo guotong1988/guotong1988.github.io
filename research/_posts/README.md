@@ -19,7 +19,3 @@
 [Drop Noise For CTR Prediction](2022-02-01-drop-noise-for-ctr.md)
 
 [Re-Label By Data Pattern For Knowledge Driven Deep Learning](2022-08-01-relabel-by-pattern.md)
-
-[Auto Self-Correct ChatGPT](2023-04-01-auto-self-correct-chatgpt.md)
-
-[Building Student Module for Large Language Models](2023-12-01-autonomous-learning.md)
