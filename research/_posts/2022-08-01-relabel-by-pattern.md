@@ -31,7 +31,7 @@ In this section, we propose the pipeline to improve the human evaluation accurac
 
 **Step-1**. Based on the human-labeled training dataset, we train a deep model and predict for industry application dataset. Human evaluate the current deep model prediction dataset and find the badcase patterns. Take text classification task as example, the pattern is the tokens from the badcase prediction text. For computer vision task, we use the embedding from the badcase prediction image to do the similarity search in training dataset.
 
-If there are no training data that is recognised by badcase patterns, we newly label the real application data that is recognised by badcase patterns and merge to the training data. And then we also get more than 95% accuracy in dev dataset by \cite{ref6} method.
+If there are no training data that is recognised by badcase patterns, we newly label the real application data that is recognised by badcase patterns and merge to the training data. And then we can also get more than 95% accuracy in dev dataset by \cite{ref6} method.
 
 **Step-2**. Re-set the labeling rule/knowledge for human. Then the knowledge-refreshed human re-label the training data that is recognised by badcase patterns of Step-1. Then we train to get a new version of current deep model.
 
