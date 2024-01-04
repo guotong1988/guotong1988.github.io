@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blogs by time order
-description: Research work of Tong Guo
+description: Research blogs of Tong Guo
 permalink: /blog/
 ---
 
