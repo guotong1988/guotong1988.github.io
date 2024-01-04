@@ -2,7 +2,7 @@
 layout: post
 title: "Auto Self-Correct ChatGPT"
 date: 2023-04-01
-category: research
+category: blog
 author: "Tong Guo"
 description: "Auto Self-Correct ChatGPT"
 ---
