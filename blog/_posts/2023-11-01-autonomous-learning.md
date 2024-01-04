@@ -2,7 +2,7 @@
 layout: post
 title: "Building Student Module for Large Language Models"
 date: 2023-11-01
-category: research
+category: blog
 author: "Tong Guo"
 description: "Towards Autonomous Learning of Large Language Models"
 ---
