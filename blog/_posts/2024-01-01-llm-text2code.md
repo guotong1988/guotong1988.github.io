@@ -2,7 +2,7 @@
 layout: post
 title: "Answering High-precision Problems for LLMs by Combining Text2code"
 date: 2024-01-01
-category: research
+category: blog
 author: "Tong Guo"
 description: "Answering High-precision Problems for LLMs by Combining Text2code"
 ---
