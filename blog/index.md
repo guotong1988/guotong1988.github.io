@@ -7,7 +7,7 @@ permalink: /blog/
 
 <ul>
 
-  {% for post in site.categories.research %}
+  {% for post in site.categories.blog %}
     <li>
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
