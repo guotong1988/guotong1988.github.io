@@ -55,7 +55,7 @@ This module determines whether to use the text2code module or not. If the user o
 This module assembles the results of code execution and natural language intermediate results into a final result.
 
 ## 4. Discussion
-The text2code approach has a lot of potential, because, in fact, all natural languages have their logical forms. We can design specific code for the application, for example SQL is a kind of code for the specific application.
+The text2code approach has a lot of potential, because, in fact, all natural languages have their logical forms. We can design specific code for the application, for example SQL is a kind of code for the specific database-based application.
 
 Letting LLMs to memorise all the correct answers is very time-consuming and difficult, so joining text2code methods with LLMs is a promising way forward.
 
