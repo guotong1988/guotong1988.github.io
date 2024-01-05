@@ -62,7 +62,9 @@ Letting LLMs to memorise all the correct answers is very time-consuming and diff
 Returning fuzzy answers for fuzzy questions by LLMs and returning high-precision answers for high-precision questions by text2code are ideal solution.
 
 ## 5. Future Works
-In our design, we view that data is part of the code. In the future, we will try to design an AI system contains more modules: code2text, code2code, to build a better expert system like a better AI-doctor/AI-lawyer/AI-teacher.
+In our design, we view that data is part of the code. That is, models trained on the data, viewed as part of the code.
+
+In the future, we will try to design an AI system contains more modules: code2text, code2code, to build a better expert system like a better AI-doctor/AI-lawyer/AI-teacher.
 
 ## References
 
