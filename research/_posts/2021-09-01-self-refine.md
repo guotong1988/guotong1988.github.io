@@ -78,7 +78,7 @@ In fine-tuning, we use Adam \cite{ref4} with learning rate of 1e-5 and use a dro
 
 
 
-### 6. Analysis
+### 6. Discussion
 
 Why removing noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
 
@@ -88,7 +88,7 @@ We suppose that data-3 is wrong-labeled by human, because more people labeled th
 
 And the trained model predict class-A for data-3. So the noise data here is data-3 by our method. 
 
-If we do not remove data-3, the model prediction for new data that is the most similar to data-3 will be class-B, which is wrong.
+If we do not remove data-3, the model prediction for new data that is the most similar to data-3 will be class-B, which is wrong. The new data is more similar to data-3 than data-1/data-2.
 
 If we remove data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right. 
 
