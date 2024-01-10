@@ -82,7 +82,7 @@ In fine-tuning, we use Adam \cite{ref4} with learning rate of 1e-5 and use a dro
 
 Why removing noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
 
-If there are three very similar data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will predict class-A for data-3. 
+If there are three very similar data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will probably predict class-A for data-3. 
 
 We suppose that data-3 is wrong-labeled by human, because more people labeled these very similar data-1/data-2 to class-A.
 
