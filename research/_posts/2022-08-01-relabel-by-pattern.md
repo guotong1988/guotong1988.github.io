@@ -46,7 +46,7 @@ In the section, we describe the experiment results. Take our text classification
 
 ![table1](/assets/png/relabel-by-pattern/table1.png)
 
-### 4. Related Works
+### 4. Related Work
 There are works that inject knowledge into deep model. But they are different from our work. They focus on model-centric part, but our method focuses on the human-in-the-loop labeling data-centric part.
 
 #### 4.1 Rule-enhanced Text2Sql
@@ -63,6 +63,11 @@ The work \cite{ref7} of OpenAI use model predictions for human as new data to la
 ### 5. Discussion
 
 The similar search method can also apply to quality inspection of the human-labeled dataset: We get a human-labeled dataset, and then we check and find a small set of error-labeled data. Then we search more similar data of error-labeled data for human to correct them, so that it can reduce the range of human-labeled dataset to check and correct.
+
+#### 5.1 Motivation
+
+Take text classification as example, if the model predicted result is wrong for a new input data. Then the new data's most similar data in the training dataset must be wrong.
+
 
 ### 6. Conclusion
 
