@@ -66,7 +66,7 @@ The similar search method can also apply to quality inspection of the human-labe
 
 #### 5.1 Motivation
 
-Take text classification as example, if the model predicted result is wrong for a new input data. Then the new data's most similar data in the training dataset must be wrong.
+Take text classification as example, if the model predicted result is wrong for a new input data. Then the new eval data's most similar data in the training dataset must be wrong.
 
 
 ### 6. Conclusion
