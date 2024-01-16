@@ -20,6 +20,7 @@ Deep Learning, Text-To-Code, Expert System, Large Language Models
 
 Transformers-based models \cite{ref10} become the best models in most deep learning \cite{ref2} tasks. The transformers-based models also have the extremely excellent storage capabilities \cite{ref6,ref7,ref8}. Data centric methods \cite{ref9} \cite{ref11} \cite{ref12} become the main methods to improve model performance. These data-centric methods become the cornerstones of industrial level NLP system. On the other hand, reward-based methods \cite{ref13} formulate the world into a reward based framework. And we need a lot of engineering works to make a reward based closed-loop system.
 
+Highly accurate predictions by AI system, broadly speaking, imply answers that surpass those of humans, such as AlphaGo \cite{ref16}.
 
 The development of LLMs/ChatGPT has made it possible to build more advanced expert systems. Current LLMs can be viewed as an AI system with strong fuzzy memory capabilities, based on the Turing computer architecture. As an expert system, Current LLMs lacks the ability to answer high-precision questions, such as code execution results. The examples are shown in Table 1 and Table 2.
 
@@ -115,7 +116,8 @@ Anil R, Dai A M, Firat O, et al. Palm 2 technical report[J]. arXiv preprint arXi
 \bibitem{ref15}
 Zhang Z, Chen C, Liu B, et al. Unifying the perspectives of nlp and software engineering: A survey on language models for code[J]. arXiv preprint arXiv:2311.07989, 2023.
 
-
+\bibitem{ref16}
+Silver D, Huang A, Maddison C J, et al. Mastering the game of Go with deep neural networks and tree search[J]. nature, 2016, 529(7587): 484-489.
 ```
 
  
