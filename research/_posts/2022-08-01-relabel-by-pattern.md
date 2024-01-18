@@ -33,7 +33,7 @@ In this section, we propose the pipeline to improve the human evaluation accurac
 
 If there are no training data that is recognised by badcase patterns, we newly label the real application data that is recognised by badcase patterns and merge to the training data. And then we can also get more than 95% accuracy in dev dataset by \cite{ref6} method.
 
-**Step-2**. Re-set the labeling rule/knowledge for human. Then the knowledge-refreshed human re-label the training data that is recognised by badcase patterns of Step-1. Then we train to get a new version of current deep model.
+**Step-2**. Re-set the labeling rule/knowledge for human. Then the knowledge-refreshed human re-label the training data that is recognised by badcase patterns of Step-1. When re-labeling, we can provide the results of the last annotation and model prediction as references. Then we train to get a new version of current deep model.
 
 In this step, the range of to-label targets can be simplified, because the to-label data is recognised by badcase patterns and is limited to a smaller range of distribution. So we reduce labeling difficulty by reduce the to-label targets range, which also improves the human labeling accuracy.
 
