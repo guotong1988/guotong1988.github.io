@@ -9,9 +9,9 @@ Hi! My name is Tong Guo（郭同）.
 
 ## Life
 
-19880129-2005 Langfang City
+19880129-2005, Langfang City
 
-2005-Now Beijing City
+2005-Now, Beijing City
 
 ## Study
 
@@ -27,12 +27,12 @@ Reviewer of ACL/NAACL/EMNLP Industry Track
 
 ## Work
 
-2013-2016 Cloudwave Database
+2013-2016, Cloudwave Database
 
-2016-2018 Lenovo AI Lab
+2016-2018, Lenovo AI Lab
 
-2018-2019 Rokid AI Lab
+2018-2019, Rokid AI Lab
 
-2019-Now Meiuan
+2019-Now, Meiuan
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
