@@ -9,7 +9,7 @@ Hi! My name is Tong Guo（郭同）.
 
 ## Life
 
-1988-2005 Langfang City
+19880129-2005 Langfang City
 
 2005-Now Beijing City
 
