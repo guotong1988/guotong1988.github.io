@@ -7,6 +7,12 @@ permalink: /about/
 
 Hi! My name is Tong Guo（郭同）. 
 
+## Life
+
+1988-2005 Langfang City
+
+2005-Now Beijing City
+
 ## Study
 
 2006-2010, Peking University, Pharmacy Science.
@@ -19,6 +25,14 @@ Hi! My name is Tong Guo（郭同）.
 
 Reviewer of ACL/NAACL/EMNLP Industry Track
 
+## Work
 
+2013-2016 Cloudwave Database
+
+2016-2018 Lenovo AI Lab
+
+2018-2019 Rokid AI Lab
+
+2019-Now Meiuan
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
