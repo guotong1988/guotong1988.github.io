@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Re-Label By Data Pattern For Knowledge Driven Deep Learning"
+title: "Re-Label By Data Pattern For Controllable Deep Learning"
 date: 2022-08-01
 category: research
 author: "Tong Guo"
@@ -8,7 +8,7 @@ description: "Re-Label By Data Pattern Is All You Need For 97% Accuracy Under Hu
 ---
 
 
-# Re-Label By Data Pattern For Knowledge Driven Deep Learning
+# Re-Label By Data Pattern For Controllable Deep Learning
 
 ### Abstract
 In industry deep learning application, we should fix the badcase by human evaluation after we achieve more than 95% accuracy at **dev dataset**. The badcase reason is from the wrong rule/knowledge of human labeling and will cause low accuracy under **human evaluation**. In this paper, we propose the pattern-based method to fix the badcase for industry application inference. We propose the pipeline to solve the problem and improve the accuracy of human evaluation. The experiment results verify our idea, which means label-edit/data-edit is the method to implement controllable deep learning application.
@@ -67,6 +67,8 @@ The similar search method can also apply to quality inspection of the human-labe
 #### 5.1 Motivation
 
 Take text classification as example, if the model predicted result is wrong for a new evaluation data. Then the new evaluation data's most similar data in the training dataset must be wrong.
+
+Fixing the model predicted results for a new evaluation data, means fixing the evaluation data's most similar data in the training dataset.
 
 
 ### 6. Conclusion
