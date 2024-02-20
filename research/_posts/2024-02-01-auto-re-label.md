@@ -45,6 +45,16 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 ![fig2](/assets/png/auto-relabel/fig1.png)
 
+Our method contains 4 steps:
+
+1. It is a text classification task. We have a human labeled dataset-v0 and a model-v0 that is trained on dataset-v0's training dataset.
+
+2. Using model-v1 to predict the classification label for dataset-v0. If the predicted label of dataset-v0 (training dataset and dev dataset) do not equal to the human label of dataset-v0, we think they are the noisy data.
+
+3. We randomly re-set each of the noisy data label to model predicted label or human label. Each setting possibility becomes a new dataset with training + dev dataset. Then we get 2^N datasets (dataset-v1, dataset-v2 ... dataset-vN) and 2^N models (model-v1, model-v2 ... model-vN).
+
+4. We use dev dataset accuracy to select the best dataset from all the 2^N datasets. The best dataset becomes the new dataset-v0.
+
 
 ### 4. Discussion
 
