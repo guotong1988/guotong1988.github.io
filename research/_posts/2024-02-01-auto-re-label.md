@@ -17,7 +17,7 @@ But manual re-labeling requires a lot of human labor to correct the noisy data i
 To solve this problem, we propose the randomly re-setting method that automaticly improve the accuracy at dev dataset and human evaluation.
 The core idea is that, we randomly re-set all the noisy data to model prediction or the manual label. All the noisy data means the noisy data in training dataset and dev dataset.
 We use the highest accuracy of dev dataset in the all possible randomly re-setted dev datasets, to judge the quality of randomly re-setted training datasets.
-The motivation of randomly re-setting is that The best dataset must be in all randomly possible datasets.
+The motivation of randomly re-setting is that the best dataset must be in all randomly possible datasets.
 
 ### 1. Introduction
 
@@ -45,6 +45,15 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 ![fig2](/assets/png/auto-relabel/fig1.png)
 
+
+### 4. Discussion
+
+From the noisy data correction point of view, the noisy data that model prediction and manual label is not equal. 
+So any label editing to these noisy data may be the improvement to the dataset quality.
+
+### 5. Experiments On Open Datasets
+
+### 6. Conclusion
 
 ### References
 ```
