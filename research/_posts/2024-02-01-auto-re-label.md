@@ -43,6 +43,8 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 ### 3. Auto Re-label
 
+![fig2](/assets/png/auto-relabel/fig1.png)
+
 
 ### References
 ```
