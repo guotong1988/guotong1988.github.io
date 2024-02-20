@@ -29,9 +29,9 @@ In recent years, deep learning \cite{ref1} model have shown significant improvem
 
 In previous work \cite{ref2}, we illustrate our idea in these steps:
 
-1. It is a text classification task. We have a human labeled dataset-v1.
+1. It is a classification task. We have a human labeled dataset-v1.
 
-2. We train a BERT-based \cite{ref3} deep model upon dataset-v1 and get model-v1.
+2. We train a deep model upon dataset-v1 and get model-v1.
 
 3. Using model-v1 to predict the classification labels for dataset-v1. 
 
@@ -47,7 +47,7 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 Our method contains 4 steps:
 
-1. It is a text classification task. We have a human labeled dataset-v0 and a model-v0 that is trained on dataset-v0's training dataset.
+1. It is a classification task. We have a human labeled dataset-v0 and a model-v0 that is trained on dataset-v0's training dataset.
 
 2. Using model-v1 to predict the classification label for dataset-v0. If the predicted label of dataset-v0 (training dataset and dev dataset) do not equal to the human label of dataset-v0, we think they are the noisy data.
 
