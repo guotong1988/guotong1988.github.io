@@ -62,7 +62,7 @@ From the noisy data correction point of view, the noisy data that model predicti
 So any label editing to these noisy data may be the improvement to the dataset quality.
 
 It seems that our method definitely improves the accuracy on the dev dataset, but not necessarily the accuracy of the manual evaluation.
-But based on our previous work \cite{ref1}, the accuracy of the dev dataset and the accuracy of the human evaluation are linearly correlated.
+But based on our previous work \cite{ref2}, the accuracy of the dev dataset and the accuracy of the human evaluation are linearly correlated.
 
 ### 5. Experiments On Open Datasets
 
@@ -75,9 +75,6 @@ Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolu
 
 \bibitem{ref2}
 Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
-
-\bibitem{ref3}
-Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
 
 ```
 
