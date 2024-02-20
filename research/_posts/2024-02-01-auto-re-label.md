@@ -19,6 +19,6 @@ The core idea is that, we randomly re-set all the noisy data to model prediction
 We use the highest accuracy of dev dataset in the all possible randomly re-setted dev datasets, to judge the quality of randomly re-setted training datasets.
 The motivation of randomly re-setting is that The best dataset must be in all randomly possible datasets.
 
-### Introduction
+### 1. Introduction
 
-### Method
+### 2. Method
