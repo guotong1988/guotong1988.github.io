@@ -61,6 +61,9 @@ Our method contains 4 steps:
 From the noisy data correction point of view, the noisy data that model prediction and manual label is not equal. 
 So any label editing to these noisy data may be the improvement to the dataset quality.
 
+It seems that our method definitely improves the accuracy on the dev dataset, but not necessarily the accuracy of the manual evaluation.
+But based on our previous work \cite{ref1}, the accuracy of the dev dataset and the accuracy of the human evaluation are linearly correlated.
+
 ### 5. Experiments On Open Datasets
 
 ### 6. Conclusion
