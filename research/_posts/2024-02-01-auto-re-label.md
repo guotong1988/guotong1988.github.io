@@ -29,17 +29,13 @@ In recent years, deep learning \cite{ref1} model have shown significant improvem
 
 In previous work \cite{ref2}, we illustrate our idea in these steps:
 
-1. It is a classification task. We have a human labeled dataset-v1.
+1. It is a classification task. We have a human labeled dataset-v0. We train a deep model upon dataset-v0 and get model-v0.
 
-2. We train a deep model upon dataset-v1 and get model-v1.
+2. Using model-v0 to predict the classification labels for dataset-v0. If the predicted labels of dataset-v0 do not equal to the human labels of dataset-v0, we think they are the noisy data.
 
-3. Using model-v1 to predict the classification labels for dataset-v1. 
+3. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v1 and model-v1.
 
-4. If the predicted labels of dataset-v1 do not equal to the human labels of dataset-v1, we think they are the noisy data.
-
-5. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v2 and model-v2.
-
-6. We loop these re-label noisy data steps and get the final dataset and final model.
+4. We loop these re-labeling noisy data steps and get the final dataset and final model.
 
 ### 3. Auto Re-label
 
