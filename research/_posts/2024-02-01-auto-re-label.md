@@ -25,7 +25,7 @@ In recent years, deep learning \cite{ref1} model have shown significant improvem
 
 ### 2. Background
 
-![fig1](/assets/png/relabel/fig1.png)
+![fig1](/assets/png/auto-relabel/fig2.png)
 
 In previous work \cite{ref2}, we illustrate our idea in these steps:
 
