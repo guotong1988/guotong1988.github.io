@@ -29,13 +29,15 @@ In recent years, deep learning \cite{ref1} model have shown significant improvem
 
 In previous work \cite{ref2}, we illustrate our idea in these steps:
 
-1. It is a classification task. We have a human labeled dataset-v0. We train a deep model upon dataset-v0 and get model-v0.
+Step-1. It is a classification task. We have a human labeled dataset-v0. We train a deep model upon dataset-v0 and get model-v0.
 
-2. Using model-v0 to predict the classification labels for dataset-v0. If the predicted labels of dataset-v0 do not equal to the human labels of dataset-v0, we think they are the noisy data.
+Step-2. Using model-v0 to predict the classification labels for dataset-v0. If the predicted labels of dataset-v0 do not equal to the human labels of dataset-v0, we think they are the noisy data.
 
-3. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v1 and model-v1.
+Step-3. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v1
 
-4. We loop these re-labeling noisy data steps and get the final dataset and final model.
+Step-4. We train on dataset-v1 and get model-v1.
+
+We loop these re-labeling noisy data steps and get the final dataset and final model.
 
 ### 3. Auto Re-label
 
@@ -43,13 +45,13 @@ In previous work \cite{ref2}, we illustrate our idea in these steps:
 
 Our method contains 4 steps:
 
-1. It is a classification task. We have a human labeled dataset-v0 and a model-v0 that is trained on dataset-v0's training dataset.
+Step-1. It is a classification task. We have a human labeled dataset-v0 and a model-v0 that is trained on dataset-v0's training dataset.
 
-2. Using model-v1 to predict the classification label for dataset-v0. If the predicted label of dataset-v0 (training dataset and dev dataset) do not equal to the human label of dataset-v0, we think they are the noisy data.
+Step-2. Using model-v1 to predict the classification label for dataset-v0. If the predicted label of dataset-v0 (training dataset and dev dataset) do not equal to the human label of dataset-v0, we think they are the noisy data.
 
-3. We randomly re-set each of the noisy data label to model predicted label or human label. Each setting possibility becomes a new dataset with training + dev dataset. Then we get 2^N datasets (dataset-v1, dataset-v2 ... dataset-vN) and 2^N models (model-v1, model-v2 ... model-vN).
+Step-3. We randomly re-set each of the noisy data label to model predicted label or human label. Each setting possibility becomes a new dataset with training + dev dataset. Then we get 2^N datasets (dataset-v1, dataset-v2 ... dataset-vN) and 2^N models (model-v1, model-v2 ... model-vN).
 
-4. We use dev dataset accuracy to select the best dataset from all the 2^N datasets. The best dataset becomes the new dataset-v0.
+Step-4. We use dev dataset accuracy to select the best dataset from all the 2^N datasets. The best dataset becomes the new dataset-v0.
 
 
 ### 4. Discussion
