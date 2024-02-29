@@ -13,8 +13,8 @@ permalink: /research/
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
   {% endfor %}
-
-  <b>Research</b>
+  <b>————</b>
+  <b>All Research</b>
   {% for post in site.categories.research %}
     <li>
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
