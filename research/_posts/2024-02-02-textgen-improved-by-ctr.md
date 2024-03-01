@@ -11,7 +11,7 @@ description: "Improving Text Generation for Product Description via Human Behavi
 ### Abstract
 Text generation is an important method to generate high quality and available product description from product title. For the product description generation for online E-commerce application, the main problem is how to improve the quality of generated text. In other words, how we judge the quality of text. If all texts are already positive and available, then we find it impossible to manually judge which text is the better text for a product. So if we cannot judge which is a better text manually,  we cannot improve the quality of generated text. In E-commerce, product description is to attract shoppers and improve sales. So we design a method to improve the quality of generated text based on user buying behaviour. Online result shows that our approach improve the sales of products by improving the text quality.
 
-### Introduction
+### 1. Introduction
 
 In recent years, the development of deep learning (DL) has brought breakthroughs on text generation. The sequence to sequence (Seq2Seq) models use encoder-decoder transformer \cite{vaswani2017attention} for better model flexibility. The most representative models of this
 type include T5 \cite{raffel2020exploring} and BART \cite{lewis2020bart}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our data-centric experiments. 
@@ -45,7 +45,7 @@ In this paper, we solve these problems and propose these contributions:
 
 ![table12](/assets/png/textgen-improved-by-ctr/table1.png)
 
-### Method
+### 2. Method
 
 The whole pipeline is shown in Figure \ref{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our text generation experiments. We adopt transformer \cite{vaswani2017attention} as our sales prediction model.
 
@@ -68,12 +68,12 @@ In Step-8, we retrain the T5 model using the quality text identified of the last
 ![fig1](/assets/png/textgen-improved-by-ctr/fig1.png)
 
 
-#### Initial Training Dataset Construction
+#### 2.1 Initial Training Dataset Construction
 
 This section corresponding to the Step-1 in Figure \ref{fig1}.
 We collect our initial training dataset by querying ChatGPT. Each prompt is formed by concatenating a product title. We ask ChatGPT to write descriptions for the products. We tried to add some product attributes as prompt, but most of the ChatGPT's results do not relate to the product attributes. Table \ref{table1} shows the prompt examples and the ChatGPT's results. Our T5 \cite{raffel2020exploring} model trained on this initial dataset gets 88\% available rate, under human evaluation. 
 
-#### Sales Prediction Model
+#### 2.2 Sales Prediction Model
 
 After the generated product description has been displayed on the online products, The users view and buy the products. So now the problem is that we want to train a sales prediction model for products. The training target is:
 
@@ -87,23 +87,23 @@ The input features for the model include:
 
 2) Product description: Text tokens.
 
-#### Training Target
+#### 2.3 Training Target
 
 We designed the training objective to capture the additional gain of text for product. So our training objective is the absolute value of the RPM, and we use the regression loss.
 
 $$ Loss = |RPM - model_output| $$
 
 
-#### Causal Inference
+#### 2.4 Causal Inference
 
 The role of causal inference in our approach is to be used to isolate the impact of text for product after having a trained sales prediction model. 
 When we make a prediction, we input the product features and the text to get score $A$, and only the product features to get score $B$. The gain effect of the text for the product is $A-B$. The detail framework of sales prediction and causal inference is shown in Figure \ref{fig2}.
 
 ![fig1](/assets/png/textgen-improved-by-ctr/fig2.png)
 
-### Experiment
+### 3. Experiment
 
-#### Manual Evaluation
+#### 3.1 Manual Evaluation
 
 The manual evaluation contains two parts: the generation available rate, the comparison of the two generation results. The available rate is to determine whether the generated text is available. We use human annotation to compute:
 
@@ -115,45 +115,45 @@ The manual comparison of the Step-1 initial results and the optimised model resu
 
 The available rate result is shown in Table \ref{table3}. The comparison of the two generation result is shown is shown in Table \ref{table4}.
 
-#### AB Experiments
+#### 3.2 AB Experiments
 
 We do AB experiments to evaluate the online performance of our method. We display the two product descriptions to two groups of users. Then we count the RPM of the two groups of users. The results show that the optimised texts improve the RPM by about 0.1\%, compared to another group.
 
 ![table34](/assets/png/textgen-improved-by-ctr/table2.png)
 
-### Discussion
+### 4. Discussion
 
 In this section we illustrate the reason why we design our method. And we illustrate the baseline solution we compare.
 
-#### Motivation
+#### 4.1 Motivation
 
 In order to improve the quality of the generated text, and to improve the RPM, we found that manual annotation can not achieve this, we look for supervisory signals from human behaviour of online App.
 
-#### Baseline Solution
+#### 4.2 Baseline Solution
 
 We first collect the results from ChatGPT to train our T5 model. We input product title and ask ChatGPT to write product description. The problems with the ChatGPT results are that the available rate of text is 89\% and 11\% of the product description is not suitable for display. So we clean the dataset based on ChatGPT API and train the T5 model with more than 99\% available rate of generated text. We use this generated results of our T5 model as the baseline, which is the Step-1 of Figure \ref{fig1}.
 
 
 
-### Relate Work
+### 5. Relate Work
 
-#### Text Generation
+#### 5.1 Text Generation
 The pre-trained model based on Transformer \cite{vaswani2017attention} has greatly improved the performance in text generation. The learning objectives include masked language modeling (MLM) and causal language modeling (CLM). MLM-based Language Models include BERT \cite{devlin2018bert}, ROBERTA \cite{liu2019roberta}. CLM-based Language Models include the GPT series works \cite{radford2018improving,radford2019language,brown2020language} and other decoder-only transformer models \cite{keskar2019ctrl}.
 The sequence to sequence models\cite{sutskever2014sequence} use encoder-decoder transformer \cite{vaswani2017attention} for better model flexibility. The seq2seq model is widely used in the field of text generation \cite{luong2014addressing,bahdanau2014neural}. We adopt Seq2Seq models implement our text generation tasks. The most representative models of this type include T5 \cite{raffel2020exploring} and BART \cite{lewis2020bart}. In this paper, we adopt the T5 model to conduct our experiments. We compared T5 and GPT-2\cite{radford2019language} on the same dataset and ultimately chose T5.
 
-#### CTR Prediction
+#### 5.2 CTR Prediction
 Sales prediction task \cite{tsoumakas2019survey,cheriyan2018intelligent} is to estimate future sales of products, which is same to the click through rate (CTR) prediction task \cite{chen2016deep,guo2017deepfm}. Sales prediction and CTR prediction both use users behaviour (click/view) as training target, which means that we collect the logs of online App to build the training dataset.
 
-#### Causal Inference
+#### 5.3 Causal Inference
 The research questions that motivate most quantitative studies in the health, social and behavioral sciences are not statistical but causal in nature. Causal inference \cite{pearl2010causal,pearl2009causal} is to solve these problems. In our scenario, the product description is displayed on the product. That is, the product description, is the treatment that affects the sales of the corresponding product.
 
-#### Text Quality Evaluation
+#### 5.4 Text Quality Evaluation
 The evaluation of text generation \cite{celikyilmaz2020evaluation,zhang2019bertscore} is the task that evaluate of natural language generation, for example in machine translation and caption
 generation, requires comparing candidate sentences to annotated references. In our scenario, however, we are unable to manually evaluate the impact of the quality of the generated product description on product sales. So we do AB experiments to count whether the generated text leads to an increase in product sales or not, to judge whether the quality of text is improved.
 
 
 
-### Conclusion
+### 6. Conclusion
 
 How to improve the quality of generated text is a very critical issue, as manual annotation cannot judge the quality of generated text. If manual annotation cannot judge the quality of the generated text, then we cannot optimise the text generation to a better quality direction. On the other hand, if we can find a method to judge the quality of the generated text, then we can continuously optimise it. This paper we find supervised signals in the E-commerce scenario that can continuously optimise the quality of generated text. We have developed a complete solution and sales of our App have been boosted.
 
