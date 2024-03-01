@@ -43,6 +43,8 @@ In this paper, we solve these problems and propose these contributions:
 
 3) We design a complete solution to continuously improve the quality of generated product description, guided by user behaviour.
 
+![table12](/assets/png/textgen-improved-by-ctr/table1.png)
+
 ### Method
 
 The whole pipeline is shown in Figure \ref{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our text generation experiments. We adopt transformer \cite{vaswani2017attention} as our sales prediction model.
@@ -62,6 +64,9 @@ In Step-5, we train the sales prediction model based on the online logs. The det
 In Step-6 and Step-7, we use causal inference to find out the best quality product descriptions in the logs. The detail is illustrated in the following sections.
 
 In Step-8, we retrain the T5 model using the quality text identified of the last step. Then we do AB experiments to evaluate the performance of the generated product description of online App.
+
+![fig1](/assets/png/textgen-improved-by-ctr/fig1.png)
+
 
 #### Initial Training Dataset Construction
 
@@ -86,13 +91,15 @@ The input features for the model include:
 
 We designed the training objective to capture the additional gain of text for product. So our training objective is the absolute value of the RPM, and we use the regression loss.
 
-$$ Loss = |RPM - model\_output| $$
+$$ Loss = |RPM - model_output| $$
 
 
 #### Causal Inference
 
 The role of causal inference in our approach is to be used to isolate the impact of text for product after having a trained sales prediction model. 
 When we make a prediction, we input the product features and the text to get score $A$, and only the product features to get score $B$. The gain effect of the text for the product is $A-B$. The detail framework of sales prediction and causal inference is shown in Figure \ref{fig2}.
+
+![fig1](/assets/png/textgen-improved-by-ctr/fig2.png)
 
 ### Experiment
 
@@ -112,7 +119,7 @@ The available rate result is shown in Table \ref{table3}. The comparison of the 
 
 We do AB experiments to evaluate the online performance of our method. We display the two product descriptions to two groups of users. Then we count the RPM of the two groups of users. The results show that the optimised texts improve the RPM by about 0.1\%, compared to another group.
 
-
+![table34](/assets/png/textgen-improved-by-ctr/table2.png)
 
 ### Discussion
 
