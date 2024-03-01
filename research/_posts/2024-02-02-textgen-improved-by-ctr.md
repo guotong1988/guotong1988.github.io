@@ -91,7 +91,7 @@ The input features for the model include:
 
 We designed the training objective to capture the additional gain of text for product. So our training objective is the absolute value of the RPM, and we use the regression loss.
 
-$$ Loss = |RPM - model-output| $$
+$$ Loss = |RPM - model\_output| $$
 
 
 #### 2.4 Causal Inference
