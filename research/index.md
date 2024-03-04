@@ -7,14 +7,6 @@ permalink: /research/
 
 <ul>
 
-  <b>Core Research:</b>
-  {% for post in site.categories.core_research %}
-    <li>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-  
-  <b>All Research:</b>
   {% for post in site.categories.research %}
     <li>
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
