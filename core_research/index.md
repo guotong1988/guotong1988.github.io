@@ -2,13 +2,13 @@
 layout: page
 title: Research works by time order
 description: Research papers of Tong Guo
-permalink: /research/
+permalink: /core_research/
 ---
 
 <ul>
 
 
-  {% for post in site.categories.research %}
+  {% for post in site.categories.core_research %}
     <li>
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
