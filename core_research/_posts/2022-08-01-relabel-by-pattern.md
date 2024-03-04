@@ -2,7 +2,7 @@
 layout: post
 title: "Re-Label By Data Pattern For Controllable Deep Learning"
 date: 2022-08-01
-category: core_research
+category: research
 author: "Tong Guo"
 description: "Re-Label By Data Pattern Is All You Need For 97% Accuracy Under Human Evaluation"
 ---
