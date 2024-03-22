@@ -66,7 +66,7 @@ We did the manual re-labeling experiments in \cite{ref2}, we verify that the imp
 
 ### 5. Experiments On Open Datasets
 
-The experiment result on TREC-6 text classification dataset is shown in Table \ref{table1}.
+The experiment result on TREC-6 text classification dataset is shown in Table \ref{table1}. The model is pretrained BERT \cite{ref3}, which has 12-layer and 768 hidden size.
 
 ![table1](/assets/png/auto-relabel/table1.png)
 
@@ -96,6 +96,10 @@ Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolu
 
 \bibitem{ref2}
 Guo T. The Re-Label Method For Data-Centric Machine Learning[J]. arXiv preprint arXiv:2302.04391, 2023.
+
+\bibitem{ref3}
+Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.
+
 
 \bibitem{ref7}
 Yun S, Oh S J, Heo B, et al. Re-labeling imagenet: from single to multi-labels, from global to localized labels[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021: 2340-2350.
