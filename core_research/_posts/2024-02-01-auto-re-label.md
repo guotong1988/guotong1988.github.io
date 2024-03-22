@@ -25,7 +25,7 @@ In recent years, deep learning \cite{ref1} model have shown significant improvem
 
 ### 2. Background
 
-![fig1](/assets/png/auto-relabel/fig2.png)
+![fig1](/assets/png/auto-relabel/fig1.png)
 
 In previous work \cite{ref2}, we illustrate our idea in these steps:
 
@@ -41,7 +41,7 @@ We loop these re-labeling noisy data steps and get the final dataset and final m
 
 ### 3. Auto Re-label
 
-![fig2](/assets/png/auto-relabel/fig1.png)
+![fig2](/assets/png/auto-relabel/fig2.png)
 
 Our method contains 4 steps:
 
