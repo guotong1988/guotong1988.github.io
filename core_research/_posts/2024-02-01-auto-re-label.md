@@ -66,6 +66,8 @@ We did the manual re-labeling experiments in \cite{ref2}, we verify that the imp
 
 ### 5. Experiments On Open Datasets
 
+The experiment result on TREC-6 text classification dataset is shown in Table \ref{table1}.
+
 ![table1](/assets/png/auto-relabel/table1.png)
 
 ### 6. Related Work 
