@@ -72,15 +72,15 @@ The experiment result on TREC-6 text classification dataset is shown in Table \r
 
 ### 6. Related Work 
 
-The work\cite{ref7} proposes pseudo-label-based method to improve data quality without human re-label, which is different from our method. Our method is to improve the data quality for model of 97\% accuracy/precision/recall/BLEU/AUC by human re-label.
+Data-centric \cite{ref5} approach which focuses on label quality by characterizing and identifying label errors in datasets.
 
-The work\cite{ref8} proposes label-guess-based method to improve data quality without human re-label, which is different from our method. Our method get the guess-label as reference for human re-label.
+\cite{ref7} proposes pseudo-label-based method to improve data quality without human re-label, which is different from our method. Our method is to improve the data quality for model of 97\% accuracy/precision/recall/BLEU/AUC by human re-label.
 
-The work\cite{ref9} of OpenAI also use model predictions for human as references to label. The work\cite{ref9} use the new human-labeled data from model predictions to train the reward model, which is named as reinforcement learning from human feedback(RLHF).
+\cite{ref8} proposes label-guess-based method to improve data quality without human re-label, which is different from our method. Our method get the guess-label as reference for human re-label.
+
+\cite{ref9} also use model predictions for human as references to label. \cite{ref9} use the new human-labeled data from model predictions to train the reward model, which is named as reinforcement learning from human feedback(RLHF).
 
 Our work do not have the reward model of RLHF, the differnce between RLHF and our re-label method is that RLHF focus on using the model predictions as training dataset of reward model, and our re-label method focus on correcting the origin training dataset of policy model. Also in RLHF, the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset of policy model, and then to re-label/re-correct by our method.
-
-Also, the correction for policy by the reward model of RLHF is same to correct all the related data/labels that found by the patterns or substrings of the badcases. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
 
 For object detection task, \cite{ref11} uses the re-label method and surpasses human performance in offline LiDAR based 3D object detection.
 
