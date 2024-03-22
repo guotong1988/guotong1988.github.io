@@ -66,7 +66,7 @@ We did the manual re-labeling experiments in \cite{ref2}, we verify that the imp
 
 ### 5. Experiments On Open Datasets
 
-The experiment result on TREC-6 text classification dataset is shown in Table \ref{table1}. The model is pretrained BERT \cite{ref3}, which has 12-layer and 768 hidden size.
+The experiment result on TREC-6 text classification dataset is shown in Table \cite{table1}. The model is pretrained BERT \cite{ref3}, which has 12-layer and 768 hidden size.
 
 ![table1](/assets/png/auto-relabel/table1.png)
 
