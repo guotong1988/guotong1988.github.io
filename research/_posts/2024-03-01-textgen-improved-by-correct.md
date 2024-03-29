@@ -1,11 +1,13 @@
 ---
 layout: post
 title: "Improving Text Generation for Product Description via Human Behaviour"
-date: 2024-02-02
+date: 2024-03-01
 category: research
 author: "Tong Guo"
 description: "Improving Text Generation for Product Description via Human Behaviour"
 ---
+
+# Improving Text Generation for Product Description via Human Behaviour
 
 ## Abstract
 
@@ -34,19 +36,26 @@ The contributions of our paper are:
 
 (3) Our method can apply to many other text generation tasks and improve the accuracy to above 99\%. Also our method can apply to a broad set of deep learning applications based on human-labeled dataset.
 
+![table1](/assets/png/textgen-improved-by-correct/table1.png)
+
 ## Method 
 The whole pipeline is shown in Figure \ref{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our experiments. The pipeline contains 6 steps. In this section, we illustrate the detail of each step and how the algorithms work. In the discussion section, we illustrate the motivation why we design these steps.
+
 
 
 #### Initial Training Dataset Construction
 This section corresponding to the Step-1 in Figure \ref{fig1}.
 We collect our initial training dataset by querying ChatGPT. Each prompt is formed by concatenating a product title. We ask ChatGPT to write descriptions for the products. We tried to add some product attributes as prompt, but most of the ChatGPT's results do not relate to the product attributes. Table \ref{table1}, Table \ref{table2} and Table \ref{table3} shows the prompt examples and the ChatGPT's results. Our T5 \cite{raffel2020exploring} model trained on this initial dataset gets 88\% available rate, under human evaluation. 
 
+![table23](/assets/png/textgen-improved-by-correct/table23.png)
+
 #### Out-of-distribution Ambiguous Data
 Out-of-distribution ambiguous data is observed in our training dataset. The examples are shown in Table \ref{table2}. These data has similar inputs, the outputs are very different. Some of them are error data.
 
 #### In-distribution Error Data
 In-distribution error data is observed in our training dataset. The examples are shown in Table \ref{table3}. These data and its similar data are error data. These error data cannot be found by using Algorithm \ref{alg1}.
+
+![figure1](/assets/png/textgen-improved-by-correct/fig1.png)
 
 #### Self-Predict and Choose
 This section corresponding to the Step-2 in Figure \ref{fig1}. The algorithm detail is shown in Algorithm \ref{alg1}. 
@@ -55,7 +64,7 @@ Because we have observed that there are many ambiguous data in the training data
 
 
 In Algorithm \ref{alg1},  we have the model\_v0 trained on the dataset of last step. Then we use model\_v0 to predict outputs for the inputs of training dataset. If the model output is significantly different from the output of the same input in the training dataset, then we manually choose a better output for the input. Then we get the corrected dataset\_v1. In this paper, if the model output and training data's output do not have common token, we identify they are significantly different and not similar.
-
+![algorithm1](/assets/png/textgen-improved-by-correct/alg1.png)
 
 #### Self-Search and Remove
 This section corresponding to the Step-5 in Figure \ref{fig1}. The algorithm detail is shown in Algorithm \ref{alg2}. 
@@ -70,6 +79,8 @@ In Algorithm \ref{alg2}, we have the model\_v1 trained on the dataset of last st
 We also tested embedding-based method for the similar search. We extract embedding from the seq2seq model's encoder for the similarity calculation. We did not observe any significant improvement for embedding-based search.
 
 We design the removing operation in this algorithm. Because it makes annotation errors tolerable. We observe that, removing some correct data due to annotation errors does not have a significant impact on the final result.
+
+![algorithm2](/assets/png/textgen-improved-by-correct/alg2.png)
 
 
 
@@ -113,6 +124,8 @@ Both the T5 \cite{raffel2020exploring} encoder and decoder have 8 transformer la
 #### Experimental Results
 The experiment results is shown in Table \ref{table5}. Our goal is to achieve the standard for online deployment, so we manually evaluate the available rate of test dataset as the evaluation metric. The T5 \cite{raffel2020exploring} model trained on the initial training dataset by querying ChatGPT gets 88.0\% available rate. After we use our Self-Predict and Choose method, the accuracy is improved to 95.1\%. After we use our Self-Search and Remove method. The accuracy is ultimately improved to 99.2\%. The Self-Predict and Choose method step improve the accuracy to 95.1\%, which means we have a good foundation to perform error data removing in the next steps. Then the Self-Search and Remove method can consume fewer annotation resources.
 
+![table4](/assets/png/textgen-improved-by-correct/table4.png)
+![table5](/assets/png/textgen-improved-by-correct/table5.png)
 
 ## Discussion
 
@@ -127,7 +140,6 @@ We design Algorithm \ref{alg2} because we found data with error labels in datase
 
 
 #### Baseline Solutions
-% 各个方法其实本质都是时间效率的问题，
 
 In this sub-section, we discuss other possible solutions to this problem. In summary, the essence of each method is the comparison of labeling efficiency.
 
