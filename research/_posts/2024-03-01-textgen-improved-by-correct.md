@@ -182,6 +182,270 @@ Data-centric \cite{zha2023data,openai2023gpt,ouyang2022training,batini2009method
 Label error detection\cite{wang2022detecting,yu2023delving,hendrycks2016baseline,yu2022predicting,yue2022ctrl,song2022learning,natarajan2013learning} and confident learning \cite{northcutt2021confidentlearning,kuan2022labelquality} is the core of our method. Based on the idea of noisy data detection, we design algorithms to make the most efficient use of annotation manpower and achieve sufficient accuracy. 
 
 
-\section{Conclusion}
+## Conclusion
 
  Product description generation's problems for online E-commerce application is the available rate of generated text and the time consuming to annotate for training dataset. Model-centric method is limited by the quality of the training dataset. We propose our data-centric method to improve the accuracy to 99.2\% to achieve the standard for online deployment. Our method also saves about 10x the annotating time.
+
+## References
+
+```
+@inproceedings{lewis2020bart,
+  title={BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension},
+  author={Lewis, Mike and Liu, Yinhan and Goyal, Naman and Ghazvininejad, Marjan and Mohamed, Abdelrahman and Levy, Omer and Stoyanov, Veselin and Zettlemoyer, Luke},
+  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  pages={7871--7880},
+  year={2020}
+}
+
+@inproceedings{chan2019stick,
+  title={Stick to the facts: Learning towards a fidelity-oriented e-commerce product description generation},
+  author={Chan, Zhangming and Chen, Xiuying and Wang, Yongliang and Li, Juntao and Zhang, Zhiqiang and Gai, Kun and Zhao, Dongyan and Yan, Rui},
+  booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
+  pages={4959--4968},
+  year={2019}
+}
+
+@inproceedings{chen2019towards,
+  title={Towards knowledge-based personalized product description generation in e-commerce},
+  author={Chen, Qibin and Lin, Junyang and Zhang, Yichang and Yang, Hongxia and Zhou, Jingren and Tang, Jie},
+  booktitle={Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  pages={3040--3050},
+  year={2019}
+}
+
+@article{vaswani2017attention,
+  title={Attention is all you need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  journal={Advances in neural information processing systems},
+  volume={30},
+  year={2017}
+}
+
+@article{raffel2020exploring,
+  title={Exploring the limits of transfer learning with a unified text-to-text transformer},
+  author={Raffel, Colin and Shazeer, Noam and Roberts, Adam and Lee, Katherine and Narang, Sharan and Matena, Michael and Zhou, Yanqi and Li, Wei and Liu, Peter J},
+  journal={The Journal of Machine Learning Research},
+  volume={21},
+  number={1},
+  pages={5485--5551},
+  year={2020},
+  publisher={JMLRORG}
+}
+
+@article{ouyang2022training,
+  title={Training language models to follow instructions with human feedback},
+  author={Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and others},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={27730--27744},
+  year={2022}
+}
+
+@article{guo2021comprehensive,
+  title={A Comprehensive Comparison of Pre-training Language Models},
+  author={Guo, Tong},
+  journal={arXiv preprint arXiv:2106.11483},
+  year={2021}
+}
+
+@article{devlin2018bert,
+  title={Bert: Pre-training of deep bidirectional transformers for language understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv preprint arXiv:1810.04805},
+  year={2018}
+}
+
+@article{liu2019roberta,
+  title={Roberta: A robustly optimized bert pretraining approach},
+  author={Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},
+  journal={arXiv preprint arXiv:1907.11692},
+  year={2019}
+}
+
+@inproceedings{zhang2019automatic,
+  title={Automatic generation of pattern-controlled product description in e-commerce},
+  author={Zhang, Tao and Zhang, Jin and Huo, Chengfu and Ren, Weijun},
+  booktitle={The World Wide Web Conference},
+  pages={2355--2365},
+  year={2019}
+}
+
+@article{brown2020language,
+  title={Language models are few-shot learners},
+  author={Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others},
+  journal={Advances in neural information processing systems},
+  volume={33},
+  pages={1877--1901},
+  year={2020}
+}
+
+@article{radford2018improving,
+  title={Improving language understanding by generative pre-training},
+  author={Radford, Alec and Narasimhan, Karthik and Salimans, Tim and Sutskever, Ilya and others},
+  year={2018},
+  publisher={OpenAI}
+}
+
+@article{radford2019language,
+  title={Language models are unsupervised multitask learners},
+  author={Radford, Alec and Wu, Jeffrey and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya and others},
+  journal={OpenAI blog},
+  volume={1},
+  number={8},
+  pages={9},
+  year={2019}
+}
+
+@inproceedings{wang2017statistical,
+  title={A statistical framework for product description generation},
+  author={Wang, Jinpeng and Hou, Yutai and Liu, Jing and Cao, Yunbo and Lin, Chin-Yew},
+  booktitle={Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 2: Short Papers)},
+  pages={187--192},
+  year={2017}
+}
+
+@article{keskar2019ctrl,
+  title={Ctrl: A conditional transformer language model for controllable generation},
+  author={Keskar, Nitish Shirish and McCann, Bryan and Varshney, Lav R and Xiong, Caiming and Socher, Richard},
+  journal={arXiv preprint arXiv:1909.05858},
+  year={2019}
+}
+
+@article{zhang2022survey,
+  title={A survey of controllable text generation using transformer-based pre-trained language models},
+  author={Zhang, Hanqing and Song, Haolin and Li, Shaoyu and Zhou, Ming and Song, Dawei},
+  journal={arXiv preprint arXiv:2201.05337},
+  year={2022}
+}
+
+@article{prabhumoye2020exploring,
+  title={Exploring controllable text generation techniques},
+  author={Prabhumoye, Shrimai and Black, Alan W and Salakhutdinov, Ruslan},
+  journal={arXiv preprint arXiv:2005.01822},
+  year={2020}
+}
+
+@article{zha2023data,
+  title={Data-centric artificial intelligence: A survey},
+  author={Zha, Daochen and Bhat, Zaid Pervaiz and Lai, Kwei-Herng and Yang, Fan and Jiang, Zhimeng and Zhong, Shaochen and Hu, Xia},
+  journal={arXiv preprint arXiv:2303.10158},
+  year={2023}
+}
+
+@article{sutskever2014sequence,
+  title={Sequence to sequence learning with neural networks},
+  author={Sutskever, Ilya and Vinyals, Oriol and Le, Quoc V},
+  journal={Advances in neural information processing systems},
+  volume={27},
+  year={2014}
+}
+
+@article{luong2014addressing,
+  title={Addressing the rare word problem in neural machine translation},
+  author={Luong, Minh-Thang and Sutskever, Ilya and Le, Quoc V and Vinyals, Oriol and Zaremba, Wojciech},
+  journal={arXiv preprint arXiv:1410.8206},
+  year={2014}
+}
+
+@article{bahdanau2014neural,
+  title={Neural machine translation by jointly learning to align and translate},
+  author={Bahdanau, Dzmitry and Cho, Kyunghyun and Bengio, Yoshua},
+  journal={arXiv preprint arXiv:1409.0473},
+  year={2014}
+}
+
+@article{wang2022detecting,
+  title={Detecting label errors in token classification data},
+  author={Wang, Wei-Chen and Mueller, Jonas},
+  journal={arXiv preprint arXiv:2210.03920},
+  year={2022}
+}
+
+@article{yu2023delving,
+  title={Delving into Noisy Label Detection with Clean Data},
+  author={Yu, Chenglin and Ma, Xinsong and Liu, Weiwei},
+  year={2023}
+}
+
+@article{northcutt2021confidentlearning,
+    title={Confident Learning: Estimating Uncertainty in Dataset Labels},
+    author={Curtis G. Northcutt and Lu Jiang and Isaac L. Chuang},
+    journal={Journal of Artificial Intelligence Research (JAIR)},
+    volume={70},
+    pages={1373--1411},
+    year={2021}
+}
+
+@inproceedings{kuan2022labelquality,
+    title={Model-agnostic label quality scoring to detect real-world label errors},
+    author={Kuan, Johnson and Mueller, Jonas},
+    booktitle={ICML DataPerf Workshop},
+    year={2022}
+}
+
+@article{openai2023gpt,
+  title={GPT-4 technical report},
+  author={OpenAI, R},
+  journal={arXiv},
+  pages={2303--08774},
+  year={2023}
+}
+
+@inproceedings{hendrycks2016baseline,
+  title={A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks},
+  author={Hendrycks, Dan and Gimpel, Kevin},
+  booktitle={International Conference on Learning Representations},
+  year={2016}
+}
+
+@inproceedings{yu2022predicting,
+  title={Predicting out-of-distribution error with the projection norm},
+  author={Yu, Yaodong and Yang, Zitong and Wei, Alexander and Ma, Yi and Steinhardt, Jacob},
+  booktitle={International Conference on Machine Learning},
+  pages={25721--25746},
+  year={2022},
+  organization={PMLR}
+}
+
+@article{yue2022ctrl,
+  title={Ctrl: Clustering training losses for label error detection},
+  author={Yue, Chang and Jha, Niraj K},
+  journal={arXiv preprint arXiv:2208.08464},
+  year={2022}
+}
+
+@article{song2022learning,
+  title={Learning from noisy labels with deep neural networks: A survey},
+  author={Song, Hwanjun and Kim, Minseok and Park, Dongmin and Shin, Yooju and Lee, Jae-Gil},
+  journal={IEEE Transactions on Neural Networks and Learning Systems},
+  year={2022},
+  publisher={IEEE}
+}
+
+@article{natarajan2013learning,
+  title={Learning with noisy labels},
+  author={Natarajan, Nagarajan and Dhillon, Inderjit S and Ravikumar, Pradeep K and Tewari, Ambuj},
+  journal={Advances in neural information processing systems},
+  volume={26},
+  year={2013}
+}
+
+@article{batini2009methodologies,
+  title={Methodologies for data quality assessment and improvement},
+  author={Batini, Carlo and Cappiello, Cinzia and Francalanci, Chiara and Maurino, Andrea},
+  journal={ACM computing surveys (CSUR)},
+  volume={41},
+  number={3},
+  pages={1--52},
+  year={2009},
+  publisher={ACM New York, NY, USA}
+}
+
+@article{ratner2016data,
+  title={Data programming: Creating large training sets, quickly},
+  author={Ratner, Alexander J and De Sa, Christopher M and Wu, Sen and Selsam, Daniel and R{\'e}, Christopher},
+  journal={Advances in neural information processing systems},
+  volume={29},
+  year={2016}
+}
+```
