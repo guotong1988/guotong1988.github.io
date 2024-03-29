@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Improving Text Generation for Product Description by Label Error Correction"
-date: 2024-03-01
+date: 2024-01-01
 category: research
 author: "Tong Guo"
 description: "Improving Text Generation for Product Description by Label Error Correction"
