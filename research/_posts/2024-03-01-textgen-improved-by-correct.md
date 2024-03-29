@@ -86,7 +86,9 @@ In this section, we illustrate the dataset size, model parameters and experiment
 
 
 #### Evaluation
-\textbf{Generation Accuracy} In this paper, we do not use BLEU to evaluate the generation results. In our scenario, our goal is to determine whether the generated text is available. We use human annotation to compute:
+\textbf{Generation Accuracy} 
+
+In this paper, we do not use BLEU to evaluate the generation results. In our scenario, our goal is to determine whether the generated text is available. We use human annotation to compute:
 
 $$ Acc = N_{good} / N_{total} $$
 
@@ -95,13 +97,18 @@ where $N_{good}$ is the available generated text number and $N_{total}$ is the t
 #### Online Dataset
 The online dataset is all the data in the application database. It contains 500,000,000 data. Other datasets are all sampled from this dataset. It is the dataset for the final model inference.
 
-\textbf{Evaluation Dataset} We sample 5,000 data from all the 500,000,000 data online for manual evaluation for each step. We evaluate the model performance for the models of Step-2, Step-4, Step-6.
+\textbf{Evaluation Dataset} 
+
+We sample 5,000 data from all the 500,000,000 data online for manual evaluation for each step. We evaluate the model performance for the models of Step-2, Step-4, Step-6.
 
 \textbf{Training Dataset} 
+
 The initial training dataset is prepared by querying ChatGPT. Considering the resource cost, we have prepared 300,000 data.
 
 
-\textbf{Seed Dataset} Seed dataset is sampled from the training dataset for Algorithm \ref{alg2}. Based on how many error data we want to retrieve, the approximate size of seed dataset can be calculated as: 
+\textbf{Seed Dataset} 
+
+Seed dataset is sampled from the training dataset for Algorithm \ref{alg2}. Based on how many error data we want to retrieve, the approximate size of seed dataset can be calculated as: 
 
 $$ N_{seed} = \frac{(1 - Acc_{training}) * N_{training} / K_{search} }{ (1 - Acc_{training})} $$
 
@@ -113,7 +120,9 @@ where $N_{seed}$ is the seed dataset size. $Acc_{training}$ is the generation ac
 
 
 
-\textbf{Dev Dataset} We split 1:20 from the training dataset as the dev dataset. The dev dataset is used to select the optimal model.
+\textbf{Dev Dataset} 
+
+We split 1:20 from the training dataset as the dev dataset. The dev dataset is used to select the optimal model.
 
 
 
