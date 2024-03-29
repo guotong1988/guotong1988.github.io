@@ -37,17 +37,16 @@ The contributions of our paper are:
 (3) Our method can apply to many other text generation tasks and improve the accuracy to above 99\%. Also our method can apply to a broad set of deep learning applications based on human-labeled dataset.
 
 ![table1](/assets/png/textgen-improved-by-correct/table1.png)
-
+![table23](/assets/png/textgen-improved-by-correct/table23.png)
 ## Method 
 The whole pipeline is shown in Figure \ref{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our experiments. The pipeline contains 6 steps. In this section, we illustrate the detail of each step and how the algorithms work. In the discussion section, we illustrate the motivation why we design these steps.
 
-
+![figure1](/assets/png/textgen-improved-by-correct/fig1.png)
 
 #### Initial Training Dataset Construction
 This section corresponding to the Step-1 in Figure \ref{fig1}.
 We collect our initial training dataset by querying ChatGPT. Each prompt is formed by concatenating a product title. We ask ChatGPT to write descriptions for the products. We tried to add some product attributes as prompt, but most of the ChatGPT's results do not relate to the product attributes. Table \ref{table1}, Table \ref{table2} and Table \ref{table3} shows the prompt examples and the ChatGPT's results. Our T5 \cite{raffel2020exploring} model trained on this initial dataset gets 88\% available rate, under human evaluation. 
 
-![table23](/assets/png/textgen-improved-by-correct/table23.png)
 
 #### Out-of-distribution Ambiguous Data
 Out-of-distribution ambiguous data is observed in our training dataset. The examples are shown in Table \ref{table2}. These data has similar inputs, the outputs are very different. Some of them are error data.
@@ -55,15 +54,14 @@ Out-of-distribution ambiguous data is observed in our training dataset. The exam
 #### In-distribution Error Data
 In-distribution error data is observed in our training dataset. The examples are shown in Table \ref{table3}. These data and its similar data are error data. These error data cannot be found by using Algorithm \ref{alg1}.
 
-![figure1](/assets/png/textgen-improved-by-correct/fig1.png)
 
 #### Self-Predict and Choose
 This section corresponding to the Step-2 in Figure \ref{fig1}. The algorithm detail is shown in Algorithm \ref{alg1}. 
 
 Because we have observed that there are many ambiguous data in the training dataset. So we design this algorithm is to correct error data in the ambiguous data by predicting itself and human re-labeling. We train the seq2seq model until the dev loss no longer decreases.
 
-
 In Algorithm \ref{alg1},  we have the model\_v0 trained on the dataset of last step. Then we use model\_v0 to predict outputs for the inputs of training dataset. If the model output is significantly different from the output of the same input in the training dataset, then we manually choose a better output for the input. Then we get the corrected dataset\_v1. In this paper, if the model output and training data's output do not have common token, we identify they are significantly different and not similar.
+
 ![algorithm1](/assets/png/textgen-improved-by-correct/alg1.png)
 
 #### Self-Search and Remove
@@ -81,7 +79,6 @@ We also tested embedding-based method for the similar search. We extract embeddi
 We design the removing operation in this algorithm. Because it makes annotation errors tolerable. We observe that, removing some correct data due to annotation errors does not have a significant impact on the final result.
 
 ![algorithm2](/assets/png/textgen-improved-by-correct/alg2.png)
-
 
 
 ## Experiment
@@ -105,9 +102,13 @@ The initial training dataset is prepared by querying ChatGPT. Considering the re
 
 
 \textbf{Seed Dataset} Seed dataset is sampled from the training dataset for Algorithm \ref{alg2}. Based on how many error data we want to retrieve, the approximate size of seed dataset can be calculated as: 
+
 $$ N_{seed} = \frac{(1 - Acc_{training}) * N_{training} / K_{search} }{ (1 - Acc_{training})} $$
+
 Then we get:
+
 $$ N_{seed} =  N_{training} / K_{search}  $$
+
 where $N_{seed}$ is the seed dataset size. $Acc_{training}$ is the generation accuracy. $K_{search}$ is the average searched texts amount by each data of seed dataset.
 
 
@@ -121,15 +122,18 @@ where $N_{seed}$ is the seed dataset size. $Acc_{training}$ is the generation ac
 #### Experimental Setup
 Both the T5 \cite{raffel2020exploring} encoder and decoder have 8 transformer layers. The hidden size is 768 and the attention head number is 12. We compared T5 and GPT-2\cite{radford2019language} on the same dataset and ultimately chose T5.
 
+![table4](/assets/png/textgen-improved-by-correct/table4.png)
+
 #### Experimental Results
 The experiment results is shown in Table \ref{table5}. Our goal is to achieve the standard for online deployment, so we manually evaluate the available rate of test dataset as the evaluation metric. The T5 \cite{raffel2020exploring} model trained on the initial training dataset by querying ChatGPT gets 88.0\% available rate. After we use our Self-Predict and Choose method, the accuracy is improved to 95.1\%. After we use our Self-Search and Remove method. The accuracy is ultimately improved to 99.2\%. The Self-Predict and Choose method step improve the accuracy to 95.1\%, which means we have a good foundation to perform error data removing in the next steps. Then the Self-Search and Remove method can consume fewer annotation resources.
 
-![table4](/assets/png/textgen-improved-by-correct/table4.png)
+
 ![table5](/assets/png/textgen-improved-by-correct/table5.png)
 
 ## Discussion
 
 In this section,  we discuss the motivation why we design our method and the advantage of our method.
+
 #### Motivation
 In this sub-section we illustrate why we design the algorithms.
 
@@ -144,12 +148,15 @@ We design Algorithm \ref{alg2} because we found data with error labels in datase
 In this sub-section, we discuss other possible solutions to this problem. In summary, the essence of each method is the comparison of labeling efficiency.
 
 \textbf{Essay Question or Choices Question}
+
 Essay question means annotators write the text answer. Writing the text answer by human without references is hard and time consuming. So in each manual annotation step, we give the annotators reference annotation results to choose from, rather than answering.
 
 \textbf{Choose from Multiple Outputs}
+
 If we query ChatGPT and get multiple results for each input, we can manually choose the best output. The disadvantage is that it consumes multiples of the labelling time.
 
 \textbf{Labeling Each Data By Multiple Times}
+
 To ensure the quality of the dataset, we can label each data by multiple times and get all the correct data. The disadvantage is that it also consumes multiples of the labelling time.
 
 
@@ -171,25 +178,24 @@ We put the Step-3 before the Step-5. The reason is that we first need to correct
 
 ## Related Work
 
-\subsection{Transformer-based Models}
+#### Transformer-based Models
 
 The pre-trained model based on Transformer \cite{vaswani2017attention} has greatly improved the performance in various NLP tasks. The learning objectives include masked language modeling (MLM) and  causal language modeling (CLM). MLM-based Language Models include BERT \cite{devlin2018bert}, ROBERTA \cite{liu2019roberta}. CLM-based Language Models include the GPT series works \cite{radford2018improving,radford2019language,brown2020language} and other decoder-only transformer models \cite{keskar2019ctrl}.
 
 
-\subsection{Seq2Seq Models}
+#### Seq2Seq Models
 
 The sequence to sequence models\cite{sutskever2014sequence} use encoder-decoder transformer \cite{vaswani2017attention} for better model flexibility. The seq2seq model is widely used in the field of text generation \cite{luong2014addressing,bahdanau2014neural}. We adopt Seq2Seq models implement our text generation tasks. The most representative models of this type include T5 \cite{raffel2020exploring} and BART \cite{lewis2020bart}. In this paper, we adopt the T5 model to conduct our experiments. We compared T5 and GPT-2\cite{radford2019language} on the same dataset and ultimately chose T5.
 
-\subsection{Product Description Generation}
+#### Product Description Generation
 
 There are many works in this area. \cite{chen2019towards} adds personalized features to solve the personalized product description task. \cite{zhang2019automatic} focuses on designing the pattern controlled decoder to ensure the quality of the description. \cite{wang2017statistical} propose a system framework for product description generation. \cite{chan2019stick} focuses on the model-centric method to solve this problem. In our paper, we focus more on achieve the standard for online deployment by efficient human participation.
 
-
-\subsection{Data-Centric Method}
+#### Data-Centric Method
 
 Data-centric \cite{zha2023data,openai2023gpt,ouyang2022training,batini2009methodologies,ratner2016data} AI focuses a greater emphasis on enhancing the quality and quantity of the data with the model relatively fixed. Data-centric representative tasks includes data collection, data labeling, data augmentation. Data-centric AI methods are categorized into automation and collaboration depending on whether human participation is needed. Our method need human participation and focuses on the label-again way to improve the quality and quantity of dataset.
 
-\subsection{Label Error Detection}
+#### Label Error Detection
 
 Label error detection\cite{wang2022detecting,yu2023delving,hendrycks2016baseline,yu2022predicting,yue2022ctrl,song2022learning,natarajan2013learning} and confident learning \cite{northcutt2021confidentlearning,kuan2022labelquality} is the core of our method. Based on the idea of noisy data detection, we design algorithms to make the most efficient use of annotation manpower and achieve sufficient accuracy. 
 
