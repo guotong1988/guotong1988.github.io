@@ -38,6 +38,7 @@ The contributions of our paper are:
 
 ![table1](/assets/png/textgen-improved-by-correct/table1.png)
 ![table23](/assets/png/textgen-improved-by-correct/table23.png)
+
 ## 2. Method 
 The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our experiments. The pipeline contains 6 steps. In this section, we illustrate the detail of each step and how the algorithms work. In the discussion section, we illustrate the motivation why we design these steps.
 
@@ -86,6 +87,7 @@ In this section, we illustrate the dataset size, model parameters and experiment
 
 
 #### 3.1 Evaluation
+
 ##### 3.1.1 Generation Accuracy
 
 In this paper, we do not use BLEU to evaluate the generation results. In our scenario, our goal is to determine whether the generated text is available. We use human annotation to compute:
@@ -123,8 +125,6 @@ We split 1:20 from the training dataset as the dev dataset. The dev dataset is u
 
 
 
-
-
 #### 3.2 Experimental Setup
 Both the T5 \cite{raffel2020exploring} encoder and decoder have 8 transformer layers. The hidden size is 768 and the attention head number is 12. We compared T5 and GPT-2\cite{radford2019language} on the same dataset and ultimately chose T5.
 
@@ -153,15 +153,15 @@ We design Algorithm \cite{alg2} because we found data with error labels in datas
 
 In this sub-section, we discuss other possible solutions to this problem. In summary, the essence of each method is the comparison of labeling efficiency.
 
-\textbf{Essay Question or Choices Question}
+##### 4.2.1 Essay Question or Choices Question
 
 Essay question means annotators write the text answer. Writing the text answer by human without references is hard and time consuming. So in each manual annotation step, we give the annotators reference annotation results to choose from, rather than answering.
 
-\textbf{Choose from Multiple Outputs}
+##### 4.2.2 Choose from Multiple Outputs
 
 If we query ChatGPT and get multiple results for each input, we can manually choose the best output. The disadvantage is that it consumes multiples of the labelling time.
 
-\textbf{Labeling Each Data By Multiple Times}
+##### 4.2.3 Labeling Each Data By Multiple Times
 
 To ensure the quality of the dataset, we can label each data by multiple times and get all the correct data. The disadvantage is that it also consumes multiples of the labelling time.
 
@@ -190,15 +190,15 @@ The pre-trained model based on Transformer \cite{vaswani2017attention} has great
 
 The sequence to sequence models\cite{sutskever2014sequence} use encoder-decoder transformer \cite{vaswani2017attention} for better model flexibility. The seq2seq model is widely used in the field of text generation \cite{luong2014addressing,bahdanau2014neural}. We adopt Seq2Seq models implement our text generation tasks. The most representative models of this type include T5 \cite{raffel2020exploring} and BART \cite{lewis2020bart}. In this paper, we adopt the T5 model to conduct our experiments. We compared T5 and GPT-2\cite{radford2019language} on the same dataset and ultimately chose T5.
 
-#### Product Description Generation
+#### 5.3 Product Description Generation
 
 There are many works in this area. \cite{chen2019towards} adds personalized features to solve the personalized product description task. \cite{zhang2019automatic} focuses on designing the pattern controlled decoder to ensure the quality of the description. \cite{wang2017statistical} propose a system framework for product description generation. \cite{chan2019stick} focuses on the model-centric method to solve this problem. In our paper, we focus more on achieve the standard for online deployment by efficient human participation.
 
-#### 5.3 Data-Centric Method
+#### 5.4 Data-Centric Method
 
 Data-centric \cite{zha2023data,openai2023gpt,ouyang2022training,batini2009methodologies,ratner2016data} AI focuses a greater emphasis on enhancing the quality and quantity of the data with the model relatively fixed. Data-centric representative tasks includes data collection, data labeling, data augmentation. Data-centric AI methods are categorized into automation and collaboration depending on whether human participation is needed. Our method need human participation and focuses on the label-again way to improve the quality and quantity of dataset.
 
-#### 5.4 Label Error Detection
+#### 5.5 Label Error Detection
 
 Label error detection\cite{wang2022detecting,yu2023delving,hendrycks2016baseline,yu2022predicting,yue2022ctrl,song2022learning,natarajan2013learning} and confident learning \cite{northcutt2021confidentlearning,kuan2022labelquality} is the core of our method. Based on the idea of noisy data detection, we design algorithms to make the most efficient use of annotation manpower and achieve sufficient accuracy. 
 
