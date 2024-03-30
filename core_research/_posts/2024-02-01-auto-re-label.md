@@ -27,7 +27,7 @@ In recent years, deep learning \cite{ref1} model have shown significant improvem
 
 ![fig1](/assets/png/auto-relabel/fig1.png)
 
-In previous work \cite{ref2}, we illustrate the method of manually correction in these steps:
+In previous work \cite{ref2}, we illustrate the method of manual correction in these steps:
 
 Step-1. We assume it is a classification task. We have a human-labeled dataset-v0 (training dataset and dev dataset). We train a deep model upon dataset-v0 and get model-v0.
 
