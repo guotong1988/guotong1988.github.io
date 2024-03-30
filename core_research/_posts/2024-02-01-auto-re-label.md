@@ -27,13 +27,13 @@ In recent years, deep learning \cite{ref1} model have shown significant improvem
 
 ![fig1](/assets/png/auto-relabel/fig1.png)
 
-In previous work \cite{ref2}, we illustrate our idea in these steps:
+In previous work \cite{ref2}, we illustrate the method of manually correction in these steps:
 
-Step-1. It is a classification task. We have a human labeled dataset-v0. We train a deep model upon dataset-v0 and get model-v0.
+Step-1. We assume it is a classification task. We have a human-labeled dataset-v0 (training dataset and dev dataset). We train a deep model upon dataset-v0 and get model-v0.
 
-Step-2. Using model-v0 to predict the classification labels for dataset-v0. If the predicted labels of dataset-v0 do not equal to the human labels of dataset-v0, we think they are the noisy data.
+Step-2. Using model-v0 to predict the classification labels for dataset-v0 (training dataset and dev dataset). If the predicted labels of dataset-v0 do not equal to the human labels of dataset-v0, we think they are the noisy data.
 
-Step-3. We label the noisy data again by human, while given the labels of model and last label by human as reference. Then we get dataset-v1
+Step-3. We label the noisy data (training dataset and dev dataset) again by human, while given the labels of model and last label by human as reference. Then we get dataset-v1
 
 Step-4. We train on dataset-v1 and get model-v1.
 
