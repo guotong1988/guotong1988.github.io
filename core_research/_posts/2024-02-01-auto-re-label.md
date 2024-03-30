@@ -74,16 +74,6 @@ The experiment result on TREC-6 text classification dataset is shown in Table \c
 
 Data-centric \cite{ref5} approach which focuses on label quality by characterizing and identifying label errors in datasets.
 
-\cite{ref7} proposes pseudo-label-based method to improve data quality without re-label, which is different from our method. Our method is to improve the data quality for model of 97\% accuracy/precision/recall/BLEU/AUC by re-label.
-
-\cite{ref8} proposes label-guess-based method to improve data quality without re-label, which is different from our method. Our method get the guess-label as reference for re-label.
-
-\cite{ref9} use model predictions for human as references to label. \cite{ref9} use the new human-labeled data from model predictions to train the reward model, which is named as reinforcement learning from human feedback(RLHF).
-
-Our work do not have the reward model of RLHF, the differnce between RLHF and our re-label method is that RLHF focus on using the model predictions as training dataset of reward model, and our re-label method focus on correcting the origin training dataset of policy model. Also in RLHF, the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset of policy model, and then to re-label/re-correct by our method.
-
-For object detection task, \cite{ref11} uses the re-label method and surpasses human performance in offline LiDAR based 3D object detection.
-
 ### 7. Conclusion
 
 In previous works, we manually re-label the noisy data to improve the dataset quality. 
@@ -106,20 +96,6 @@ Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in
 \bibitem{ref5}
 Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[J]. arXiv preprint arXiv:2303.10158, 2023.
 
-\bibitem{ref7}
-Yun S, Oh S J, Heo B, et al. Re-labeling imagenet: from single to multi-labels, from global to localized labels[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021: 2340-2350.
-
-\bibitem{ref8}
-Nicholson B, Zhang J, Sheng V S, et al. Label noise correction methods[C]//2015 IEEE International Conference on Data Science and Advanced Analytics (DSAA). IEEE, 2015: 1-9.
-
-\bibitem{ref9}
-Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. arXiv preprint arXiv:2203.02155, 2022.
-
-\bibitem{ref10}
-Guo, Tong (2022): Re-Label By Data Pattern For Knowledge Driven Deep Learning. TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.20485917.v6
-
-\bibitem{ref11}
-Fan L, Yang Y, Mao Y, et al. Once Detected, Never Lost: Surpassing Human Performance in Offline LiDAR based 3D Object Detection[J]. arXiv preprint arXiv:2304.12315, 2023.
 
 ```
 
