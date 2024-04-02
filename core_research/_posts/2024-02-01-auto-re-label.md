@@ -29,7 +29,7 @@ In summary, our contributions include:
 
 2) We propose the method that constructs the candidate datasets by randomly setting the labels to predicted label or human label. And we propose the method that using accuracy of dev dataset to find the best dataset. Because we already verify that the improved dataset exists in the candidate datasets.
 
-3) The code is at \href{https://github.com/guotong1988/Automatic-Label-Error-Correction}{github.com/guotong1988/Automatic-Label-Error-Correction}
+3) The code is at https://github.com/guotong1988/Automatic-Label-Error-Correction
 
 ### 2. Background
 
