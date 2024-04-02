@@ -106,7 +106,6 @@ Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in
 \bibitem{ref5}
 Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[J]. arXiv preprint arXiv:2303.10158, 2023.
 
-
 \bibitem{ref6}
 Cui Z, Zhang Y, Ji Q. Label error correction and generation through label relationships[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2020, 34(04): 3693-3700.
 
