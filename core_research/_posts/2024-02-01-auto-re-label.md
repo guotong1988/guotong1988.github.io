@@ -21,7 +21,15 @@ The motivation of randomly re-setting is that the best dataset must be in all ra
 
 ### 1. Introduction
 
-In recent years, deep learning \cite{ref1} model have shown significant improvement on natural language processing (NLP), computer vision (CV) and speech processing technologies. However, the model performance is limited by the human-labeled data quality. The main reason is that the human-labeled data has a certain number of noisy data. Previous work \cite{ref2} has propose the method to find the noisy data and manually correct the noisy data. In this paper, we first review the method we achieve more than 90 score in dev dataset and more than 95 score under human evaluation, then we illustrate our method that randomly re-setting and the best dataset selection. The code is at [github.com/guotong1988/Automatic-Label-Error-Correction](https://github.com/guotong1988/Automatic-Label-Error-Correction)
+In recent years, deep learning \cite{ref1} model have shown significant improvement on natural language processing (NLP), computer vision (CV) and speech processing technologies. However, the model performance is limited by the human-labeled data quality. The main reason is that the human-labeled data has a certain number of noisy data. Previous work \cite{ref2} has propose the method to find the noisy data and manually correct the noisy data. In this paper, we first review the method we achieve more than 90 score in dev dataset and more than 95 score under human evaluation, then we illustrate our method that randomly re-setting and the best dataset selection. The problem with manual re-labeling is that it consumes a lot of labor. In order to solve this problem, we propose automatic re-labeling method.
+
+In summary, our contributions include:
+
+1) In order to solve the problem that manual re-labeling consumes a lot of labor to correct the noisy data, we propose automatic re-labeling method to find the best dataset in the possible candidate datasets.
+
+2) We propose the method that constructs the candidate datasets by randomly setting the labels to predicted label or human label. And we propose the method that using accuracy of dev dataset to find the best dataset. Because we already verify that the improved dataset exists in the candidate datasets.
+
+3) The code is at \href{https://github.com/guotong1988/Automatic-Label-Error-Correction}{github.com/guotong1988/Automatic-Label-Error-Correction}
 
 ### 2. Background
 
