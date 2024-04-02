@@ -82,6 +82,8 @@ The experiment result on TREC-6 text classification dataset is shown in Table \c
 
 Data-centric \cite{ref5} approach which focuses on label quality by characterizing and identifying label errors in datasets.
 
+Label error correction or noise data correction\cite{ref6,ref7,ref8,ref9,ref10,ref11,ref12} is to correct the error labeled data to improve the dataset quality.
+
 ### 7. Conclusion
 
 In previous works, we manually re-label the noisy data to improve the dataset quality. 
@@ -103,6 +105,28 @@ Vaswani A, Shazeer N, Parmar N, et al. Attention is all you need[C]//Advances in
 
 \bibitem{ref5}
 Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[J]. arXiv preprint arXiv:2303.10158, 2023.
+
+
+\bibitem{ref6}
+Cui Z, Zhang Y, Ji Q. Label error correction and generation through label relationships[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2020, 34(04): 3693-3700.
+
+\bibitem{ref7}
+Tong F, Liu Y, Li S, et al. Automatic error correction for speaker embedding learning with noisy labels[C]//Proc. Interspeech. 2021.
+
+\bibitem{ref8}
+Liu X, Li S, Kan M, et al. Self-error-correcting convolutional neural network for learning with noisy labels[C]//2017 12th IEEE International Conference on Automatic Face \& Gesture Recognition (FG 2017). IEEE, 2017: 111-117.
+
+\bibitem{ref9}
+Rebbapragada U, Brodley C E, Sulla-Menashe D, et al. Active label correction[C]//2012 IEEE 12th International Conference on Data Mining. IEEE, 2012: 1080-1085.
+
+\bibitem{ref10}
+Bryant C J, Felice M, Briscoe E. Automatic annotation and evaluation of error types for grammatical error correction[C]. Association for Computational Linguistics, 2017.
+
+\bibitem{ref11}
+Zhang J, Sheng V S, Li T, et al. Improving crowdsourced label quality using noise correction[J]. IEEE transactions on neural networks and learning systems, 2017, 29(5): 1675-1688.
+
+\bibitem{ref12}
+Jiao Y, Latifi S, Yang M. Self error detection and correction for noisy labels based on error correcting output code in convolutional neural networks[C]//2019 IEEE 9th Annual Computing and Communication Workshop and Conference (CCWC). IEEE, 2019: 0311-0316.
 
 
 ```
