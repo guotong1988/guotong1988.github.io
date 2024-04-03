@@ -82,7 +82,16 @@ The experiment result on TREC-6 text classification dataset is shown in Table \c
 
 Data-centric \cite{ref5} approach which focuses on label quality by characterizing and identifying label errors in datasets.
 
-Label error correction or noise data correction\cite{ref6,ref7,ref8,ref9,ref10,ref11,ref12} is to correct the error labeled data to improve the dataset quality.
+Label error correction or noise data correction\cite{ref6,ref7,ref8,ref9,ref10,ref11} is to correct the error labeled data to improve the dataset quality.
+
+\cite{ref6} uses the label relationships to correct label error without human annotation. 
+\cite{ref7} corrected the original loss value by introducing the model’s prediction labels into loss function.
+\cite{ref8} proposes the self-error-correcting CNN learning framework to deal with the problem of noisy labels and demonstrates that the model is robust to label noise even up to 80% proportion.
+\cite{ref9} presents a human/machine learning method for cleaning training data of label noise when an alternate, high confidence labeling source is available.
+\cite{ref10} described a grammatical error annotation toolkit designed to automatically annotate parallel error correction data with explicit edit spans and error type information.
+\cite{ref11} uses a novel algorithm termed adaptive voting noise correction to precisely identify and correct the potential noisy labels. 
+
+
 
 ### 7. Conclusion
 
@@ -123,9 +132,6 @@ Bryant C J, Felice M, Briscoe E. Automatic annotation and evaluation of error ty
 
 \bibitem{ref11}
 Zhang J, Sheng V S, Li T, et al. Improving crowdsourced label quality using noise correction[J]. IEEE transactions on neural networks and learning systems, 2017, 29(5): 1675-1688.
-
-\bibitem{ref12}
-Jiao Y, Latifi S, Yang M. Self error detection and correction for noisy labels based on error correcting output code in convolutional neural networks[C]//2019 IEEE 9th Annual Computing and Communication Workshop and Conference (CCWC). IEEE, 2019: 0311-0316.
 
 
 ```
