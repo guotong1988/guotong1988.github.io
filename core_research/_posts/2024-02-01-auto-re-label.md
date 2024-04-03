@@ -82,7 +82,7 @@ The experiment result on TREC-6 text classification dataset is shown in Table \c
 
 Data-centric \cite{ref5} approach which focuses on label quality by characterizing and identifying label errors in datasets.
 
-Label error correction or noise data correction\cite{ref6,ref7,ref8,ref9,ref10,ref11} is to correct the error labeled data to improve the dataset quality.
+Label error correction or noise data correction\cite{ref6,ref7,ref8,ref9,ref10,ref11,ref12} is to correct the error labeled data to improve the dataset quality.
 
 \cite{ref6} uses the label relationships to correct label error without human annotation. 
 \cite{ref7} corrected the original loss value by introducing the model’s prediction labels into loss function.
@@ -90,8 +90,9 @@ Label error correction or noise data correction\cite{ref6,ref7,ref8,ref9,ref10,r
 \cite{ref9} presents a human/machine learning method for cleaning training data of label noise when an alternate, high confidence labeling source is available.
 \cite{ref10} described a grammatical error annotation toolkit designed to automatically annotate parallel error correction data with explicit edit spans and error type information.
 \cite{ref11} uses a novel algorithm termed adaptive voting noise correction to precisely identify and correct the potential noisy labels. 
+\cite{ref12} proposes a novel algorithm that corrects the labels based on the noisy classifier prediction.
 
-
+Our method is different from the above works. We first verify that human re-labeling can improve the dataset quality. Then we propose our method that can automatically do the re-labeling without human annotation.
 
 ### 7. Conclusion
 
@@ -133,6 +134,8 @@ Bryant C J, Felice M, Briscoe E. Automatic annotation and evaluation of error ty
 \bibitem{ref11}
 Zhang J, Sheng V S, Li T, et al. Improving crowdsourced label quality using noise correction[J]. IEEE transactions on neural networks and learning systems, 2017, 29(5): 1675-1688.
 
+\bibitem{ref12}
+Zheng S, Wu P, Goswami A, et al. Error-bounded correction of noisy labels[C]//International Conference on Machine Learning. PMLR, 2020: 11447-11457.
 
 ```
 
