@@ -78,7 +78,7 @@ The experiment result on TREC-6 text classification dataset is shown in Table \c
 
 ![table1](/assets/png/auto-relabel/table1.png)
 
-![table1](/assets/png/auto-relabel/table2.png)
+![table2](/assets/png/auto-relabel/table2.png)
 
 ### 6. Related Work 
 
