@@ -66,6 +66,8 @@ In this section, we evaluate our method on our real-world dataset. Our dataset-A
 
 ### 5. Discussion
 
+#### 5.1 Why drop-noise method work?
+
 Why drop-noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
 
 If there are three very similar data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will probably predict class-A for data-3. 
@@ -77,6 +79,11 @@ And the trained model predict class-A for data-3. So the noise data here is data
 If we do not drop data-3, the model prediction for new data that is the most similar to data-3 will be class-B, which is wrong. The new data is more similar to data-3 than data-1/data-2.
 
 If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right.  
+
+
+#### 5.2 Real CTR Application
+
+This method can not apply to real CTR application, because CTR application like recommender system is memory-based. The CTR model memorizes the user-item data first. So this method can only improve the AUC of un-drop part of user-item data.
 
 ### 6. Conclusion
 
