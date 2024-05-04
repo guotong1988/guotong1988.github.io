@@ -47,7 +47,7 @@ In this paper, we solve these problems and propose these contributions:
 
 ### 2. Method
 
-The whole pipeline is shown in Figure \ref{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our text generation experiments. We adopt transformer \cite{vaswani2017attention} as our sales prediction model.
+The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our text generation experiments. We adopt transformer \cite{vaswani2017attention} as our sales prediction model.
 
 Our method contains 8 steps: 
 
@@ -70,7 +70,7 @@ In Step-8, we retrain the T5 model using the quality text identified of the last
 
 #### 2.1 Initial Training Dataset Construction
 
-This section corresponding to the Step-1 in Figure \ref{fig1}.
+This section corresponding to the Step-1 in Figure \cite{fig1}.
 We collect our initial training dataset by querying ChatGPT. Each prompt is formed by concatenating a product title. We ask ChatGPT to write descriptions for the products. We tried to add some product attributes as prompt, but most of the ChatGPT's results do not relate to the product attributes. Table \ref{table1} shows the prompt examples and the ChatGPT's results. Our T5 \cite{raffel2020exploring} model trained on this initial dataset gets 88\% available rate, under human evaluation. 
 
 #### 2.2 Sales Prediction Model
@@ -97,7 +97,7 @@ $$ Loss = |RPM - model\_output| $$
 #### 2.4 Causal Inference
 
 The role of causal inference in our approach is to be used to isolate the impact of text for product after having a trained sales prediction model. 
-When we make a prediction, we input the product features and the text to get score $A$, and only the product features to get score $B$. The gain effect of the text for the product is $A-B$. The detail framework of sales prediction and causal inference is shown in Figure \ref{fig2}.
+When we make a prediction, we input the product features and the text to get score $A$, and only the product features to get score $B$. The gain effect of the text for the product is $A-B$. The detail framework of sales prediction and causal inference is shown in Figure \cite{fig2}.
 
 ![fig1](/assets/png/textgen-improved-by-ctr/fig2.png)
 
@@ -111,7 +111,7 @@ $$ Rate = N_{good} / N_{total} $$
 
 where $N_{good}$ is the available generated text number and $N_{total}$ is the total texts that are human annotated. 
 
-The manual comparison of the Step-1 initial results and the optimised model results. The initial model results are corresponding to the Step-1 of the Figure \ref{fig1}. The optimised model results are the generated texts from the optimised model of the Step-8 of the Figure \ref{fig1}. We find it impossible to manually determine which of the two is more appropriate to be displayed on a product.
+The manual comparison of the Step-1 initial results and the optimised model results. The initial model results are corresponding to the Step-1 of the Figure \cite{fig1}. The optimised model results are the generated texts from the optimised model of the Step-8 of the Figure \cite{fig1}. We find it impossible to manually determine which of the two is more appropriate to be displayed on a product.
 
 The available rate result is shown in Table \ref{table3}. The comparison of the two generation result is shown is shown in Table \ref{table4}.
 
@@ -131,7 +131,7 @@ In order to improve the quality of the generated text, and to improve the RPM, w
 
 #### 4.2 Baseline Solution
 
-We first collect the results from ChatGPT to train our T5 model. We input product title and ask ChatGPT to write product description. The problems with the ChatGPT results are that the available rate of text is 89\% and 11\% of the product description is not suitable for display. So we clean the dataset based on ChatGPT API and train the T5 model with more than 99\% available rate of generated text. We use this generated results of our T5 model as the baseline, which is the Step-1 of Figure \ref{fig1}.
+We first collect the results from ChatGPT to train our T5 model. We input product title and ask ChatGPT to write product description. The problems with the ChatGPT results are that the available rate of text is 89\% and 11\% of the product description is not suitable for display. So we clean the dataset based on ChatGPT API and train the T5 model with more than 99\% available rate of generated text. We use this generated results of our T5 model as the baseline, which is the Step-1 of Figure \cite{fig1}.
 
 
 
