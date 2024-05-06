@@ -113,7 +113,7 @@ where $N_{good}$ is the available generated text number and $N_{total}$ is the t
 
 The manual comparison of the Step-1 initial results and the optimised model results. The initial model results are corresponding to the Step-1 of the Figure \cite{fig1}. The optimised model results are the generated texts from the optimised model of the Step-8 of the Figure \cite{fig1}. We find it impossible to manually determine which of the two is more appropriate to be displayed on a product.
 
-The available rate result is shown in Table \ref{table3}. The comparison of the two generation result is shown is shown in Table \ref{table4}.
+The available rate result is shown in Table \ref{table3}. The comparison of the two generation result is shown in Table \ref{table4}.
 
 #### 3.2 AB Experiments
 
