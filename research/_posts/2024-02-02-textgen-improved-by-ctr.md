@@ -105,9 +105,9 @@ When we make a prediction, we input the product features and the text to get sco
 
 #### 3.1 Manual Evaluation
 
-The manual evaluation contains two parts: the generation available rate, the comparison of the two generation results. The available rate is to determine whether the generated text is available. We use human annotation to compute:
+The manual evaluation is the generation available rate. The available rate is to determine whether the generated text is available for display online. We do human annotation for each data and then we compute:
 
-$$ Rate = N_{good} / N_{total} $$
+$$ AvailableRate = N_{good} / N_{total} $$
 
 where $N_{good}$ is the available generated text number and $N_{total}$ is the total texts that are human annotated. 
 
