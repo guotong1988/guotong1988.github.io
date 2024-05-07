@@ -91,13 +91,22 @@ The input features for the model include:
 
 We designed the training objective to capture the additional gain of text for product. So our training objective is the absolute value of the RPM, and we use the regression loss.
 
-$$ Loss = |RPM - model\_output| $$
+$$ modelOutput = model(allFeatures) $$
+
+$$ Loss = |RPM - modelOutput| $$
 
 
 #### 2.4 Causal Inference
 
 The role of causal inference in our approach is to be used to isolate the impact of text for product after having a trained sales prediction model. 
 When we make a prediction, we input the product features and the text to get score $A$, and only the product features to get score $B$. The gain effect of the text for the product is $A-B$. The detail framework of sales prediction and causal inference is shown in Figure \cite{fig2}.
+
+$$ ScoreA = model(productFeatures, textTokens) $$
+
+$$ ScoreB = model(productFeatures) $$
+
+$$ TextQuality = ScoreA - ScoreB $$
+
 
 ![fig1](/assets/png/textgen-improved-by-ctr/fig2.png)
 
