@@ -153,15 +153,15 @@ We design Algorithm \cite{alg2} because we found data with error labels in datas
 
 In this sub-section, we discuss other possible solutions to this problem. In summary, the essence of each method is the comparison of labeling efficiency.
 
-##### 4.2.1 Essay Question or Choices Question
+##### 4.2.1 Product attributes for input
 
-Essay question means annotators write the text answer. Writing the text answer by human without references is hard and time consuming. So in each manual annotation step, we give the annotators reference annotation results to choose from, rather than answering.
+In addition to product title as input, we have tried putting the product attributes like product type and product tags into the prompts, but we do not observe some improvement of text quality and diversity by ChatGPT.
 
-##### 4.2.2 Choose from Multiple Outputs
+##### 4.2.2 Choose from multiple outputs
 
 If we query ChatGPT and get multiple results for each input, we can manually choose the best output. The disadvantage is that it consumes multiples of the labelling time.
 
-##### 4.2.3 Labeling Each Data By Multiple Times
+##### 4.2.3 Labeling each data by multiple times
 
 To ensure the quality of the dataset, we can label each data by multiple times and get all the correct data. The disadvantage is that it also consumes multiples of the labelling time.
 
