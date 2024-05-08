@@ -19,7 +19,7 @@ type include T5 \cite{raffel2020exploring} and BART \cite{lewis2020bart}. In thi
 In E-commerce, product description can attract shoppers and improve sales. But manually writing a successful product description is highly time-consuming. Text generation \cite{zhang2022survey,prabhumoye2020exploring} technologies play a crucial role in this range of applications.
 
 
-Text generation has an input or a source sequence $X$ and an output or a target sequence $Y$ to be generated. In our product description generation tasks, $X$ is the product title and $Y$ is the product description. The examples are shown in Table \ref{table1}.
+Text generation has an input or a source sequence $X$ and an output or a target sequence $Y$ to be generated. In our product description generation tasks, $X$ is the product title and $Y$ is the product description. The examples are shown in Table \cite{table1}.
 
 
 The problem is to improve the quality of the generated text in E-commerce, then the following problem is how we define and judge what is high quality text. We find it impossible to manually judge which text is the better text for a product. To answer this problem, we define text that brings more sales to a product as better text. So we need to use user buying behaviour to judge which are better texts.
@@ -27,9 +27,9 @@ The problem is to improve the quality of the generated text in E-commerce, then 
 
 Then the problem is how to use user buying behaviour to select better quality text, the problem is that the text is displayed alongside the product, and we need to isolate the impact of the gain of the text on the product.
 
-In summary, in order to improve the quality of generated description text for product. We face these problems: 
+In summary, in order to improve the quality of generated description texts for products. We face these problems: 
 
-1) We cannot judge which text is the better text for a product by human labeling. If we can't judge and define text as good or bad, then we can't optimize it.
+1) We cannot judge which text is the better text to improve App sales for a product by human labeling. If we can't judge and define text as good or bad, then we can't optimize it. We can only judge whether the text is available for display online by human labeling.
 
 2) We use user buying behaviour to judge better text. Then we need to isolate the gain impact of the text. Because text is displayed on the product. The product descriptions and products are bound together to be displayed to the users.
 
@@ -37,33 +37,33 @@ In summary, in order to improve the quality of generated description text for pr
 
 In this paper, we solve these problems and propose these contributions:
 
-1) We use user buying behaviour to judge which text is better for a product, in order to solve the problem that we cannot judge it manually.
+1) We use user buying behaviour to judge which description is better for its product, in order to solve the problem that we cannot judge it manually.
 
-2) We train a sales prediction model upon the user buying logs of our E-commerce application. In order to isolate the gain impact of the text for the product, we use causal inference method.
+2) We train a sales prediction model upon the user buying logs of our E-commerce application. In order to isolate the gain impact of the description for its product, we use causal inference method.
 
-3) We design a complete solution to continuously improve the quality of generated product description, guided by user behaviour.
+3) We design a complete solution to continuously improve the quality of generated product description to improve App sales, guided by user behaviour.
 
 ![table12](/assets/png/textgen-improved-by-ctr/table1.png)
 
 ### 2. Method
 
-The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our text generation experiments. We adopt transformer \cite{vaswani2017attention} as our sales prediction model.
+The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our text generation experiments. We adopt transformer \cite{vaswani2017attention} added multilayer perceptron (MLP) as our sales prediction model.
 
 Our method contains 8 steps: 
 
 In Step-1, we get an initial dataset to train the T5 generative model. The initial dataset is constructed by query ChatGPT. We ask ChatGPT to write product description, input the product title as the prompts. We then remove the data in the training dataset that do not suitable to display online.
 
-In Step-2, we use the T5 model to generate product descriptions for hundreds of millions the products. 
+In Step-2, we use the data of Step-1 and train T5 model. Then we use the T5 model to generate product descriptions for hundreds of millions the products. 
 
-In Step-3, we display the generated product descriptions on the products. 
+In Step-3, we display the generated product descriptions on the products on the App. 
 
-In Step-4, we collect the logs of sales and views of each product.
+In Step-4, we collect the logs of user buying and user views of each product.
 
-In Step-5, we train the sales prediction model based on the online logs. The detail is illustrated in the following sections.
+In Step-5, we train the sales prediction model based on the online logs of Step-4. The detail is illustrated in the following sections.
 
-In Step-6 and Step-7, we use causal inference to find out the best quality product descriptions in the logs. The detail is illustrated in the following sections.
+In Step-6 and Step-7, we use causal inference and the sales prediction model to find the best quality product descriptions in the logs. The detail is illustrated in the following sections.
 
-In Step-8, we retrain the T5 model using the quality text identified of the last step. Then we do AB experiments to evaluate the performance of the generated product description of online App.
+In Step-8, we retrain the T5 model using the better texts found by Step-7. Then we do AB experiments to evaluate the performance of the generated product descriptions at online App.
 
 ![fig1](/assets/png/textgen-improved-by-ctr/fig1.png)
 
@@ -71,7 +71,7 @@ In Step-8, we retrain the T5 model using the quality text identified of the last
 #### 2.1 Initial Training Dataset Construction
 
 This section corresponding to the Step-1 in Figure \cite{fig1}.
-We collect our initial training dataset by querying ChatGPT. Each prompt is formed by concatenating a product title. We ask ChatGPT to write descriptions for the products. We tried to add some product attributes as prompt, but most of the ChatGPT's results do not relate to the product attributes. Table \ref{table1} shows the prompt examples and the ChatGPT's results. Our T5 \cite{raffel2020exploring} model trained on this initial dataset gets 88\% available rate, under human evaluation. 
+We collect our initial training dataset by querying ChatGPT. Each prompt is formed by concatenating a product title. We ask ChatGPT to write descriptions for the products. We tried to add some product attributes as prompt, but most of the ChatGPT's results do not relate to the product attributes. Table \cite{table1} shows the prompt examples and the ChatGPT's results. Our T5 \cite{raffel2020exploring} model trained on this initial dataset gets 88\% available rate, under human evaluation. 
 
 #### 2.2 Sales Prediction Model
 
@@ -122,7 +122,7 @@ where $N_{good}$ is the available generated text number and $N_{total}$ is the t
 
 The manual comparison of the Step-1 initial results and the optimised model results. The initial model results are corresponding to the Step-1 of the Figure \cite{fig1}. The optimised model results are the generated texts from the optimised model of the Step-8 of the Figure \cite{fig1}. We find it impossible to manually determine which of the two is more appropriate to be displayed on a product.
 
-The available rate result is shown in Table \ref{table3}. The comparison of the two generation result is shown in Table \ref{table4}.
+The available rate result is shown in Table \cite{table3}. The comparison of the two generation result is shown in Table \cite{table4}.
 
 #### 3.2 AB Experiments
 
