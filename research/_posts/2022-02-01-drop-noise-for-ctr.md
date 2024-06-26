@@ -12,7 +12,7 @@ description: "Drop Noise For CTR Prediction"
 
 ### Abstract
 
-Click-through rate (CTR) prediction is task to estimate the possibility of user clicking on a recommended item. The ground truth labels of this task are the click history of users. As there are many reasons why noise data or low quality data may be generated, the training data has a certain amount of noise data or low quality data. In this work, We propose a simple but effective method to find the noise data. Our method could improve the offline AUC from 0.60 to 0.75 on our real-world dataset.
+Click-through rate (CTR) prediction is task to estimate the possibility of user clicking on a recommended item. The ground truth labels of this task are the click history of users. As there are many reasons why noise data or low quality data may be generated, the training data has a certain amount of noise data or low quality data. In this work, We propose a simple but effective method to find the noise data. Our method could improve the offline AUC from 0.60 to 0.75 on our real-world dataset. **But this method can not apply to real CTR application.**
 
 #### Keywords
 
