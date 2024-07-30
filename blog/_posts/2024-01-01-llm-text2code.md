@@ -65,7 +65,11 @@ Returning fuzzy answers for fuzzy questions by LLMs and returning high-precision
 ## 5. Future Works
 In our design, we view that data is part of the code. That is, models trained on the data, viewed as part of the code.
 
-In the future, we will try to design an AI system contains more modules: code2text, code2code, to build a better expert system like a better AI-doctor/AI-lawyer/AI-teacher.
+In the future, we will try to design an AI system contains more modules: code2text, code2code, to build a better expert system like a better AI-doctor/AI-lawyer/AI-teacher:
+
+github.com/guotong1988/code2image\_LM\_image2code
+
+github.com/guotong1988/code2text\_LLM\_text2code
 
 ## References
 
