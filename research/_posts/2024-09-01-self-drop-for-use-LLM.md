@@ -14,7 +14,7 @@ Leveraging large language models (LLMs) to performs direct inference or build tr
 
 ### 1. Introduction
 
-In recent years, the development of large language models (LLMs) [1] has brought breakthroughs on NLP applications. However the quality of the training datasets or inference results of LLMs exist some noise data for the specific deep learning (DL) [2] applications. In order to solve the noise data problem, we propose our self-eval-drop method to clean the datasets by LLMs API.
+In recent years, the development of large language models (LLMs) \cite{ref1} has brought breakthroughs on NLP applications. However the quality of the training datasets or inference results of LLMs exist some noise data for the specific deep learning (DL) \cite{ref2} applications. In order to solve the noise data problem, we propose our self-eval-drop method to clean the datasets by LLMs API.
 
 (some examples to leverage LLMs API)
 
@@ -33,6 +33,10 @@ To get the seed dataset that sample from the to-clean dataset, we should sample 
 To find the similar data in the to-clean dataset for each badcase in seed dataset, we define the two texts that contain the most common tokens as the most similar two texts.
 
 ### 3. Manual Evaluation
+
+The manual evaluation results is shown in Table \ref{table1}.
+
+![table1](/assets/png/self-eval-drop/table1.png)
 
 ### 4. Discussion
 
