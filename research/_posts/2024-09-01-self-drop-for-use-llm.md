@@ -20,9 +20,13 @@ In recent years, the development of large language models (LLMs) \cite{ref1} has
 
 ### 2. Method
 
-![alg1](/assets/png/self-eval-drop/alg1.png)
+The pseudo code is shown in algorithm \cite{alg1}.
 
 ![fig1](/assets/png/self-eval-drop/fig1.png)
+
+The whole pipeline is shown in figure \cite{fig1}.
+
+![alg1](/assets/png/self-eval-drop/alg1.png)
 
 There are some key steps in the pipeline to be illustrated in detail.
 
@@ -36,7 +40,7 @@ To find the similar data in the to-clean dataset for each badcase in seed datase
 
 ### 3. Manual Evaluation
 
-The manual evaluation results is shown in Table \ref{table1}.
+The manual evaluation results is shown in Table \cite{table1}.
 
 ![table1](/assets/png/self-eval-drop/table1.png)
 
@@ -46,6 +50,8 @@ Prompt the LLMs to generate sufficient and diverse results, ensuring that the qu
 
 
 ### 5. Conclusion
+
+In order to solve the problem that the dataset by LLMs API has a certain number of noise data, we propose our method: First, we sample a seed dataset from the to-clean dataset by LLMs API. Then we manually find the badcases in the seed dataset. Then we search the to-clean dataset by querying the badcases to find the (most) similar data of the badcases in the to-clean dataset and remove the searched data. The manual evaluation results show that our simple self-eval-drop method can improve the accuracy of the to-clean dataset by LLM API to more than 97% by only sampling and manually evaluating about 1% of the to-clean dataset as the seed dataset.
 
 ### Reference
 ```
