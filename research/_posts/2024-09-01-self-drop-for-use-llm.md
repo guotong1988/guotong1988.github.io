@@ -14,11 +14,15 @@ Leveraging large language models (LLMs) to performs direct inference or build tr
 
 ### 1. Introduction
 
-In recent years, the development of large language models (LLMs) \cite{ref1,ref3} has brought breakthroughs on NLP applications. However the quality of the training datasets or inference results of LLMs exist some noise data for the specific deep learning (DL) \cite{ref2} applications. In order to solve the noise data problem, we propose our self-eval-drop method to clean the datasets by LLMs API.
+In recent years, the development of large language models (LLMs) \cite{ref1,ref3,ref4,ref5} has brought breakthroughs on NLP applications. However the quality of the training datasets or inference results of LLMs exist some noise data for the specific deep learning (DL) \cite{ref2} applications. In order to solve the noise data problem, we propose our self-eval-drop method to clean the datasets by LLMs API.
 
 ### 2. Method
 
 The pseudo code is shown in algorithm \cite{alg1}. The whole pipeline is shown in figure \cite{fig1}. Our pipeline method has 5 steps:
+
+![table1](/assets/png/self-eval-drop/alg1.png)
+
+![table1](/assets/png/self-eval-drop/fig1.png)
 
 #### 2.1 Prompt LLMs for Specific Problem
 In order to solve our NLP problem, such as text generation, named entity recognition, we input the prompts to the LLMs and get the results as datasets.
@@ -61,5 +65,11 @@ Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolu
 
 \bibitem{ref3}
 Hadi M U, Qureshi R, Shah A, et al. Large language models: a comprehensive survey of its applications, challenges, limitations, and future prospects[J]. Authorea Preprints, 2023.
+
+\bibitem{ref4}
+Yang A, Yang B, Hui B, et al. Qwen2 technical report[J]. arXiv preprint arXiv:2407.10671, 2024.
+
+\bibitem{ref5}
+Touvron H, Lavril T, Izacard G, et al. Llama: Open and efficient foundation language models[J]. arXiv preprint arXiv:2302.13971, 2023.
 
 ```
