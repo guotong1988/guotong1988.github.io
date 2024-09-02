@@ -10,23 +10,35 @@ description: "Simple Self-Eval-Drop for Leveraging LLMs"
 
 ### Abstract
 
-Leveraging large language models (LLMs) to performs direct inference or build training datasets has becoming an important method for natural language processing (NLP) applications. However the quality of the training datasets or inference results of LLMs exist some noise data. In this paper, we propose our self-eval-drop method to clean the datasets by LLMs API. We first sort the to-clean dataset and then sample a seed dataset from the to-clean dataset. Then we manually evaluate the seed dataset and find badcases in the seed dataset. Then we loop the badcases to find the (batch) similar data in the to-clean dataset for each badcase. The we remove the found similar data of badcases from the to-clean dataset. The manual evaluation results show that our simple self-eval-drop method can improve the accuracy of the to-clean dataset to more than 97% by only sampling and evaluating about 1% of the to-clean dataset as the seed dataset.
+Leveraging large language models (LLMs) to performs direct inference or build training datasets has becoming an important method for natural language processing (NLP) applications. However the quality of the training datasets or inference results of LLMs exist some noise data. In this paper, we propose our self-eval-drop method to clean the datasets by LLMs API. We first sort the to-clean dataset by LLMs API and then sample a seed dataset from the to-clean dataset. Then we manually evaluate the seed dataset and find badcases in the seed dataset. Then we loop the badcases to find the (batch) similar data in the to-clean dataset for each badcase. The we remove the found similar data of badcases from the to-clean dataset. The manual evaluation results show that our simple self-eval-drop method can improve the accuracy of the to-clean dataset to more than 97% by only sampling and evaluating about 1% of the to-clean dataset as the seed dataset.
 
-### Introduction
+### 1. Introduction
 
 In recent years, the development of large language models (LLMs) [1] has brought breakthroughs on NLP applications. However the quality of the training datasets or inference results of LLMs exist some noise data for the specific deep learning (DL) [2] applications. In order to solve the noise data problem, we propose our self-eval-drop method to clean the datasets by LLMs API.
 
 (some examples to leverage LLMs API)
 
-### Method
+### 2. Method
 
-### Manual Evaluation
+![fig1](/assets/png/self-eval-drop/fig1.png)
 
-### Discussion
+There are some key steps in the pipeline to be illustrated in detail.
 
-### Relate Work
+#### 2.1 Representative Sampling
 
-### Conclusion
+To get the seed dataset that sample from the to-clean dataset, we should sample the representative data. In this paper, we sort the to-clean dataset by alphabetical order and sample 1 data every 100 data, when iterating sequentially.
+
+#### 2.2 Similar Data Search
+
+To find the similar data in the to-clean dataset for each badcase in seed dataset, we define the two texts that contain the most common tokens as the most similar two texts.
+
+### 3. Manual Evaluation
+
+### 4. Discussion
+
+### 5. Relate Work
+
+### 6. Conclusion
 
 ### Reference
 ```
