@@ -20,9 +20,9 @@ In recent years, the development of large language models (LLMs) \cite{ref1,ref3
 
 The pseudo code is shown in algorithm \cite{alg1}. The whole pipeline is shown in figure \cite{fig1}. Our pipeline method has 5 steps:
 
-![table1](/assets/png/self-eval-drop/alg1.png)
+![alg1](/assets/png/self-eval-drop/alg1.png)
 
-![table1](/assets/png/self-eval-drop/fig1.png)
+![fig1](/assets/png/self-eval-drop/fig1.png)
 
 #### 2.1 Prompt LLMs for Specific Problem
 In order to solve our NLP problem, such as text generation, named entity recognition, we input the prompts to the LLMs and get the results as datasets.
