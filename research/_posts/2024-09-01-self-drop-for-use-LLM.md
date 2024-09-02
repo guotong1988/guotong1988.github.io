@@ -42,11 +42,8 @@ The manual evaluation results is shown in Table \ref{table1}.
 
 Prompt the LLMs to generate sufficient and diverse results, ensuring that the quantity of this data is both controllable and adequate. So, after removing some noisy data, the quantity of the remaining data is still adequate.
 
-### 5. Relate Work
 
-
-
-### 6. Conclusion
+### 5. Conclusion
 
 ### Reference
 ```
