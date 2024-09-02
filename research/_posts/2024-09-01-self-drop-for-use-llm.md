@@ -18,23 +18,22 @@ In recent years, the development of large language models (LLMs) \cite{ref1,ref3
 
 ### 2. Method
 
-The pseudo code is shown in algorithm \cite{alg1}.
+The pseudo code is shown in algorithm \cite{alg1}. The whole pipeline is shown in figure \cite{fig1}. Our pipeline method has 5 steps:
 
-![fig1](/assets/png/self-eval-drop/alg1.png)
+#### 2.1 Prompt LLMs for Specific Problem
+In order to solve our NLP problem, such as text generation, named entity recognition, we input the prompts to the LLMs and get the results as datasets.
 
-The whole pipeline is shown in figure \cite{fig1}.
+#### 2.2 Representative Sampling for Seed Dataset
+In this step, to get the seed dataset that sample from the to-clean dataset, we should sample the representative data. In this paper, we sort the to-clean dataset by alphabetical order and sample 1 data every 100 data, when iterating sequentially.
 
-![alg1](/assets/png/self-eval-drop/fig1.png)
+#### 2.3 Find Badcases in Seed Dataset
+In this step, we manually evaluate the seed dataset. We find the badcases in the seed dataset.
 
-There are some key steps in the pipeline to be illustrated in detail.
+#### 2.4 Similar Data Search
+In this step, we find the similar data in the to-clean dataset for each badcase in seed dataset, we define the two texts that contain the most common tokens as the most similar two texts.
 
-#### 2.1 Representative Sampling
-
-To get the seed dataset that sample from the to-clean dataset, we should sample the representative data. In this paper, we sort the to-clean dataset by alphabetical order and sample 1 data every 100 data, when iterating sequentially.
-
-#### 2.2 Similar Data Search
-
-To find the similar data in the to-clean dataset for each badcase in seed dataset, we define the two texts that contain the most common tokens as the most similar two texts.
+#### 2.5 Removing the Similar Data
+In this step, we remove the searched similar data in the to-clean dataset by looping the badcases and get the cleaned dataset.
 
 ### 3. Manual Evaluation
 
