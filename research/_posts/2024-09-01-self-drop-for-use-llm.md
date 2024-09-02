@@ -20,6 +20,8 @@ In recent years, the development of large language models (LLMs) \cite{ref1} has
 
 ### 2. Method
 
+![alg1](/assets/png/self-eval-drop/alg1.png)
+
 ![fig1](/assets/png/self-eval-drop/fig1.png)
 
 There are some key steps in the pipeline to be illustrated in detail.
