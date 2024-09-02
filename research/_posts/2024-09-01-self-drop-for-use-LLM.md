@@ -40,7 +40,11 @@ The manual evaluation results is shown in Table \ref{table1}.
 
 ### 4. Discussion
 
+Prompt the LLMs to generate sufficient and diverse results, ensuring that the quantity of this data is both controllable and adequate. So, after removing some noisy data, the quantity of the remaining data is still adequate.
+
 ### 5. Relate Work
+
+
 
 ### 6. Conclusion
 
@@ -49,4 +53,6 @@ The manual evaluation results is shown in Table \ref{table1}.
 [1] Achiam J, Adler S, Agarwal S, et al. Gpt-4 technical report[J]. arXiv preprint arXiv:2303.08774, 2023.
 
 [2] Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25.
+
+[3] Hadi M U, Qureshi R, Shah A, et al. Large language models: a comprehensive survey of its applications, challenges, limitations, and future prospects[J]. Authorea Preprints, 2023.
 ```
