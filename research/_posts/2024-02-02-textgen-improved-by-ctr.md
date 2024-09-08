@@ -43,7 +43,7 @@ In this paper, we solve these problems and propose these contributions:
 
 3) We design a complete solution to continuously improve the quality of generated product description to improve App sales, guided by user behaviour.
 
-![table12](/assets/png/textgen-improved-by-ctr/table1.png)
+![table12](/assets/png/textgen-improved-by-ctr/table12.png)
 
 ### 2. Method
 
@@ -130,7 +130,7 @@ The available rate result is shown in Table \cite{table3}. The comparison of the
 
 We do AB experiments to evaluate the online performance of our method. We display the two product descriptions to two groups of users. Then we count the RPM of the two groups of users. The results show that the optimised texts improve the RPM by about 0.1\%, compared to another group.
 
-![table34](/assets/png/textgen-improved-by-ctr/table2.png)
+![table34](/assets/png/textgen-improved-by-ctr/table34.png)
 
 ### 4. Discussion
 
