@@ -88,9 +88,9 @@ In this section, we illustrate the dataset size, model parameters and experiment
 
 #### 3.1 Evaluation
 
-##### 3.1.1 Generation Accuracy
+##### 3.1.1 Available Rate
 
-In this paper, we do not use BLEU to evaluate the generation results. In our scenario, our goal is to determine whether the generated text is available. We use human annotation to compute the **available rate**:
+In this paper, we do not use BLEU to evaluate the generation results. In our scenario, our goal is to determine whether the generated text is available. We use human annotation to compute the available rate:
 
 $$ Acc = N_{good} / N_{total} $$
 
@@ -117,7 +117,7 @@ Then we get:
 
 $$ N_{seed} =  N_{training} / K_{search}  $$
 
-where $N_{seed}$ is the seed dataset size. $Acc_{training}$ is the generation accuracy. $K_{search}$ is the average searched texts amount by each data of seed dataset.
+where $N_{seed}$ is the seed dataset size. $Acc_{training}$ is the available rate. $K_{search}$ is the average searched texts amount by each data of seed dataset.
 
 ##### 3.1.6 Dev Dataset
 
