@@ -90,7 +90,7 @@ In this section, we illustrate the dataset size, model parameters and experiment
 
 ##### 3.1.1 Generation Accuracy
 
-In this paper, we do not use BLEU to evaluate the generation results. In our scenario, our goal is to determine whether the generated text is available. We use human annotation to compute:
+In this paper, we do not use BLEU to evaluate the generation results. In our scenario, our goal is to determine whether the generated text is available. We use human annotation to compute the **available rate**:
 
 $$ Acc = N_{good} / N_{total} $$
 
