@@ -23,7 +23,7 @@ Hi! My name is Tong Guo（郭同）.
 
 [my.scholar.google](https://scholar.google.com/citations?user=4J7HYNAAAAAJ)
 
-Reviewer of ACL/NAACL/EMNLP Industry Track
+Reviewer of ACL-2023, NAACL-2022/2024, EMNLP-2022/2023/2024, COLING-2025 Industry Track
 
 ## Work
 
