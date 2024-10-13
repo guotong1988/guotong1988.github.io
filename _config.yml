@@ -29,7 +29,7 @@ social_sites:
   github:  guotong1988
   twitter: guotong198801
 
-rss: rss
+# rss: rss
 
 # Build settings
 markdown: kramdown
