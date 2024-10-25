@@ -49,6 +49,12 @@ The manual evaluation results is shown in Table \cite{table1}.
 
 Prompt the LLMs to generate sufficient and diverse results, ensuring that the quantity of this data is both controllable and adequate. So, after removing some noisy data, the quantity of the remaining data is still adequate.
 
+#### 4.1 Motivation
+
+First, in the absence of sufficient labeling manpower, we must find ways to reduce the amount of data that needs to be labeled. If we can reduce the amount of data to be labeled to a level that a single programmer can handle, then we do not need an additional labeling team.
+
+Secondly, the number of calls to the large language models is sufficient, so the amount of data we can obtain is adequate. Therefore, the key issue is to improve the quality of the data.
+
 
 ### 5. Conclusion
 
