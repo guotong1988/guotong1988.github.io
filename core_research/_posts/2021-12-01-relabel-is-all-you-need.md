@@ -135,7 +135,7 @@ For object detection task, \cite{ref11} uses the re-label method and surpasses h
 
 We argue that the key point to improve the industry deep learning application performance is to correct the noisy data. We propose a simple method to achieve our idea and show the experimental results to verify our idea. 
 
-For future optimization directions, we believe that expanding the "coverage" of the dataset on the basis of achieving 100% accuracy on the training dataset can lead to better deep learning models.
+For future optimization directions, we believe that expanding the 'coverage' of the dataset on the basis of achieving 100% accuracy on the training dataset can lead to better deep learning models.
 
 ### References
 ```
