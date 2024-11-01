@@ -74,7 +74,7 @@ Fixing the wrong model predicted results for a new evaluation data, means fixing
 
 In this paper, we solve the problem of the low accuracy under human evaluation after we achieve good accuracy of dev dataset. We propose the pipeline: First, we find the badcase in the prediction data and summarize the right knowledge for human labeling. Second, we summarize the pattern from prediction badcase data and re-label the training data which match the pattern. Loop this pipeline means we inject the right knowledge/rule to the deep model by re-label the training data retrieved by pattern from badcase prediction data. The experiment results verify our idea.
 
-Our idea can apply to a broad set of deep learning industry applications. For future optimization directions, we believe that expanding the "coverage" of the dataset on the basis of achieving 100% accuracy on the training dataset can lead to better deep learning models.
+Our idea can apply to a broad set of deep learning industry applications. For future optimization directions, we believe that expanding the 'coverage' of the dataset on the basis of achieving 100% accuracy on the training dataset can lead to better deep learning models.
 
 
 ### References
