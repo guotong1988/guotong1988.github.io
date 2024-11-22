@@ -66,7 +66,7 @@ The similar search method can also apply to quality inspection of the human-labe
 
 #### 5.1 Motivation
 
-**If the model predicted result is wrong for a new evaluation/test data. Then the new evaluation/test data's most similar data in the training dataset must be wrong.**
+**If the model predicted result is wrong for a new evaluation/test data, then the new evaluation/test data's most similar data in the training dataset must be wrong.**
 
 Fixing the wrong model predicted results for a new evaluation data, means fixing the evaluation data's most similar data in the training dataset. Editing the model predicted results for a new evaluation data, means editing the evaluation data's most similar data in the training dataset. 
 
