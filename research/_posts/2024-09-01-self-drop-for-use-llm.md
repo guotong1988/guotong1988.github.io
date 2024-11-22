@@ -39,6 +39,8 @@ In this step, we find the similar data in the to-clean dataset for each badcase 
 #### 2.5 Removing the Similar Data
 In this step, we remove the searched similar data in the to-clean dataset by looping the badcases and get the cleaned dataset.
 
+If we consider the data insufficient, we will return to Step-1.
+
 ### 3. Manual Evaluation
 
 The manual evaluation results is shown in Table \cite{table1}.
