@@ -11,8 +11,7 @@ description: "Automatic ReLabel Is All You Need For 97% Accuracy At Dev Dataset"
 # Automatic Label Error Correction
 
 ### Abstract
-
-In the previous works, we verify that manual re-labeling the training data that model prediction do not equal to the manual label, improve the accuracy at dev dataset and human evaluation.
+In industry deep learning application, our manually labeled data has a certain number of noisy data. In the previous works, we verify that manual re-labeling the training data that model prediction do not equal to the manual label, improve the accuracy at dev dataset and human evaluation.
 But manual re-labeling requires a lot of human labor to correct the noisy data in the training dataset. We think that the noisy data is the training data that model prediction and manual label is not equal.
 To solve this problem, we propose the randomly re-setting method that automaticly improve the accuracy at dev dataset and human evaluation.
 The core idea is that, we randomly re-set all the noisy data to model prediction or the manual label. All the noisy data means the noisy data in training dataset and dev dataset.
@@ -64,13 +63,15 @@ Step-4. We use dev dataset accuracy to select the best dataset from all the $2^N
 
 ### 4. Discussion
 
-From the noisy data correction point of view, the noisy data that model prediction and manual label is not equal. 
+From the noisy data correction point of view, the noisy data that model prediction and manual label are not equal. 
 So any label editing to these noisy data may be the improvement to the dataset quality.
 
 It seems that our method definitely improves the accuracy on the dev dataset, but not necessarily the accuracy of the manual evaluation.
 But based on our previous work \cite{ref2}, the accuracy of the dev dataset and the accuracy of the human evaluation are linearly correlated.
 
 We did the manual re-labeling experiments in \cite{ref2}, we verify that the improved dataset exists in all 2^N possible datasets.
+
+The cost of annotation time is crucial for deep learning tasks based on manually labeled data. If there is not enough labeling manpower, we must find ways to reduce the amount of data that needs to be labeled. If we can reduce the amount of data to be labeled to a level that a single programmer can handle, then we do not need an additional labeling team.
 
 ### 5. Experiments On Open Datasets
 
