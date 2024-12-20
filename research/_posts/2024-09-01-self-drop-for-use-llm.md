@@ -57,6 +57,9 @@ The cost of annotation time is crucial for deep learning tasks based on manually
 
 Secondly, the number of calls to the large language models is sufficient, so the amount of data we can obtain is adequate. Therefore, the key issue is to improve the quality of the data.
 
+#### 4.2 About Prompt 
+
+Under the condition that the prompt itself is correct, the more content in the prompt, the more accurate LLMs' response will be. The prompt is equivalent to the features of a model's input. When training a model on your own, you also hope that, given the correctness of the features, the more features, the better. Covering various situations, you can even input the answer directly into the prompt for the LLMs.
 
 ### 5. Conclusion
 
