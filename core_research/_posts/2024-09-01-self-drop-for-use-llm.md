@@ -18,9 +18,11 @@ In recent years, the development of large language models (LLMs) \cite{ref1,ref3
 
 ### 2. Method
 
-The pseudo code is shown in algorithm \cite{alg1}. The whole pipeline is shown in figure \cite{fig1}. Our pipeline method has 5 steps:
+The pseudo code is shown in algorithm \cite{alg1}. 
 
 ![alg1](/assets/png/self-eval-drop/alg1.png)
+
+The whole pipeline is shown in figure \cite{fig1}. Our pipeline method has 5 steps:
 
 ![fig1](/assets/png/self-eval-drop/fig1.png)
 
