@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research works by time order
+title: These works propose methods for efficiently implementing models with an accuracy of 99%
 description: Research papers of Tong Guo
 permalink: /core_research/
 ---
