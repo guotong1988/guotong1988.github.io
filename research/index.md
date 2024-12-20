@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research works by time order
+title: research works by time order
 description: Research papers of Tong Guo
 permalink: /research/
 ---
