@@ -1,6 +1,6 @@
 ---
 layout: page
-title: efficiently implementing models with an accuracy of 99%
+title: efficiently get models with an accuracy of 99%
 description: Research papers of Tong Guo
 permalink: /core_research/
 ---
