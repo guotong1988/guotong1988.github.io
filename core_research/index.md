@@ -1,6 +1,6 @@
 ---
 layout: page
-title: efficiently get 99% accuracy models
+title: research works by time order
 description: Research papers of Tong Guo
 permalink: /core_research/
 ---
