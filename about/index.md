@@ -33,6 +33,6 @@ Hi! My name is Tong Guo（郭同）.
 
 2018-2019, Rokid AI Lab
 
-2019-Now, Meiuan
+2019-Now, Meituan 
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
