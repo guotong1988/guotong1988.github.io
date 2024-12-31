@@ -32,7 +32,11 @@ Our T5 model trained on the final dataset achieves a coverage rate of over 95% a
 
 ### 4. Discussion
 
-#### 4.1 Motivation
+There are many ways to merge the dataset from LLMs and the dataset based on orders:
+
+1) Directly mix the order-based dataset and the cleaned LLMs dataset, if the accuracy of the LLMs dataset has also reached over 95%, considering the dataset based on orders already has an accuracy of over 95%.
+
+2) If the prediction results for each query from the T5 model trained on order-based dataset are equal to those prediction from the LLMs, then append the training dataset with this data. If there is insufficient labeling manpower to perform the aforementioned LLMs data cleaning manually.
 
 
 ### 5. Conclusion
