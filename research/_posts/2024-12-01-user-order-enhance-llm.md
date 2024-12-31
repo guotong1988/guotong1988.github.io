@@ -40,7 +40,7 @@ There are many ways to merge the dataset from LLMs and the dataset based on orde
 
 
 ### 5. Conclusion
-
+This paper proposes a method of constructing a training dataset using query tag mining based on user orders, while also integrating a dataset for query tagging from LLMs. The T5 model trained on the final dataset can achieve 95% coverage and 95% accuracy in query understanding.
 
 ### Reference
 ```
