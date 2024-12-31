@@ -23,7 +23,8 @@ After cleaning the dataset by prompting the LLMs, combine it with the dataset mi
 ![fig1](/assets/png/self-eval-drop/fig1.png)
 #### 2.2 User Behaviour Based Query Analysis
 ![fig1](/assets/png/user-order-enhance-llm/fig1.png)
-
+#### 2.3 Use Merged Dataset To Train 
+The final merged dataset has sufficient data quantity and quality to train a generative model that outputs tags for a given input query. Specifically, we used T5. This T5 model performs tagging predictions for each query.
 
 ### 3. Evaluation
 
