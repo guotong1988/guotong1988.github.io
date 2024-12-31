@@ -15,3 +15,10 @@ We present a simple method to find the noise data and remove them. We select the
 The experiment result shows that our method works. For industry deep learning application, our method improves the text classification accuracy from % to % in dev dataset, 
 and improve the human-evaluation accuracy from % to %. 
 The conclusion is: The self-predict and remove method of this paper can improve the accuracy to about 90\% automatically, if the base dev accuracy is around 80\%.
+
+### 1. Introduction
+
+
+### 2. Method
+
+![fig1](/assets/png/self-refine-use-llm/fig1.png)
