@@ -19,7 +19,7 @@ Query analysis is the task of query tagging, such as query synonyms, query categ
 ### 2. Method
 
 #### 2.1 Prompt LLMs for Query Analysis
-
+![fig1](/assets/png/self-eval-drop/fig1.png)
 #### 2.2 User Behaviour Based Query Analysis
 ![fig1](/assets/png/user-order-enhance-llm/fig1.png)
 
