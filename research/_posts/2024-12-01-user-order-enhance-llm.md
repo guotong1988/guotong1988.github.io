@@ -14,7 +14,9 @@ The advantage of using LLMs (Large Language Models) for query understanding is t
 
 ### 1. Introduction
 
-Query analysis is the task of query tagging, such as query synonyms, query categories, etc.
+Query analysis, or query understanding, is the task of query tagging, such as query synonyms, query categories, etc. query understanding is a crucial part of the search system.
+In an e-commerce platform, search querys and user orders are closely linked, making it possible to mine search query tags based on user orders.
+At the same time, the emergence of LLMs (Large Language Models) allows for the possibility of returning desired search query tags based on customized prompts, potentially enhanced by additional auxiliary information from search results for the prompts.
 
 ### 2. Method
 After cleaning the dataset by prompting the LLMs, combine it with the dataset mined based on user orders to obtain the final training dataset. The LLMs dataset and order-based dataset are constructed as follows:
