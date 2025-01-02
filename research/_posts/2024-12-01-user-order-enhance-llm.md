@@ -18,7 +18,7 @@ Query analysis, or query understanding, is the task of query tagging, such as qu
 In an e-commerce platform, search querys and user orders are closely linked, making it possible to mine search query tags based on user orders.
 At the same time, the emergence of LLMs (Large Language Models) allows for the possibility of returning desired search query tags based on customized prompts, potentially enhanced by additional auxiliary information from search results for the prompts.
 
-The problem with prompting LLMs for query analysis in e-commerce search is that the accuracy rate can at most reach up to 88%-90%, due to the lack of domain specific information. 
+The problem with prompting LLMs for query analysis in e-commerce search is that the accuracy rate can at most reach up to 88%-90%, due to the lack of domain specific information. At the same time, the coverage can exceed 95% because almost any input prompt containing query information given to LLMs will yield a result.
 The problem with order-based query analysis is that the coverage rate of the query tags is lower than 50%, with an accuracy greater than 95% that is usable.
 Therefore, this paper proposes a method for constructing a training dataset that combines the two approaches to train a model with a coverage rate of over 95% and an accuracy of over 95%.
 
