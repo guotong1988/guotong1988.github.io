@@ -36,9 +36,11 @@ Count the search querys with the highest and second highest amount of orders in 
 #### 2.3 Use Merged Dataset To Train 
 The final merged dataset has sufficient data quantity and quality to train a generative model that outputs tags for a given input query. Specifically, we used T5 \cite{ref4}. This T5 model performs tagging predictions for each query.
 
-### 3. Evaluation
+### 3. Experiments
 
 Our T5 model trained on the final dataset achieves a coverage rate of over 95% and an accuracy rate of over 95% for query tagging.
+
+![fig2](/assets/png/user-order-enhance-llm/table1.png)
 
 ### 4. Discussion
 
