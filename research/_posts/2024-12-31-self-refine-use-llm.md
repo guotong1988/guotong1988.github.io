@@ -10,7 +10,7 @@ description: "Self-Refine Learning For Cleaning LLMs Data"
 
 ### Abstract
 
-In industry NLP application, our data by prompting large language models (LLMs) has a certain number of noise data. 
+In industry NLP application, our dataset by prompting large language models (LLMs) has a certain number of noise data. 
 We present a simple method to find the noise data and remove them. 
 We retain the data that contains certain common tokens between the LLMs data and the prediction results of a generative model trained on the LLMs data.
 We remove the data that does not contain certain common tokens between the LLMs data and the prediction results of a generative model trained on the LLMs data.
