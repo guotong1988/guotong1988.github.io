@@ -11,7 +11,7 @@ description: "ReLabel Is All You Need For 97% Accuracy At Dev Dataset"
 # The Re-Label Method For Data-Centric Machine Learning
 
 ### Abstract
-In industry deep learning application, our manually labeled data has a certain number of noisy data. To solve this problem and achieve more than 90 score in dev dataset, we present a simple method to find the noisy data and re-label the noisy data by human, given the model predictions as references in human labeling. In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, click-through rate prediction. The dev dataset evaluation results and human evaluation results verify our idea.
+In industry deep learning application, our manually labeled dataset has a certain number of noisy data. To solve this problem and achieve more than 90 score in dev dataset, we present a simple method to find the noisy data and re-label the noisy data by human, given the model predictions as references in human labeling. In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, click-through rate prediction. The dev dataset evaluation results and human evaluation results verify our idea.
 
 #### Keywords
 
