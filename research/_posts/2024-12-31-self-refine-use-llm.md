@@ -11,10 +11,12 @@ description: "Self-Refine Learning For Leveraging LLMs Data"
 ### Abstract
 
 In industry NLP application, our data by prompting large language models (LLMs) has a certain number of noise data. 
-We present a simple method to find the noise data and remove them. We select the noise data whose LLMs' label is not contained in the top-K model's predictions. 
-The experiment result shows that our method works. For industry deep learning application, our method improves the text classification accuracy from % to % in dev dataset, 
-and improve the human-evaluation accuracy from % to %. 
-The conclusion is: The self-predict and remove method of this paper can improve the accuracy to about 90\% automatically, if the base dev accuracy is around 80\%.
+We present a simple method to find the noise data and remove them. 
+We retain the data that contains certain common tokens between the LLMs data and the prediction results of a trained generative model on the LLMs data.
+We remove the data that does not contain certain common tokens between the LLMs data and the prediction results of a trained generative model on the LLMs data.
+We adopt T5-Base as our generative model.
+The experiment result shows our method is highly effective and **does not require any manual annotation**.
+For industry deep learning application, our method improves the NLP tasks accuracy from 88% to 98% under human evaluation.
 
 ### 1. Introduction
 
