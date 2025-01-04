@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Self-Refine Learning For Leveraging LLMs Data"
+title: "Self-Refine Learning For Cleaning LLMs Data"
 date: 2024-12-31
 category: research
 author: "Tong Guo"
-description: "Self-Refine Learning For Leveraging LLMs Data"
+description: "Self-Refine Learning For Cleaning LLMs Data"
 ---
-# Self-Refine Learning For Leveraging LLMs Data
+# Self-Refine Learning For Cleaning LLMs Data
 
 ### Abstract
 
