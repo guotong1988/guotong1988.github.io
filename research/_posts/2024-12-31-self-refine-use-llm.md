@@ -42,6 +42,8 @@ T5 is a model based on the transformer encoder-decoder architecture \cite{ref5}.
 
 ### 6. Conclusion
 
+This paper proposes an automated, annotation-free method for cleaning dataset obtained from LLMs through prompting. In human evaluations, this method can increase accuracy from 88% to 98% in our NLP tasks. Additionally, this method can also be extended to other LLMs data-driven tasks, such as computer vision tasks.
+
 ### Reference
 
 ```
