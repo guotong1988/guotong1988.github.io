@@ -33,6 +33,10 @@ With the development of LLMs, prompting LLMs to obtain a domain-specific trainin
 
 ### 4. Discussion
 
+In actual observations, we found that almost all noisy data with significant issues were filtered out. The significant issues here refer to the presence of unexpected special tokens in the data.
+
+This automated cleaning method is a highly compatible combination with the method of obtaining data through prompting LLMs. The amount of training data obtained via prompting LLMs is sufficient, and we can set the necessary control thresholds to filter the data.
+
 ### 5. Relate Work
 
 ### 6. Conclusion
