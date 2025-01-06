@@ -23,7 +23,7 @@ With the development of LLMs \cite{ref1,ref2,ref3}, prompting LLMs to obtain a d
 
 ### 2. Method
 
-The whole pipeline and algorithm pseudocode of our method are shown in Figure \ref{fig1} and Algorithm \ref{alg1}.
+The whole pipeline and algorithm pseudocode of our method are shown in Figure \cite{fig1} and Algorithm \cite{alg1}.
 
 In our task, the T5-Base model we trained overfitted on a dataset with a size of 50,000. We trained for 30-50 epochs. Our threshold condition is that the number of common tokens is greater than 20% of the total length of the two text data.
 
@@ -32,7 +32,7 @@ In our task, the T5-Base model we trained overfitted on a dataset with a size of
 ![alg1](/assets/png/self-refine-use-llm/alg1.png)
 
 ### 3. Experiment
-The results of the experiment are shown in Table \ref{tab1}.
+The results of the experiment are shown in Table \cite{tab1}.
 ![table1](/assets/png/self-refine-use-llm/table1.png)
 
 ### 4. Discussion
