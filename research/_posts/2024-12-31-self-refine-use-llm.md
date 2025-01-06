@@ -19,7 +19,7 @@ The experiment result shows our method is highly effective and **does not requir
 For industry deep learning application, our method improves the NLP tasks accuracy from 88% to 98% under human evaluation, meanwhile the LLMs data source is sufficiently abundant.
 
 ### 1. Introduction
-With the development of LLMs, prompting LLMs to obtain a domain-specific training dataset and then training a smaller model to achieve sufficiently fast model inference has become a very useful approach for performing NLP tasks. However, the accuracy of LLMs' original datasets within a specific domain generally only reaches 88%-90%. Additionally, using manual annotation methods to correct or clean the datasets requires a substantial amount of human resources and time. Therefore, this paper proposes a method for automatic dataset cleaning. Experiments show that it is highly effective, requires no manual annotation, and can be extended to more AI tasks based on LLMs datasets, such as computer vision.
+With the development of LLMs \cite{ref1,ref2}, prompting LLMs to obtain a domain-specific training dataset and then training a smaller model to achieve sufficiently fast model inference has become a very useful approach for performing NLP tasks. However, the accuracy of LLMs' original datasets within a specific domain generally only reaches 88%-90%. Additionally, using manual annotation methods to correct or clean the datasets requires a substantial amount of human resources and time. Therefore, this paper proposes a method for automatic dataset cleaning. Experiments show that it is highly effective, requires no manual annotation, and can be extended to more AI tasks based on LLMs datasets, such as computer vision.
 
 ### 2. Method
 
@@ -38,7 +38,7 @@ In actual observations, we found that almost all noisy data with significant iss
 This automated cleaning method is a highly compatible combination with the method of obtaining data through prompting LLMs. The amount of training data obtained via prompting LLMs is sufficient, and we can set the necessary control thresholds to filter the data.
 
 ### 5. Relate Work
-T5 is a model based on the transformer encoder-decoder architecture \cite{ref5}. In our experiments, we found that it performs better than the decoder-only GPT in single-turn question-answer style NLP (natural language processing) tasks.
+T5 \cite{ref4} is a model based on the transformer encoder-decoder architecture \cite{ref5}. In our experiments, we found that it performs better than the decoder-only GPT in single-turn question-answer style NLP (natural language processing) tasks.
 
 ### 6. Conclusion
 
@@ -54,7 +54,6 @@ Achiam J, Adler S, Agarwal S, et al. Gpt-4 technical report[J]. arXiv preprint a
 Radford A. Improving language understanding by generative pre-training[J]. 2018.
 
 \bibitem{ref3}
-Query understanding for search engines[M]. Heidelberg: Springer, 2020.
 
 \bibitem{ref4}
 Raffel C, Shazeer N, Roberts A, et al. Exploring the limits of transfer learning with a unified text-to-text transformer[J]. Journal of machine learning research, 2020, 21(140): 1-67.
