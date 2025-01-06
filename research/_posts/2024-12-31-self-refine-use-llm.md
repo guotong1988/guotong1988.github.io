@@ -38,7 +38,25 @@ In actual observations, we found that almost all noisy data with significant iss
 This automated cleaning method is a highly compatible combination with the method of obtaining data through prompting LLMs. The amount of training data obtained via prompting LLMs is sufficient, and we can set the necessary control thresholds to filter the data.
 
 ### 5. Relate Work
+T5 is a model based on the transformer encoder-decoder architecture \cite{ref5}. In our experiments, we found that it performs better than the decoder-only GPT in single-turn question-answer style NLP (natural language processing) tasks.
 
 ### 6. Conclusion
 
 ### Reference
+
+```
+\bibitem{ref1}
+Achiam J, Adler S, Agarwal S, et al. Gpt-4 technical report[J]. arXiv preprint arXiv:2303.08774, 2023.
+
+\bibitem{ref2}
+Radford A. Improving language understanding by generative pre-training[J]. 2018.
+
+\bibitem{ref3}
+Query understanding for search engines[M]. Heidelberg: Springer, 2020.
+
+\bibitem{ref4}
+Raffel C, Shazeer N, Roberts A, et al. Exploring the limits of transfer learning with a unified text-to-text transformer[J]. Journal of machine learning research, 2020, 21(140): 1-67.
+
+\bibitem{ref5}
+Vaswani A. Attention is all you need[J]. Advances in Neural Information Processing Systems, 2017.
+```
