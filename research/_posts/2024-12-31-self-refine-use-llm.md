@@ -23,6 +23,10 @@ With the development of LLMs \cite{ref1,ref2}, prompting LLMs to obtain a domain
 
 ### 2. Method
 
+The whole pipeline and algorithm pseudocode of our method are shown in Figure \cite{fig1} and Algorithm \cite{alg1}.
+
+In our task, the T5-Base model we trained overfitted on a dataset with a size of 50,000. We trained for 30-50 epochs. Our threshold condition is that the number of common tokens is greater than 20% of the total length of the two text data.
+
 ![fig1](/assets/png/self-refine-use-llm/fig1.png)
 
 ![alg1](/assets/png/self-refine-use-llm/alg1.png)
