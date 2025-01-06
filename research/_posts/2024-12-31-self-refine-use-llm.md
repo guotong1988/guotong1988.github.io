@@ -25,7 +25,11 @@ With the development of LLMs, prompting LLMs to obtain a domain-specific trainin
 
 ![fig1](/assets/png/self-refine-use-llm/fig1.png)
 
+![alg1](/assets/png/self-refine-use-llm/alg1.png)
+
 ### 3. Experiment
+
+![table1](/assets/png/self-refine-use-llm/table1.png)
 
 ### 4. Discussion
 
