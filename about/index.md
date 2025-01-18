@@ -10,7 +10,8 @@ Hi! My name is Tong Guo（郭同）.
 ## Life
 
 19880129-2005, Langfang City
-![huahang](/assets/png/huahang.png)
+
+![huahang](/assets/png/huahang.jpg)
 
 2005-Now, Beijing City
 
