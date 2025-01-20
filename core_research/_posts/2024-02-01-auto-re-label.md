@@ -73,6 +73,8 @@ We did the manual re-labeling experiments in \cite{ref2}, we verify that the imp
 
 The cost of annotation time is crucial for deep learning tasks based on manually labeled data. If there is not enough labeling manpower, we must find ways to reduce the amount of data that needs to be labeled. If we can reduce the amount of data to be labeled to a level that a single programmer can handle, then we do not need an additional labeling team.
 
+To take a step back, we can invest some human resources to manually select the best dataset from several of the highest dev datasets. That is to say, we don't need to manually correct dataset. We just need to pay manual annotation to select the dataset.
+
 ### 5. Experiments On Open Datasets
 
 The experiment result on TREC-6 text classification dataset is shown in Table \cite{table1} and Table \cite{table2}. The model to fine-tune/train is the pre-trained BERT \cite{ref3,ref4}, which has 12-layer and 768 hidden size.
