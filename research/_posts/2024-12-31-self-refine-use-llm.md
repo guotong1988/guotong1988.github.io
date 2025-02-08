@@ -45,7 +45,7 @@ This automated cleaning method is a highly compatible combination with the metho
 
 ### 4.1 Comparing to RAG methods
 
-For high-precision deep learning tasks, another approach are the RAG (Retrieval Augmented Generation) methods, which involves providing more information to the prompts for LLMs. Upon observation, the issue with the RAG-LLM method is that some results returned by the LLMs are still uncontrollable and can be considered as noise for specific tasks.
+For high-precision deep learning tasks, another approach is the RAG (Retrieval Augmented Generation) method, which involves providing more information to the prompts for LLMs. Upon observation, the issue with the RAG-LLM method is that some results returned by the LLMs are still uncontrollable and can be considered as noise for specific tasks.
 
 ### 5. Relate Work
 T5 \cite{ref4} is a model based on the transformer encoder-decoder architecture \cite{ref5}. In our experiments, we found that it performs better than the decoder-only GPT in single-turn question-answer style NLP (natural language processing) tasks.
