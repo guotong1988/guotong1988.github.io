@@ -43,6 +43,10 @@ In actual observations, we found that almost all noisy data with significant iss
 
 This automated cleaning method is a highly compatible combination with the method of obtaining data through prompting LLMs. The amount of training data obtained via prompting LLMs is sufficient, and we can set the necessary control thresholds to filter the data.
 
+### 4.1 Comparing to RAG methods
+
+For high-precision deep learning tasks, another approach are the RAG (Retrieval Augmented Generation) methods, which involves providing more information to the prompts for LLMs. Upon observation, the issue with the RAG-LLM method is that some results returned by the LLMs are still uncontrollable and can be considered as noise for specific tasks.
+
 ### 5. Relate Work
 T5 \cite{ref4} is a model based on the transformer encoder-decoder architecture \cite{ref5}. In our experiments, we found that it performs better than the decoder-only GPT in single-turn question-answer style NLP (natural language processing) tasks.
 
