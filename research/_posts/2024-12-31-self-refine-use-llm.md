@@ -45,6 +45,8 @@ This automated cleaning method is a highly compatible combination with the metho
 
 ### 4.1 Comparing to RAG methods
 
+Our approach is to obtain a dataset from LLMs to train our own model, in contrast to the RAG method, which involves working on the prompts given to LLMs.
+
 For high-precision deep learning tasks, another approach is the RAG (Retrieval Augmented Generation) method, which involves providing more information to the prompts for LLMs. Upon observation, the issue with the RAG-LLM method is that some results returned by the LLMs are still uncontrollable and can be considered as noise for specific tasks.
 
 ### 5. Relate Work
