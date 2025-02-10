@@ -45,7 +45,7 @@ This automated cleaning method is a highly compatible combination with the metho
 
 ### 4.1 Comparing to RAG methods
 
-Our approach is to obtain a dataset from LLMs to train our own model, in contrast to the RAG method, which involves working on the prompts given to LLMs.
+Our approach is to obtain a dataset from LLMs to train our own model, in contrast to the RAG method \cite{ref6}, which involves working on the prompts given to LLMs.
 
 For high-precision deep learning tasks, another approach is the RAG (Retrieval Augmented Generation) method, which involves providing more information to the prompts for LLMs. Upon observation, the issue with the RAG-LLM method is that some results returned by the LLMs are still uncontrollable and can be considered as noise for specific tasks.
 
@@ -73,4 +73,7 @@ Raffel C, Shazeer N, Roberts A, et al. Exploring the limits of transfer learning
 
 \bibitem{ref5}
 Vaswani A. Attention is all you need[J]. Advances in Neural Information Processing Systems, 2017.
+
+\bibitem{ref6}
+Lewis P, Perez E, Piktus A, et al. Retrieval-augmented generation for knowledge-intensive nlp tasks[J]. Advances in Neural Information Processing Systems, 2020, 33: 9459-9474.
 ```
