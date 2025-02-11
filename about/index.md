@@ -25,7 +25,7 @@ Hi! My name is Tong Guo（郭同）.
 
 [my.scholar.google](https://scholar.google.com/citations?user=4J7HYNAAAAAJ)
 
-[Reviewer of ACL/NAACL/EMNLP/COLING Industry Track (Top4 NLP Conference)](https://github.com/guotong1988/guotong1988/blob/main/README.md)
+[Reviewer of ACL/NAACL/EMNLP/COLING](https://github.com/guotong1988/guotong1988/blob/main/README.md)(Industry Track, Top4 NLP Conference)
 
 ## Work
 
