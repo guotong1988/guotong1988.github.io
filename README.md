@@ -5,7 +5,7 @@ Do Not Forget The Basic:
 
 1) 写完代码，BUG是**一定**会出现的。
 
-2) 你**必须**针对修复BUG这件事出力。
+2) 你**一定**须对写完的代码修复BUG。
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
