@@ -3,9 +3,9 @@
 
 Do Not Forget The Basic:
 
-1) The fastest way to get code online is to test it by batch.
+1) 写完代码，BUG是**一定**会出现的。
 
-2) The bug law is that bugs are unavoidable, unless you review the code multiple times, as if you had never written it.
+2) 你**必须**针对修复BUG这件事出力。
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
