@@ -3,9 +3,9 @@
 
 Do Not Forget The Basic:
 
-1) 写完代码，BUG是**一定**会出现的。
+1) BUG是**一定**会出现在写完的代码里。
 
-2) 你**一定**须对写完的代码修复BUG。
+2) 你**一定**多少会花时间在修复BUG上。
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
