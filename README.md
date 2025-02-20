@@ -3,9 +3,9 @@
 
 Do Not Forget The Basic:
 
-1) Printing is the best debugging method. Re-scanning all the code is also important.
+1) The fastest way to get code online is to test it by batch.
 
-2) The fastest way to get code online is to test it by batch and check the error logs.
+2) The most stable method to avoid bug it to re-check all the code.
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
