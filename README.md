@@ -3,7 +3,7 @@
 
 Do Not Forget The Basic:
 
-1) BUG迟早会出现在写完的代码里。
+1) BUG多少会出现在写完的代码里。
 
 2) 你一定会花时间在修复BUG上。
 
