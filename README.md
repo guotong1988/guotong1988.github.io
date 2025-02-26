@@ -7,5 +7,7 @@ Do Not Forget The Basic:
 
 2) 你一定会花时间在修复BUG上。
 
+3) 积善德，行正道。
+
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
