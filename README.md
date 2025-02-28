@@ -7,7 +7,11 @@ Do Not Forget The Basic:
 
 2) 你一定会花时间在修复BUG上。
 
-3) 积善德，行正道。
+3) print还是最好的debug方法。
+
+4) 批量测试是快速上线的好方法。
+
+5) 积善德，行正道。
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
