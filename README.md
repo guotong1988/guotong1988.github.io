@@ -3,9 +3,9 @@
 
 Do Not Forget The Basic:
 
-1) BUG多少会出现在写完的代码里。你一定会花时间在修复BUG上。
+1) BUG多少会出现在写完的代码里，你一定会花时间在修复BUG上。
 
-2) print还是最好的bug-fix方法。print也是bug-detect很好的方法。
+2) print还是最好的bug-fix方法，print也是bug-detect很好的方法。
 
 3) 批量测试是快速上线的好方法。
 
