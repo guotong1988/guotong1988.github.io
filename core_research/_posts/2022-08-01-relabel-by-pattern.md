@@ -46,7 +46,7 @@ In the section, we describe the experiment results. Take our text classification
 
 ![table1](/assets/png/relabel-by-pattern/table1.png)
 
-### 4. Related Work
+### 4. Relate Work
 There are works that inject knowledge into deep model. But they are different from our work. They focus on model-centric part, but our method focuses on the human-in-the-loop labeling data-centric part.
 
 #### 4.1 Rule-enhanced Text2Sql
