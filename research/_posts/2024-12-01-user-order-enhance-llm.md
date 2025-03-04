@@ -50,7 +50,7 @@ There are many ways to merge the dataset from LLMs and the dataset based on orde
 
 2) If the prediction results for each query from the T5 model trained on order-based dataset are equal to those prediction from the LLMs, then append the training dataset with this data. If there is insufficient labeling manpower to perform the aforementioned LLMs data cleaning manually.
 
-### 5. Relate Works
+### 5. Relate Work
 T5 is a model based on the transformer encoder-decoder architecture \cite{ref5}. In our experiments, we found that it performs better than the decoder-only GPT in single-turn question-answer style NLP (natural language processing) tasks.
 
 ### 6. Conclusion
