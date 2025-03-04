@@ -44,7 +44,7 @@ In summary our paper has three contributions: First, We fine-tuning BERT and get
 The code is at [github.com/guotong1988/Semantic-Tree-Search](https://github.com/guotong1988/Semantic-Tree-Search).
 
 
-## 2. Related Works
+## 2. Relate Work
 
 In recent years, neural information retrieval and neural question answering research has developed several effective ways to improve ranking accuracy. Interaction-based neural rankers match query and document pair using attention-based deep model; representation-based neural rankers output sentence representations and using cosine distance to score the sentence pairs. There are many effective representation-based model include DSSM\cite{huang2013learning}, CLSM \cite{shen2014latent} and LSTM-RNN \cite{palangi2016deep} and many effective interaction-based model include DRMM\cite{guo2016deep} Match-SRNN\cite{wan2016match} and BERT\cite{devlin2018bert}.
 
