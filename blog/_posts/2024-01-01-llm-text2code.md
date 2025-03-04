@@ -37,7 +37,7 @@ The LLM-text2code system has these modules:
 ![table1](/assets/png/text2code/table1.png)
 ![table2](/assets/png/text2code/table2.png)
 
-## 2. Related Work
+## 2. Relate Work
 
 There are great code-LLM works \cite{ref1,ref3,ref4,ref5,ref14,ref15} that are pretrained on code and text. Our paper presents some contributions more from a perspective of applications such as expert system.
 
