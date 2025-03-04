@@ -115,8 +115,7 @@ If we split the target prompt-response-pair to sub-strings, the train-dataset sh
 Our mothod removes the reward model of InstructGPT [4]. Because we think the most important thing is the train-dataset and its quality. 
 We use the self-predict and re-label method [3] to improve the data quality.
 
-
-## 4. Related Works
+## 4. Relate Work
 
 Pre-trained language models [6][7] store the text context for the downstream tasks and improve their performance. 
 
