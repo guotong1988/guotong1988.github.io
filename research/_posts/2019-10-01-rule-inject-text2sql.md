@@ -31,7 +31,7 @@ In order to solve the problem that the table content is not used for model, we p
 
 ![fig1](/assets/png/rule-text2sql/fig1.png)
 
-### 2. Relate Work
+### 2. Related Work
 
 WikiSQL \cite{ref1} is a large semantic parsing dataset. It has 80654 natural language and corresponding SQL pairs. The examples of WikiSQL are shown in fig. 1. 
 
