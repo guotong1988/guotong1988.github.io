@@ -115,7 +115,7 @@ In the labeling details, the to-label dataset can be sorted for people to read a
 The cost of annotation time is crucial for deep learning tasks based on manually labeled data. If there is not enough labeling manpower, we must find ways to reduce the amount of data that needs to be labeled. If we can reduce the amount of data to be labeled to a level that a single programmer can handle, then we do not need an additional labeling team.
 
 
-### 6. Relate Work
+### 6. Related Work
 
 #### 6.1 Pseudo-label-based methods
 
