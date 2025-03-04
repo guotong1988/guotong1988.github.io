@@ -83,7 +83,7 @@ The experiment result on TREC-6 text classification dataset is shown in Table \c
 
 ![table2](/assets/png/auto-relabel/table2.png)
 
-### 6. Related Work 
+### 6. Relate Work 
 
 Data-centric \cite{ref5} approach which focuses on label quality by characterizing and identifying label errors in datasets.
 
