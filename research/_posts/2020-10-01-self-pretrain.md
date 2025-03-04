@@ -60,7 +60,7 @@ In summary, our contributions include:
 • We explore different experimental factors on our text classification dataset and NER dataset. The experiment results prove that the pre-training with task-specific loss and no-MaskLM (masked language model) loss is the best way to make use of the unlabel data. We also find that pre-training using KL-divergence loss with pre-softmax logits is better than cross-entropy loss with one-hot pseudo-label, which is corresponding to the step 4 of Figure 1.
 
 
-## 2. Related Works
+## 2. Relate Work
 
 ![alg1](/assets/png/self-pretrain/alg1.png)
 
