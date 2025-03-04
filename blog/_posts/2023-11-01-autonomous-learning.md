@@ -82,7 +82,7 @@ The AI system under the deep learning framework is a powerful memory system. But
 
 Building a student module for LLMs takes a lot of engineering works and datasets preparing. And the goal of our work is to achieve better efficiency in data production. We are trying to find more efficient methods to prepare data for LLMs.
 
-## 4. Related Works
+## 4. Related Work
 
 There are great works \cite{ref3} \cite{ref4} \cite{ref5} that are solving the problem of autonomous machine intelligence. 
 
