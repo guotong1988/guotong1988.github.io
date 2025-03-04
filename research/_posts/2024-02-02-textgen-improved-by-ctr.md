@@ -146,7 +146,7 @@ We first collect the results from ChatGPT to train our T5 model. We input produc
 
 We have tried putting the product attributes like product type and product tags into the prompts, combined with product title to query ChatGPT, but we do not observe some improvement of text quality and diversity by ChatGPT.
 
-### 5. Relate Work
+### 5. Related Work
 
 #### 5.1 Text Generation
 The pre-trained model based on Transformer \cite{vaswani2017attention} has greatly improved the performance in text generation. The learning objectives include masked language modeling (MLM) and causal language modeling (CLM). MLM-based Language Models include BERT \cite{devlin2018bert}, ROBERTA \cite{liu2019roberta}. CLM-based Language Models include the GPT series works \cite{radford2018improving,radford2019language,brown2020language} and other decoder-only transformer models \cite{keskar2019ctrl}.
