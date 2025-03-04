@@ -32,7 +32,7 @@ Based on our industry dataset, we first find the noise data which human label is
 
 
 
-### 2. Relate Work
+### 2. Related Work
 
 BERT \cite{ref1} is built by the multi-layer transformer encoder \cite{ref10}, which produces self-attended token representations that have been pre-trained from unlabeled text and fine-tuned for the supervised downstream tasks. BERT achieved state-of-the-art results on many sentence-level tasks on the GLUE benchmark \cite{ref3} and CLUE\cite{ref12} benchmark. 
 
