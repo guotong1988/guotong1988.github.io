@@ -27,7 +27,7 @@ In the paper, we pre-train a list of transformer-based models on the same datase
 
 
 
-### 2. Relate Works
+### 2. Related Work
 
 BERT \cite{ref1}, or Bidirectional Encoder Representations from Transformers, is a multi-layer transformer-encoder based \cite{ref10} deep model, which produces contextual token representations that have been pre-trained from unlabeled text and fine-tuned for the supervised downstream tasks. BERT obtains state-of-the-art results on a wide array of Natural Language Processing (NLP) tasks, which include the GLUE\cite{ref3} benchmark and CLUE\cite{ref9} benchmark. There are two steps in BERT's framework: pre-training and fine-tuning. During pre-training, the model is trained on unlabeled data by using masked language model task and next sentence prediction task. Apart from output layers, the same architectures are used in both pre-training and fine-tuning. The same pre-trained model parameters are used to initialize models for different down-stream tasks. 
 
