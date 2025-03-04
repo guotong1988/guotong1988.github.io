@@ -3,15 +3,13 @@
 
 Do Not Forget The Basic:
 
-1) BUG多少会出现在写完的代码里。
+1) BUG多少会出现在写完的代码里。你一定会花时间在修复BUG上。
 
-2) 你一定会花时间在修复BUG上。
+2) print还是最好的debug方法。print也是debug-detect很好的方法。
 
-3) print还是最好的debug方法。
+3) 批量测试是快速上线的好方法。
 
-4) 批量测试是快速上线的好方法。
-
-5) 积善德，行正道。
+4) 积善德，行正道。
 
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
