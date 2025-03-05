@@ -66,7 +66,7 @@ In this section, we evaluate our method on our real-world dataset. Our dataset-A
 
 ### 5. Discussion
 
-#### 5.1
+#### 5.1 Why dev AUC improved
 
 Why drop-noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
 
@@ -80,7 +80,7 @@ If we do not drop data-3, the model prediction for new data that is the most sim
 
 If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right.  
 
-### 5.2 
+#### 5.2 Reason of AUC upper bound
 
 The main reason why CTR models struggle to achieve AUC scores above 0.95 lies in the inherent unpredictability of users' purchase intentions. Unlike well-defined NLP tasks where outcomes can be more precisely determined, user purchasing behavior itself is fundamentally uncertain - there's no guaranteed conversion even when all predictive signals seem favorable. This essential uncertainty in decision-making creates an upper bound on model performance metrics like AUC.
 
