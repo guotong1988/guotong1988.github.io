@@ -7,7 +7,7 @@ Do Not Forget The Basic:
 
 2) print还是最好的bug-fix方法，print也是bug-detect很好的方法。
 
-3) 批量测试是快速上线的好方法。
+3) 批量测试是快速上线的好方法，另外就是要自己多次check代码。
 
 4) 积善德，行正道。
 
