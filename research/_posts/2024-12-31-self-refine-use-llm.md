@@ -52,9 +52,11 @@ For high-precision deep learning tasks, another approach is the RAG (Retrieval A
 ### 5. Related Work
 T5 \cite{ref4} is a model based on the transformer encoder-decoder architecture \cite{ref5}. In our experiments, we found that it performs better than the decoder-only GPT in single-turn question-answer style NLP (natural language processing) tasks.
 
-### 6. Conclusion
+### 6. Conclusion and Future Work
 
 This paper proposes an automated, annotation-free method for cleaning dataset obtained from LLMs through prompting. In human evaluations, this method can increase accuracy from 88% to 98% in our NLP tasks. Additionally, this method can also be extended to other LLMs data-driven tasks, such as computer vision tasks.
+
+Since we have validated that using the methodology in this paper to clean LLM data enables effective training of a smaller model, applying this same approach to clean the complete post-training dataset originally used for training the LLM will become the direction we are to explore.
 
 ### Reference
 
