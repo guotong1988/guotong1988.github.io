@@ -99,10 +99,12 @@ Label error correction or noise data correction\cite{ref6,ref7,ref8,ref9,ref10,r
 
 Our method is different from the above works. We first verify that human re-labeling can improve the dataset quality. Then we propose our method that can automatically do the re-labeling without human annotation.
 
-### 7. Conclusion
+### 7. Conclusion and Future Work
 
 In previous works, we manually re-label the noisy data to improve the dataset quality. 
 In this paper, we propose the method to automatically re-label the noisy data to improve the dataset quality. The experimental results and theoretical analysis verify our idea: The best re-labeled dataset exists in the all possible candidate datasets.
+
+Since we verify that resetting the learning objectives for noisy data through our proposed method - selecting the optimal training dataset from randomly generated candidate datasets based on the highest dev accuracy - can yield the highest-quality training data, we can consider directly dropping noisy data when working with abundant data sources (such as LLM-generated data or LLM post-training data). In these scenarios, our methodology (potentially enhanced with manual evaluation for multi-candidate dataset selection) could effectively improve the quality of LLM post-training datasets.
 
 ### References
 ```
