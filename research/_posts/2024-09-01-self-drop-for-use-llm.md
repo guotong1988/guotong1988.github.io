@@ -63,9 +63,11 @@ Secondly, the number of calls to the large language models is sufficient, so the
 
 Under the condition that the prompt itself is correct, the more content in the prompt, the more accurate LLMs' response will be. The prompt is equivalent to the features of a model's input. When training a model on your own, you also hope that, given the correctness of the features, the more features, the better. Covering various situations, you can even input the answer directly into the prompt for the LLMs.
 
-### 5. Conclusion
+### 5. Conclusion and Future Work
 
 In order to solve the problem that the dataset by LLMs API has a certain number of noise data, we propose our method: First, we sample a seed dataset from the to-clean dataset by LLMs API. Then we manually find the badcases in the seed dataset. Then we search the to-clean dataset by querying the badcases to find the (most) similar data of the badcases in the to-clean dataset and remove the searched data. The manual evaluation results show that our simple self-eval-drop method can improve the accuracy of the to-clean dataset by LLM API to more than 97% by only sampling and manually evaluating about 1% of the to-clean dataset as the seed dataset.
+
+Since we verify that using the methodology in this paper to clean LLM data enables effective training of a smaller model, applying this same approach to clean the complete post-training dataset originally used for training the LLM will become the direction we are to explore.
 
 ### Reference
 ```
