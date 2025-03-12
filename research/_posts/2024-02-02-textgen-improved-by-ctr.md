@@ -167,8 +167,10 @@ generation, requires comparing candidate sentences to annotated references. In o
 
 
 ### 6. Conclusion
+Improving the quality of AI-generated text for app sales is critical, as manual annotation cannot reliably assess text effectiveness. Without objective quality evaluation, optimizing text generation toward higher quality becomes unachievable. Conversely, establishing a robust evaluation method enables continuous optimization.
 
-How to improve the quality of generated text is a very critical issue, as manual annotation cannot judge the quality of generated text. If manual annotation cannot judge the quality of the generated text, then we cannot optimise the text generation to a better quality direction. On the other hand, if we can find a method to judge the quality of the generated text, then we can continuously optimise it. This paper we find supervised signals in the E-commerce scenario that can continuously optimise the quality of generated text. We have developed a complete solution and sales of our App have been boosted.
+In this paper, we identify actionable supervisory signals within e-commerce user behavior data to iteratively enhance text quality. Our solution integrates causal inference to isolate textual impact from product-specific factors, ensuring accurate quality attribution. Experimental results demonstrate that this methodology significantly boosts app sales performance.
+
 
 ### References
 ```
