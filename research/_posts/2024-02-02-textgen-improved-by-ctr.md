@@ -13,35 +13,38 @@ Text generation is an important method to generate high quality and available pr
 
 ### 1. Introduction
 
-In recent years, the development of deep learning (DL) has brought breakthroughs on text generation. The sequence to sequence (Seq2Seq) models use encoder-decoder transformer \cite{vaswani2017attention} for better model flexibility. The most representative models of this
+In recent years, the development of deep learning (DL) has brought breakthroughs in text generation. The sequence to sequence (Seq2Seq) models use encoder-decoder transformer \cite{vaswani2017attention} for better model flexibility. The most representative models of this
 type include T5 \cite{raffel2020exploring} and BART \cite{lewis2020bart}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our data-centric experiments. 
 
-In E-commerce, product description can attract shoppers and improve sales. But manually writing a successful product description is highly time-consuming. Text generation \cite{zhang2022survey,prabhumoye2020exploring} technologies play a crucial role in this range of applications.
+In e-commerce, product descriptions can attract shoppers and improve sales. However, manually writing a successful product descriptions is highly time-consuming. Text generation \cite{zhang2022survey,prabhumoye2020exploring} technologies play a crucial role in this domain of applications.
 
 
-Text generation has an input or a source sequence $X$ and an output or a target sequence $Y$ to be generated. In our product description generation tasks, $X$ is the product title and $Y$ is the product description. The examples are shown in Table \cite{table1}.
+Text generation involves an input (source sequence) $X$ and an output (target sequence) $Y$. In our product description generation tasks, $X$ represents the product title, $Y$ corresponds to the product description to be generated. Example pairs are illustrated in Table \ref{table1}.
 
 
-The problem is to improve the quality of the generated text in E-commerce, then the following problem is how we define and judge what is high quality text. We find it impossible to manually judge which text is the better text for a product. To answer this problem, we define text that brings more sales to a product as better text. So we need to use user buying behaviour to judge which are better texts.
+The primary challenge involves enhancing the quality of generated text in e-commerce, which leads to a subsequent question: How do we define and evaluate what constitutes high-quality text for app sales? We find manual evaluation impractical for determining which text version better serves a product's commercial objectives. To answer this problem, we define text that brings more sales to a product as better text. Thus, we employ user purchasing behavior data to objectively identify high-performing text variants.
 
 
-Then the problem is how to use user buying behaviour to select better quality text, the problem is that the text is displayed alongside the product, and we need to isolate the impact of the gain of the text on the product.
+This leads to a dual challenge: 1) Utilizing user purchasing behavior to identify higher-quality text, and 2) Isolating the text's specific impact on product performance when displayed alongside the product. 
 
-In summary, in order to improve the quality of generated description texts for products. We face these problems: 
+In summary, to enhance generated product description quality, we must address these key challenges:
 
-1) We cannot judge which text is the better text to improve App sales for a product by human labeling. If we can't judge and define text as good or bad, then we can't optimize it. We can only judge whether the text is available for display online by human labeling.
 
-2) We use user buying behaviour to judge better text. Then we need to isolate the gain impact of the text. Because text is displayed on the product. The product descriptions and products are bound together to be displayed to the users.
+1) Human labeling cannot effectively determine which text version better improves app sales for products. Without reliable criteria to evaluate text quality (good vs. bad), optimization becomes unfeasible. Manual assessment can only verify whether text meets basic requirements for online display.
 
-3) We need to design a complete solution to solve the above problems all together.
 
-In this paper, we solve these problems and propose these contributions:
+2) We employ user purchasing behavior as our quality metric, which necessitates isolating the text's specific impact. This challenge arises because product descriptions are inherently coupled with their corresponding products during user exposure - both elements are simultaneously presented to shoppers.
 
-1) We use user buying behaviour to judge which description is better for its product, in order to solve the problem that we cannot judge it manually.
+3) A comprehensive solution must be developed to address these interdependent challenges systematically.
 
-2) We train a sales prediction model upon the user buying logs of our E-commerce application. In order to isolate the gain impact of the description for its product, we use causal inference method.
 
-3) We design a complete solution to continuously improve the quality of generated product description to improve App sales, guided by user behaviour.
+In this paper, we address these challenges through three key contributions:
+
+1) **Automated Quality Evaluation**: We leverage user purchasing behavior to evaluate description effectiveness, overcoming the limitation of manual judgment for sales-optimized text.
+
+2) **Causal Impact Isolation**: A sales prediction model trained on e-commerce transaction logs enables precise measurement of description quality through causal inference methods, disentangling textual impact from product-specific factors.
+
+3) **Closed-Loop Optimization**: We implement an iterative system that continuously enhances generated descriptions using behavioral feedback, creating a self-improving mechanism for sales optimization.
 
 ![table12](/assets/png/textgen-improved-by-ctr/table12.png)
 
