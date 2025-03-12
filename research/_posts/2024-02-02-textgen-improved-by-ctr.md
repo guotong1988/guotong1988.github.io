@@ -142,11 +142,26 @@ In this section we illustrate the reason why we design our method. And we illust
 
 In order to improve the quality of the generated text, and to improve the RPM, we found that manual annotation can not achieve this, we look for supervisory signals from human behaviour of online App.
 
-#### 4.2 Baseline Solution
+#### 4.2 Experimental Detail
+
+Our investigation of prompt engineering revealed minimal variation in output quality across different ChatGPT query formulations, suggesting prompt design has limited impact on final text quality for this application.
+
+For the sales prediction model, we intentionally retained all available features without selection, as feature optimization falls outside this paper's scope.
+
+A critical implementation detail: When all products display descriptions, causal isolation becomes statistically infeasible. To enable rigorous analysis, we implemented a randomized control trial:
+
+1) 50\% of products displayed AI-generated descriptions
+
+2) 50\% displayed no descriptions
+
+We tried repeating the whole pipeline of Figure \ref{fig1} to iteratively improve the results. The gain is minimal after one iteration.
+
+#### 4.3 Baseline Solution
 
 We first collect the results from ChatGPT to train our T5 model. We input product title and ask ChatGPT to write product description. The problems with the ChatGPT results are that the available rate of text is 89\% and 11\% of the product description is not suitable for display. So we clean the dataset based on ChatGPT API and train the T5 model with more than 99\% available rate of generated text. We use this generated results of our T5 model as the baseline, which is the Step-1 of Figure \cite{fig1}.
 
 We have tried putting the product attributes like product type and product tags into the prompts, combined with product title to query ChatGPT, but we do not observe some improvement of text quality and diversity by ChatGPT.
+
 
 ### 5. Related Work
 
