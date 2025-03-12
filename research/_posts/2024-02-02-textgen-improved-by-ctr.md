@@ -53,19 +53,19 @@ The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T
 
 Our methodology comprises eight sequential stages:
 
-In Step-1, **Initial Dataset Construction** we get an initial dataset to train the T5 generative model. The initial dataset is constructed by query ChatGPT. We ask ChatGPT to write product description, input the product title as the prompts. We then remove the data in the training dataset that do not suitable to display online. The detail algorithm is shown in Algorithm \ref{alg1}.
+In Step-1, **Initial Dataset Construction**. We get an initial dataset to train the T5 generative model. The initial dataset is constructed by query ChatGPT. We ask ChatGPT to write product description, input the product title as the prompts. We then remove the data in the training dataset that do not suitable to display online. The detail algorithm is shown in Algorithm \ref{alg1}.
 
-In Step-2, **Model Training \& Inference** we use the data of Step-1 and train T5 model. Then we use the T5 model to generate product descriptions for hundreds of millions the products. 
+In Step-2, **Model Training \& Inference**. We use the data of Step-1 and train T5 model. Then we use the T5 model to generate product descriptions for hundreds of millions the products. 
 
-In Step-3, **Deployment** we display the generated product descriptions on the products on the App. 
+In Step-3, **Deployment**. We display the generated product descriptions on the products on the App. 
 
-In Step-4, **Log Dataset Collection** we collect the logs of user buying and user views of each product.
+In Step-4, **Log Dataset Collection**. We collect the logs of user buying and user views of each product.
 
-In Step-5, **Predictive Modeling** we train the sales prediction model based on the online logs of Step-4. The detail is illustrated in the following sections.
+In Step-5, **Predictive Modeling**. We train the sales prediction model based on the online logs of Step-4. The detail is illustrated in the following sections.
 
-In Step-6 and Step-7, **Causal Analysis** we use causal inference and the sales prediction model to find the best quality product descriptions in the logs. The detail is illustrated in the following sections.
+In Step-6 and Step-7, **Causal Analysis**. We use causal inference and the sales prediction model to find the best quality product descriptions in the logs. The detail is illustrated in the following sections.
 
-In Step-8, **Iterative Improvement** we retrain the T5 model using the better texts found by Step-7. Then we do AB experiments to evaluate the performance of the generated product descriptions at online App.
+In Step-8, **Iterative Improvement**. We retrain the T5 model using the better texts found by Step-7. Then we do AB experiments to evaluate the performance of the generated product descriptions at online App.
 
 ![fig1](/assets/png/textgen-improved-by-ctr/fig1.png)
 
