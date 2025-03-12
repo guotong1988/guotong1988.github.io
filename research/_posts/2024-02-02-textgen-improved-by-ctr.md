@@ -150,9 +150,9 @@ For the sales prediction model, we intentionally retained all available features
 
 A critical implementation detail: When all products display descriptions, causal isolation becomes statistically infeasible. To enable rigorous analysis, we implemented a randomized control trial:
 
-1) 50\% of products displayed AI-generated descriptions
+1) 50% of products displayed AI-generated descriptions
 
-2) 50\% displayed no descriptions
+2) 50% displayed no descriptions
 
 We tried repeating the whole pipeline of Figure \ref{fig1} to iteratively improve the results. The gain is minimal after one iteration.
 
