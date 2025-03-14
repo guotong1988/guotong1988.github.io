@@ -102,7 +102,8 @@ $$ Loss = |productRPM - modelOutput| $$
 
 #### 2.4 Causal Inference
 
-The role of causal inference in our approach is to be used to isolate the impact of text for product after having a trained sales prediction model. 
+Causal inference in our framework serves to isolate the causal effect of product descriptions on sales, using the trained sales prediction model as a counterfactual estimator.
+
 When we make a prediction, we input the product features and the text to get score $A$, and only the product features to get score $B$. The gain effect of the text for the product is $A-B$. The detail framework of sales prediction and causal inference is shown in Figure \cite{fig2}.
 
 $$ ScoreA = model.forward(productFeatures, textTokens) $$
