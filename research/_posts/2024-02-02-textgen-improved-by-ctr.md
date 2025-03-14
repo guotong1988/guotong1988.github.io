@@ -18,7 +18,7 @@ type include T5 \cite{raffel2020exploring} and BART \cite{lewis2020bart}. In thi
 In e-commerce, product descriptions can attract shoppers and improve sales. However, manually writing a successful product descriptions is highly time-consuming. Text generation \cite{zhang2022survey,prabhumoye2020exploring} technologies play a crucial role in this domain of applications.
 
 
-Text generation involves an input (source sequence) $X$ and an output (target sequence) $Y$. In our product description generation tasks, $X$ represents the product title, $Y$ corresponds to the product description to be generated. Example pairs are illustrated in Table \ref{table1}.
+Text generation involves an input (source sequence) $X$ and an output (target sequence) $Y$. In our product description generation tasks, $X$ represents the product title, $Y$ corresponds to the product description to be generated. Example pairs are illustrated in Table \cite{table1}.
 
 
 The primary challenge involves enhancing the quality of generated text in e-commerce, which leads to a subsequent question: How do we define and evaluate what constitutes high-quality text for app sales? We find manual evaluation impractical for determining which text version better serves a product's commercial objectives. To answer this problem, we define text that brings more sales to a product as better text. Thus, we employ user purchasing behavior data to objectively identify high-performing text variants.
@@ -53,7 +53,7 @@ The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T
 
 Our methodology comprises eight sequential stages:
 
-In Step-1, **Initial Dataset Construction**. We get an initial dataset to train the T5 generative model. The initial dataset is constructed by query ChatGPT. We ask ChatGPT to write product description, input the product title as the prompts. We then remove the data in the training dataset that do not suitable to display online. The detail algorithm is shown in Algorithm \ref{alg1}.
+In Step-1, **Initial Dataset Construction**. We get an initial dataset to train the T5 generative model. The initial dataset is constructed by query ChatGPT. We ask ChatGPT to write product description, input the product title as the prompts. We then remove the data in the training dataset that do not suitable to display online. The detail algorithm is shown in Algorithm \cite{alg1}.
 
 In Step-2, **Model Training \& Inference**. We use the data of Step-1 and train T5 model. Then we use the T5 model to generate product descriptions for hundreds of millions the products. 
 
@@ -154,7 +154,7 @@ A critical implementation detail: When all products display descriptions, causal
 
 2) 50% displayed no descriptions
 
-We tried repeating the whole pipeline of Figure \ref{fig1} to iteratively improve the results. The gain is minimal after one iteration.
+We tried repeating the whole pipeline of Figure \cite{fig1} to iteratively improve the results. The gain is minimal after one iteration.
 
 #### 4.3 Baseline Solution
 
