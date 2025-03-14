@@ -53,7 +53,7 @@ The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T
 
 Our methodology comprises eight sequential stages:
 
-In Step-1, **Initial Dataset Construction**. We get an initial dataset to train the T5 generative model. The initial dataset is constructed by query ChatGPT. We ask ChatGPT to write product description, input the product title as the prompts. We then remove the data in the training dataset that do not suitable to display online. The detail algorithm is shown in Algorithm \cite{alg1}.
+In Step-1, **Initial Dataset Construction**. We obtain an initial dataset to train the T5 generative model. The dataset is constructed by querying ChatGPT to generate product descriptions, using product titles as prompts. We then remove data from the training dataset that are not suitable for online display. The detailed algorithm is shown in Algorithm \cite{alg1}.
 
 In Step-2, **Model Training \& Inference**. We use the data of Step-1 and train T5 model. Then we use the T5 model to generate product descriptions for hundreds of millions the products. 
 
