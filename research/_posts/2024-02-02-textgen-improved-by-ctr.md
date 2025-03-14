@@ -59,7 +59,7 @@ In Step-2, **Model Training \& Inference**. Using the data from Step-1, we train
 
 In Step-3, **Deployment**. We display the generated product descriptions for the products in the app.
 
-In Step-4, **Log Dataset Collection**. We collect the logs of user buying and user views of each product.
+In Step-4, **Log Dataset Collection**. We collect user purchase and view logs for each product.
 
 In Step-5, **Predictive Modeling**. We train the sales prediction model based on the online logs of Step-4. The detail is illustrated in the following sections.
 
