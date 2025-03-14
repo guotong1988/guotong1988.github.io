@@ -61,7 +61,7 @@ In Step-3, **Deployment**. We display the generated product descriptions for the
 
 In Step-4, **Log Dataset Collection**. We collect user purchase and view logs for each product.
 
-In Step-5, **Predictive Modeling**. We train the sales prediction model based on the online logs of Step-4. The detail is illustrated in the following sections.
+In Step-5, **Predictive Modeling**. The sales prediction model is trained using logs from Step-4. Implementation details are described in the subsequent sections.
 
 In Step-6 and Step-7, **Causal Analysis**. We use causal inference and the sales prediction model to find the best quality product descriptions in the logs. The detail is illustrated in the following sections.
 
