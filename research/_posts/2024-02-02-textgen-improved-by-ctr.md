@@ -63,9 +63,9 @@ In Step-4, **Log Dataset Collection**. We collect user purchase and view logs fo
 
 In Step-5, **Predictive Modeling**. The sales prediction model is trained using logs from Step-4. Implementation details are described in the subsequent sections.
 
-In Step-6 and Step-7, **Causal Analysis**. We use causal inference and the sales prediction model to find the best quality product descriptions in the logs. The detail is illustrated in the following sections.
+In Step-6 and Step-7, **Causal Analysis**. By combining causal inference with the sales prediction model, we identify the highest-quality product descriptions in the logs. Technical details are presented in subsequent sections.
 
-In Step-8, **Iterative Improvement**. We retrain the T5 model using the better texts found by Step-7. Then we do AB experiments to evaluate the performance of the generated product descriptions at online app.
+In Step-8, **Iterative Improvement**. The T5 model is retrained using higher-quality texts identified in Step-7. AB testing is then conducted to evaluate the effectiveness of the generated product descriptions on the live app.
 
 ![fig1](/assets/png/textgen-improved-by-ctr/fig1.png)
 
