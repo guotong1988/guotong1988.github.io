@@ -65,7 +65,7 @@ In Step-5, **Predictive Modeling**. We train the sales prediction model based on
 
 In Step-6 and Step-7, **Causal Analysis**. We use causal inference and the sales prediction model to find the best quality product descriptions in the logs. The detail is illustrated in the following sections.
 
-In Step-8, **Iterative Improvement**. We retrain the T5 model using the better texts found by Step-7. Then we do AB experiments to evaluate the performance of the generated product descriptions at online App.
+In Step-8, **Iterative Improvement**. We retrain the T5 model using the better texts found by Step-7. Then we do AB experiments to evaluate the performance of the generated product descriptions at online app.
 
 ![fig1](/assets/png/textgen-improved-by-ctr/fig1.png)
 
@@ -140,7 +140,7 @@ In this section we illustrate the reason why we design our method. And we illust
 
 #### 4.1 Motivation
 
-In order to improve the quality of the generated text, and to improve the RPM, we found that manual annotation can not achieve this, we look for supervisory signals from human behaviour of online App.
+In order to improve the quality of the generated text, and to improve the RPM, we found that manual annotation can not achieve this, we look for supervisory signals from human behaviour of online app.
 
 #### 4.2 Experimental Detail
 
@@ -170,7 +170,7 @@ The pre-trained model based on Transformer \cite{vaswani2017attention} has great
 The sequence to sequence models\cite{sutskever2014sequence} use encoder-decoder transformer \cite{vaswani2017attention} for better model flexibility. The seq2seq model is widely used in the field of text generation \cite{luong2014addressing,bahdanau2014neural}. We adopt Seq2Seq models implement our text generation tasks. The most representative models of this type include T5 \cite{raffel2020exploring} and BART \cite{lewis2020bart}. In this paper, we adopt the T5 model to conduct our experiments. We compared T5 and GPT-2\cite{radford2019language} on the same dataset and ultimately chose T5.
 
 #### 5.2 CTR Prediction
-Sales prediction task \cite{tsoumakas2019survey,cheriyan2018intelligent} is to estimate future sales of products, which is same to the click through rate (CTR) prediction task \cite{chen2016deep,guo2017deepfm}. Sales prediction and CTR prediction both use users behaviour (click/view) as training target, which means that we collect the logs of online App to build the training dataset.
+Sales prediction task \cite{tsoumakas2019survey,cheriyan2018intelligent} is to estimate future sales of products, which is same to the click through rate (CTR) prediction task \cite{chen2016deep,guo2017deepfm}. Sales prediction and CTR prediction both use users behaviour (click/view) as training target, which means that we collect the logs of online app to build the training dataset.
 
 #### 5.3 Causal Inference
 The research questions that motivate most quantitative studies in the health, social and behavioral sciences are not statistical but causal in nature. Causal inference \cite{pearl2010causal,pearl2009causal} is to solve these problems. In our scenario, the product description is displayed on the product. That is, the product description, is the treatment that affects the sales of the corresponding product.
