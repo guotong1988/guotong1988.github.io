@@ -57,7 +57,7 @@ In Step-1, **Initial Dataset Construction**. We obtain an initial dataset to tra
 
 In Step-2, **Model Training \& Inference**. Using the data from Step-1, we train the T5 model. The trained model is then used to generate product descriptions for hundreds of millions of products.
 
-In Step-3, **Deployment**. We display the generated product descriptions on the products on the App. 
+In Step-3, **Deployment**. We display the generated product descriptions for the products in the app.
 
 In Step-4, **Log Dataset Collection**. We collect the logs of user buying and user views of each product.
 
