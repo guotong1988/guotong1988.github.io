@@ -77,7 +77,7 @@ We collect our initial training dataset by querying ChatGPT. Each prompt is form
 
 #### 2.2 Sales Prediction Model
 
-After the generated product description has been displayed on the online products, The users view and buy the products. So now the problem is that we want to train a sales prediction model for products. The training target is:
+When the generated product descriptions are deployed on the platform, user engagement (views and purchases) can be observed. This creates an opportunity to train a product sales prediction model. The training target is:
 
 $$ RPM = N_{sales} / N_{views} $$
 
