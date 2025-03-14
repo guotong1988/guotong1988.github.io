@@ -91,7 +91,7 @@ The input features for the model include:
 
 #### 2.3 Training Target
 
-We designed the training objective to capture the additional gain of text for product. So our training objective is the absolute value of the RPM, and we use the regression loss.
+The training objective is designed to quantify the incremental value added by textual product descriptions. Therefore, the sales prediction model optimizes the absolute value of RPM through a regression-based loss function.
 
 $$ allFeatures = concat(productFeatures, textTokens) $$
 
