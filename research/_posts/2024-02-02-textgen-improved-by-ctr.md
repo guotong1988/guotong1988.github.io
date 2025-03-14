@@ -55,7 +55,7 @@ Our methodology comprises eight sequential stages:
 
 In Step-1, **Initial Dataset Construction**. We obtain an initial dataset to train the T5 generative model. The dataset is constructed by querying ChatGPT to generate product descriptions, using product titles as prompts. We then remove data from the training dataset that are not suitable for online display. The detailed algorithm is shown in Algorithm \cite{alg1}.
 
-In Step-2, **Model Training \& Inference**. We use the data of Step-1 and train T5 model. Then we use the T5 model to generate product descriptions for hundreds of millions the products. 
+In Step-2, **Model Training \& Inference**. Using the data from Step-1, we train the T5 model. The trained model is then used to generate product descriptions for hundreds of millions of products.
 
 In Step-3, **Deployment**. We display the generated product descriptions on the products on the App. 
 
