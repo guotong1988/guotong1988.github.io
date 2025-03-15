@@ -1,3 +1,3 @@
 Research direction: 
-1) Efficiently Build 99% Accuracy Models,
+1) Efficiently Build 99% Accuracy Models
 2) Efficiently Build AGI
