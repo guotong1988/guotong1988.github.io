@@ -23,9 +23,11 @@ Hi! My name is Tong Guo（郭同）.
 
 ## Research
 
-[my.scholar.google](https://scholar.google.com/citations?user=4J7HYNAAAAAJ)
+[My Google Scholar](https://scholar.google.com/citations?user=4J7HYNAAAAAJ)
 
 [Reviewer of ACL/NAACL/EMNLP/COLING Industry Track](https://github.com/guotong1988/guotong1988/blob/main/README.md) (Top-4 NLP Conferences)
+
+[My Research Direction](https://github.com/guotong1988/guotong1988.github.io/blob/main/README2.md)
 
 ## Work
 
