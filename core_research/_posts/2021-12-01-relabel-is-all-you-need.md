@@ -74,7 +74,7 @@ Object detection is a computer vision technique that allows us to identify and l
 
 #### 3.3 sequence generation
 
-The key step of our idea is about how to judge the noisy data. For sequence generation, we can use edit-distance score or other sequence similarity evaluation method. Then our steps are:
+The key step of our idea is about how to judge the noisy data. For sequence generation, we can use edit distance score or other sequence similarity evaluation method. Then our steps are:
 
 1. We take text generation task as example. We have an origin labeled dataset-v1. The data has input sentence and output sentence.
 
