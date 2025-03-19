@@ -74,7 +74,7 @@ Object detection is a computer vision technique that allows us to identify and l
 
 #### 3.3 sequence generation
 
-The key step of our idea is about how to judge the noisy data. For sequence generation, we can use BLEU score or other sequence similarity evaluation method. Then our steps are:
+The key step of our idea is about how to judge the noisy data. For sequence generation, we can use edit-distance score or other sequence similarity evaluation method. Then our steps are:
 
 1. We take text generation task as example. We have an origin labeled dataset-v1. The data has input sentence and output sentence.
 
@@ -82,7 +82,7 @@ The key step of our idea is about how to judge the noisy data. For sequence gene
 
 3. Using model-v1 to predict the generated sentences for dataset-v1's input sentences. 
 
-4. If the BLEU score of model-generated sentences is far from the origin output sentences of dataset-v1, we think they are the noisy data. In actual operation, if the model result and the origin output sentence does not have common token, we think the data is a noisy data. 
+4. If the distance score of model-generated sentences is far from the origin output sentences of dataset-v1, we think they are the noisy data. In actual operation, if the model result and the origin output sentence does not have common token, we think the data is a noisy data. 
 
 5. We label the noisy data again by human, while given the generated sentences of model and origin output sentence as reference. In actual operation, it can be a choice question for labeling people. The labeling people chooses the best result from model results and origin output sentence. Then we get dataset-v2 and model-v2.
 
