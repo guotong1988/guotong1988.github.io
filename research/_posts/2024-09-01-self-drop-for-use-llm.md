@@ -18,7 +18,7 @@ In recent years, the development of large language models (LLMs) \cite{ref1,ref3
 
 ### 2. Method
 
-The pseudo code is shown in algorithm \cite{alg1}. In this algorithm, the term "sort" refers to the process of arranging the entire text in Unicode order, which we consider equivalent to sorting based on text similarity.
+The pseudo code is shown in algorithm \cite{alg1}. In this algorithm, the term "sort" refers to the process of arranging the text dataset in Unicode order, which we consider equivalent to sorting based on text similarity.
 
 ![alg1](/assets/png/self-eval-drop/alg1.png)
 
