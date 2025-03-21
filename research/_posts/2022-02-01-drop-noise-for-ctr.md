@@ -87,7 +87,7 @@ The main reason why CTR models struggle to achieve AUC scores above 0.95 lies in
 
 #### 5.3 Effectiveness of drop-noise method
 
-In the domain of recommendation systems, it is recognized that for distinct stratified user groups—such as dividing a user group into two segments—training separate CTR models for each segment enables the application of different models to different user groups during online exposure. Consequently, the drop-noise method proposed in this paper can be implemented through user grouping. Specifically, the model refined by drop-noise will exclusively apply to the corresponding user group, while the other user group will continue to rely on the baseline model.
+In the domain of recommendation systems, it is recognized that for distinct stratified user groups—such as dividing a user group into two segments — training separate CTR models for each segment enables the application of different models to different user groups during online exposure. Consequently, the drop-noise method proposed in this paper can be implemented through user grouping. Specifically, the model refined by drop-noise will exclusively apply to the corresponding user group, while the other user group will continue to rely on the baseline model.
 
 Alternatively, when training on combined user data from different groups, distinct corresponding weights can be assigned to the loss function. This ensures that the model appropriately accounts for the varying importance or characteristics of each user group during the optimization process.
 
