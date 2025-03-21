@@ -29,16 +29,6 @@ Hi! My name is Tong Guo（郭同）.
 
 [My Research Direction](https://github.com/guotong1988/guotong1988.github.io/blob/main/README.md)
 
-## Work
-
-2013-2016, Cloudwave Database
-
-2016-2018, Lenovo AI Lab
-
-2018-2019, Rokid AI Lab
-
-2019-Now, Meituan 
-
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
 ## Project
