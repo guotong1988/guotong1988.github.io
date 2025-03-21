@@ -11,7 +11,11 @@ description: "Improving Text Generation for Product Description by Label Error C
 
 ## Abstract
 
-Text generation is an important method to generate accurate and available product description from product title. Product description generation's main problem for online E-commerce application is the available rate of generated text. The available rate of online deployment standard needs to reach above 99\%. Model-centric method is limited by the quality of the training dataset. To handle the problem, we propose our data-centric method to improve the generation model's available rate from 88.0\% to 99.2\%. Our approach helps in building models using LLMs (large language models) annotation results and constructing datasets to obtain better results than LLMs. Also, our method simplifies the human labeling work to 2-class choices to label, which improve the labeling speed. In summary, our method saves about 10x of the labeling time and achieves 99.2\% accuracy to be deployed online.
+Text generation serves as a crucial technique for producing accurate and usable product descriptions from product titles. The primary challenge in product description generation for online e-commerce applications lies in achieving sufficient usability rates for generated text. Current online deployment standards require usability rates exceeding 99%. Traditional model-centric approaches remain constrained by training dataset quality. To address this limitation, we propose a data-centric methodology that enhances generation model usability rates from 88.0% to 99.2%. Our approach helps in building models using LLMs (large language models) annotation results and constructing datasets to obtain better results than LLMs API. The methodology significantly streamlines human labeling efforts by reducing annotation tasks to binary classification decisions, thereby accelerating labeling speed. In summary, our solution achieves a tenfold reduction in labeling time while attaining  99.2% accuracy suitable for online deployment.
+
+
+Our approach leverages LLM (Large Language Model) generated annotations to build enhanced models and construct datasets, ultimately outperforming standalone LLM applications. 
+
 
 ## 1. Introduction
 
