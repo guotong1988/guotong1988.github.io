@@ -211,7 +211,9 @@ Label error detection\cite{wang2022detecting,yu2023delving,hendrycks2016baseline
 
 ## 6. Conclusion
 
- Product description generation's problems for online E-commerce application is the available rate of generated text and the time consuming to annotate for training dataset. Model-centric method is limited by the quality of the training dataset. We propose our data-centric method to improve the accuracy to 99.2\% to achieve the standard for online deployment. Our method also saves about 10x the annotating time.
+
+The challenges in product description generation for online e-commerce applications lie in the availability rate of generated text and the time consumption required for training dataset annotation. While model-centric approaches are constrained by training dataset quality, we propose a data-centric method that achieves 99.2\% accuracy, meeting the standard for online deployment. Our solution additionally reduces annotation time by approximately tenfold.
+
 
 ## References
 
