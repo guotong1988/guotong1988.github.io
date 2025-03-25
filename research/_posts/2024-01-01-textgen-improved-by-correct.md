@@ -21,7 +21,7 @@ Text generation serves as a crucial technique for producing accurate and usable 
 
 In e-commerce, product descriptions can attract shoppers and improve sales. However, manually writing effective product descriptions is highly time-consuming. Text generation \cite{zhang2022survey,prabhumoye2020exploring} technologies play a crucial role in this range of applications.
 
-In recent years, developments in deep learning (DL) have brought breakthroughs in text generation. Sequence-to-sequence (Seq2Seq) models utilize encoder-decoder transformers  \cite{vaswani2017attention} to achieve greater flexibility. Prominent examples of such models include T5 and BART \cite{raffel2020exploring,lewis2020bart}. In this paper, we employ the T5 \cite{raffel2020exploring} model to perform our data-centric experiments. 
+In recent years, developments in deep learning (DL) have brought breakthroughs in text generation. Sequence-to-sequence (Seq2Seq) models utilize encoder-decoder transformers  \cite{vaswani2017attention} to achieve greater flexibility. Prominent examples of such models include T5 and BART \cite{raffel2020exploring,lewis2020bart}. In this paper, we employ the T5 model to perform our data-centric experiments. 
 
 Text generation has an input or a source sequence $X$ and an output or a target sequence $Y$ to be generated. In our product description generation tasks, $X$ is the product title and $Y$ is the product description. The examples are shown in Table \cite{table1}.
 
