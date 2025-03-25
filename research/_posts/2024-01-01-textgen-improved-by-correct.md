@@ -40,7 +40,7 @@ The contributions of our paper are:
 ![table23](/assets/png/textgen-improved-by-correct/table23.png)
 
 ## 2. Method 
-The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our experiments. The pipeline contains 6 steps. In this section, we illustrate the detail of each step and how the algorithms work. In the discussion section, we illustrate the motivation why we design these steps.
+The whole pipeline is shown in Figure \cite{fig1}. In this paper, we adopt the T5 \cite{raffel2020exploring} model to conduct our experiments. The pipeline contains six steps. In this section, we illustrate the details of each step and how the algorithms work. In the discussion section, we explain the motivation behind designing these steps.
 
 ![figure1](/assets/png/textgen-improved-by-correct/fig1.png)
 
@@ -167,13 +167,14 @@ To ensure the quality of the dataset, we can label each data by multiple times a
 
 #### 4.3 The Advantage Of Our Method
 
-In this section we illustrate the advantage of our method, compared to the baseline methods above. 
+In this section, we illustrate the advantages of our method compared to the baseline methods mentioned above.
 
-First, we want to fix the ambiguous data in initial training dataset. If we label all the training dataset to remove the ambiguous data. The labeling amount is about 10x to our method. Our Self-Predict and Choose method avoids to search all the data in the training dataset and narrow the scope to be labeled.
+First, we aim to resolve ambiguous data in the initial training dataset. If we were to label the entire training dataset to eliminate ambiguous data, the labeling effort would be approximately 10 times greater than our method requires. Our Self-Predict and Choose method avoids searching through all data in the training dataset and narrows the scope requiring labeling.
 
-Second, the manually labeling error may cause wrong removing from the training dataset. In Step-5, we want to remove the error data while also overcoming manual annotation errors. So we design this algorithm that will not affect the model performance even if some right data is removed by mistake. Because we observe that some of the right data may be removed, but the error data has a greater negative impact.
+Second, manual labeling errors might lead to incorrect removal of data from the training dataset. In Step-5, we address both error removal and manual annotation inaccuracies. Our designed algorithm ensures model performance remains unaffected even if some valid data is mistakenly removed, as we observe that while some valid data might be eliminated, erroneous data has a significantly greater negative impact.
 
 #### 4.4 The Pipeline Steps Order
+
 The order of several steps in our pipeline is crucial for the result. We illustrate the reasons in this section.
 
 We put the Step-3 before the Step-5. The reason is that we first need to correct the ambiguous data of out-of-distribution. Then we use Step-5 to remove in-distribution error data. If there are more ambiguous data in Step-3, there will be more error data in Step-5. It will consume more time to achieve the standard.
