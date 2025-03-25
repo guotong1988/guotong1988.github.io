@@ -175,10 +175,15 @@ Second, manual labeling errors might lead to incorrect removal of data from the 
 
 #### 4.4 The Pipeline Steps Order
 
-The order of several steps in our pipeline is crucial for the result. We illustrate the reasons in this section.
+The sequence of steps in our pipeline is crucial for achieving optimal results. This section explains the rationale behind our specific ordering.
 
-We put the Step-3 before the Step-5. The reason is that we first need to correct the ambiguous data of out-of-distribution. Then we use Step-5 to remove in-distribution error data. If there are more ambiguous data in Step-3, there will be more error data in Step-5. It will consume more time to achieve the standard.
+We position Step-3 before Step-5 because:
 
+(1) Out-of-distribution data correction must precede in-distribution error removal.
+
+(2) Step-3's ambiguous data processing directly impacts Step-5's error quantity.
+
+(3) More ambiguous data identified in Step-3 leads to: Increased erroneous data requiring processing in Step 5. Extended processing time to meet quality standards.
 
 ## 5. Related Work
 
