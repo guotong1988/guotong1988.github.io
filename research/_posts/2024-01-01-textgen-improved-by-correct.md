@@ -16,16 +16,14 @@ Text generation serves as a crucial technique for producing accurate and usable 
 
 ## 1. Introduction
 
-  
-
-
 In e-commerce, product descriptions can attract shoppers and improve sales. However, manually writing effective product descriptions is highly time-consuming. Text generation \cite{zhang2022survey,prabhumoye2020exploring} technologies play a crucial role in this range of applications.
 
 In recent years, developments in deep learning (DL) have brought breakthroughs in text generation. Sequence-to-sequence (Seq2Seq) models utilize encoder-decoder transformers  \cite{vaswani2017attention} to achieve greater flexibility. Prominent examples of such models include T5 and BART \cite{raffel2020exploring,lewis2020bart}. In this paper, we employ the T5 model to perform our data-centric experiments. 
 
 Text generation has an input or a source sequence $X$ and an output or a target sequence $Y$ to be generated. In our product description generation tasks, $X$ is the product title and $Y$ is the product description. The examples are shown in Table \cite{table1}.
 
-In online applications, we mainly face low accuracy or low available rate problem: Model-centric method \cite{guo2021comprehensive} is limited by the quality of the training dataset. The generation results' accuracy needs to be above 99\%, because too many error descriptions will result in a poor user experience. Our initial available rate is only 88\%, after we initially construct the training dataset by querying ChatGPT\cite{ouyang2022training,openai2023gpt}. The reason of the low accuracy is: There is a certain amount of error data in the training dataset that is not suitable to display. For example, the product is titled 'fish-flavored shredded pork'. But the corresponding description in training dataset is 'this dish is spicy'. So the product description may not suit for not-spicy 'fish-flavored shredded pork'. More examples are shown in Table \cite{table2} and \cite{table3}.
+In online applications, we mainly face low accuracy or low availability rate problems: Model-centric method is limited by the quality of the training dataset. The generation results' accuracy needs to be above 99\% as too many erroneous descriptions would result in poor user experience. Our initial availability rate was only 88\% after initially constructing the training dataset by querying ChatGPT \cite{ouyang2022training,openai2023gpt}. The reason for the low accuracy is that there exists a significant amount of erroneous data in the training dataset that is unsuitable for display. For instance, while a product is titled 'fish-flavored shredded pork', the corresponding description in the training dataset states "this dish is spicy." Consequently, such product descriptions may not be suitable for non-spicy "fish-flavored shredded pork" products. More examples are shown in Table \cite{table2} and \cite{table3}.
+
 
 The speed of manual annotation is also a very critical issue. In our scenario, 80\% of the time is spent on labeling data. For example, if it consumes 2 weeks to annotate 100,000 data. So if we use the baseline method which 5x peoples label the same data to ensure data quality, it will consume us 10 weeks to complete the data preparation work. On the other end, it only consumes 1 week if we reduce the labeling time by 2x.
 
