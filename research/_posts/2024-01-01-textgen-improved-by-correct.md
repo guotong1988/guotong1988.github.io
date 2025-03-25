@@ -183,7 +183,7 @@ We position Step-3 before Step-5 because:
 
 (2) Step-3's ambiguous data processing directly impacts Step-5's error quantity.
 
-(3) More ambiguous data identified in Step-3 leads to: Increased erroneous data requiring processing in Step 5. Extended processing time to meet quality standards.
+(3) More ambiguous data identified in Step-3 leads to: Increased erroneous data requiring processing in Step-5.
 
 ## 5. Related Work
 
