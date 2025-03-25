@@ -24,18 +24,17 @@ Text generation has an input or a source sequence $X$ and an output or a target 
 
 In online applications, we mainly face low accuracy or low availability rate problems: Model-centric method is limited by the quality of the training dataset. The generation results' accuracy needs to be above 99\% as too many erroneous descriptions would result in poor user experience. Our initial availability rate was only 88\% after initially constructing the training dataset by querying ChatGPT \cite{ouyang2022training,openai2023gpt}. The reason for the low accuracy is that there exists a significant amount of erroneous data in the training dataset that is unsuitable for display. For instance, while a product is titled 'fish-flavored shredded pork', the corresponding description in the training dataset states "this dish is spicy." Consequently, such product descriptions may not be suitable for non-spicy "fish-flavored shredded pork" products. More examples are shown in Table \cite{table2} and \cite{table3}.
 
+The speed of manual annotation is a critical challenge. In our scenario, 80\% of the time is spent on data labeling. For example, annotating 100,000 data points currently takes 2 weeks. If we adopt the baseline method requiring five people to label the same data for quality assurance, the data preparation would require 10 weeks to complete. Conversely, by reducing labeling time by half, this process could be completed in just 1 week.
 
-The speed of manual annotation is also a very critical issue. In our scenario, 80\% of the time is spent on labeling data. For example, if it consumes 2 weeks to annotate 100,000 data. So if we use the baseline method which 5x peoples label the same data to ensure data quality, it will consume us 10 weeks to complete the data preparation work. On the other end, it only consumes 1 week if we reduce the labeling time by 2x.
-
-To solve the above problems, we design the Self-Predict and Choose method to correct the error data in ambiguous data, and we design Self-Search and Remove method to solve the problem of in-distribution error data, while overcoming the problem of errors in manual annotations.
+To solve the aforementioned problems, we designed the Self-Predict and Choose method to correct errors in ambiguous data, and developed the Self-Search and Remove method to address in-distribution errors, while also overcoming issues with manual annotation errors.
 
 The contributions of our paper are:
 
-(1) we propose the data-centric method for improving text generation model's accuracy or available rate. Our method can achieve 99.2\% available rate in our product description generation task to be deployed online. 
+(1) We propose a data-centric method for improving text generation models' accuracy and success rates. Our method achieves a 99.2\% success rate in our product description generation task being deployed online.
 
-(2) Our method focuses on using minimal labeling time to identify ambiguous and error data in the training dataset. It saves about 10x of the labeling time, compared to the baseline of checking all the training data for several times. In all the stages where we need annotations, the annotators only need to label 2-class choices, which is the fastest and most accurate annotation process.
+(2) Our method focuses on minimizing labeling effort by identifying ambiguous and erroneous data in training datasets. It reduces labeling time by tenfold compared to the baseline approach of repeatedly checking all training data. For all annotation stages, labelers only need to make two-class selections - the most efficient and reliable annotation format.
 
-(3) Our method can apply to many other text generation tasks and improve the accuracy to above 99\%. Also our method can apply to a broad set of deep learning applications based on human-labeled dataset.
+(3) Our method can be applied to various text generation tasks, achieving accuracy rates above 99\%. It also has broad applicability to deep learning applications using human-annotated datasets.
 
 ![table1](/assets/png/textgen-improved-by-correct/table1.png)
 ![table23](/assets/png/textgen-improved-by-correct/table23.png)
