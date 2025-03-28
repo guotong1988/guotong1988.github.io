@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Self-Refine Learning For Cleaning LLMs Data"
+title: "Drop Noise For Cleaning LLMs Data"
 date: 2024-12-31
 category: research
 author: "Tong Guo"
-description: "Self-Refine Learning For Cleaning LLMs Data"
+description: "Drop Noise For Cleaning LLMs Data"
 ---
-# Self-Refine Learning For Cleaning LLMs Data
+# Drop Noise For Cleaning LLMs Data
 
 ### Abstract
 
