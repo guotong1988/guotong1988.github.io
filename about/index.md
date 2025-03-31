@@ -25,7 +25,7 @@ Hi! My name is Tong Guo（郭同）.
 
 [My Google Scholar](https://scholar.google.com/citations?user=4J7HYNAAAAAJ)
 
-[Reviewer of ACL/NAACL/EMNLP/COLING Industry Track](https://github.com/guotong1988/guotong1988/blob/main/README.md)
+[My Academic Honors](https://github.com/guotong1988/guotong1988/blob/main/README.md)
 
 [My Research Direction](https://github.com/guotong1988/guotong1988.github.io/blob/main/README.md)
 
