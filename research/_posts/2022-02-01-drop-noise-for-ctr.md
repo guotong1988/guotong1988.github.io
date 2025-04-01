@@ -37,7 +37,7 @@ Previous works \cite{ref1} \cite{ref2} focus on the data-centric perspective on 
 
 ### 3. Method
 
-![fig1](/assets/png/drop-ctr/fig1.png)
+![fig1](/assets/png/drop-noise-for-ctr/fig1.png)
 
 In this section, we describe our method in detail. Our method is shown in Fig 1. It includes 5 steps:
 
@@ -61,7 +61,7 @@ In this section we describe detail of experiment parameters and list the experim
 In this section, we evaluate our method on our real-world dataset. Our dataset-A contains 2,000,000,000 user-item click-or-not data and each data has 100 features. Table 1 shows the performance comparison on the dataset. The model is DeepFM. As our method is data-centric approach, we do not focus on which model we use.
 
 
-![table1](/assets/png/drop-ctr/table1.png)
+![table1](/assets/png/drop-noise-for-ctr/table1.png)
 
 
 ### 5. Discussion
