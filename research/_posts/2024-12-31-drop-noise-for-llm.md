@@ -43,7 +43,22 @@ In actual observations, we found that almost all noisy data with significant iss
 
 This automated cleaning method is a highly compatible combination with the method of obtaining data through prompting LLMs. The amount of training data obtained via prompting LLMs is sufficient, and we can set the necessary control thresholds to filter the data.
 
-### 4.1 Comparing to RAG methods
+### 4.1 Why drop-noise method work?
+
+Why drop-noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.)
+
+If there are three very similar data (data-1/data-2/data-3) in total, which labels are class-A/class-A/class-B, Then the trained model will probably predict class-A for data-3.
+
+We suppose that data-3 is wrong-labeled by human, because more people labeled these very similar data-1/data-2 to class-A.
+
+And the trained model predict class-A for data-3. So the noise data here is data-3 by our method.
+
+If we do not drop data-3, the model prediction for new data that is the most similar to data-3 will be class-B, which is wrong. The new data is more similar to data-3 than data-1/data-2.
+
+If we drop data-3, the model prediction for new data that is the most similar to data-3 will be class-A, which is right.
+
+
+### 4.2 Comparing to RAG methods
 
 Our approach is to obtain a dataset from LLMs to train our own model, in contrast to the RAG method \cite{ref6}, which involves working on the prompts given to LLMs.
 
