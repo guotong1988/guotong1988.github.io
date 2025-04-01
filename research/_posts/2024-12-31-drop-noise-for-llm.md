@@ -27,15 +27,15 @@ The whole pipeline and algorithm pseudocode of our method are shown in Figure \c
 
 In our task, the T5-Base model we trained overfitted on a dataset with a size of 50,000. We trained for 30-50 epochs. Our threshold condition is that the number of common tokens is greater than 20% of the total length of the two text data.
 
-![fig1](/assets/png/self-refine-use-llm/fig1.png)
+![fig1](/assets/png/drop-noise-for-llm/fig1.png)
 
-![alg1](/assets/png/self-refine-use-llm/alg1.png)
+![alg1](/assets/png/drop-noise-for-llm/alg1.png)
 
 ### 3. Experiment
 We conducted experiments on a NLP task that inputting item names to generate item tags. We prompted the LLMs to write synonyms for the item name that can be found through search. We constructed an initial dataset of 50,000, which was reduced to 35,000 after being cleaned using our method. 
 
 The results of the experiment are shown in Table \cite{tab1}.
-![table1](/assets/png/self-refine-use-llm/table1.png)
+![table1](/assets/png/drop-noise-for-llm/table12.png)
 
 ### 4. Discussion
 
