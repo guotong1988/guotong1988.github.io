@@ -66,6 +66,8 @@ In this section, we evaluate our method on our real-world dataset. Our dataset-A
 
 ### 5. Discussion
 
+In subsequent observations, we found that the method proposed in this paper can effectively remove noise. However, it does not alter the dataset's labeling rules, knowledge sources, or inherent biases.
+
 #### 5.1 Why dev AUC improved
 
 Why drop-noise method work? Because deep learning is statistic-based. Take classification as example. (In a broad sense, all the machine learning tasks can be viewed as classification.) 
