@@ -95,7 +95,7 @@ Alternatively, when training on combined user data from different groups, distin
 
 The core reason why the drop-noise method can be deployed is that we can cluster users during the prediction phase.
 
-Similarly, for manually labeled datasets, while we can prepare two separate models for inference based on different inputs, only the training-dataset data can be reliably used for data clustering purposes.
+But for manually labeled datasets, while we can prepare two separate models for inference based on different inputs, only the training-dataset data can be reliably used for data clustering purposes.
 
 ### 6. Conclusion
 
