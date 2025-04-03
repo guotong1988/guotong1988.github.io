@@ -33,4 +33,4 @@ Hi! My name is Tong Guo（郭同）.
 
 ## Project
 
-[Two games](https://space.bilibili.com/447278957), with a monthly revenue of 200 RMB.
+[Two games](https://space.bilibili.com/447278957), with a monthly revenue of 100 RMB.
