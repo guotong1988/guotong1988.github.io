@@ -93,7 +93,7 @@ In the domain of recommendation systems, it is recognized that for distinct stra
 
 Alternatively, when training on combined user data from different groups, distinct corresponding weights can be assigned to the loss function. This ensures that the model appropriately accounts for the varying importance or characteristics of each user group during the optimization process.
 
-The fundamental reason the drop-noise method can be deployed is that it enables user clustering during the prediction phase.
+The core reason why the drop-noise method can be deployed is that we can cluster users during the prediction phase.
 
 Similarly, for manually labeled datasets, while we can prepare two separate models for inference based on different inputs, only the training-dataset data can be reliably used for data clustering purposes.
 
