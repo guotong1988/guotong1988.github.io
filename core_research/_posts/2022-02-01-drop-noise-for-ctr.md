@@ -2,7 +2,7 @@
 layout: post
 title: "Drop Noise For CTR Prediction"
 date: 2022-02-01
-category: research
+category: core_research
 author: "Tong Guo"
 description: "Drop Noise For CTR Prediction"
 ---
