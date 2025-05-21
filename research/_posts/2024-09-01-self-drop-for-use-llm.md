@@ -69,7 +69,7 @@ Under the condition that the prompt itself is correct, the more content in the p
 
 #### 4.3 Baseline Solution
 
-If we manually review the training dataset to identify and correct the error data, this method would consume a significant amount of annotation manpower.
+If we manually review all the training data to identify and correct the error data, this method would consume a significant amount of annotation manpower.
 
 ### 5. Conclusion and Future Work
 
