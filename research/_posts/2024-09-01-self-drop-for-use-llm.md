@@ -20,7 +20,7 @@ Data Efficiency, Representative Sampling
 
 In recent years, the development of large language models (LLMs) \cite{ref1,ref3,ref4,ref5} has brought breakthroughs on NLP applications. However the quality of the training datasets or inference results of LLMs exist some noise data for the specific deep learning (DL) \cite{ref2} applications. In order to solve the noise data problem, we propose our self-eval-drop method to clean the datasets by LLMs API.
 
-First, we identify suitable prompts to generate domain-specific data through LLM APIs, which can produce virtually unlimited data. Our programmers then either manually inspect the data (or assign it to annotators) and develop robust filtering rules to eliminate dirty data. This approach effectively enhances the quality of datasets derived from LLM APIs.
+First, we identify suitable prompts to generate domain-specific data through LLM APIs, which can produce virtually unlimited data. Then programmers then either manually inspect the data (or assign it to annotators) and **develop robust filtering rules to eliminate dirty data**. This approach effectively enhances the quality of datasets derived from LLM APIs.
 
 ### 2. Method
 
