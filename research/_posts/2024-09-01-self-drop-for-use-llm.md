@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Self-Eval-Drop for Leveraging LLMs Data"
+title: "Self-Eval-Drop for Cleaning LLMs Data"
 date: 2024-09-01
 category: research
 author: "Tong Guo"
-description: "Self-Eval-Drop for Leveraging LLMs Data"
+description: "Self-Eval-Drop for Cleaning LLMs Data"
 ---
-# Self-Eval-Drop for Leveraging LLMs Data
+# Self-Eval-Drop for Cleaning LLMs Data
 
 ### Abstract
 
