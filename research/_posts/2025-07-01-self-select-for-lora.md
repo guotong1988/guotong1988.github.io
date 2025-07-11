@@ -12,7 +12,7 @@ description: "Self-Predict And Self-Select For Improving LoRA-based Domain Fine-
 
 LoRA fine-tuning preserves the information of the base LLMs
 while incorporating domain-specific data through fine-tuning. 
-Therefore, if we use QA-paired domain training dataset to LoRA fine-tune a LLM
+Therefore, if we use QA-pair domain training dataset to LoRA fine-tune a LLM
 and then employ this fine-tuned LLM to predict the domain training dataset itself, 
 we can prepare two or more answers for each QA-pair's question. 
 We manually label the optimal answer from the answers, replace the original answer, 
