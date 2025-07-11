@@ -18,3 +18,5 @@ we can prepare two or more answers for each QA-pair's question.
 We manually label the optimal answer from the answers, replace the original answer, 
 and proceed to the next round of LoRA fine-tuning.
 Thus, we can continuously optimize the training dataset through iterative self-predict and self-select.
+This method can also be applied to multi-turn QA fine-tuning datasets.
+The human evaluation results of the fine-tuned LLM demonstrate that our approach is effective.
