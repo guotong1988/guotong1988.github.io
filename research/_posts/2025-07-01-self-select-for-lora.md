@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Self-Predict And Self-Select For Improving LoRA-based Domain Fine-tuning"
+title: "Self-Predict And Human-Select For Improving LoRA-based Domain Fine-tuning"
 date: 2025-07-01
 category: research
 author: "Tong Guo"
-description: "Self-Predict And Self-Select For Improving LoRA-based Domain Fine-tuning"
+description: ""
 ---
-# Self-Predict And Self-Select For Improving LoRA-based Domain Fine-tuning
+# Self-Predict And Human-Select For Improving LoRA-based Domain Fine-tuning
 
 ### Abstract
 
@@ -17,6 +17,6 @@ and then employ this fine-tuned LLM to predict the domain training dataset itsel
 we can prepare two or more answers for each QA-pair's question. 
 We manually label the optimal answer from the answers, replace the original answer, 
 and proceed to the next round of LoRA fine-tuning.
-Thus, we can continuously optimize the training dataset through iterative self-predict and self-select.
+Thus, we can continuously optimize the training dataset through iterative self-predict and human-select.
 This method can also be applied to multi-turn QA fine-tuning datasets.
 The human evaluation results of the fine-tuned LLM demonstrate that our approach is effective.
