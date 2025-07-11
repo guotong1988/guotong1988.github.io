@@ -6,7 +6,7 @@ category: research
 author: "Tong Guo"
 description: ""
 ---
-
+# Self-Predict And Manual-Select For Improving LoRA-based Domain Fine-tuning
 ### Abstract
 
 LoRA fine-tuning preserves the information of the base LLMs
