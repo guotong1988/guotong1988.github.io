@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Self-Predict And Human-Select For Improving LoRA-based Domain Fine-tuning"
+title: "Self-Predict And Manual-Select For Improving LoRA-based Domain Fine-tuning"
 date: 2025-07-01
 category: research
 author: "Tong Guo"
 description: ""
 ---
-# Self-Predict And Human-Select For Improving LoRA-based Domain Fine-tuning
+# Self-Predict And Manual-Select For Improving LoRA-based Domain Fine-tuning
 
 ### Abstract
 
