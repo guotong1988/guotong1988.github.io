@@ -37,7 +37,7 @@ The proposed method can be iteratively applied to continuously enhance the quali
 
 ### 4. Discussion
 
-If we intend to fine-tune a LLM for domain-specific applications, then acquiring the step-1 dataset, as the foundation of the entire workflow, carries greater weight compared with the method proposed in this paper.‌ For instance, when employing API-based prompt engineering (e.g., utilizing GPT-4 or Gemini) for dataset generation, ‌rigorous optimization of the prompt engineering pipeline itself becomes paramount‌ to secure a high-quality seed training dataset.
+If we intend to fine-tune a LLM for domain-specific applications, then acquiring the Step-1 dataset, as the foundation of the entire workflow, carries greater weight compared with the method proposed in this paper.‌ For instance, when employing API-based prompt engineering (e.g., utilizing GPT-4 or Gemini) for dataset generation, ‌rigorous optimization of the prompt engineering pipeline itself becomes paramount‌ to secure a high-quality seed training dataset.
 
 
 
