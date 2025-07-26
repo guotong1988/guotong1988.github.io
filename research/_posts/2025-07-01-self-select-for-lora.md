@@ -37,7 +37,7 @@ The proposed method can be iteratively applied to continuously enhance the quali
 
 ### 4. Discussion
 
-When fine-tuning a domain-adapted LLM, the acquisition of the initial dataset (Step-1) – serving as the foundational stage of the workflow – assumes greater criticality relative to the method presented in this paper.‌ For instance, ‌should‌ data generation be implemented via prompt engineering leveraging APIs such as GPT-4 or Gemini, ‌rigorous optimization of the prompt engineering pipeline itself becomes paramount‌ to secure a high-quality seed training dataset.
+When fine-tuning a domain-adapted LLM, the acquisition of the initial dataset (Step-1) – serving as the foundational stage of the workflow – assumes greater criticality relative to the method presented in this paper.‌ For instance, ‌should‌ dataset be implemented via prompt engineering leveraging APIs such as GPT-4 or Gemini, ‌rigorous optimization of the prompt engineering pipeline itself becomes paramount‌ to secure a high-quality seed training dataset.
 
 
 
