@@ -25,10 +25,24 @@ The human evaluation results of the fine-tuned LLM demonstrate that our approach
 
 In recent years, the development of large language models (LLMs) \cite{ref1,ref2,ref3} has brought breakthroughs on NLP applications. 
 
+Parameter Efficient Fine-Tuning (PEFT) \cite{ref4,ref5} provides a practical solution by efficiently adjusting the large models over the various downstream tasks.
+
+The proposed method can be iteratively applied to continuously enhance the quality of the dataset.
+
 ### 2. Method
 
 ![fig1](/assets/png/self-select/fig1.png)
 
+### 3. Experiments
+
+### 4. Discussion
+
+When fine-tuning a domain-adapted LLM, the acquisition of the initial dataset (Step-1) – serving as the foundational stage of the workflow – assumes greater criticality relative to the method presented in this paper.‌ For instance, ‌should‌ data generation be implemented via prompt engineering leveraging APIs such as GPT-4 or Gemini, ‌rigorous optimization of the prompt engineering pipeline itself becomes paramount‌ to secure a high-quality seed training dataset.
+
+
+
+
+### 5. Conclusion
 
 ### Reference
 ```
@@ -42,4 +56,9 @@ Yang A, Li A, Yang B, et al. Qwen3 technical report[J]. arXiv preprint arXiv:250
 \bibitem{ref3}
 Touvron H, Lavril T, Izacard G, et al. Llama: Open and efficient foundation language models[J]. arXiv preprint arXiv:2302.13971, 2023.
 
+\bibitem{ref4}
+Hu E J, Shen Y, Wallis P, et al. Lora: Low-rank adaptation of large language models[J]. ICLR, 2022, 1(2): 3.
+
+\bibitem{ref5}
+Han Z, Gao C, Liu J, et al. Parameter-efficient fine-tuning for large models: A comprehensive survey[J]. arXiv preprint arXiv:2403.14608, 2024.
 ```
