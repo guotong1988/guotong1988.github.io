@@ -27,8 +27,6 @@ Hi! My name is Tong Guo（郭同）.
 
 [My Academic Honors](https://github.com/guotong1988/guotong1988/blob/main/README.md)
 
-[My Research Direction](https://github.com/guotong1988/guotong1988.github.io/blob/main/README.md)
-
 <meta name="google-site-verification" content="8NeXeopl0Y7RpgHgRilAMtTLuzHTNav3LpL8MA7lj1A" />
 
 ## Project
