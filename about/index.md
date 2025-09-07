@@ -19,7 +19,7 @@ Hi! My name is Tong Guo（郭同）.
 
 2006-2010, Peking University, Pharmacy Science.
 
-2011-2014, Beihang University, Software Engineering. （德才兼备 知行合一）
+2011-2014, Beihang University, Software Engineering. 
 
 ## Research
 
