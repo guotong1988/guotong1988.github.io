@@ -31,6 +31,8 @@ then we further illustrate our idea for sequence tagging, object detection, sequ
 ### 2. Method
 ![fig1](/assets/png/unified-nlp/fig1.png)
 
+#### 2.1 Initial Datasets
+
 Our initial datasets can be sourced from the following three methods:
 
 **Manual Annotation**: Data noise in a manually annotated dataset, using a classification task as an example, occurs when there is disagreement among annotators. For instance, for 3 very similar data to-label, 2 annotators assign label-A, while 1 annotator assigns label-B.
@@ -39,8 +41,14 @@ Our initial datasets can be sourced from the following three methods:
 
 **User Behavior Logs**: Datasets based on user behavior logs are constructed from user actions. For example, in an e-commerce scenario, a dataset can be built based on whether a user clicks on an item or places an order.
 
+#### 2.2 Find Noisy Data
+
+We first train a model on the initial dataset. Then, we use this model to generate predictions for the entire training set. The data where the model's prediction differs from the original ground-truth label, or where the prediction error is large, are identified as potential noise. This method allows us to flag approximately 5-15% of the data for re-annotation. This approach not only reduces manual annotation costs, but its effectiveness in identifying noisy data has also been validated by our experimental results.
 
 
+#### 2.3 Relabel Step
+
+We perform a manual re-annotation of the noisy data. During this process, we provide the human annotators with both the original label and the model's prediction as input information. In the era of LLM, we are now replacing this manual re-annotation with an automated process using an LLM. Similarly, we feed the LLM the same inputs: the original label and the model's prediction.
 
 ### 3. Experimental Results
 
