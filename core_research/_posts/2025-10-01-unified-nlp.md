@@ -22,7 +22,7 @@ NLP, LLM
 
 ### 1. Introduction
 
-In recent years, deep learning \cite{ref1} model and LLM have shown significant improvement on natural language processing(NLP), 
+In recent years, deep learning \cite{ref1} and LLM \cite{ref2} have shown significant improvement on natural language processing(NLP), 
 computer vision and speech processing technologies. However, the model performance is limited by the dataset quality. 
 The main reason is that the dataset has a certain number of noisy data. 
 In this paper, we present a framework to find the noisy data and relabel the noisy data, 
@@ -30,3 +30,14 @@ then we further illustrate our idea for sequence tagging, object detection, sequ
 
 ### 2. Method
 ![fig1](/assets/png/unified-nlp/fig1.png)
+
+
+
+### Reference
+```
+\bibitem{ref1}
+Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[J]. Advances in neural information processing systems, 2012, 25: 1097-1105.
+
+\bibitem{ref2}
+Achiam J, Adler S, Agarwal S, et al. Gpt-4 technical report[J]. arXiv preprint arXiv:2303.08774, 2023.
+```
