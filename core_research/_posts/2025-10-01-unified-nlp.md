@@ -29,3 +29,4 @@ In this paper, we present a framework to find the noisy data and relabel the noi
 then we further illustrate our idea for sequence tagging, object detection, sequence generation, click-through rate (CTR) prediction.
 
 ### 2. Method
+![fig1](/assets/png/unified-nlp/fig1.png)
