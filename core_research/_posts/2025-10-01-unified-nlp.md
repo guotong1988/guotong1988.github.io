@@ -53,7 +53,13 @@ We perform a manual re-annotation of the noisy data. During this process, we pro
 ### 3. Experimental Results
 
 
-### 4. Conclusion
+### 4. Discussion
+
+We find noisy data by contrasting original labels with model predictions.
+
+To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. Nevertheless, human annotation remains indispensable, as relying purely on LLM to relabel would impose a performance ceiling limited by the LLM itself.
+
+### 5. Conclusion
 In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method.
 
 
