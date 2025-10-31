@@ -22,7 +22,7 @@ NLP, LLM
 
 ### 1. Introduction
 
-In recent years, deep learning \cite{ref1} and LLM \cite{ref2} have shown significant improvement on natural language processing(NLP), 
+In recent years, deep learning \cite{ref1} and LLM \cite{ref2,ref3,ref4,ref5} have shown significant improvement on natural language processing(NLP), 
 computer vision and speech processing technologies. However, the model performance is limited by the dataset quality. 
 The main reason is that the dataset has a certain number of noisy data. 
 In this paper, we present a framework to find the noisy data and relabel the noisy data, 
@@ -75,4 +75,13 @@ Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolu
 
 \bibitem{ref2}
 Achiam J, Adler S, Agarwal S, et al. Gpt-4 technical report[J]. arXiv preprint arXiv:2303.08774, 2023.
+
+\bibitem{ref3}
+Radford A. Improving language understanding by generative pre-training[J]. 2018.
+
+\bibitem{ref4}
+Ouyang L, Wu J, Jiang X, et al. Training language models to follow instructions with human feedback[J]. Advances in neural information processing systems, 2022, 35: 27730-27744.
+
+\bibitem{ref5}
+Raffel C, Shazeer N, Roberts A, et al. Exploring the limits of transfer learning with a unified text-to-text transformer[J]. Journal of machine learning research, 2020, 21(140): 1-67.
 ```
