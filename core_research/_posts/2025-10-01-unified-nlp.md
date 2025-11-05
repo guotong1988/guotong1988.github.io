@@ -51,8 +51,8 @@ We first train a model on the initial dataset. Then, we use this model to genera
 We perform a manual re-annotation of the noisy data. During this process, we provide the human annotators with both the original label and the model's prediction as input information. In the era of LLM, we are now replacing this manual re-annotation with an automated process using an LLM. Similarly, we feed the LLM the same inputs: the original label and the model's prediction.
 
 ### 3. Experimental Results
-![table1](/assets/png/unified-nlp/table1.png)
-
+![table12](/assets/png/unified-nlp/table12.png)
+![table3](/assets/png/unified-nlp/table3.png)
 ### 4. Discussion
 
 We find noisy data by contrasting original labels with model predictions.
