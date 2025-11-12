@@ -57,7 +57,7 @@ We perform a manual re-annotation of the noisy data. During this process, we pro
 ![table3](/assets/png/unified-nlp/table3.png)
 ### 4. Discussion
 
-We find noisy data by contrasting original labels with model predictions. To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. In the LLM relabeling step, both the predicted labels and scores from our custom-trained NLP model can be fed to the LLM as the information needed for noise correction.
+We find noisy data by contrasting original labels with model predictions. To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. In the LLM relabeling step, both the predicted labels and scores from our trained NLP model can be fed to the LLM as the information needed for noise correction.
 
 The key advantage of prompt-based data annotation is its efficiency in batch processing. By including a few examples (few-shot learning) in the prompt for a LLM, the LLM can generalize and apply the annotation logic to an entire batch of data. Therefore, LLMs bring the amount of data labeling down to a quantity that is manageable for a single developer.
 
