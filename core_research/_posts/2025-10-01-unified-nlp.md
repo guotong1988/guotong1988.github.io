@@ -28,7 +28,7 @@ The main reason is that the dataset has a certain number of noisy data.
 In this paper, we present a framework to find the noisy data and relabel the noisy data, 
 then we further illustrate our idea for sequence tagging, object detection, sequence generation, click-through rate (CTR) prediction.
 
-This paper's contribution lies in the demonstration that the quality of a training dataset can be enhanced by first generating it with LLM and subsequently using LLM for re-annotation, requiring a small amount of manual proofreading during the relabeling process.
+This paper's contribution lies in the demonstration that the quality of a training dataset can be enhanced by first generating it with LLM and subsequently using LLM for re-annotation, **requiring a small amount of manual proofreading during the relabeling process**.
 
 ### 2. Method
 ![fig1](/assets/png/unified-nlp/fig1.png)
