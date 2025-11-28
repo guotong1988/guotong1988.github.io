@@ -28,7 +28,7 @@ The main reason is that the dataset has a certain number of noisy data.
 In this paper, we present a framework to find the noisy data and relabel the noisy data, 
 then we further illustrate our idea for sequence tagging, object detection, sequence generation, click-through rate (CTR) prediction.
 
-This paper's contribution lies in the demonstration that the quality of a training dataset can be enhanced by first generating it with LLM and subsequently using LLM for re-annotation, **requiring a small amount of manual proofreading during the relabeling process**.
+This paper's contribution lies in the demonstration that the quality of a training dataset can be enhanced by first generating it with LLM and subsequently using LLM for re-annotation, without the need for manual re-annotation.
 
 ### 2. Method
 ![fig1](/assets/png/unified-nlp/fig1.png)
@@ -50,7 +50,7 @@ We first train a model on the initial dataset. Then, we use this model to genera
 
 #### 2.3 Relabel Step
 
-We perform a manual re-annotation of the noisy data. During this process, we provide the human annotators with both the original label and the model's prediction as input information. In the era of LLM, we are now replacing this manual re-annotation with an automated process using an LLM. Similarly, we feed the LLM the same inputs: the original label and the model's prediction. In detail, we ask the LLM within the prompt to correct noisy data made in the last round of labeling.
+We perform a manual re-annotation of the noisy data. During this process, we provide the human annotators with both the original label and the model's prediction as input information. In the era of LLM, we are now replacing this manual re-annotation with an automated process using an LLM. Similarly, we feed the LLM the same inputs: the original label and the model's prediction. In detail, we ask the LLM within the prompt to correct noisy data made in the last round of labeling. **To ensure the quality of the LLM relabeling, we ran inference on the to-relabel dataset 7 times with the same LLM and selected the final label by majority vote.**
 
 ### 3. Experimental Results
 ![table12](/assets/png/unified-nlp/table12.png)
