@@ -15,8 +15,8 @@ We present a simple method to find the noise data and remove them.
 We retain the data that contains certain common tokens between the LLMs data and the prediction results of a generative model trained on the LLMs data.
 We remove the data that does not contain certain common tokens between the LLMs data and the prediction results of a generative model trained on the LLMs data.
 We adopt T5-Base as our generative model.
-The experiment result shows our method is highly effective and **does not require any manual annotation**.
-For industry deep learning application, our method improves the NLP tasks accuracy from 88% to 98% under human evaluation, meanwhile the LLMs data source is sufficiently abundant.
+The experiment result shows our method is highly effective and **does not require any manual annotation** for text generation task.
+For industry deep learning application, our method improves the text generation task's accuracy from 88% to 98% under human evaluation, meanwhile the LLMs data source is sufficiently abundant. However, for classification tasks, simply dropping noisy data does not lead to any improvement.
 
 ### 1. Introduction
 With the development of LLMs \cite{ref1,ref2,ref3}, prompting LLMs to obtain a domain-specific training dataset and then training a smaller model to achieve sufficiently fast model inference has become a very useful approach for performing NLP tasks. However, the accuracy of LLMs' original datasets within a specific domain generally only reaches 88%-90%. Additionally, using manual annotation methods to correct or clean the datasets requires a substantial amount of human resources and time. Therefore, this paper proposes a method for automatic dataset cleaning. Experiments show that it is highly effective, requires no manual annotation, and can be extended to more AI tasks based on LLMs datasets, such as computer vision.
