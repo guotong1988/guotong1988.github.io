@@ -15,7 +15,7 @@ We present a simple method to find the noise data and remove them.
 We retain the data that contains certain common tokens between the LLMs data and the prediction results of a generative model trained on the LLMs data.
 We remove the data that does not contain certain common tokens between the LLMs data and the prediction results of a generative model trained on the LLMs data.
 We adopt T5-Base as our generative model.
-The experiment result shows our method is highly effective and **does not require any manual annotation** for text generation task.
+The experiment result shows our method is highly effective and does not require any manual annotation for text generation task.
 For industry deep learning application, our method improves the text generation task's accuracy from 88% to 98% under human evaluation, meanwhile the LLMs data source is sufficiently abundant. However, for classification tasks, simply dropping noisy data does not lead to any improvement.
 
 ### 1. Introduction
