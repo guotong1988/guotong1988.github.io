@@ -50,7 +50,7 @@ We first train a model on the initial dataset. Then, we use this model to genera
 
 #### 2.3 Relabel Step
 
-We perform a manual re-annotation of the noisy data. During this process, we provide the human annotators with both the original label and the model's prediction as input information. In the era of LLM, we are now replacing this manual re-annotation with an automated process using an LLM. Similarly, we feed the LLM the same inputs: the original label and the model's prediction. In detail, we ask the LLM within the prompt to correct noisy data made in the last round of labeling. **To ensure the quality of the LLM relabeling, we ran inference on the to-relabel dataset 7 times with the same LLM and selected the final label by majority vote.**
+We perform a manual re-annotation of the noisy data. During this process, we provide the human annotators with both the original label and the model's prediction as input information. In the era of LLM, we are now replacing this manual re-annotation with an automated process using an LLM. Similarly, we feed the LLM the same inputs: the original label and the model's prediction. In detail, we ask the LLM within the prompt to correct noisy data made in the last round of labeling. **We require the LLM's error correction output to be chosen from either the result of our self-trained model or the result from the previous annotation.**
 
 ### 3. Experimental Results
 ![table12](/assets/png/unified-nlp/table12.png)
