@@ -70,6 +70,8 @@ The LLM-relabel method can also be applied to the post-training of LLMs. In this
 ### 5. Conclusion
 In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method.
 
+The core of improving the accuracy of an NLP task ultimately comes down to two points: first, how to find badcases, and second, how to efficiently fix them in batches.
+
 Our ultimate goal is to automatically ensure all data is right and to achieve a 100% accurate training dataset for any specific task without human labeling.
 
 
