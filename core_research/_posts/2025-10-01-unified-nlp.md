@@ -25,8 +25,7 @@ NLP, LLM
 In recent years, deep learning \cite{ref1} and LLM \cite{ref2,ref3,ref4,ref5} have shown significant improvement on natural language processing(NLP), 
 computer vision and speech processing technologies. However, the model performance is limited by the dataset quality. 
 The main reason is that the dataset has a certain number of noisy data. 
-In this paper, we present a framework to find the noisy data and relabel the noisy data, 
-then we further illustrate our idea for sequence tagging, object detection, sequence generation, click-through rate (CTR) prediction.
+In this paper, we present a framework to find the noisy data and relabel the noisy data for NLP tasks. In this paper, 'NLP' refers to a specific NLP task, such as NER, text classification, specific text generation, etc.. Our idea can apply to a broad set of deep learning industry applications.
 
 This paper's contribution lies in the demonstration that the quality of a training dataset can be enhanced by first generating it with LLM and subsequently using LLM for re-annotation, without the need for manual re-annotation.
 
@@ -70,11 +69,11 @@ Humans also have a re-label mechanism, through which they grow and iterate. For 
 
 
 ### 5. Conclusion
-In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method.
+In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method. Our idea can apply to a broad set of deep learning industry applications.
 
 The core of improving the accuracy of an NLP task ultimately comes down to two points: first, how to find badcases, and second, how to efficiently fix them in batches.
 
-Our ultimate goal is to automatically ensure all data is right and to achieve a 100% accurate training dataset for any specific task without human labeling.
+Our ultimate goal is to automatically ensure all data is right and to achieve a 100% accurate training dataset for any specific task without human labeling. 
 
 
 
