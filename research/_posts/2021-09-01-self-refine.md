@@ -98,7 +98,7 @@ In ChatGPT \cite{ref14}, OpenAI use human-labeled policy-prediction-data as rewa
 
 ### 7. Conclusion
 
-The experiment result shows our idea works. Our idea can apply to a broad set of deep learning industry applications. We will do the experiments like \cite{ref11} that inject the prediction result of model-A to model-B. For further applying of removing noise method, we can remove the noise data which model prediction and human label is not equal, while the model prediction confidence score is high. But we still encourage the human re-label method of \cite{ref13}.
+Identifying and removing noisy data from the training dataset via self-prediction is ineffective. To genuinely improve data quality, it is essential to correct the noisy data \cite{ref13} rather than just removing it.
 
 
 ### References
