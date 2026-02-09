@@ -32,6 +32,8 @@ This paper's contribution lies in the demonstration that the quality of a traini
 ### 2. Method
 ![fig1](/assets/png/unified-nlp/fig1.png)
 
+![fig2](/assets/png/unified-nlp/fig2.png)
+
 #### 2.1 Initial Datasets
 
 Our initial datasets can be sourced from the following three methods:
