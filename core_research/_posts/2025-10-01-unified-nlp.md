@@ -22,7 +22,7 @@ NLP, LLM
 
 ### 1. Introduction
 
-In recent years, deep learning \cite{ref1} and LLM \cite{ref2,ref3,ref4,ref5} have shown significant improvement on natural language processing(NLP), 
+In recent years, deep learning \cite{ref1} and LLM \cite{ref2,ref3,ref4,ref5,ref7,ref8,ref9,ref10} have shown significant improvement on natural language processing(NLP), 
 computer vision and speech processing technologies. However, the model performance is limited by the dataset quality. 
 The main reason is that the dataset has a certain number of noisy data. 
 In this paper, we present a framework to find the noisy data and relabel the noisy data for NLP tasks. In this paper, 'NLP' refers to a specific NLP task, such as NER, text classification, specific text generation, etc.. Specifically, we define 'NLP tasks' as those that can be solved by the 'data-cover' paradigm. 'LLM tasks', on the other hand, refer to the paradigm that relies on trillion-token pre-training and million-token post-training data. Our idea can apply to a broad set of deep learning industry applications.
@@ -98,4 +98,16 @@ Raffel C, Shazeer N, Roberts A, et al. Exploring the limits of transfer learning
 
 \bibitem{ref6}
 Tong Guo. Automatic Label Error Correction. TechRxiv. March 12, 2025.
+
+\bibitem{ref7}
+Yang A, Li A, Yang B, et al. Qwen3 technical report[J]. arXiv preprint arXiv:2505.09388, 2025.
+
+\bibitem{ref8}
+Liu A, Feng B, Xue B, et al. Deepseek-v3 technical report[J]. arXiv preprint arXiv:2412.19437, 2024.
+
+\bibitem{ref9}
+Guo D, Yang D, Zhang H, et al. DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning[J]. Nature, 2025, 645(8081): 633-638.
+
+\bibitem{ref10}
+Shao Z, Wang P, Zhu Q, et al. Deepseekmath: Pushing the limits of mathematical reasoning in open language models[J]. arXiv preprint arXiv:2402.03300, 2024.
 ```
