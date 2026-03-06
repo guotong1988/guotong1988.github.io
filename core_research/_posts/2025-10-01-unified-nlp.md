@@ -34,6 +34,8 @@ This paper's contribution lies in the demonstration that the quality of a traini
 
 ![fig2](/assets/png/unified-nlp/fig2.png)
 
+![fig2](/assets/png/unified-nlp/fig3.png)
+
 ![alg1](/assets/png/unified-nlp/alg1.png)
 
 #### 2.1 Initial Datasets
@@ -46,14 +48,17 @@ Our initial datasets can be sourced from the following three methods:
 
 3) User Behavior Logs: Datasets based on user behavior logs are constructed from user actions. For example, in an e-commerce scenario, a dataset can be built based on whether a user clicks on an item or places an order.
 
-#### 2.2 Find Noisy Data
+#### 2.2 Find Noisy Data And Relabel
 
 We first train a model on the initial dataset. Specifically, we choose the model from the point where the dev loss no longer decreases, using it as our model for self-prediction. Therefore, we use this model to generate predictions for the entire training and dev dataset. The data where the model's prediction differs from the original ground-truth label, or where the prediction error is large, are identified as potential noise/badcases. This method allows us to find approximately 2-10% of the dataset for re-annotation. This approach not only reduces manual annotation costs, but its effectiveness in identifying noisy data has also been validated by our experimental results.
 
-
-#### 2.3 Relabel Step
-
 We perform a manual re-annotation of the noisy data. During this process, we provide the human annotators with both the original label and the model's prediction as input information. In the era of LLM, we are now replacing this manual re-annotation with an automated process using an LLM. Similarly, we feed the LLM the same inputs: the original label and the model's prediction. In detail, we ask the LLM within the prompt to correct noisy data made in the last round of labeling. **We require the LLM's error correction output to be chosen from either the result of our trained model or the result from the previous annotation** \cite{ref6}. For example, in a 10-class text classification task, the correction step for the LLM is simplified to a 2-class classification problem, where the candidates are just 2 labels: the previously annotation and the one predicted by the trained model. To be specific, in the prompt we use for LLM annotation during the correction step, we only provide the definitions and examples for the candidate labels, and do not include the definitions and examples for the other labels in the prompt.
+
+
+#### 2.3 Find Badcases And Relabel
+Once we achieved over 93% dev accuracy using self-predict and LLM re-labeling, we need to build a test dataset reflecting real-world performance. This requires manual annotation by a human-in-the-loop. Next, we identify badcases in the test dataset where our model's predictions disagree with the human labels. We use these badcases to find the most similar samples in the training dataset. These found samples are then re-labeled by an LLM. The task is a 2-class classification, with the candidate labels being the previous LLM's label and our own model's prediction.
+
+We do still need to manually annotate the test dataset. However, the dataset is small in size, and more importantly, this is the only step in our entire workflow that requires human annotation. For all other labeling tasks, we have already validated the effectiveness of using an LLM. This test dataset is crucial as it allows us to definitively determine our model's performance by providing a benchmark that reflects real-world performance.
 
 ### 3. Experimental Results
 
