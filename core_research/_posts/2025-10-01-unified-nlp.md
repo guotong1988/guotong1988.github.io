@@ -62,8 +62,8 @@ We do still need to manually annotate the test dataset. However, the dataset is 
 
 ### 3. Experimental Results
 
-![table123](/assets/png/unified-nlp/table123.png)
-
+![table12](/assets/png/unified-nlp/table12.png)
+![table3](/assets/png/unified-nlp/table3.png)
 ### 4. Discussion
 
 We find noisy data by contrasting original labels with model predictions. To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. In the LLM relabeling step, both the predicted labels and scores from our trained NLP model can be fed to the LLM as the information needed for noise correction.
