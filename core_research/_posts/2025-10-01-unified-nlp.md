@@ -57,9 +57,9 @@ We perform a manual re-annotation of the noisy data. During this process, we pro
 
 
 #### 2.3 Find Badcases And Relabel
-Once we achieved over 93% dev accuracy using self-predict and LLM re-labeling, we need to build a test dataset reflecting real-world performance. This requires manual annotation by a human-in-the-loop. Next, we identify badcases in the test dataset where our model's predictions disagree with the human labels. We use these badcases to find the most similar samples in the training dataset. These found samples are then re-labeled by an LLM. The task is a 2-class classification, with the candidate labels being the previous LLM's label and our own model's prediction.
+Once we achieved over 93% dev accuracy using self-predict and LLM re-labeling, we need to build a test dataset reflecting real-world performance. This requires manual annotation by a human-in-the-loop. Next, we identify badcases in the test dataset where our model's predictions disagree with the human labels. We use these badcases to find the most similar samples in the training dataset. These found samples are then re-labeled by an LLM. 
 
-We do still need to manually annotate the test dataset. However, the dataset is small in size, and more importantly, this is the only step in our entire workflow that requires human annotation. For all other labeling tasks, we have already validated the effectiveness of using an LLM. This test dataset is crucial as it allows us to definitively determine our model's performance by providing a benchmark that reflects real-world performance.
+We do still need to manually annotate the test dataset. However, the dataset is small in size, and more importantly, this is the only step in our entire workflow that requires human annotation. This test dataset is crucial as it allows us to definitively determine our model's performance by providing a benchmark that reflects real-world performance.
 
 ### 3. Experimental Results
 
