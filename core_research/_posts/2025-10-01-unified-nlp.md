@@ -81,7 +81,7 @@ Humans also have a re-label mechanism, through which they grow and iterate. For 
 ### 5. Conclusion
 In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method. Our idea can apply to a broad set of deep learning industry applications.
 
-The core of improving the accuracy of an NLP task ultimately comes down to two points: first, how to find badcases, and second, how to efficiently fix them in batches.
+The core of improving the accuracy of an NLP task ultimately comes down to two points: first, how to find ambiguous data and badcases, and second, how to efficiently fix them in batches. We have verified that our method of correcting ambiguous data is highly effective for improving accuracy on the dev dataset. As for improving the test dataset accuracy, our approach is equivalent to iteratively correcting badcases in batches. Once an improvement in test dataset accuracy is achieved, we then need to annotate a new test dataset.
 
 Our ultimate goal is to automatically ensure all data is right and to achieve a 100% accurate training dataset for any specific task without human labeling. 
 
