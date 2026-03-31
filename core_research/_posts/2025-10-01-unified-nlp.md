@@ -23,7 +23,7 @@ NLP, LLM
 
 In recent years, deep learning \cite{ref1} and LLM \cite{ref2,ref3,ref4,ref5,ref7,ref8,ref9,ref10} have shown significant improvement on natural language processing(NLP), 
 computer vision and speech processing technologies. However, the model performance is limited by the dataset quality. 
-The main reason is that the dataset has a certain number of noisy data. 
+The main reason is that the dataset has a certain number of noisy and badcase data. 
 In this paper, we present a framework to find the noisy and badcase data and relabel it for NLP tasks. In this paper, 'NLP' refers to a specific NLP task, such as NER, text classification, specific text generation, etc.. Specifically, we define 'NLP tasks' as those that can be solved by the 'data-cover' paradigm. 'LLM tasks', on the other hand, refer to the paradigm that relies on trillion-token pre-training and million-token post-training data. Our idea can apply to a broad set of deep learning industry applications.
 
 This paper's contribution lies in the demonstration that the quality of a training dataset can be enhanced by first generating it with LLM and subsequently using LLM for re-annotation, without the need for manual re-annotation. Due to the inherent instability of LLM-based annotation, the method proposed in this paper also becomes a necessity.
