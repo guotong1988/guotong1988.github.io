@@ -12,7 +12,7 @@ description: "A Unified Framework for NLP Tasks by ReLabel Method"
 
 ### Abstract
 In industry deep learning application, our dataset has a certain number of noisy data. The init datasets are from human labeling or LLM (large language model) generation or user behavior log.
-To achieve over 90% accuracy on the validation and test sets, we propose a framework that identifies noisy and erroneous data, relabels it using a Large Language Model (LLM), and constrains the relabeling task to a binary classification problem.
+To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a Large Language Model (LLM), and constrains the relabeling task to a binary classification problem.
 In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, 
 click-through rate prediction. The dev dataset evaluation results and human evaluation results verify our idea.
 
