@@ -4,7 +4,7 @@ title: "Automatic Label Error Correction"
 date: 2024-02-01
 category: core_research
 author: "Tong Guo"
-description: "Automatic ReLabel Is All You Need For 97% Accuracy At Dev Dataset"
+description: "Automatic ReLabel Is All You Need For 97% Accuracy"
 ---
 
 
@@ -26,7 +26,7 @@ In summary, our contributions include:
 
 1) In order to solve the problem that manual re-labeling consumes a lot of labor to correct the noisy data, we propose automatic re-labeling method to find the best dataset in the possible candidate datasets.
 
-2) We propose the method that constructs the candidate datasets by randomly setting the labels to predicted label or human label. And we propose the method that using accuracy of dev dataset to find the best dataset. Because we already verify that the improved dataset exists in the candidate datasets.
+2) We propose the method that constructs the candidate datasets by randomly setting the labels to predicted label or human label. And we propose the method that using accuracy of dev dataset to find the best dataset. Because we already verify that the improved dataset exists in the candidate datasets. **Similarly, we can use a test dataset as a metric to evaluate each candidate training dataset.**
 
 3) The code is at https://github.com/guotong1988/Automatic-Label-Error-Correction
 
