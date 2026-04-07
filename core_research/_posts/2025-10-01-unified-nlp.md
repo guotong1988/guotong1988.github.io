@@ -15,6 +15,7 @@ In industry deep learning application, our dataset has a certain number of noisy
 To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and constrains the relabeling task to a binary classification problem.
 In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, 
 click-through rate prediction. The dev dataset evaluation results and human evaluation results verify our idea.
+**But the conclusion is that relabeling must rely on manual annotation; the gains from using LLMs for relabeling are limited.**
 
 #### Keywords
 NLP, LLM
@@ -78,7 +79,8 @@ Since our noise correction method relies on the statistics of the training data 
 #### 4.2 Discussion For Noisy Data Relabel
 We find noisy data by contrasting original labels with model predictions. To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. In the LLM relabeling step, our visual inspection reveals that, when correcting noisy data in binary classification tasks, LLMs indeed correctly resolve the majority of ambiguous data. 
 
-
+#### 4.3 Discussion For Badcase Relabel
+A method that attempts to selectively improve accuracy on the test dataset by changing the labels in the training dataset is highly inefficient, and may even be considered a trick, because it only targets better performance on this specific test dataset. This approach is for reference only.
 
 ### 5. Conclusion
 In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method. Our idea can apply to a broad set of deep learning industry applications.
