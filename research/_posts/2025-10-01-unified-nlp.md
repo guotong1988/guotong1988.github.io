@@ -66,7 +66,7 @@ We do still need to manually annotate the test dataset. However, the dataset is 
 ![table12](/assets/png/unified-nlp/table12.png)
 ![table34](/assets/png/unified-nlp/table3.png)
 
-For clarification, the human evaluation process consists of presenting the model's outputs to annotators. These annotators are then tasked with assessing the correctness of each output, determining if it is right or wrong.
+For clarification, the human evaluation process involves presenting the model's outputs on real-world data to human annotators. These annotators are then tasked with assessing the correctness of each prediction, determining if it is right or wrong.
 
 ### 4. Discussion
 
