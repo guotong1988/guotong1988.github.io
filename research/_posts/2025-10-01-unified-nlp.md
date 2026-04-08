@@ -65,6 +65,9 @@ We do still need to manually annotate the test dataset. However, the dataset is 
 
 ![table12](/assets/png/unified-nlp/table12.png)
 ![table34](/assets/png/unified-nlp/table3.png)
+
+For clarification, the human evaluation process consists of presenting the model's outputs to annotators. These annotators are then tasked with assessing the correctness of each output, determining if it is right or wrong.
+
 ### 4. Discussion
 
 The key advantage of prompt-based data annotation is its efficiency in batch processing. By including a few examples (few-shot learning) in the prompt for a LLM, the LLM can generalize and apply the annotation logic to an entire batch of data. Therefore, LLMs bring the amount of data labeling down to a quantity that is manageable for a single developer. For the relabeling step, the prompt-based LLM can be seen as a batch annotation/correction tool. Humans write few-shot examples into the prompts to correct noise in the training dataset. Although LLMs are considered a tool for batch annotation, we've found in practice that providing a large number of showcases (examples) is not very effective. By examining the LLM's reasoning process, we observed that it can utilize a maximum of 1-5 showcases, even when we provide 20-30. Unlike humans, an LLM cannot automatically induce the underlying rules from a large set of showcases and then perform annotation. Consequently, batch-fixing specific badcases must be achieved through other methods of prompt optimization.
