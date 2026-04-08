@@ -15,7 +15,7 @@ In industry deep learning application, our dataset has a certain number of noisy
 To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and constrains the relabeling task to a binary classification problem.
 In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, 
 click-through rate prediction. The dev dataset evaluation results and human evaluation results verify our idea.
-**But the conclusion is that relabeling must rely on manual annotation; the gains from using LLMs for relabeling are limited.**
+
 
 #### Keywords
 NLP, LLM
