@@ -87,6 +87,14 @@ We find noisy data by contrasting original labels with model predictions. To cor
 #### 4.3 Discussion For Badcase Relabel
 A method that attempts to selectively improve accuracy on the test dataset by changing the labels in the training dataset is highly inefficient, and may even be considered a trick, because it only targets better performance on this specific test dataset. This approach is for reference only.
 
+#### 4.4 Other Discussion
+Why not convert all data annotations into a binary classification task for a second round of relabeling? The proposed method was:
+
+For data where the LLM and our trained small model agreed, the candidate labels would be the LLM's label and the small model's second-best prediction.
+For data where they disagreed, the candidates would be the LLM's label and the small model's label.
+
+We experimented with this approach but found that for some simple samples, this relabeling annotation process actually reduced the accuracy of the resulting labels. Ultimately, we decided against implementing this comprehensive binary re-annotation across the entire dataset.
+
 ### 5. Conclusion
 In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method. Our idea can apply to a broad set of deep learning industry applications.
 
