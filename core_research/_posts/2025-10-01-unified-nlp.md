@@ -8,7 +8,7 @@ description: "A Unified Framework for LLM-based ReLabel Method"
 ---
 
 
-# A Unified Framework for NLP Tasks by ReLabel Method
+# A Unified Framework for LLM-based ReLabel Method
 
 ### Abstract
 In industry deep learning application, our dataset has a certain number of noisy data. The init datasets are from human labeling or LLM (large language model) generation or user behavior log.
