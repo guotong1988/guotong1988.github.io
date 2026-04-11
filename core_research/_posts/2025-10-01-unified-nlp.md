@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "A Unified Framework for NLP Tasks by ReLabel Method"
+title: "A Unified Framework for LLM-based ReLabel Method"
 date: 2025-10-01
 category: core_research
 author: "Tong Guo"
-description: "A Unified Framework for NLP Tasks by ReLabel Method"
+description: "A Unified Framework for LLM-based ReLabel Method"
 ---
 
 
