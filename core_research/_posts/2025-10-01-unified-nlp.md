@@ -95,8 +95,7 @@ We experimented with this approach but found that for some simple samples, this 
 ### 5. Conclusion
 In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method. Our idea can apply to a broad set of deep learning industry applications.
 
-Our ultimate goal is to automatically ensure all data is right and to achieve a 100% accurate training dataset for any specific task without human labeling. 
-
+The method described in this paper is highly dependent on the effectiveness of the initial prompts. We later discovered that a better approach is to incorporate the concept of the AutoResearch framework for AI-assisted programming. This allows a Code-LLM to iteratively improve the prompts based on badcases and their corresponding error reasons from the test dataset. The resulting optimized prompts can increase the accuracy on the test dataset to over 93%.
 
 
 ### Reference
