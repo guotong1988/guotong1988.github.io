@@ -11,7 +11,7 @@ description: "A Unified Framework for LLM-based ReLabel Method"
 # A Unified Framework for LLM-based ReLabel Method
 
 ### Abstract
-In industry deep learning application, our dataset has a certain number of noisy data. The init datasets are from human labeling or LLM (large language model) generation or user behavior log.
+In industry deep learning application, we need to train and deploy a small model for a specific task. Our dataset for the small model has a certain number of noisy data. The init datasets are from human labeling or LLM (large language model) generation or user behavior log.
 To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and **constrains the relabeling task to a binary classification problem**.
 In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, 
 click-through rate prediction. The dev dataset evaluation results and human evaluation results verify our idea.
@@ -95,7 +95,7 @@ We experimented with this approach but found that for some simple samples, this 
 ### 5. Conclusion
 In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method. Our idea can apply to a broad set of deep learning industry applications.
 
-**The method described in this paper is highly dependent on the effectiveness of the initial prompts. We later discovered that a better approach is to incorporate the concept of the AutoResearch framework for AI-assisted programming. This allows a Code-LLM to iteratively improve the prompts based on badcases and their corresponding error reasons from the test dataset. The resulting optimized prompts can increase the accuracy on the test dataset to over 93%.**
+**The method described in this paper is highly dependent on the effectiveness of the initial prompts. We later discovered that a better approach is to incorporate the concept of the AutoResearch framework for AI-assisted programming. This allows a Code-LLM to iteratively improve the prompts based on badcases and their corresponding error reasons from the test dataset. In other words, instead of re-labeling the data used to train the small model, we re-label the prompts for the large model. The resulting optimized prompts can increase the accuracy on the test dataset to over 93%.**
 
 
 ### Reference
