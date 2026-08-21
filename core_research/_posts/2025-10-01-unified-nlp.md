@@ -12,13 +12,12 @@ description: "A Unified Framework for LLM-based ReLabel Method"
 
 ### Abstract
 In industry deep learning application, we need to train and deploy a small model for a specific task. Our dataset for the small model has a certain number of noisy data. The init datasets are from human labeling or LLM (large language model) generation or user behavior log.
-To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and **constrains the relabeling task to a binary classification problem**.
-In this paper, we illustrate our idea for a broad set of deep learning tasks, includes classification, sequence tagging, object detection, sequence generation, 
-click-through rate prediction. The dev dataset evaluation results and human evaluation results verify our idea.
+To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and constrains the relabeling task to a binary classification problem.
 
+Our conclusion is that the method of using a large model to re-label noisy data is not very effective. This noisy data was identified by finding instances where the predictions of our small model and a large model either disagreed or had a large divergence. While it has been conclusively verified that manual re-labeling improves performance, re-labeling by the large model does not.
 
-#### Keywords
-NLP, LLM
+For the overall workflow — which involves writing prompts for a large model to label data, then training and deploying a small model for a specific task — the best approach we've found so far is to refine the prompts based on badcases from the test dataset.
+
 
 ### 1. Introduction
 
@@ -32,13 +31,10 @@ This paper's contribution lies in the demonstration that the quality of a traini
 ### 2. Method
 ![fig1](/assets/png/unified-nlp/fig1.png)
 
-![fig2](/assets/png/unified-nlp/fig2.png)
-
-![fig2](/assets/png/unified-nlp/fig3.png)
 
 ![alg1](/assets/png/unified-nlp/alg1.png)
 
-![alg2](/assets/png/unified-nlp/alg2.png)
+
 #### 2.1 Initial Datasets
 
 Our initial datasets can be sourced from the following three methods:
@@ -56,10 +52,6 @@ In this paper, we define noisy data as ambiguous data; for instance, when three 
 We perform a manual re-annotation of the noisy data. During this process, we provide the human annotators with both the original label and the model's prediction as input information. In the era of LLM, we are now replacing this manual re-annotation with an automated process using an LLM. Similarly, we feed the LLM the same inputs: the original label and the model's prediction. In detail, we ask the LLM within the prompt to correct noisy data made in the last round of labeling. **We require the LLM's error correction output to be chosen from either the result of our trained model or the result from the previous annotation** \cite{ref6}. For example, in a 10-class text classification task, the correction step for the LLM is simplified to a 2-class classification problem, where the candidates are just 2 labels: the previously annotation and the one predicted by the trained model. To be specific, in the prompt we use for LLM annotation during the correction step, we only provide the definitions and examples for the candidate labels, and do not include the definitions and examples for the other labels in the prompt.
 
 
-#### 2.3 Find Badcases And Relabel
-Once we achieved over 93% dev accuracy using self-predict and LLM re-labeling, we need to build a test dataset reflecting real-world performance. This requires manual annotation by a human-in-the-loop. Next, we identify badcases in the test dataset where our model's predictions disagree with the human labels. We use these badcases to find the most similar samples in the training dataset. These found samples are then re-labeled by an LLM. **During the LLM relabeling process, we instruct the LLM via the prompt to treat the human-annotated label from the test dataset and the last label as the candidate labels.** Executing this step once may not be sufficient to improve the accuracy to, for example, over 90%. This step should be iterated using the remaining badcases, while adjusting the thresholds or methods for similarity searching, until the percentage of remaining badcases drops below a certain threshold, such as 10%.
-
-We do still need to manually annotate the test dataset. However, the dataset is small in size, and more importantly, this is the only step in our entire workflow that requires human annotation. This test dataset is crucial as it allows us to definitively determine our model's performance by providing a benchmark that reflects real-world performance.
 
 ### 3. Experimental Results
 
@@ -72,8 +64,7 @@ The labels in the dev dataset are changed during the re-labeling process, while 
 
 ### 4. Discussion
 
-The key advantage of prompt-based data annotation is its efficiency in batch processing. By including a few examples (few-shot learning) in the prompt for a LLM, the LLM can generalize and apply the annotation logic to an entire batch of data. Therefore, LLMs bring the amount of data labeling down to a quantity that is manageable for a single developer. For the relabeling step, the prompt-based LLM can be seen as a batch annotation/correction tool. Humans write few-shot examples into the prompts to correct noise in the training dataset. Although LLMs are considered a tool for batch annotation, we've found in practice that providing a large number of showcases (examples) is not very effective. By examining the LLM's reasoning process, we observed that it can utilize a maximum of 1-5 showcases, even when we provide 20-30. Unlike humans, an LLM cannot automatically induce the underlying rules from a large set of showcases and then perform annotation. Consequently, batch-fixing specific badcases must be achieved through other methods of prompt optimization.
-
+The key advantage of prompt-based data annotation is its efficiency in batch processing. By including a few examples (few-shot learning) in the prompt for a LLM, the LLM can generalize and apply the annotation logic to an entire batch of data. Therefore, LLMs bring the amount of data labeling down to a quantity that is manageable for a single developer. For the relabeling step, the prompt-based LLM can be seen as a batch annotation/correction tool. Humans write few-shot examples into the prompts to correct noise in the training dataset. Although LLMs are considered a tool for batch annotation, we've found in practice that providing a large number of showcases (examples) is not very effective. By examining the LLM's reasoning process, we observed that it can utilize a maximum of 1-5 showcases, even when we provide 20-30. 
 
 #### 4.1 Discussion For Dataset Size
 Since our noise correction method relies on the statistics of the training data itself, the amount of training data should be in the millions, rather than tens of thousands.
@@ -81,8 +72,6 @@ Since our noise correction method relies on the statistics of the training data 
 #### 4.2 Discussion For Noisy Data Relabel
 We find noisy data by contrasting original labels with model predictions. To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. In the LLM relabeling step, our visual inspection reveals that, when correcting noisy data in binary classification tasks, LLMs indeed correctly resolve the majority of ambiguous data. 
 
-#### 4.3 Discussion For Badcase Relabel
-A method that attempts to selectively improve accuracy on the test dataset by changing the labels in the training dataset is highly inefficient, and may even be considered a trick, because it only targets better performance on this specific test dataset. This approach is for reference only.
 
 #### 4.4 Other Discussion
 Why not convert all data annotations into a binary classification task for a second round of relabeling? The proposed method was:
