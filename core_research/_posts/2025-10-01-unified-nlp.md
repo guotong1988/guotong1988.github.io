@@ -12,11 +12,7 @@ description: "A Unified Framework for LLM-based ReLabel Method"
 
 ### Abstract
 In industry deep learning application, we need to train and deploy a small model for a specific task. Our dataset for the small model has a certain number of noisy data. The init datasets are from human labeling or LLM (large language model) generation or user behavior log.
-To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and constrains the relabeling task to a binary classification problem.
-
-Our conclusion is that the method of using a large model to re-label noisy data is not very effective. This noisy data was identified by finding instances where the predictions of our small model and a large model either disagreed or had a large divergence. While it has been conclusively verified that manual re-labeling improves performance, re-labeling by the large model does not.
-
-For the overall workflow — which involves writing prompts for a large model to label data, then training and deploying a small model for a specific task — the best approach we've found so far is to refine the prompts based on badcases from the test dataset.
+To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and constrains the relabeling task to a binary classification problem. Our conclusion is that the method of using a large model to re-label noisy data is not very effective. This noisy data was identified by finding instances where the predictions of our small model and a large model either disagreed or had a large divergence. While it has been conclusively verified that manual re-labeling improves performance, re-labeling by the large model does not. For the overall workflow — which involves writing prompts for a large model to label data, then training and deploying a small model for a specific task — the best approach we've found so far is to refine the prompts based on badcases from the test dataset.
 
 
 ### 1. Introduction
