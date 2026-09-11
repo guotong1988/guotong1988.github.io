@@ -77,6 +77,9 @@ For data where they disagreed, the candidates would be the LLM's label and the s
 We experimented with this approach but found that for some simple samples, this relabeling annotation process actually reduced the accuracy of the resulting labels. Ultimately, we decided against implementing this comprehensive binary re-annotation across the entire dataset.
 
 ### 5. Conclusion
+
+![table34](/assets/png/unified-nlp/table4.png)
+
 In the era of LLM, our goal is to train models for NLP tasks. To correct the noise in our initial dataset, we propose a framework that supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach. Experimental results have validated the effectiveness of our method. Our idea can apply to a broad set of deep learning industry applications.
 
 **The method described in this paper is highly dependent on the effectiveness of the initial prompts. We later discovered that a better approach is to incorporate the concept of the AutoResearch framework for AI-assisted programming. This allows a Code-LLM to iteratively improve the prompts based on badcases and their corresponding error reasons from the test dataset. In other words, instead of re-labeling the data used to train the small model, we re-label the prompts for the large model.** We then conducted an experiment for an NLP task. Our first goal was to use the AutoResearch method to optimize a prompt for a Large Language Model (LLM), which improved its accuracy on the test dataset from 73% to 96%. Next, we used this optimized prompt with the LLM to batch-label a training dataset. A smaller model trained on this LLM-labeled data achieved an 86% accuracy on the test dataset. In contrast, a small model trained using data labeled by the initial, manually-written prompt (which had 73% accuracy) only achieved a 75% accuracy.
