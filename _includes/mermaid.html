@@ -1,0 +1,45 @@
+<style>
+  .mermaid {
+    margin: 1.5em 0;
+    overflow-x: auto;
+    text-align: center;
+  }
+  .mermaid svg {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof mermaid === 'undefined') return;
+
+    document.querySelectorAll('.language-mermaid').forEach(function (el) {
+      if (el.parentElement && el.parentElement.closest('.language-mermaid')) return;
+
+      var code = el.querySelector('code') || el;
+      var target = el.closest('.highlighter-rouge') ||
+                   el.closest('figure.highlight') ||
+                   (el.tagName === 'CODE' && el.parentElement && el.parentElement.tagName === 'PRE'
+                     ? el.parentElement
+                     : el);
+
+      var diagram = document.createElement('div');
+      diagram.className = 'mermaid';
+      diagram.textContent = code.textContent;
+      target.parentNode.replaceChild(diagram, target);
+    });
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'neutral',
+      securityLevel: 'loose',
+      flowchart: {
+        htmlLabels: true,
+        useMaxWidth: true
+      }
+    });
+
+    mermaid.run({ querySelector: '.mermaid' });
+  });
+</script>
