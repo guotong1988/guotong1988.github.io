@@ -5,6 +5,7 @@ date: 2025-10-01
 category: core_research
 author: "Tong Guo"
 description: "A Unified Framework for LLM-based ReLabel Method"
+mermaid: true
 ---
 
 
