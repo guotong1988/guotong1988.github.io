@@ -30,6 +30,10 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   {% if page.math != false %}
   {% include mathjax.html %}
+  {% endif %}
+
+  {% if page.mermaid or page.content contains 'language-mermaid' %}
+  {% include mermaid.html %}
   {% endif %} 
 
   {% if jekyll.environment == 'production' %}
