@@ -75,13 +75,13 @@ Our initial datasets can be sourced from the following three methods:
 
 #### 2.2 Find Noisy Data And Relabel
 
-**Algorithm 1.** LLM-based Noisy Data Correction To Improve Dev Accuracy.
-
-**Require:** Unlabeled dataset $\mathcal{D}_{\text{raw}} = \{x_i\}_{i=1}^N$, Initial Prompt $\mathcal{P}_0$, LLM $\mathcal{M}_{\text{LLM}}$, Student Model $\mathcal{M}_{\theta}$, Max Iterations $T$.
-
-**Ensure:** Refined Dataset $\mathcal{D}^*$, Trained Model $\mathcal{M}_{\theta^*}$.
-
 ```
+Algorithm 1. LLM-based Noisy Data Correction To Improve Dev Accuracy
+
+Require: Unlabeled dataset D_raw = {x_i}_{i=1}^{N},
+         Initial Prompt P_0, LLM M_LLM, Student Model M_θ, Max Iterations T
+Ensure:  Refined Dataset D*, Trained Model M_θ*
+
 1.  // Step 1: Initial Annotation
 2.  D_0 ← ∅
 3.  for each x_i in D_raw do
@@ -130,11 +130,11 @@ We adopt the idea of the AutoResearch framework for AI-assisted programming. A C
 
 1) Prepare a human-annotated, real-world test set. As stated in Section 2.1, this test set should be ready before an LLM is used to generate or label training data.
 
-2) Write an initial prompt $\mathcal{P}_0$ and evaluate the LLM on the test set.
+2) Write an initial prompt P_0 and evaluate the LLM on the test set.
 
 3) Collect badcases together with the corresponding error reasons.
 
-4) Ask a Code-LLM to revise the prompt, yielding $\mathcal{P}_{t+1}$.
+4) Ask a Code-LLM to revise the prompt, yielding P_{t+1}.
 
 5) Repeat until the LLM's test accuracy saturates.
 
