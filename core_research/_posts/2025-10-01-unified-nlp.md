@@ -323,13 +323,10 @@ The five settings are summarized above. Human instance-level relabeling is consi
 
 The key advantage of prompt-based data annotation is its efficiency in batch processing. By including a few examples (few-shot learning) in the prompt for a LLM, the LLM can generalize and apply the annotation logic to an entire batch of data. Therefore, LLMs bring the amount of data labeling down to a quantity that is manageable for a single developer. For the relabeling step, the prompt-based LLM can be seen as a batch annotation/correction tool. Humans write few-shot examples into the prompts to correct noise in the training dataset. Although LLMs are considered a tool for batch annotation, we've found in practice that providing a large number of showcases (examples) is not very effective. By examining the LLM's reasoning process, we observed that it can utilize a maximum of 1-5 showcases, even when we provide 20-30.
 
-#### 5.1 Discussion For Dataset Size
-Since our noise correction method relies on the statistics of the training data itself, the amount of training data should be in the millions, rather than tens of thousands.
-
-#### 5.2 Discussion For Noisy Data Relabel
+#### 5.1 Discussion For Noisy Data Relabel
 We find noisy data by contrasting original labels with model predictions. To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. In the LLM relabeling step, our visual inspection reveals that, when correcting noisy data in binary classification tasks, LLMs indeed correctly resolve the majority of ambiguous data. However, as shown in Section 4, this local visual correctness does not translate into a higher test accuracy of the small model. Prompt-level relabeling is more effective: improving the annotation prompt from test-set badcases raises the quality of the entire LLM-labeled training set, rather than only the noisy subset. Extending that loop through the small model's own test-set badcases further improves the small model, because the prompt is then optimized for the student rather than for the LLM's own accuracy.
 
-#### 5.3 Other Discussion
+#### 5.2 Other Discussion
 Why not convert all data annotations into a binary classification task for a second round of relabeling? The proposed method was:
 
 For data where the LLM and our trained small model agreed, the candidate labels would be the LLM's label and the small model's second-best prediction.
