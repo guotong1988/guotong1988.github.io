@@ -13,7 +13,7 @@ mermaid: true
 
 ### Abstract
 In industry deep learning application, we need to train and deploy a small model for a specific task. Our dataset for the small model has a certain number of noisy data. The init datasets are from human labeling or LLM (large language model) generation or user behavior log.
-To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and constrains the relabeling task to a binary classification problem. Our conclusion is that the method of using a large model to re-label noisy data is not very effective. This noisy data was identified by finding instances where the predictions of our small model and a large model either disagreed or had a large divergence. While it has been conclusively verified that manual re-labeling improves performance, re-labeling by the large model does not. For the overall workflow — which involves writing prompts for a large model to label data, then training and deploying a small model for a specific task — the best approach we've found so far is to refine the prompts based on badcases from the test dataset.
+To achieve over 90% accuracy on the dev and test datasets, we propose a framework that identifies noisy and badcase data, relabels it using a LLM, and constrains the relabeling task to a binary classification problem. Our conclusion is that the method of using a large model to re-label noisy data is not very effective. This noisy data was identified by finding instances where the predictions of our small model and a large model either disagreed or had a large divergence. While it has been conclusively verified that manual re-labeling improves performance, re-labeling by the large model does not. For the overall workflow — which involves writing prompts for a large model to label data, then training and deploying a small model for a specific task — the best approach we've found so far is a closed loop: the LLM labels the training set, a small model is trained, the prompt is refined from the small model's test-set badcases, the training set is re-labeled, and the small model is retrained.
 
 
 ### 1. Introduction
@@ -23,7 +23,7 @@ computer vision and speech processing technologies. However, the model performan
 The main reason is that the dataset has a certain number of noisy and badcase data.
 In this paper, we present a unified relabeling framework for NLP tasks. In this paper, 'NLP' refers to a specific NLP task, such as NER, text classification, specific text generation, etc.. Specifically, we define 'NLP tasks' as those that can be solved by the 'data-cover' paradigm. 'LLM tasks', on the other hand, refer to the paradigm that relies on trillion-token pre-training and million-token post-training data.
 
-We study two relabeling targets (Fig. 1). The first is instance-level relabeling: we identify noisy and badcase data and correct their labels with a human annotator or an LLM. The second is prompt-level relabeling: instead of correcting training labels, we iteratively refine the LLM annotation prompt using badcases from a human-annotated test set, then use the refined prompt to label data for the small model. Our idea can apply to a broad set of deep learning industry applications.
+We study two relabeling targets (Fig. 1). The first is instance-level relabeling: we identify noisy and badcase data and correct their labels with a human annotator or an LLM. The second is prompt-level relabeling: instead of correcting training labels, we iteratively refine the LLM annotation prompt using badcases from a human-annotated test set, then use the refined prompt to label data for the small model. Prompt-level relabeling has two variants (Fig. 2): one refines the prompt from the LLM's own test-set badcases and then labels the training set once; the other closes the loop through the small model, refining the prompt from the small model's test-set badcases, re-labeling the training set, and retraining. Our idea can apply to a broad set of deep learning industry applications.
 
 
 ### 2. Method
@@ -85,7 +85,7 @@ flowchart LR
     class SM model
 ```
 
-*Fig. 1. Unified relabeling framework. Top: instance-level relabeling finds noisy data where model-v1 diverges from the original labels, then corrects them by human or LLM re-labeling. Bottom: prompt-level relabeling refines the LLM prompt from test-set badcases, then batch-labels the training set for the small model.*
+*Fig. 1. Unified relabeling framework. Top: instance-level relabeling finds noisy data where model-v1 diverges from the original labels, then corrects them by human or LLM re-labeling. Bottom: prompt-level relabeling from LLM test-set badcases: the prompt is refined until LLM test accuracy saturates, then used once to batch-label the training set for the small model.*
 
 #### 2.1 Initial Datasets
 
@@ -164,7 +164,74 @@ We adopt the idea of the AutoResearch framework for AI-assisted programming. A C
 
 6) Use the refined prompt to batch-label a training set, then train and deploy a small model.
 
-The object of relabeling is therefore the prompt, not the instance labels of the small-model training set.
+The object of relabeling is therefore the prompt, not the instance labels of the small-model training set. This procedure evaluates the LLM itself on the test set, refines the prompt until LLM accuracy saturates, and then trains the small model only once.
+
+#### 2.4 Closed-loop Prompt Relabeling from Small-Model Badcases
+
+The procedure in Section 2.3 optimizes the prompt for the LLM's own test accuracy, then trains the small model only once. The LLM and the small model do not share the same error distribution, so a prompt that raises LLM test accuracy to 96% does not necessarily maximize the small model's test accuracy. We therefore close the loop through the small model (Fig. 2 and Algorithm 2).
+
+**Closed-loop prompt relabeling from small-model badcases**
+
+```mermaid
+flowchart LR
+    P["prompt P_t"] --> BL["LLM batch-labels<br/>training set with P_t"]
+    BL --> SM["trained small model"]
+    SM --> E["evaluate small model,<br/>collect test badcases"]
+    T["human-annotated<br/>test set"] --> E
+    E --> R["Code-LLM refines<br/>prompt to P_{t+1}"]
+    R -.-> P
+
+    classDef init fill:#5B9BD5,stroke:#2E75B6,color:#fff
+    classDef model fill:#C5E0B4,stroke:#70AD47
+    classDef noisy fill:#B4A7D6,stroke:#8064A2
+    classDef prompt fill:#FFE699,stroke:#BF8F00
+
+    class T init
+    class SM model
+    class E noisy
+    class P,BL,R prompt
+```
+
+*Fig. 2. Closed-loop prompt relabeling. The LLM labels the training set with the current prompt; a small model is trained and evaluated on a human-annotated test set; the prompt is refined from the small model's badcases; the training set is re-labeled and the small model is retrained. The loop repeats until the small-model test accuracy saturates.*
+
+```
+Algorithm 2. Closed-loop Prompt Relabeling from Small-Model Badcases
+
+Require: Unlabeled dataset D_raw, initial prompt P_0, LLM M_LLM,
+         student model M_θ, human-annotated test set D_test, max iterations T
+Ensure:  Refined prompt P*, trained model M_θ*
+
+1.  D_0 ← batch-label D_raw with M_LLM(·, P_0)
+2.  M_θ ← Train(M_θ, D_0)
+3.  t ← 1
+4.  while t ≤ T do
+5.      Evaluate M_θ on D_test; collect small-model badcases D_bad and error reasons
+6.      if small-model test accuracy saturates then
+7.          break
+8.      end if
+9.      P_t ← RefinePrompt(P_{t-1}, D_bad)     // Code-LLM revises prompt from SM badcases
+10.     D_t ← batch-label D_raw with M_LLM(·, P_t)  // re-label the whole training set
+11.     M_θ ← Train(M_θ, D_t)
+12.     t ← t + 1
+13. end while
+14. return M_θ, P_{t-1}
+```
+
+The procedure is as follows:
+
+1) Write an initial prompt P_0 and use the LLM to batch-label the training set.
+
+2) Train a small model on that LLM-labeled data.
+
+3) Evaluate the small model on the human-annotated test set and collect its badcases together with error reasons.
+
+4) Ask a Code-LLM to revise the prompt from those small-model badcases, yielding P_{t+1}.
+
+5) Re-label the entire training set with P_{t+1} and retrain the small model.
+
+6) Repeat until the small model's test accuracy saturates.
+
+Unlike Section 2.3, the supervision for prompt revision is the small model's test errors, not the LLM's. Unlike Algorithm 1, each iteration re-labels the whole training set rather than only a noisy subset.
 
 
 ### 3. Experimental Results
@@ -212,9 +279,21 @@ Replacing the human annotator with an LLM in the same noise-correction loop yiel
 
 *Table 4. Prompt-level relabeling on a text classification task. Rows 1–2 are the LLM's own test accuracy; rows 3–4 are the small model trained on the corresponding LLM-labeled data.*
 
-We then evaluate prompt-level relabeling on the same type of NLP task. We first use the AutoResearch method to optimize the LLM annotation prompt from test-set badcases. This raises the LLM's own accuracy on the test set from 73% to 96%. We next use the optimized prompt to batch-label a training set. A small model trained on that LLM-labeled data achieves 86% test accuracy. In contrast, a small model trained on data labeled by the initial, manually written prompt (LLM accuracy 73%) achieves only 75%.
+We then evaluate prompt-level relabeling on the same type of NLP task. We first use the AutoResearch method to optimize the LLM annotation prompt from the LLM's own test-set badcases. This raises the LLM's own accuracy on the test set from 73% to 96%. We next use the optimized prompt to batch-label a training set. A small model trained on that LLM-labeled data achieves 86% test accuracy. In contrast, a small model trained on data labeled by the initial, manually written prompt (LLM accuracy 73%) achieves only 75%.
 
-#### 3.4 Overall Comparison
+#### 3.4 Closed-loop Prompt Relabeling from Small-Model Badcases
+
+| Setting | Test-Acc |
+|---|---|
+| Small model trained on data from initial prompt | 75% |
+| Small model after prompt relabel from LLM badcases | 86% |
+| Small model after closed-loop prompt relabel from SM badcases | 92% |
+
+*Table 5. Closed-loop prompt relabeling. All numbers are the test accuracy of the small model. Row 2 is the one-shot procedure of Section 2.3; row 3 is the small-model loop of Section 2.4.*
+
+We next close the loop through the small model. Starting from the same initial prompt, the LLM labels the training set and a small model is trained (75%). We then collect the small model's test-set badcases, refine the LLM prompt, re-label the training set, and retrain the small model, repeating this loop. The small model reaches 92% test accuracy, which is 6 points above the one-shot prompt relabeling that uses the LLM's own test-set badcases (86%). The gap indicates that a prompt optimized for LLM test accuracy is not the same as a prompt optimized for the downstream small model.
+
+#### 3.5 Overall Comparison
 
 | Init-Dataset | Method | Init-Acc | Final-Acc |
 |---|---|---|---|
@@ -222,10 +301,11 @@ We then evaluate prompt-level relabeling on the same type of NLP task. We first 
 | LLM-labeled | Human relabel data | 75.0% | 90.0% |
 | LLM-labeled | LLM relabel data | 75.0% | 75.0% |
 | LLM-labeled | LLM relabel prompt | 75.0% | 86.0% |
+| LLM-labeled | LLM relabel prompt via SM loop | 75.0% | 92.0% |
 
-*Table 5. Summary of instance-level and prompt-level relabeling. Init-Acc and Final-Acc are the test accuracy of the small model before and after the corresponding relabeling method.*
+*Table 6. Summary of instance-level and prompt-level relabeling. Init-Acc and Final-Acc are the test accuracy of the small model before and after the corresponding relabeling method.*
 
-The four settings are summarized above. Human instance-level relabeling is consistently effective. LLM instance-level relabeling is not. Prompt-level relabeling, i.e., refining the LLM prompt rather than correcting individual training labels, is the best fully automatic approach we have found so far for the workflow of LLM labeling followed by small-model training.
+The five settings are summarized above. Human instance-level relabeling is consistently effective. LLM instance-level relabeling is not. Prompt-level relabeling, i.e., refining the LLM prompt rather than correcting individual training labels, is the best fully automatic family of methods we have found so far. Within that family, closing the loop through the small model's test-set badcases (92.0%) outperforms one-shot prompt relabeling from the LLM's own test-set badcases (86.0%).
 
 
 ### 4. Discussion
@@ -236,7 +316,7 @@ The key advantage of prompt-based data annotation is its efficiency in batch pro
 Since our noise correction method relies on the statistics of the training data itself, the amount of training data should be in the millions, rather than tens of thousands.
 
 #### 4.2 Discussion For Noisy Data Relabel
-We find noisy data by contrasting original labels with model predictions. To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. In the LLM relabeling step, our visual inspection reveals that, when correcting noisy data in binary classification tasks, LLMs indeed correctly resolve the majority of ambiguous data. However, as shown in Section 3, this local visual correctness does not translate into a higher test accuracy of the small model. Prompt-level relabeling is more effective: improving the annotation prompt from test-set badcases raises the quality of the entire LLM-labeled training set, rather than only the noisy subset.
+We find noisy data by contrasting original labels with model predictions. To correct noisy labels, LLM can be employed to relabel data, thereby reducing the scope of manual annotation. In the LLM relabeling step, our visual inspection reveals that, when correcting noisy data in binary classification tasks, LLMs indeed correctly resolve the majority of ambiguous data. However, as shown in Section 3, this local visual correctness does not translate into a higher test accuracy of the small model. Prompt-level relabeling is more effective: improving the annotation prompt from test-set badcases raises the quality of the entire LLM-labeled training set, rather than only the noisy subset. Closing the loop through the small model's own test-set badcases further improves the small model, because the prompt is then optimized for the student rather than for the LLM's own accuracy.
 
 #### 4.3 Other Discussion
 Why not convert all data annotations into a binary classification task for a second round of relabeling? The proposed method was:
@@ -250,7 +330,7 @@ We experimented with this approach but found that for some simple samples, this 
 
 In the era of LLM, our goal is to train small models for specific NLP tasks. The initial datasets—whether from human labeling, LLM generation, or user behavior logs—contain noisy and badcase data. We proposed a unified relabeling framework with two targets: instance labels and the LLM prompt. The framework supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach.
 
-Experimental results show that human re-labeling of the noisy subset identified by our framework is effective, whereas LLM re-labeling of the same subset is not. For the overall workflow of writing prompts for a large model to label data, then training and deploying a small model, the best approach we have found so far is to iteratively refine the prompts from test-set badcases, rather than to correct individual training labels with an LLM. Our idea can apply to a broad set of deep learning industry applications.
+Experimental results show that human re-labeling of the noisy subset identified by our framework is effective, whereas LLM re-labeling of the same subset is not. For the overall workflow of writing prompts for a large model to label data, then training and deploying a small model, the best approach we have found so far is a closed loop of prompt relabeling: refine the LLM prompt from the small model's test-set badcases, re-label the training set, and retrain the small model. This reaches 92% test accuracy, compared with 86% when the prompt is refined only from the LLM's own test-set badcases. Our idea can apply to a broad set of deep learning industry applications.
 
 
 ### Reference
