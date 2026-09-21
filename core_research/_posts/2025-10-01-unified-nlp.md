@@ -22,20 +22,20 @@ computer vision and speech processing technologies. However, the model performan
 The main reason is that the dataset has a certain number of noisy and badcase data.
 In this paper, we present a unified relabeling framework for NLP tasks. In this paper, 'NLP' refers to a specific NLP task, such as NER, text classification, specific text generation, etc.. Specifically, we define 'NLP tasks' as those that can be solved by the 'data-cover' paradigm. 'LLM tasks', on the other hand, refer to the paradigm that relies on trillion-token pre-training and million-token post-training data.
 
-We study two relabeling targets. The first is instance-level relabeling (Fig. 1): we identify noisy and badcase data and correct their labels with a human annotator or an LLM. The second is prompt-level relabeling: instead of correcting training labels, we iteratively refine the LLM annotation prompt using badcases from a human-annotated test set, then use the refined prompt to label data for the small model. Prompt-level relabeling has two loops (Fig. 2 and Fig. 3). In the LLM-prompt loop, we iterate the prompt from the LLM's own test-set badcases until LLM accuracy saturates, then batch-label the training set and train the small model. In the small-model loop, we iterate further through the small model: refine the prompt from the small model's test-set badcases, re-label the training set, and retrain. The LLM-prompt loop is related to automatic prompt optimization with textual gradients \cite{ref11}. We differ in that the prompt is an annotation prompt for training a small deployed model, and we further close the loop through the small model's own badcases. Our idea can apply to a broad set of deep learning industry applications.
+We study two relabeling targets. The first is instance-level relabeling (Fig. 1): we identify noisy and badcase data and correct their labels with a human annotator or an LLM. The second is prompt-level relabeling: instead of correcting training labels, we iteratively refine the LLM annotation prompt using badcases from a human-annotated test set, then use the refined prompt to label data for the small model. Prompt-level relabeling has two loops (Fig. 2 and Fig. 3). In the LLM-prompt loop, we iterate the prompt from the LLM's own test-set badcases until LLM accuracy saturates, then batch-label the training set and train the small model. In the small-model loop, we iterate further through the small model: refine the prompt from the small model's test-set badcases, re-label the training set, and retrain. The LLM-prompt loop is related to automatic prompt optimization \cite{ref11,ref12,ref13,ref14}. We differ in that the prompt is an annotation prompt for training a small deployed model, and we further close the loop through the small model's own badcases. Our idea can apply to a broad set of deep learning industry applications.
 
 
 ### 2. Related Work
 
 Our work sits at the intersection of automatic prompt optimization, LLM-based data annotation, and instance-level label correction.
 
-**Automatic prompt optimization.** LLM behavior is highly dependent on the prompt, yet prompts are still largely written by trial and error. Pryzant et al. \cite{ref11} propose ProTeGi (Prompt Optimization with Textual Gradients). Minibatches of errors are turned into natural-language "gradients" that criticize the current prompt; an LLM then edits the prompt in the opposite semantic direction; beam search with bandit selection retains the best candidates. The goal of ProTeGi is to raise the LLM's own task accuracy.
+**Automatic prompt optimization.** LLM behavior is highly dependent on the prompt, yet prompts are still largely written by trial and error. Automatic prompt optimization (APO) searches for better instructions without manual trial-and-error. Zhou et al. \cite{ref13} propose APE: an LLM generates candidate instructions, and a score function selects among them. Pryzant et al. \cite{ref11} propose ProTeGi (Prompt Optimization with Textual Gradients). Minibatches of errors are turned into natural-language "gradients" that criticize the current prompt; an LLM then edits the prompt in the opposite semantic direction; beam search with bandit selection retains the best candidates. Wang et al. \cite{ref12} propose PromptAgent, which treats prompt search as planning: it collects error feedback and uses Monte Carlo tree search to refine expert-level prompts. Khattab et al. \cite{ref14} propose DSPy, which compiles declarative LM programs by jointly optimizing instructions and few-shot demonstrations against a metric. The goal of these methods is to raise the LLM's own task accuracy.
 
-Our prompt-level relabeling is related but serves a different workflow. We refine an *annotation* prompt so that an LLM can label training data for a small model that will be deployed. The LLM-prompt loop is close to ProTeGi: both iterate from LLM errors on a labeled evaluation set. The small-model loop differs in two ways. First, the prompt is scored by the student model's test accuracy rather than by the LLM's accuracy, because the two models do not share the same error distribution. Second, each iteration re-labels the entire training set and retrains the student, rather than only searching over prompt candidates for the LLM itself.
+Our prompt-level relabeling is related but serves a different workflow. We refine an *annotation* prompt so that an LLM can label training data for a small model that will be deployed. The LLM-prompt loop is close to ProTeGi and PromptAgent: both iterate from LLM errors on a labeled evaluation set. The small-model loop is closer to compiling a prompt against a downstream metric, as in DSPy, but differs in two ways. First, the prompt is scored by the student model's test accuracy rather than by the LLM's accuracy, because the two models do not share the same error distribution. Second, each iteration re-labels the entire training set and retrains the student, rather than only searching over prompt candidates for the LLM itself.
 
-**LLM-based annotation.** Instruction-following LLMs \cite{ref2,ref4} are increasingly used as batch annotators. Our setting is the industrial workflow of writing a prompt, labeling data with an LLM, and training a small task model. We show that the bottleneck is the prompt, not a second pass of instance-level LLM correction.
+**LLM-based annotation.** Instruction-following LLMs \cite{ref2,ref4} are increasingly used as batch annotators \cite{ref15}. Wang et al. \cite{ref20} show that GPT-3 labels can train downstream models at a fraction of human labeling cost. Viswanathan et al. \cite{ref16} propose Prompt2Model: given a natural-language prompt, an LLM generates or retrieves data, and a small deployable model is fine-tuned on that data. Hsieh et al. \cite{ref17} distill LLM labels and rationales into a smaller student (Distilling Step-by-Step). Our setting is the same industrial workflow of writing a prompt, labeling data with an LLM, and training a small task model. We show that the bottleneck is the prompt, not a second pass of instance-level LLM correction. Unlike Prompt2Model, we iterate the annotation prompt from a human-annotated test set, and further close the loop through the small model's own badcases.
 
-**Instance-level label correction.** A complementary line of work corrects individual training labels. We previously studied automatic label-error correction \cite{ref6}. In this paper we treat instance-level relabeling and prompt-level relabeling in one framework, and find that LLM correction of a noisy subset identified by student--label disagreement is not effective, whereas refining the annotation prompt is.
+**Instance-level label correction.** A complementary line of work identifies and handles individual noisy labels. Northcutt et al. \cite{ref18} propose Confident Learning, which estimates the joint distribution of noisy and true labels from model predicted probabilities and prunes likely errors. Han et al. \cite{ref19} propose Co-teaching: two networks filter small-loss examples for each other. We previously studied automatic label-error correction \cite{ref6}. We use a similar disagreement signal---student predictions that diverge from the original labels---to select a noisy subset, then attempt correction rather than pruning. In this paper we treat instance-level relabeling and prompt-level relabeling in one framework, and find that LLM correction of that subset is not effective, whereas refining the annotation prompt is.
 
 
 ### 3. Method
@@ -161,7 +161,7 @@ flowchart LR
 
 *Fig. 2. Prompt relabeling via the LLM-prompt loop. A dashed loop refines the prompt from the LLM's own test-set badcases until LLM test accuracy saturates; the converged prompt then batch-labels the training set for the small model.*
 
-We adopt the idea of the AutoResearch framework for AI-assisted programming, and the loop is related to automatic prompt optimization with textual gradients \cite{ref11}. A Code-LLM iteratively improves the annotation prompt from badcases and their error reasons on a human-annotated test set. The procedure is as follows:
+We adopt the idea of the AutoResearch framework for AI-assisted programming, and the loop is related to automatic prompt optimization from errors \cite{ref11,ref12}. A Code-LLM iteratively improves the annotation prompt from badcases and their error reasons on a human-annotated test set. The procedure is as follows:
 
 1) Prepare a human-annotated, real-world test set. As stated in Section 3.1, this test set should be ready before an LLM is used to generate or label training data.
 
@@ -242,7 +242,7 @@ The procedure is as follows:
 
 6) Repeat until the small model's test accuracy saturates.
 
-Unlike Section 3.3, whose loop updates only the prompt from LLM test errors, the loop here is driven by the small model's test errors and re-labels the whole training set at each iteration. Unlike Algorithm 1, each iteration re-labels the whole training set rather than only a noisy subset. This is the main difference from ProTeGi \cite{ref11}: the search target is the student model's accuracy after full re-labeling, not the LLM's own accuracy after prompt editing.
+Unlike Section 3.3, whose loop updates only the prompt from LLM test errors, the loop here is driven by the small model's test errors and re-labels the whole training set at each iteration. Unlike Algorithm 1, each iteration re-labels the whole training set rather than only a noisy subset. This is the main difference from ProTeGi \cite{ref11} and DSPy \cite{ref14}: the search target is the student model's accuracy after full re-labeling, not the LLM's own accuracy after prompt editing.
 
 
 ### 4. Experimental Results
@@ -375,4 +375,31 @@ Shao Z, Wang P, Zhu Q, et al. Deepseekmath: Pushing the limits of mathematical r
 
 \bibitem{ref11}
 Pryzant R, Iter D, Li J, et al. Automatic prompt optimization with ``Gradient Descent'' and beam search[C]//Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. 2023: 7957-7968.
+
+\bibitem{ref12}
+Wang X, Li C, Wang Z, et al. PromptAgent: Strategic planning with language models enables expert-level prompt optimization[C]//The Twelfth International Conference on Learning Representations. 2024.
+
+\bibitem{ref13}
+Zhou Y, Muresanu A I, Han Z, et al. Large language models are human-level prompt engineers[C]//The Eleventh International Conference on Learning Representations. 2023.
+
+\bibitem{ref14}
+Khattab O, Singhvi A, Maheshwari P, et al. DSPy: Compiling declarative language model calls into self-improving pipelines[C]//The Twelfth International Conference on Learning Representations. 2024.
+
+\bibitem{ref15}
+Tan Z, Li D, Wang S, et al. Large language models for data annotation and synthesis: A survey[C]//Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing. 2024: 930-957.
+
+\bibitem{ref16}
+Viswanathan V, Zhao C, Bertsch A, et al. Prompt2Model: Generating deployable models from natural language instructions[C]//Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: System Demonstrations. 2023: 413-421.
+
+\bibitem{ref17}
+Hsieh C Y, Li C L, Yeh C K, et al. Distilling step-by-step! Outperforming larger language models with less training data and smaller model sizes[C]//Findings of the Association for Computational Linguistics: ACL 2023. 2023: 8003-8017.
+
+\bibitem{ref18}
+Northcutt C, Jiang L, Chuang I. Confident learning: Estimating uncertainty in dataset labels[J]. Journal of Artificial Intelligence Research, 2021, 70: 1373-1411.
+
+\bibitem{ref19}
+Han B, Yao Q, Yu X, et al. Co-teaching: Robust training of deep neural networks with extremely noisy labels[C]//Advances in neural information processing systems. 2018, 31.
+
+\bibitem{ref20}
+Wang S, Liu Y, Xu Y, et al. Want to reduce labeling cost? GPT-3 can help[C]//Findings of the Association for Computational Linguistics: EMNLP 2021. 2021: 4195-4205.
 ```
