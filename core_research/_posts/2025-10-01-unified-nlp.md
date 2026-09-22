@@ -277,7 +277,7 @@ Manual re-annotation of the noisy subset identified by our framework substantial
 
 *Table 3. LLM instance-level relabeling of noisy data. The datasets correspond to Fig. 1.*
 
-Replacing the human annotator with an LLM in the same noise-correction loop yields almost no gain: 74.8% → 75.3% after one loop and 75.4% after two loops. Thus, using a large model to re-label the noisy subset identified by disagreement or large divergence between the small model and the original labels is not effective, even though the same subset is useful when re-labeled by humans.
+Replacing the human annotator with an LLM in the same noise-correction loop yields almost no gain: 74.8% → 75.3% after one loop and 75.4% after two loops. Thus, using a large model to re-label the noisy subset identified by disagreement or large divergence between the small model and the original labels is not effective, even though the same subset is useful when re-labeled by humans. Human evaluation of the resulting small model stays at 80%, the same as the model trained on the initial LLM-labeled data, so the relabeling brings no improvement.
 
 #### 4.3 Prompt Relabeling via the LLM-Prompt Loop
 
@@ -296,13 +296,13 @@ We then evaluate the LLM-prompt loop on the same type of NLP task. We first iter
 
 | Setting | Test-Acc | Human-Eval |
 |---|---|---|
-| Small model trained on data from initial prompt | 75% | -- |
+| Small model trained on data from initial prompt | 75% | 80% |
 | Small model after LLM-prompt loop | 86% | 95% |
 | Small model after small-model loop | 92% | 93% |
 
 *Table 5. Two prompt-level loops. Test-Acc is the small model's accuracy on the fixed test set. Human-Eval is the accuracy of the small model's outputs on real-world data as judged by human annotators. Row 2 is the LLM-prompt loop of Section 3.3; row 3 is the small-model loop of Section 3.4.*
 
-We next extend the loop through the small model. Starting from the same initial prompt, the LLM labels the training set and a small model is trained (75%). We then collect the small model's test-set badcases, refine the LLM prompt, re-label the training set, and retrain the small model, repeating this loop. The small model reaches 92% test accuracy, which is 6 points above the LLM-prompt loop (86%). The gap indicates that a prompt optimized by looping on LLM test accuracy is not the same as a prompt optimized by looping on the downstream small model. Human evaluation does not follow this gain. Annotators judge each prediction on real-world data as right or wrong: the LLM-prompt loop scores 95%, while the small-model loop scores 93%. Although the small-model loop improves the test set, human evaluation does not improve and declines slightly.
+We next extend the loop through the small model. Starting from the same initial prompt, the LLM labels the training set and a small model is trained (75% test accuracy, 80% human evaluation). We then collect the small model's test-set badcases, refine the LLM prompt, re-label the training set, and retrain the small model, repeating this loop. The small model reaches 92% test accuracy, which is 6 points above the LLM-prompt loop (86%). The gap indicates that a prompt optimized by looping on LLM test accuracy is not the same as a prompt optimized by looping on the downstream small model. Human evaluation does not follow this gain. Annotators judge each prediction on real-world data as right or wrong: the initial prompt scores 80%, the LLM-prompt loop scores 95%, and the small-model loop scores 93%. Although the small-model loop improves the test set, human evaluation does not improve and declines slightly.
 
 #### 4.5 Overall Comparison
 
@@ -310,13 +310,13 @@ We next extend the loop through the small model. Starting from the same initial 
 |---|---|---|---|---|
 | Human-labeled | Human relabel data | 88.0% | 97.0% | -- |
 | LLM-labeled | Human relabel data | 75.0% | 90.0% | -- |
-| LLM-labeled | LLM relabel data | 75.0% | 75.0% | -- |
+| LLM-labeled | LLM relabel data | 75.0% | 75.0% | 80.0% |
 | LLM-labeled | LLM relabel prompt (LLM loop) | 75.0% | 86.0% | 95.0% |
 | LLM-labeled | LLM relabel prompt (SM loop) | 75.0% | 92.0% | 93.0% |
 
-*Table 6. Summary of instance-level and prompt-level relabeling. Init-Acc and Final-Acc are the test accuracy of the small model before and after the corresponding relabeling method. Human-Eval is reported for the two prompt-level loops: annotators judge the small model's outputs on real-world data as right or wrong.*
+*Table 6. Summary of instance-level and prompt-level relabeling. Init-Acc and Final-Acc are the test accuracy of the small model before and after the corresponding relabeling method. Human-Eval is the accuracy of the small model's outputs on real-world data as judged by human annotators.*
 
-The five settings are summarized above. Human instance-level relabeling is consistently effective. LLM instance-level relabeling is not. Prompt-level relabeling, i.e., refining the LLM prompt rather than correcting individual training labels, is the best fully automatic family of methods we have found so far. Both prompt methods are loops: the LLM-prompt loop (86.0%) iterates the prompt from the LLM's own test-set badcases; the small-model loop (92.0%) iterates further through the small model's test-set badcases, re-labeling and retraining. Human evaluation separates the two loops from the test-set ranking. The LLM-prompt loop reaches 95.0%, and the small-model loop reaches 93.0%. Although the small-model loop improves test accuracy, human evaluation does not improve and declines slightly.
+The five settings are summarized above. Human instance-level relabeling is consistently effective. LLM instance-level relabeling is not: human evaluation stays at 80.0%, the same as the small model trained on the initial LLM-labeled data, so there is no improvement. Prompt-level relabeling, i.e., refining the LLM prompt rather than correcting individual training labels, is the best fully automatic family of methods we have found so far. Both prompt methods are loops: the LLM-prompt loop (86.0%) iterates the prompt from the LLM's own test-set badcases; the small-model loop (92.0%) iterates further through the small model's test-set badcases, re-labeling and retraining. Human evaluation separates the two loops from the test-set ranking. The small model trained on the initial prompt scores 80.0%. The LLM-prompt loop reaches 95.0%, and the small-model loop reaches 93.0%. Although the small-model loop improves test accuracy, human evaluation does not improve and declines slightly.
 
 
 ### 5. Discussion
@@ -338,7 +338,7 @@ We experimented with this approach but found that for some simple samples, this 
 
 In the era of LLM, our goal is to train small models for specific NLP tasks. The initial datasets—whether from human labeling, LLM generation, or user behavior logs—contain noisy and badcase data. We proposed a unified relabeling framework with two targets: instance labels and the LLM prompt. The framework supports both a human-in-the-loop (HITL) and an LLM-in-the-loop (LITL) approach.
 
-Experimental results show that human re-labeling of the noisy subset identified by our framework is effective, whereas LLM re-labeling of the same subset is not. For the overall workflow of writing prompts for a large model to label data, then training and deploying a small model, the best approach we have found so far is prompt-level relabeling. Both variants are loops. The LLM-prompt loop refines the prompt from the LLM's own test-set badcases and then trains the small model, reaching 86% test accuracy and 95% under human evaluation. Extending the loop through the small model's test-set badcases, re-labeling the training set, and retraining reaches 92% test accuracy, but human evaluation declines slightly to 93%. Although the small-model loop improves the test set, human evaluation does not improve and even declines slightly. Our idea can apply to a broad set of deep learning industry applications.
+Experimental results show that human re-labeling of the noisy subset identified by our framework is effective, whereas LLM re-labeling of the same subset is not. Human evaluation stays at 80%, the same as the initial LLM-labeled model, so instance-level LLM relabeling brings no improvement. For the overall workflow of writing prompts for a large model to label data, then training and deploying a small model, the best approach we have found so far is prompt-level relabeling. Both variants are loops. The LLM-prompt loop refines the prompt from the LLM's own test-set badcases and then trains the small model, reaching 86% test accuracy and 95% under human evaluation. Extending the loop through the small model's test-set badcases, re-labeling the training set, and retraining reaches 92% test accuracy, but human evaluation declines slightly to 93%. Although the small-model loop improves the test set, human evaluation does not improve and even declines slightly. Our idea can apply to a broad set of deep learning industry applications.
 
 
 ### Reference
