@@ -251,21 +251,21 @@ All results below are on a text classification task. Human evaluation presents t
 
 #### 4.1 Human Relabeling of Noisy Data
 
-| Dataset | Test-Accuracy |
-|---|---|
-| Dataset labeled by LLM | 75.0% |
-| Human relabeled dataset | 90.0% |
+| Dataset | Test-Accuracy | Human-Eval |
+|---|---|---|
+| Dataset labeled by LLM | 75.0% | -- |
+| Human relabeled dataset | 90.0% | 93.0% |
 
-*Table 1. Human relabeling of noisy data whose initial labels come from an LLM. The two datasets correspond to Fig. 1.*
+*Table 1. Human relabeling of noisy data whose initial labels come from an LLM. Test-Accuracy is the small model's accuracy on the fixed test set. Human-Eval is the accuracy of its outputs on real-world data as judged by annotators. The two datasets correspond to Fig. 1.*
 
-| Dataset | Test-Accuracy |
-|---|---|
-| Dataset labeled by human | 88.0% |
-| Human relabeled dataset | 97.0% |
+| Dataset | Test-Accuracy | Human-Eval |
+|---|---|---|
+| Dataset labeled by human | 88.0% | -- |
+| Human relabeled dataset | 93.0% | 97.0% |
 
-*Table 2. Human relabeling of noisy data whose initial labels are already human-annotated. The two datasets correspond to Fig. 1.*
+*Table 2. Human relabeling of noisy data whose initial labels are already human-annotated. Test-Accuracy is the small model's accuracy on the fixed test set. Human-Eval is the accuracy of its outputs on real-world data as judged by annotators. The two datasets correspond to Fig. 1.*
 
-Manual re-annotation of the noisy subset identified by our framework substantially improves test accuracy: from 75.0% to 90.0% when the initial labels come from an LLM, and from 88.0% to 97.0% when the initial labels are already human-annotated.
+Manual re-annotation of the noisy subset identified by our framework substantially improves test accuracy: from 75.0% to 90.0% when the initial labels come from an LLM, and from 88.0% to 93.0% when the initial labels are already human-annotated. Human evaluation of these relabeled models reaches 93.0% and 97.0%, respectively.
 
 #### 4.2 LLM Relabeling of Noisy Data
 
@@ -308,15 +308,15 @@ We next extend the loop through the small model. Starting from the same initial 
 
 | Init-Dataset | Method | Ini-Test-Acc | Final-Test-Acc | Human-Eval |
 |---|---|---|---|---|
-| Human-labeled | Human relabel data | 88.0% | 97.0% | -- |
-| LLM-labeled | Human relabel data | 75.0% | 90.0% | -- |
+| Human-labeled | Human relabel data | 88.0% | 93.0% | 97.0% |
+| LLM-labeled | Human relabel data | 75.0% | 90.0% | 93.0% |
 | LLM-labeled | LLM relabel data | 75.0% | 75.0% | 80.0% |
 | LLM-labeled | LLM relabel prompt (LLM loop) | 75.0% | 86.0% | 95.0% |
 | LLM-labeled | LLM relabel prompt (SM loop) | 75.0% | 92.0% | 93.0% |
 
 *Table 6. Summary of instance-level and prompt-level relabeling. Init-Acc and Final-Acc are the test accuracy of the small model before and after the corresponding relabeling method. Human-Eval is the accuracy of the small model's outputs on real-world data as judged by human annotators.*
 
-The five settings are summarized above. Human instance-level relabeling is consistently effective. LLM instance-level relabeling is not: human evaluation stays at 80.0%, the same as the small model trained on the initial LLM-labeled data, so there is no improvement. Prompt-level relabeling, i.e., refining the LLM prompt rather than correcting individual training labels, is the best fully automatic family of methods we have found so far. Both prompt methods are loops: the LLM-prompt loop (86.0%) iterates the prompt from the LLM's own test-set badcases; the small-model loop (92.0%) iterates further through the small model's test-set badcases, re-labeling and retraining. Human evaluation separates the two loops from the test-set ranking. The small model trained on the initial prompt scores 80.0%. The LLM-prompt loop reaches 95.0%, and the small-model loop reaches 93.0%. Although the small-model loop improves test accuracy, human evaluation does not improve and declines slightly.
+The five settings are summarized above. Human instance-level relabeling is consistently effective: on human-labeled data, test accuracy rises from 88.0% to 93.0% and human evaluation reaches 97.0%; on LLM-labeled data, test accuracy rises from 75.0% to 90.0% and human evaluation reaches 93.0%. LLM instance-level relabeling is not: human evaluation stays at 80.0%, the same as the small model trained on the initial LLM-labeled data, so there is no improvement. Prompt-level relabeling, i.e., refining the LLM prompt rather than correcting individual training labels, is the best fully automatic family of methods we have found so far. Both prompt methods are loops: the LLM-prompt loop (86.0%) iterates the prompt from the LLM's own test-set badcases; the small-model loop (92.0%) iterates further through the small model's test-set badcases, re-labeling and retraining. Human evaluation separates the two loops from the test-set ranking. The small model trained on the initial prompt scores 80.0%. The LLM-prompt loop reaches 95.0%, and the small-model loop reaches 93.0%. Although the small-model loop improves test accuracy, human evaluation does not improve and declines slightly.
 
 
 ### 5. Discussion
