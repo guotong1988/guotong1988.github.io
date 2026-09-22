@@ -253,7 +253,7 @@ All results below are on a text classification task. Human evaluation presents t
 
 | Dataset | Test-Accuracy | Human-Eval |
 |---|---|---|
-| Dataset labeled by LLM | 75.0% | 80% |
+| Dataset labeled by LLM | 75.0% | 80.0% |
 | Human relabeled dataset | 90.0% | 93.0% |
 
 *Table 1. Human relabeling of noisy data whose initial labels come from an LLM. Test-Accuracy is the small model's accuracy on the fixed test set. Human-Eval is the accuracy of its outputs on real-world data as judged by annotators. The two datasets correspond to Fig. 1.*
@@ -283,10 +283,10 @@ Replacing the human annotator with an LLM in the same noise-correction loop yiel
 
 | Setting | Test-Acc |
 |---|---|
-| LLM with initial prompt | 73% |
-| LLM with AutoResearch-refined prompt | 96% |
-| Small model trained on data from initial prompt | 75% |
-| Small model trained on data from refined prompt | 86% |
+| LLM with initial prompt | 73.0% |
+| LLM with AutoResearch-refined prompt | 96.0% |
+| Small model trained on data from initial prompt | 75.0% |
+| Small model trained on data from refined prompt | 86.0% |
 
 *Table 4. Prompt-level relabeling on a text classification task. Rows 1–2 are the LLM's own test accuracy; rows 3–4 are the small model trained on the corresponding LLM-labeled data.*
 
@@ -296,9 +296,9 @@ We then evaluate the LLM-prompt loop on the same type of NLP task. We first iter
 
 | Setting | Test-Acc | Human-Eval |
 |---|---|---|
-| Small model trained on data from initial prompt | 75% | 80% |
-| Small model after LLM-prompt loop | 86% | 95% |
-| Small model after small-model loop | 92% | 93% |
+| Small model trained on data from initial prompt | 75.0% | 80.0% |
+| Small model after LLM-prompt loop | 86.0% | 95.0% |
+| Small model after small-model loop | 92.0% | 93.0% |
 
 *Table 5. Two prompt-level loops. Test-Acc is the small model's accuracy on the fixed test set. Human-Eval is the accuracy of the small model's outputs on real-world data as judged by human annotators. Row 2 is the LLM-prompt loop of Section 3.3; row 3 is the small-model loop of Section 3.4.*
 
