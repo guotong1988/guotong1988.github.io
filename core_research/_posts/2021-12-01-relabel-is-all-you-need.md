@@ -123,16 +123,33 @@ The work\cite{ref7} proposes pseudo-label-based method to improve data quality w
 
 The work\cite{ref8} proposes label-guess-based method to improve data quality without human re-label, which is different from our method. Our method get the guess-label as reference for human re-label.
 
-#### 6.2 ChatGPT
+Pseudo-label \cite{ref19} assigns the model's own hard prediction to unlabeled examples and trains on those predictions. It never checks whether an existing human label is wrong. Re-labeling ImageNet \cite{ref7} replaces a single global label by model-generated multi-labels and localized labels, still without a second human pass. Label-noise correction \cite{ref8} guesses a new class from the neighborhood of a sample and writes that guess back as the label. In our method the model prediction is only a reference. A human decides the final label, and the corrected label is written back into the original training set.
+
+A survey of learning from noisy labels \cite{ref12} reviews robust training under five groups: robust architecture, robust regularization, robust loss design, loss adjustment, and sample selection. These methods change the training procedure so that a wrong label hurts less. They do not ask a human to fix the training set. Our target is a cleaned dataset on which an ordinary model can reach about 97 score, so we correct the data and keep the training algorithm unchanged.
+
+#### 6.2 Noisy label detection and robust training
+
+Confident learning \cite{ref14} estimates the joint distribution between the observed noisy label and the latent true label, then prunes or ranks examples. It is a data-centric method \cite{ref15}: the gain comes from label quality rather than a new network. Confident learning removes the suspected errors. We keep the example and send it back to a human, with the model label and the previous human label shown together.
+
+Co-teaching \cite{ref13} trains two networks at the same time. Each network updates on the small-loss examples selected by the other, and the large-loss examples are dropped for that step. Small loss is used as a proxy for a clean label. Dropping is close to the CTR case in Section 3.4, where a threshold on the gap between the predicted score and the online 0/1 label decides that a click log is noise. For classification, sequence tagging, detection, and generation, dropping a disagreed example also drops the input pattern we still need. Re-label keeps the input and only changes the label.
+
+Hendrycks and Gimpel \cite{ref16} use the maximum softmax probability to flag misclassified and out-of-distribution examples. A low top-class score means the model is uncertain. Our noisy-data rule does not need a score threshold: if the predicted label is not equal to the human label, the example is sent to re-label. A close top-1 score and top-2 score is another useful signal that the label is likely to be noisy. We leave the combination of that score gap with our disagreement rule as future work.
+
+Northcutt et al. \cite{ref18} show that label errors are also common in benchmark test sets, on the order of several percent, and that correcting them can change which model ranks higher. Our loop corrects the training set. The same disagreement check can be run on the dev set before the scores in Table 1, Table 2, and Table 3 are reported, otherwise a noisy dev label hides a real gain.
+
+#### 6.3 Task-specific annotation noise
+
+For sequence tagging, CrossWeigh \cite{ref17} splits an NER training set into folds, finds sentences on which the fold models disagree with the human tags, and lowers the weight of those sentences. The authors also manually correct about 5.38% of CoNLL03 test sentences and show that the published F1 near 93% was measured on a dirty test set. Down-weighting still leaves the wrong span in the training file. In Section 3.1 we treat each entity class as a classification problem. Disagreed spans are re-labeled by human. When annotators are limited, the task is reduced to a choice between the model span and the previous human span.
+
+For object detection, Li et al. \cite{ref20} alternate detector training with automatic correction of both the class label and the box coordinates. The new box and the new class come from the detector itself, and no clean seed set is required. In Section 3.2 a box is treated as noisy when it is far from the human box, and a human draws the box again with the model box as a reference. The model does not overwrite the training file by itself. Fan et al. \cite{ref11} apply a re-label procedure to offline LiDAR 3D detection and report accuracy above the human labels. That result agrees with our claim: moving the score comes from correcting the boxes, not only from changing the detector.
+
+#### 6.4 ChatGPT
 
 The work\cite{ref9} of OpenAI also use model predictions for human as references to label. The work\cite{ref9} use the new human-labeled data from model predictions to train the reward model, which is named as reinforcement learning from human feedback(RLHF). 
 
 Our work do not have the reward model of RLHF, the differnce between RLHF and our re-label method is that RLHF focus on using the model predictions as training dataset of reward model, and our re-label method focus on correcting the origin training dataset of policy model. Also in RLHF, the new human-labeled data from model predictions do not conflict to our method, because the new data can be simply merged to the whole dataset of policy model, and then to re-label/re-correct by our method. 
 
 Also, the correction for policy by the reward model of RLHF is same to correct all the related data/labels that found by the patterns or substrings of the badcases. The detail pattern-based human-correct method is illustrated at \cite{ref10}.
-
-#### 6.3 Other Works
-For object detection task, \cite{ref11} uses the re-label method and surpasses human performance in offline LiDAR based 3D object detection.
 
 ### 7. Conclusion
 
@@ -174,4 +191,31 @@ Guo, Tong (2022): Re-Label By Data Pattern For Knowledge Driven Deep Learning. T
 
 \bibitem{ref11}
 Fan L, Yang Y, Mao Y, et al. Once Detected, Never Lost: Surpassing Human Performance in Offline LiDAR based 3D Object Detection[J]. arXiv preprint arXiv:2304.12315, 2023.
+
+\bibitem{ref12}
+Song H, Kim M, Park D, et al. Learning from noisy labels with deep neural networks: A survey[J]. IEEE Transactions on Neural Networks and Learning Systems, 2023, 34(11): 8135-8153.
+
+\bibitem{ref13}
+Han B, Yao Q, Yu X, et al. Co-teaching: Robust training of deep neural networks with extremely noisy labels[C]//Advances in neural information processing systems. 2018: 8536-8546.
+
+\bibitem{ref14}
+Northcutt C, Jiang L, Chuang I. Confident learning: Estimating uncertainty in dataset labels[J]. Journal of Artificial Intelligence Research, 2021, 70: 1373-1411.
+
+\bibitem{ref15}
+Zha D, Bhat Z P, Lai K H, et al. Data-centric artificial intelligence: A survey[J]. arXiv preprint arXiv:2303.10158, 2023.
+
+\bibitem{ref16}
+Hendrycks D, Gimpel K. A baseline for detecting misclassified and out-of-distribution examples in neural networks[C]//International Conference on Learning Representations. 2017.
+
+\bibitem{ref17}
+Wang Z, Shang J, Liu L, et al. CrossWeigh: Training named entity tagger from imperfect annotations[C]//Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing. 2019: 5154-5163.
+
+\bibitem{ref18}
+Northcutt C, Athalye A, Mueller J. Pervasive label errors in test sets destabilize machine learning benchmarks[C]//Advances in Neural Information Processing Systems Datasets and Benchmarks Track. 2021.
+
+\bibitem{ref19}
+Lee D H. Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks[C]//ICML Workshop on Challenges in Representation Learning. 2013.
+
+\bibitem{ref20}
+Li J, Xiong C, Socher R, et al. Towards noise-resistant object detection with noisy annotations[J]. arXiv preprint arXiv:2003.01285, 2020.
 ```
